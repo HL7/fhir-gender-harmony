@@ -3,7 +3,7 @@ Parent: Patient
 Description: "An example profile of the Patient resource."
 * name 1..* MS
 * extension contains
-    GenderIdentity named GenderIdentity 0..1 and 
+    GenderIdentity named GenderIdentity 0..1  
 
 Extension: GenderIdentity
 Id: gender-identity
