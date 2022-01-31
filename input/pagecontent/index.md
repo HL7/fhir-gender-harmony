@@ -1,4 +1,3 @@
-
 <style>
     table, th, td {
         border: 1px solid black;
@@ -995,3 +994,111 @@ This minimum set of pronouns is suggested by Kronk [81]:
 </table>
 
 Cases linked to unknown (such as pronouns not stated) could theoretically be mapped to ‘U’ and neopronouns like ze/zir and xie/hir could be linked to ‘O’ in this situation, but it is recommended to include other pronouns provided as necessary based on individual clinical use. Please also note, a patient record may utilize more than one pronoun set.
+
+# Bibliography
+1. [If They Don't Count Us, We Don't Count: Trump Administration Rolls Back Sexual Orientation and Gender Identity Data Collection](https://doi.org/10.1089/lgbt.2017.0073)
+2. [Evolving Sex and Gender in Electronic Health Records](https://www.ncbi.nlm.nih.gov/pubmed/31258320)
+3. [A rapid review of gender, sex, and sexual orientation documentation in electronic health records](https://doi.org/10.1093/jamia/ocaa158) 
+4. [Collecting Sexual Orientation and Gender Identity Information -- Importance of the Collection and Use of These Data -- CDC](https://www.cdc.gov/hiv/clinicians/transforming-health/health-care-providers/collecting-sexual-orientation.html)
+5. [LGBT questions in electronic health records - UC Davis Medical Center](https://health.ucdavis.edu/medicalcenter/features/2013-2014/07/20130704_LGBT-EMR.html)
+6. [Using sexual orientation and gender identity data in electronic health records to assess for disparities in preventive health screening services](https://doi.org/10.1016/j.ijmedinf.2020.104245)
+7. [Patient Perspectives on Gender Identity Data Collection in Electronic Health Records: An Analysis of Disclosure, Privacy, and Access to Care](https://doi.org/10.1089/trgh.2016.0007)
+8. [Collecting Sexual Orientation and Gender Identity Data in Electronic Health Records: Workshop Summary](https://nhchc.org/wp-content/uploads/2019/08/IOM_2013_Collecting-sexual-orientation-and-gender-identity-information.pdf)
+9. [IHS supports the inclusion of sexual orientation and gender identity in electronic health records](https://www.ihs.gov/newsroom/ihs-blog/june2020/ihs-supports-the-inclusion-of-sexual-orientation-and-gender-identity-in-electronic-health-records/)
+10. [Planningandimplementingsexualorientationand gender identity data collection in electronic health records](https://doi.org/10.1093/jamia/ocy137)
+11. [Respectful Collection of Demographic Data](https://medium.com/managing-on-the-margins/respectful-collection-of-demographic-data-56de9fcb80e2)
+12. [ChosenNameUseIsLinkedtoReduced Depressive Symptoms, Suicidal Ideation, and Suicidal Behavior Among Transgender Youth](https://doi.org/10.1016/j.jadohealth.2018.02.003)
+13. [Misgendering and experiences of stigma within health care settings for transgender individuals](https://doi.org/10.5694/mja2.50497)
+14. [Bad Gender Measures & How to Avoid Them: A guide by a nonbinary psychologist](https://devonprice.medium.com/bad-gender-measures-how-to-avoid-them-23b8f3a503a6)
+15. [Designing forms for gender diversity and inclusion](https://uxdesign.cc/designing-forms-for-gender-diversity-and-inclusion-d8194cf1f51)
+16. [Beyond the Binary: 5 steps to designing gender inclusive fields in your product](https://uxdesign.cc/beyond-the-binary-5-steps-to-designing-gender-inclusive-fields-in-your-product-ff9230337b4f)
+17. [HOW TO DO BETTER WITH GENDER ON SURVEYS: A GUIDE FOR HCI RESEARCHERS](https://interactions.acm.org/archive/view/july-august-2019/how-to-do-better-with-gender-on-surveys)
+18. [Predictors and Mental Health Benefits of Chosen Name Use Among Transgender Youth](https://doi.org/10.1177/0044118X19855898)
+19. [Perspectives from Transgender and Gender Diverse People on How to Ask About Gender](https://doi.org/10.1089/lgbt.2019.0295)
+20. [TransCare Begins at... the Software?](https://hankoehle.com/2020/08/06/trans-care-begins-at-the-software/)
+21. [AMA Pushes Forward on Fully Inclusive EHRs for Transgender Patients](https://www.hcinnovationgroup.com/clinical-it/electronic-health-record-electronic-medical-record-ehr-emr/news/21115399/ama-pushes-forward-on-fully-inclusive-ehrs-for-transgender-patients#:~:text=To%20create%20EHRs%20that%20are,documentation%2C%20according%20to%20the%20association)
+22. [Electronic Health Records and Transgender Patients—Practical Recommendations for the Collection of Gender Identity Data](https://dx.doi.org/10.1007%2Fs11606-014-3148-7)
+23. [Electronicmedicalrecordsandthe transgender patient: recommendations from the World Professional Association for Transgender Health EMR Working Group](https://doi.org/10.1136/amiajnl-2012-001472)
+24. [CareoftheTransgenderPatient](https://doi.org/10.7326/AITC201907020)
+25. [Sexual Orientation and Gender Identity Measures for Global Survey Research: A Primer for Improving Data Quality](https://www.measureevaluation.org/resources/publications/ms-19-177)
+26. [The Report of the 2015 U.S. Transgender Survey](https://www.transequality.org/sites/default/files/docs/usts/USTS%20Full%20Report%20-%20FINAL%201.6.17.pdf)
+27. [Bangladesh: Gender Recognition Process Spurs Abuse](https://www.hrw.org/news/2016/12/23/bangladesh-gender-recognition-process-spurs-abuse#)
+28. [Empowering communities and strengthening systems to improve transgender health: outcomes from the Pehchan programme in India](https://doi.org/10.7448/ias.19.3.20809)
+29. [Indian transgender healthcare challenges](https://www.aljazeera.com/features/2014/06/18/indian-transgender-healthcare-challenges/?gb=true)
+30. [Living on the extreme margin: social exclusion of the transgender population (hijra) in Bangladesh](https://doi.org/10.3329/jhpn.v27i4.3388)
+31. [Transgender health in India and Pakistan](https://doi.org/10.1016/S0140-6736(16)32222-X)
+32. [Transgender patients face health-care discrimination, inadequate treatment](https://www.cbc.ca/news/health/transgender-health-lancet-study-medical-care-1.3641030)
+33. [Barriers to accessing health care among transgender individuals](https://www.ohtn.on.ca/rapid-response-barriers-to-accessing-health-care-among-transgender-individuals/)
+34. [Address transphobia in Canada’s health system](https://healthydebate.ca/opinions/canadas-health-care-system-is-transphobic)
+35. [Rights in Transition: Making Legal Recognition for Transgender People a Global Priority](https://www.hrw.org/world-report/2016/country-chapters/africa-americas-asia-europe/central-asia-middle-east/north-0)
+36. [Barriers and Facilitators to Transgender Healthcare Access in South Asia with Lessons for Nepal: A Qualitative Literature Review](http://library.lshtm.ac.uk/MSc_PH/2014-15/108406.pdf)
+37. [Who was Lou Sullivan?](https://web.archive.org/web/20080906123232/http://www.sgn.org/sgnnews36_08/page30.cfm)
+38. [Why are trans men invisible in HIV prevention & care?](https://www.sfaf.org/collections/beta/why-are-trans-men-invisible-in-hiv-prevention-care/)
+39. [A Death Robbed of Dignity Mobilizes a Community](https://www.washingtonpost.com/archive/local/1995/12/10/a-death-robbed-of-dignity-mobilizes-a-community/2ca40566-9d67-47a2-80f2-e5756b2753a6/)
+40. [EMS Denied Transgender Patient Care Causing Her Death, Alleges Sheepshead Bay Lawyer](https://bklyner.com/ems-denied-transgender-patient-care-causing-her-death-alleges-sheepshead-bay-lawyer-sheepshead-bay/)
+41. [Trans woman left to die with coronavirus symptoms by paramedics who ‘refused to treat her’ because she had HIV](https://www.pinknews.co.uk/2020/06/01/alejandra-monocuco-trans-woman-dead-coronavirus-hiv-positive-bogota/)
+42. [Transgender Americans Just Lost Health Protections. Now What?](https://www.commonwealthfund.org/publications/podcast/2020/jul/transgender-americans-just-lost-health-protections-now-what)
+43. [Ensuring an inclusive global health agenda for transgender people](http://dx.doi.org/10.2471/BLT.16.183913)
+44. [Catalyzing a Nursing Response to Healthcare Discrimination Against Transgender and Nonbinary Individuals](https://doi.org/10.1111/jnu.12597)
+45. [Transgender Population Size in the United States: a Meta-Regression of Population-Based Probability Samples](https://doi.org/10.2105/AJPH.2016.303578)
+46. [How Many Adults Identify as Transgender in the United States?](https://williamsinstitute.law.ucla.edu/publications/trans-adults-united-states/)
+47. [Agenda for zero discrimination in health care. Geneva: The Joint United Nations Programme on HIV/AIDS](http://www.unaids.org/sites/default/files/media_asset/Agenda-zero-discrimination-healthcare_en.pdf)
+48. [Re: Völling](http://icj.wpengine.netdna-cdn.com/wp-content/uploads/2008/02/In-re-Volling-Regional-Court-Cologne-Germany-English.pdf)
+49. [In re Völling, Regional Court Cologne, Germany (6 February 2008)](http://www.icj.org/sogicasebook/in-re-volling-regional-court-cologne-germany-6-february-2008/)
+50. [Groundbreaking SLPC Lawsuit Accuses South Carolina Doctors and Hospitals of Unnecessary Surgery on Infant](http://www.splcenter.org/get-informed/news/groundbreaking-splc-lawsuit-accuses-south-carolina-doctors-and-hospitals-of-unnece)
+51. [Transgender Sterilisation Requirements in Europe](https://doi.org/10.1093/medlaw/fwx028)
+52. [Japan: Compelled Sterilization of Transgender People](https://www.hrw.org/news/2019/03/19/japan-compelled-sterilization-transgender-people)
+53. [Forced and Coerced Sterilization: The Nightmare of Transgender and Intersex Individuals](https://impakter.com/forced-and-coerced-sterilization-an-unnecessary-intervention-in-transgender-and-intersex-individuals/)
+54. [Unfit for Parenthood? Compulsory Sterilization and Transgender Reproductive Justice in Finland](https://core.ac.uk/download/pdf/215437609.pdf)
+55. [NEW REPORT REVEALS RAMPANT DISCRIMINATION AGAINST TRANSGENDER PEOPLE BY HEALTH PROVIDERS, HIGH HIV RATES AND WIDESPREAD LACK OF ACCESS TO NECESSARY CARE](https://www.thetaskforce.org/new-report-reveals-rampant-discrimination-against-transgender-people-by-health-providers-high-hiv-rates-and-widespread-lack-of-access-to-necessary-care-2/)
+56. [Compendium of legislation and policies](https://www.coe.int/en/web/sogi/legislation-and-policies)
+57. [Data collection in relation to LGBTI People](https://ec.europa.eu/newsroom/just/document.cfm?action=display&doc_id=45605)
+58. [Report on data collection and management](https://www.ohchr.org/EN/Issues/SexualOrientationGender/Pages/ReportOnData.aspx)
+59. [Annual Review of the Human Rights Situation of Lesbian, Gay, Bisexual, Trans and Intersex People](https://www.ilga-europe.org/sites/default/files/2019/full_annual_review.pdf)
+60. [Do Ask, Do Tell: Capturing data on sexual orientation and gender identity globally](https://www.stonewall.org.uk/sites/default/files/do_ask_do_tell_guide_2016.pdf)
+61. [Health Care System Fails Many Transgender Americans](https://www.npr.org/sections/health-shots/2017/11/21/564817975/health-care-system-fails-many-transgender-americans)
+62. [Health Records Adapting to Meet Transgender Needs](https://news.bloomberglaw.com/health-law-and-business/health-records-adapting-to-meet-transgender-needs)
+63. [When Gender Goes Awry in Electronic Health Records](https://labmedicineblog.com/2019/08/14/when-gender-goes-awry-in-electronic-health-records/)
+64. [ThePowerandLimitsof Classification — A 32-Year-Old Man with Abdominal Pain](https://www.nejm.org/doi/full/10.1056/NEJMp1811491)
+65. [The problems with LGBTQ health care](https://news.harvard.edu/gazette/story/2018/03/health-care-providers-need-better-understanding-of-lgbtq-patients-harvard-forum-says/)
+66. [Why transgender people are ignored by modern medicine](https://www.bbc.com/future/article/20200814-why-our-medical-systems-are-ignoring-transgender-people)
+67. [Transgender-inclusive measures of sex/gender for population surveys: Mixed-methods evaluation and recommendations](https://dx.doi.org/10.1371%2Fjournal.pone.0178043)
+68. [In-Depth Review of Measuring Gender Identity](https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.30/2019/mtg1/03_In-depth_review_of_Measuring_Gender_Identity.pdf)
+69. [Jay Kallio, Model Activist to the End, Dead at 61](https://www.gaycitynews.com/jay-kallio-model-activist-to-the-end-dead-at-61/)
+70. [Global Attitudes Toward Transgender People](https://www.ipsos.com/en-us/news-polls/global-attitudes-toward-transgender-people)
+71. [Human Rights Watch Country Profiles: Sexual Orientation and Gender Identity](https://www.hrw.org/news/2017/06/23/human-rights-watch-country-profiles-sexual-orientation-and-gender-identity)
+72. [Global health burden and needs of transgender populations: a review](https://doi.org/10.1016/S0140-6736(16)00684-X)
+73. [The missing trans women of science, medicine, and global health](https://doi.org/10.1016/S0140-6736(18)32423-1)
+74. [Health Care for Transgender Individuals](https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2011/12/health-care-for-transgender-individuals)
+75. [Health care avoidance due to anticipated discrimination among transgender people: A call to create trans-affirmative environments](https://doi.org/10.1016/j.ssmph.2020.100608)
+76. [Sex and gender influences on pharmacological response: an overview](https://pubmed.ncbi.nlm.nih.gov/24857340/)
+77. [Sex And Gender Equity in Research (SAGER): reporting guidelines as a framework of innovation for an equitable approach to gender medicine. Commentary](https://pubmed.ncbi.nlm.nih.gov/27364388/)
+78. [Legato M.J. Principles of Gender-Specific Medicine. Gender in the Genomic Era. 3rd ed. Elsevier Academic Press; Amsterdam, The Netherlands: Boston, MA, USA: 2017. 792p](https://www.elsevier.com/books/principles-of-gender-specific-medicine/legato/978-0-12-803506-1)
+79. [https://www.cdc.gov/hiv/clinicians/transforming-health/health- care-providers/collecting-sexual-orientation.html](https://www.cdc.gov/hiv/clinicians/transforming-health/health-care-providers/collecting-sexual-orientation.html)
+80. [Affirming Transgender Youths’ Names and Pronouns in the Electronic Medical Record](https://jamanetwork.com/journals/jamapediatrics/article-abstract/2761803)
+81. [Suggested Tables](https://docs.google.com/document/d/1oN4nmfylAUKB1okDildiIkW6bs1JAGyR8oAX2t1NKUw/edit?usp=sharing)
+82. [Transgender Data Collection in the Electronic Health Record(EHR):Current Concepts and Issues] (Kronk et al, 2021, in press)
+83. [Australian Government Guidelines on the Recognition of Sex and Gender](https://www.ag.gov.au/rights-and-protections/publications/australian-government-guidelines-recognition-sex-and-gender)
+84. [FenwayHealth.2021.FenwayHealth:HealthCareIsARight,NotAPrivilege.[online]](https://fenwayhealth.org/) [Accessed 1 April 2021].
+85. [Callen-Lorde. 2021. A letter from our Executive Director, WendyStark-Callen-Lorde. [online]](https://callen-lorde.org/eoy/) [Accessed 31 March 2021].
+86. [UCSF Transcare. 2021. UCSF Transgender Care, HomePage.[online]](https://transcare.ucsf.edu/) [Accessed 31 March 2021].
+87. [TransCareBC. 2021. Improving gender-affirming care across BC.[online]](http://www.phsa.ca/our-services/programs-services/trans-care-bc) [Accessed 31 March 2021].
+88. [Rainbow Health Ontario. 2021. Rainbow Health Ontario, HomePage.[online]](https://www.rainbowhealthontario.ca/) [Accessed 31 March 2021].
+89. [Doc 9303: Machine Readable Travel Documents(2015). 7th Ed. Part 7:MachineReadable Visas](https://www.icao.int/publications/Documents/9303_p7_cons_en.pdf) [Accessed 8 April 2021]
+90. [Emergency Care for Transgender and Gender-Diverse Children and Adolescents(Ethics CME)](https://www.ebmedicine.net/topics/ethics/transgender-gender-diverse-children) [Accessted 6 May 2021]
+91. Tate CC, Youssef CP, Bettergarcia JN. Integrating the Study of Transgender Spectrum and Cisgender Experiences of Self-Categorization from a Personality Perspective. Rev Gen Psychol. 2014 Dec;18(4):302–12.
+92. [PFLAG National Glossary of Terms[Internet]. 2020[cited 2021 Jan 22]](https://pflag.org/glossary)
+93. [Mitchell G. Some Terms Are Better Than Others[Internet]. Medium; 2017 [cited 2021 Jan22]](https://transsubstantiation.com/some-terms-are-better-than-others-603827adb9b7)
+94. [Mere A. 64 Terms That Describe Gender Identity and Expression[Internet]. Healthline Media; 2019 [cited 2021 Jan 22]](https://www.healthline.com/health/different-genders)
+95. [Bailar S. Terminology[Internet]. 2015[cited 2021 Jan22]](https://pinkmantaray.com/terminology)
+96. [FonsecaS. Designing forms for gender diversity and inclusion[Internet]. A Medium Corporation; 2017 [cited 2020 Oct 1]](https://uxdesign.cc/designing-forms-for-gender-diversity-and-inclusion-d8194cf1f51)
+97. BauerGR,BraimohJ,ScheimAI,DharmaC.Transgender-inclusivemeasuresofsex/gender for population surveys: Mixed-methods evaluation and recommendations. Dalby AR, editor. PLOS ONE. 2017 May 25;12(5):e0178043.
+98. [HolzbergJ, EllisR, VirgileM, NelsonD, EdgarJ, PhippsP, etal. Assessing the Feasibility of Asking About Gender Identity in the Current Population Survey: Results from Focus Groups with Members of the Transgender Population [Internet]. U.S. Census Bureau; 2017 [cited 2021 Jan 8].](https://www.bls.gov/osmr/research-papers/2017/pdf/st170200.pdf)
+99. PuckettJA, BrownNC, DunnT, MustanskiB, NewcombME. Perspectives from Transgender and Gender Diverse People on How to Ask About Gender. LGBT Health. 2020 Sep 1;7(6):305–11.
+100. [Ke M. How to make an LGBTQ+ inclusive survey [Internet]. Medium; 2020 [cited 2021 Jan 11]](https://uxdesign.cc/how-to-make-an-lgbtq-inclusive-survey-bfd1d801cc21) Page 44 HL7 Informative Document: Gender Harmony - Modeling Sex and Gender Representation, R1 © 2021 Health Level Seven International. All rights reserved. August 2021
+101. [Stock K. Changing the concept of “woman” will cause unintended harms [Internet]. The Economist Newspaper Limited; 2018 [cited 2021 Jan 8]](https://www.economist.com/open-future/2018/07/06/changing-the-concept-of-woman-will-cause-unintended-harms)
+102. Jenkins K. Amelioration and Inclusion: Gender Identity and the Concept of Woman*. Ethics. 2016 Jan;126(2).
+103. [Holston-Zannell LB. Black Trans Women Are Being Murdered in the Streets. Now the Trump Administration Wants to Turn Us Away From Shelters and Health Care [Internet]. American Civil Liberties Union; 2019 [cited 2021 Jan 8]](https://www.aclu.org/blog/lgbt-rights/transgender-rights/black-trans-women-are-being-murdered-streets-now-trump)
+104. [Taylor L Boyer, Ada O Youk, Ann P Haas, George R Brown, Jillian C Shipherd, Michael R Kauth, Guneet K Jasuj, John R Blosnich, Suicide, Homicide, and All-Cause Mortality Among Transgender and Cisgender Patients in the Veterans Health Administration DOI](http://doi.org/10.1089/lgbt.2020.0235)
+105. [Kronk, Clair, Avery R. Everhart, Florence Ashley, Hale M. Thompson, Theodore E. Schall, Teddy G. Goetz, Laurel Hiatt, Zackary Derrick, Roz Queen, A Ram, E. Mae Guthman, Olivia M. Danforth, Elle Lett, Emery Potter, Simón(e) D. Sun, Zack Marshall, and Ryan Karnoski. “Transgender Data Collection in the Electronic Health Record (EHR): Current Concepts and Issues" (2021). Journal of the American Medical Informatics Association. Forthcoming. Preprint:](https://osf.io/preprints/socarxiv/qnc2g/)
+106. [Sun, Simón(e) D. “Stop Using Phony Science to Justify Transphobia” (13 June 2019). Scientific American.](https://blogs.scientificamerican.com/voices/stop-using-phony-science-to-justify-transphobia/)
