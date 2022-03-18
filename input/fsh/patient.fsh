@@ -1,9 +1,15 @@
-Profile: MyPatient
+Profile: GenderPatient
 Parent: Patient
 Description: "An example profile of the Patient resource."
 * name 1..* MS
 * extension contains
     GenderIdentity named GenderIdentity 0..1  
+* extension contains
+    SexForClinicalUse named SexForClinicalUse 0..1  
+* extension contains
+    RecordedSexAndGender named RecordedSexAndGender 0..1  
+* extension contains
+    Pronouns named Pronouns 0..1     
 
 Extension: GenderIdentity
 Id: gender-identity

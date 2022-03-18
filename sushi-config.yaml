@@ -9,7 +9,7 @@ name: fhir-gender-harmony
 title: "HL7 FHIR Gender Harmony Implementation Guide"
 description: "HL7 FHIR Gender Harmony Implementation Guide"
 status: draft # draft | active | retired | unknown
-version: 0.1.2
+version: 0.1.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -72,9 +72,51 @@ publisher:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+#menu:
+#  Home: index.html
+#  Artifacts: artifacts.html
+
+
+pages:
+  index.md:
+    title: Home
+  model.md:
+     title: Model
+  conformance-general.md:
+    title: Conformance Expectations
+  conformance-profiles.md:
+    title: Profile Conformance
+  cdagenderharmony.md:
+   title: CDA Gender Harmony
+  fhirgenderharmony.md:
+   title: FHIR Gender Harmony   
+  hl7v2genderharmony.md:
+   title: V2 Gender Harmony
+  terminology.md:
+    title: Terminology
+  examples.md:
+    title:  Examples
+  change_log.md:
+    title: Change log
 menu:
   Home: index.html
-  Artifacts: artifacts.html
+  Model: model.html
+  Terminology: terminology.html
+  V2:
+    V2 Gender Harmony: hl7v2genderharmony.html
+    Examples: examples.html
+  CDA:
+    CDA Gender Harmony: cdagenderharmony.html
+    Examples: examples.html
+  FHIR:
+    General Expectations: conformance-general.html
+    Profile Conformance: conformance-profiles.html
+    FHIR Gender Harmony: fhirgenderharmony.html
+    Examples: examples.html
+  All Artifacts: artifacts.html
+  Change Log: change_log.html
+  History: http://hl7.org/fhir/us/military-service/history.html
+
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
