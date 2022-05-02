@@ -1,3 +1,6 @@
+
+![Alt text](rainbow-1445337690d8q.jpg)
+
 The FHIR profiles and extensions in this implementation guide are intended to
 fill gaps in current implementations of HL7 Version 2 and RESTful APIs currently
 available to implementers. This implementation guide expands FHIR best practices
@@ -10,6 +13,8 @@ require require subsequent change proposals to LOINC and SNOMED CT consistent
 with the requirements summarized in the use cases.
 
 ### Background
+
+
 
 Health care is increasingly turning to technology to help improve systems and processes to benefit patients and their health. Ongoing efforts supported by governing agencies and standards committees are responding to the demonstrated need through standards that allow for seamless integration of patient information between systems.
 
