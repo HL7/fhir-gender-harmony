@@ -96,8 +96,12 @@ pages:
     title: Terminology
   ghexamples.md:
     title: Gender Harmony Examples
-  examples.md:
-    title:  Examples
+  cdaexamples.md:
+    title:  CDA Examples    
+  fhirexamples.md:
+    title:  FHIR Examples
+  v2examples.md:
+    title:  V2 Examples    
   change_log.md:
     title: Change log
   survey.md:
@@ -114,15 +118,15 @@ menu:
  
   V2:
     V2 Gender Harmony: hl7v2genderharmony.html
-    Examples: examples.html
+    Examples: v2examples.html
   CDA:
     CDA Gender Harmony: cdagenderharmony.html
-    Examples: examples.html
+    Examples: cdaexamples.html
   FHIR:
     General Expectations: conformance-general.html
     Profile Conformance: conformance-profiles.html
     FHIR Gender Harmony: fhirgenderharmony.html
-    Examples: ghexamples.html
+    Examples: fhirexamples.html
   All Artifacts: artifacts.html
   Change Log: change_log.html
   History: http://hl7.org/fhir/us/military-service/history.html
