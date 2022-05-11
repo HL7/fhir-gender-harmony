@@ -103,9 +103,7 @@ pages:
   v2examples.md:
     title:  V2 Examples    
   change_log.md:
-    title: Change log
-  survey.md:
-    title: Survey Summary Report
+    title: Change log   
   design.md:
      title: Design Decisions    
 menu:
@@ -114,7 +112,6 @@ menu:
   Model: model.html
   Terminology: terminology.html
   Examples: ghexamples.html
-  Survey : survey.html
  
   V2:
     V2 Gender Harmony: hl7v2genderharmony.html
