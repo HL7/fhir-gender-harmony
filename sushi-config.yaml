@@ -94,6 +94,8 @@ pages:
    title: V2 Gender Harmony
   terminology.md:
     title: Terminology
+  terminology2.md:
+    title: Terminology2    
   ghexamples.md:
     title: Gender Harmony Examples
   cdaexamples.md:
@@ -111,6 +113,7 @@ menu:
   Design Decisions: design.html
   Model: model.html
   Terminology: terminology.html
+  Terminology2: terminology2.html
   Examples: ghexamples.html
  
   V2:
