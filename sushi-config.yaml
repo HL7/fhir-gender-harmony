@@ -94,8 +94,6 @@ pages:
    title: V2 Gender Harmony
   terminology.md:
     title: Terminology
-  terminology2.md:
-    title: Terminology2    
   ghexamples.md:
     title: Gender Harmony Examples
   cdaexamples.md:
@@ -107,15 +105,26 @@ pages:
   change_log.md:
     title: Change log   
   design.md:
-     title: Design Decisions    
+     title: Design Decisions  
+  labratory_use_case.md:
+    title: Laboratory Use Case for transgender woman presenting to laboratory facility for blood draw
+  hysterectomy_use_case.md:
+    title: Transgender man needs hysterectomy and needs procedure approval
+  dicom_use_case.md:
+    title: DICOM
+  health_maintanence_use_case.md:
+    title:  Health Maintanence Use Case     
 menu:
   Home: index.html
   Design Decisions: design.html
   Model: model.html
-  Terminology: terminology.html
-  Terminology2: terminology2.html
-  Examples: ghexamples.html
- 
+  Use Cases:  
+    Laboratory Use Case: labratory_use_case.html
+    Hysterectomy Use Case: hysterectomy_use_case.html
+    DICOM Use Case: dicom_use_case.html
+    Health Maintanence Use Case: health_maintanence_use_case.html
+  Terminology: terminology.html 
+  Examples: ghexamples.html 
   V2:
     V2 Gender Harmony: hl7v2genderharmony.html
     Examples: v2examples.html
