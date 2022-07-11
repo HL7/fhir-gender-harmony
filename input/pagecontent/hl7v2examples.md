@@ -1,9 +1,4 @@
-FHIR Examples
-
-# **TODO** - Update FHIR Build Patient Samples (Update FHIR Build Patients)
-
-Add snippet of extension inlined
-
+V2 Examples
 
 # **TODO** Have examples for the use cases 
 
@@ -15,4 +10,3 @@ Add snippet of extension inlined
 ### **TODO** Examples for this use cases 
 ## Health Maintanence Use Case Example
 ### **TODO** Examples for this use cases 
-

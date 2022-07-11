@@ -100,12 +100,18 @@ pages:
     title:  CDA Examples    
   fhirexamples.md:
     title:  FHIR Examples
-  v2examples.md:
+  hl7v2examples.md:
     title:  V2 Examples    
   change_log.md:
     title: Change log   
   design.md:
-     title: Design Decisions  
+     title: Design Decisions
+  fhirdesign.md:
+    title: FHIR Design Decisions
+  cdadesign.md:
+    title: CDA Design Decisions
+  hl7v2design.md:
+    title: V2 Design Decisions    
   labratory_use_case.md:
     title: Laboratory Use Case for transgender woman presenting to laboratory facility for blood draw
   hysterectomy_use_case.md:
@@ -116,7 +122,11 @@ pages:
     title:  Health Maintanence Use Case     
 menu:
   Home: index.html
-  Design Decisions: design.html
+  Design Decisions: 
+    Overview: design.html
+    FHIR Design: fhirdesign.html
+    CDA Design: cdadesign.html
+    V2 Design: hl7v2design.html
   Model: model.html
   Use Cases:  
     Laboratory Use Case: labratory_use_case.html
@@ -127,7 +137,7 @@ menu:
   Examples: ghexamples.html 
   V2:
     V2 Gender Harmony: hl7v2genderharmony.html
-    Examples: v2examples.html
+    Examples: hl7v2examples.html
   CDA:
     CDA Gender Harmony: cdagenderharmony.html
     Examples: cdaexamples.html
