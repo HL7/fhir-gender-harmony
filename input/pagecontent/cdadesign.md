@@ -1,6 +1,7 @@
 ## CDA Design Decisions
 
 
+
 ### Approach
 
 To support the content defined in the Gender Harmony logical model in CDA, two primary design approaches were considered: the “core model change” option, where the CDA model would be extended by defining new types and relations in the SDTC extension schema, and the “name-value” option, where templates could be defined to specify data elements as Observations with codes and values.
