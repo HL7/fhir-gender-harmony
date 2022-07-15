@@ -9,6 +9,7 @@
 
 [GenderPatient]:StructureDefinition-GenderPatient.html
 
+[NameToUse]:StructureDefinition-NameToUse.html
  
 
 
