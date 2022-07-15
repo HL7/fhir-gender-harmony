@@ -9,7 +9,7 @@ name: fhir-gender-harmony
 title: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 description: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 status: draft # draft | active | retired | unknown
-version: 0.1.2
+version: 0.1.3
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -66,6 +66,10 @@ pages:
     title:  Health Maintanence Use Case     
   externalstandards.md:
     title: External Standadrds  
+  fhirextensions.md:
+    title: FHIR Extensions
+  
+   
 menu:
   Home: index.html
   Design Decisions: 
@@ -89,9 +93,11 @@ menu:
     CDA Gender Harmony: cdagenderharmony.html
     Examples: cdaexamples.html
   FHIR:
-    General Expectations: conformance-general.html
-    Profile Conformance: conformance-profiles.html
-    FHIR Gender Harmony: fhirgenderharmony.html
+    FHIR Extensions: fhirextensions.html
+    Sex For Clinical Use: http://build.fhir.org/extension-patient-sexforclinicaluse.html
+    Gender Identity: http://build.fhir.org/extension-individual-genderidentity.html
+    Pronouns: http://build.fhir.org/extension-individual-pronouns.html
+    Recorded Sex or Gender: http://build.fhir.org/extension-individual-recordedsexorgender.html
     Examples: fhirexamples.html
   All Artifacts: artifacts.html
   Change Log: change_log.html

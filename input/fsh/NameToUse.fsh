@@ -1,3 +1,5 @@
+Alias: NameToUse = http://hl7.org/fhir/name-use 
+
 // Profile:  NameToUse
 // Parent:   Observation
 // Id:       nametouse
@@ -11,3 +13,10 @@
 // * effectivePeriod.start 0..1 
 // * effectivePeriod.end 0..1
 // * note 0..1 // "Text to further explain use of the Name. This may be related to social and/or cultural context."
+
+
+Profile:  NameToUse
+Parent:   HumanName
+Id:       NameToUse
+* use =  http://hl7.org/fhir/name-use#usual "Usual"
+
