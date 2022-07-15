@@ -1,3 +1,6 @@
+
+#
+
 ## V2 Gender Harmony
 Sexual Orientation, Gender Identity, Administrative Sex, Birth Sex etc
 Given that SOGI data is typically not collected by laboratories nor is it critical to performing and interpreting lab tests, inclusion of this data as part of the ELR ORU message is not the best long-term solution to capturing and sharing SOGI observations.
