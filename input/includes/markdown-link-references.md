@@ -11,7 +11,7 @@
 
 [NameToUse]:StructureDefinition-NameToUse.html
  
-
+[Change Log]: changes.html
 
 <!-- US Core -->
 [USCoreLaboratoryResultObservationProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html

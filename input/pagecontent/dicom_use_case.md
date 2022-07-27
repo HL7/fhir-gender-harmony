@@ -61,7 +61,7 @@ Gender Identity of "male" arrives for check-in at a facility using a
 DICOM worklist for a PET/CT examination. The examination is performed,
 the patient's demographics are updated, and the report is delivered.
 
-![Alt text](dicom/gh-dicom-singlepage.svg )
+
 
 ### Actors:
 
@@ -152,8 +152,8 @@ processing and reporting for a PET/CT examination order.
 
 ### Workflow/Storyboard:
 
-![](media/image1.png){width="5.1666393263342085in"
-height="6.8865069991251096in"}
+![](dicom/gh-dicom-singlepage.svg)
+ 
 
 Figure 1 Workflow Storyboard
 
@@ -197,13 +197,15 @@ In this scenario, the patient initiates the discussion with the clerk.
 
 **Example 2: Imaging Order (DICOM attributes in MWL)**
 
-  **V2**   **Attribute Name**    **Tag**        **VR**   **Value**
-  -------- --------------------- -------------- -------- -------------------------------------------------------------
-  PID-5    Patient\'s Name       (0010,0010)    PN       Smith\^Janet\^\^\^
-  PID-8    Patient\'s Sex        (0010,0040)    CS       F
-  GSP-5    Patient's Gender      (0010,xxxx)    CS       M
-  GSR-10   Sex Comment           (0010, xxx1)   LT       Hormonal treatment, use affirmed gender Cr reference ranges
-  PID-9    Patient Name to Use   (0010,xxx3)    PN       Smith\^John\^\^\^
+
+
+|**V2**|**Attribute Name**|**Tag**|**VR**|**Value**|
+| -------- | --------------------- | --------------  | -------- | -------------------------------------------------------------|
+|PID-5    |Patient\'s Name       |(0010,0010)    |PN       |Smith\^Janet\^\^\^|
+|PID-8    |Patient\'s Sex        |(0010,0040)    |CS       |F|
+|GSP-5    |Patient's Gender      |(0010,xxxx)    |CS       |M|
+|GSR-10   |Sex Comment           |(0010, xxx1)   |LT       |Hormonal treatment, use affirmed gender Cr reference ranges|
+|PID-9    |Patient Name to Use   |(0010,xxx3)    |PN       |Smith\^John\^\^\^|
 
 **Example 3: Patient Name Update (HL7 v2.x message)**
 
@@ -228,13 +230,14 @@ the date the name change was entered by the clerk.
 **Example 3: Patient Name Update (DICOM patient demographics
 attributes)**
 
-  **V2**   **Attribute Name**    **Tag**        **VR**   **Value**
-  -------- --------------------- -------------- -------- -------------------------------------------------------------
-  PID-5    Patient\'s Name       (0010,0010)    PN       Smith\^John\^\^\^
-  PID-8    Patient\'s Sex        (0010,0040)    CS       F
-  GSP-5    Patient's Gender      (0010,xxxx)    CS       M
-  GSR-10   Sex Comment           (0010, xxx1)   LT       Hormonal treatment, use affirmed gender Cr reference ranges
-  PID-9    Patient Name to Use   (0010,xxx3)    PN       Smith\^John\^\^\^
+ 
+|**V2**|**Attribute Name**|**Tag**|**VR**|**Value**|
+| -------- | --------------------- | --------------  | -------- | -------------------------------------------------------------|
+|PID-5    |Patient\'s Name       |(0010,0010)    |PN      |Smith\^John\^\^\^|
+|PID-8    |Patient\'s Sex        |(0010,0040)    |CS      |F|
+|GSP-5    |Patient's Gender      |(0010,xxxx)    |CS      |M|
+|GSR-10   |Sex Comment           |(0010, xxx1)   |LT      |Hormonal treatment, use affirmed gender Cr reference ranges|
+|PID-9    |Patient Name to Use   |(0010,xxx3)    |PN      |Smith\^John\^\^\^|
 
  
 
@@ -367,23 +370,23 @@ The demographics portions of the mapping will change to those shown.
 The patient is referenced as the subject of DiagnosticReport,
 ImagingStudy or ImagingSelection. Mapping to DICOM is as follows:
 
-  ** Maps to FHIR attribute**                                                                  **DICOM Attribute**
-  -------------------------------------------------------------------------------------------- ---------------------------------
-  Patient.name.use=official                                                                    Patient's Name (0010,0010)
-  serviceRequest.sexForClinicalUse.value or Patient.gender, depending on local mapping rules   Patient's Sex (0010,0040)
-  Patient.genderIdentity.value                                                                 Patient's Gender (0010,xxxx)
-  serviceRequest.sexForClinicalUse.comment or Patient.genderIdentity.comment                   Sex Comment (0010, xxx1)
-  Patient.name.use=usual                                                                       Patient Name to Use (0010,xxx3)
+  |** Maps to FHIR attribute** | **DICOM Attribute**|
+  |--------------------------------------------------------------------------------------------| ---------------------------------|
+  |Patient.name.use=official                                                                   |Patient's Name (0010,0010)|
+  |serviceRequest.sexForClinicalUse.value or Patient.gender, depending on local mapping rules  |Patient's Sex (0010,0040)|
+  |Patient.genderIdentity.value                                                                |Patient's Gender (0010,xxxx)|
+  |serviceRequest.sexForClinicalUse.comment or Patient.genderIdentity.comment                  |Sex Comment (0010, xxx1)|
+  |Patient.name.use=usual                                                                      |Patient Name to Use (0010,xxx3)|
 
 **CDA Basic Imaging Report
 ([http://hl7.org/v3/cda](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7))**
 
 Mapping from Basic Imaging Reports CDA to DICOM is as follows:
 
-   **CDA Business Name**                                **DICOM Attribute**
-  ----------------------------------------------------- ----------------------------
-  ImagingReport: [Patient:Name](http://patient.name/)   Patient's Name (0010,0010)
-  ImagingReport: Patient:Gender                         Patient\'s Sex (0010,0040)
+  | **CDA Business Name**                              |  **DICOM Attribute**|
+  |-----------------------------------------------------| ----------------------------|
+  |ImagingReport: [Patient:Name](http://patient.name/)   |Patient's Name (0010,0010)|
+  |ImagingReport: Patient:Gender                         |Patient\'s Sex (0010,0040)|
 
 The radiologist is likely to dictate details of the Patient's Gender,
 Name to Use and Sex Comment in the Request or Patient presentation

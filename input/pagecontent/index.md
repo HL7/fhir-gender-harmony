@@ -1,5 +1,25 @@
 
-![Alt text](rainbow-1445337690d8q.jpg)
+
+<span style="font-size:1.1em;">**Balloters**<br/>
+This universal-realm implementation guide describes the changes incorporated in Hl7 product family specifications that can be used to align with the logical Gender Harmony model published in 2021. To accomplish that cross-paradigm goal, the guide provides:<br/>
+1 Introductory and background information, much drawn from previously published material.,<br/>
+2 An overview on some of the design decisions that led to specific choices in modeling approach.<br/>
+3 Separate discussions for each of FHIR, V2x, and CDA product family enhancements that are intended to provide a consistent alignment with the Gender Harmony (GH) logical model, noting that the initial 2021 model has had some minor improvements based upon our work done after the initial publication.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A The CDA templates are balloted as Standard for Trial Use (STU) on the normative track<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B The remaining content of this IG is balloted Informative.<br/>
+4 Specified terminology artifacts that are used in all product families.<br/>
+5 Examples that illustrate how to use the product family-specific enhancements in consistent ways to meet a use case. <br/></span>
+{:.stu-note}
+ 
+
+<span style="font-size:1.1em;">**Conformance testable content**<br/>
+Of the information provided within this initial version of guide, only the CDA templates [link] described in this guide are conformance testable and therefore the CDA template content in this guide is Standard for Trial Use (STU) to normative track. The Version 2 Gender Harmony Normative material is conformance testable, but while that specification is discussed in this guide, the conformance testable material is in the official V2.9.1 ballot found elsewhere, and the material is this guide is additional informative content. All new FHIR enhancements to support Gender Harmony modeling are changes to FHIR included in the R5 FHIR core specification described in the separate R5 FHIR ballot specification and all comments on the extensions and the related terminology must be made on the FHIR R5 ballot, not on this ballot. Each GH FHIR enhancement, except Name To Use, is an extension in the core FHIR specification. Guidance on the use of these extensions is the focus on this guide. If the community would like conformance-testable FHIR profiles that ensure use of the new extensions, ballot comments clarifying the need and requirements for those profiles should be provided on this implementation guide.<br/>
+The approaches in data exchange discussed in this guide expand HL7 best practices to assist organizations that adapt and extend FHIR profiles and implementation guides in their jurisdictions (e.g., US, Canada) to meet business and regulatory requirements. We look forward to implementers embracing the approaches outlined. <br/></span>
+{:.stu-note}
+
+### Overview
+
+<img src="rainbow-1445337690d8q.png" width="100%" />
 
 The FHIR profiles and extensions in this implementation guide are intended to
 fill gaps in current implementations of HL7 Version 2 and RESTful APIs currently
@@ -93,3 +113,4 @@ The Interoperability Standards Advisory (ISA) “represents the model by which t
 
 
 
+{% include markdown-link-references.md %}
