@@ -61,6 +61,8 @@ Gender Identity of "male" arrives for check-in at a facility using a
 DICOM worklist for a PET/CT examination. The examination is performed,
 the patient's demographics are updated, and the report is delivered.
 
+![Alt text](dicom/gh-dicom-singlepage.svg )
+
 ### Actors:
 
 #### People
