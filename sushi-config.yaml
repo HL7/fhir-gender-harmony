@@ -80,7 +80,6 @@ menu:
   Use Cases:  
     DICOM PET scan in patient with change in gender: dicom_use_case.html
     Health Screening with lab test in patient with change in gender: labratory_use_case.html 
-    Health Maintanence Use Case: health_maintanence_use_case.html
   Terminology: terminology.html 
   Examples: ghexamples.html 
   V2:
