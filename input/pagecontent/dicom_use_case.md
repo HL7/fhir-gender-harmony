@@ -1,3 +1,5 @@
+# x.1 DICOM® Use Case (DRAFT)
+
 ### Note to Balloters
 
 This use case is illustrative of how ancillary systems in imaging,
@@ -13,19 +15,19 @@ Public comment, based on this use case is sought on the following Open
 Issues:
 
 1.  Technologist may be in a position to observe a discrepancy between
-    the current medical record and "observed" information. Where and how
+    the current medical record and “observed” information. Where and how
     is this communicated to other actors? Where and how is
     reconciliation performed? Considerations include:
-
-    a.  Authoritative sources of observations
-
-    b.  Official systems of record
-
-    c.  See also IHE (Integrating the Healthcare Enterprise)
-        [SWF](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf)
-        (Scheduled Workflow) Patient Information Reconciliation workflow
-        in which upstream systems (ADT / RIS) perform patient update or
-        merge.
+    
+    - Authoritative sources of observations
+    
+    - Official systems of record
+    
+    - See also IHE (Integrating the Healthcare Enterprise)
+      [SWF](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf)
+      (Scheduled Workflow) Patient Information Reconciliation workflow
+      in which upstream systems (ADT / RIS) perform patient update or
+      merge.
 
 2.  What imaging activities are effected by the discrepant observation,
     and how should those be handled prior to reconciliation (e.g.
@@ -51,24 +53,22 @@ Issues:
     at birth for the application of established reference values. How
     should this be considered?
 
-### Use Case Description:
+### x.1.1 Use Case Description:
 
 Post Gender Harmony model implementation with incorrect naming from the
 EHR.
 
-Patient with EHR Sex for Clinical Use (SFCU) of "female" and a EHR
-Gender Identity of "male" arrives for check-in at a facility using a
+Patient with EHR Sex for Clinical Use (SFCU) of “female” and a EHR
+Gender Identity of “male” arrives for check-in at a facility using a
 DICOM worklist for a PET/CT examination. The examination is performed,
-the patient's demographics are updated, and the report is delivered.
+the patient’s demographics are updated, and the report is delivered.
 
-
-
-### Actors:
+### x.1.2 Actors:
 
 #### People
 
 1.  Patient (John Smith) - whose previous records are for studies
-    performed when his EHR Gender Identity was "female". 
+    performed when his EHR Gender Identity was “female”. 
 
 2.  Facility Clerk - admits patient, utilizes the Radiology Information
     System (RIS)
@@ -92,22 +92,22 @@ the patient's demographics are updated, and the report is delivered.
 
 6.  AI (Artificial Intelligence) Task Performer
 
-### Scope Statement:
+### x.1.3 Scope Statement:
 
 Use case covers admission, patient prep, examination, recovery, post
 processing and reporting for a PET/CT examination order.
 
-### Precondition(s):
+### x.1.4 Precondition(s):
 
 1.  John Smith is registered in the hospital record system with his old
-    name of "Janet Smith"
+    name of “Janet Smith”
 
 2.  Patient ID has not changed
 
 3.  John Smith arrives at an outpatient facility with an appointment
 
 4.  Patient history, social history, medical history has already been
-    captured upstream and are available in the facility\'s EHR
+    captured upstream and are available in the facility's EHR
 
 5.  Physician order for examination is utilizing information from the
     facility
@@ -121,19 +121,10 @@ processing and reporting for a PET/CT examination order.
 8.  Technical scan and contrast administration parameters (protocol) are
     pre-determined based on departmental protocols for a female patient
 
-### Example 1: Imaging Order (partial HL7 v2.x message)
+**Example 01** depicts a HL7 v2.9.1 Imaging Order for this patient with
+mapping to DICOM Modality Worklist attributes.
 
-> MSH\|\^\~\\&\|\|\|\|\|20220715142240\|\|OMI\^O23\|WSA5mY0UBuCGrytRTAFR8UWJ\|P\|2.9.1PID\|\|\|patientID\^\^\^\^MR\|\|Smith\^Janet\^\^\^\^\^B\|\|\|F\|Smith\^JohnGSP\|1\|X\|\|76691-5\^Gender
-> identity\^LN\|446151000124109\^Male\^SCTGSC\|1\|X\|\|248152002\^Female\^SCT\|\|OBR\^4\|Hormonal
-> treatment, use affirmed gender Cr reference
-> rangesORC\|NWOBR\|\|\|\|241439007\^PET heart
-> study\^SCT\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|82800-4\^PET+CT
-> Heart W contrast
-> IV\^LNIPC\|accessionNum\|procedureID\|studyInstanceUID\|schProcedureStepId\|PT\^Positron
-> emission tomography\^DCM\|122793\^PET Myocardial Perfusion, Rest and
-> Stress\^DCM
-
-### Postcondition(s):
+### x.1.5 Postcondition(s):
 
 1.  PET/CT Examination is complete or cancelled
 
@@ -143,47 +134,46 @@ processing and reporting for a PET/CT examination order.
     occurred
 
 4.  DICOM Name to Use is updated based on policy. For example:
-
-    i.  EHR name (John Smith) is associated with a Name to Use element
+    
+    - EHR name (John Smith) is associated with a Name to Use element
         whose validity period ends on day of exam
-
-    ii. Add a Name to Use (Janet Smith) whose validity period begins on
+    
+    - Add a Name to Use (Janet Smith) whose validity period begins on
         day of exam
 
-### Workflow/Storyboard:
+### x.1.6 Workflow/Storyboard:
 
-![](dicom/gh-dicom-singlepage.svg)
- 
+![](media/image1.png)
 
-Figure 1 Workflow Storyboard
+Figure Workflow Storyboard
 
-#### Arrival and check-in:
+#### x.1.6.1 Arrival and check-in:
 
 In this scenario, the patient initiates the discussion with the clerk.
 
 1.  When John arrives at the waiting room for a PET/CT examination he
-    announces himself as "John".
+    announces himself as “John”.
 
-2.  The clerk asks "John Williams?", seeing a John Williams in the
+2.  The clerk asks “John Williams?”, seeing a John Williams in the
     schedule. 
 
-3.  Response, "No, Smith"
+3.  Response, “No, Smith”
 
-4.  The clerk asks "Date of birth"
+4.  The clerk asks “Date of birth”
 
-5.  Smith: "month, day, year"
+5.  Smith: “month, day, year”
 
 6.  The clerk performs a date-of-birth based lookup and finds:
 
-7.  A schedule entry for Janet Smith, with Patient's Sex (0010,0040) "F"
-    and Patient's Gender (0010,xxxx) "M", and with a Preferred Form of
-    Address (0010,xxx3) "Preferred name is John". Sex Comment
-    (0010,xxx1) contains "Hormonal treatment, use affirmed gender Cr
-    reference ranges[^1]".
+7.  A schedule entry for Janet Smith, with Patient’s Sex (0010,0040) “F”
+    and Patient’s Gender (0010,xxxx) “M”, and with a Preferred Form of
+    Address (0010,xxx3) “Preferred name is John”. Sex Comment
+    (0010,xxx1) contains “Hormonal treatment, use affirmed gender Cr
+    reference ranges\[1\]”.
 
 8.  The clerk confirms that the birth dates match, confirms the
-    patient's identity in accordance with local policies, and checks in
-    the patient.
+    patient’s identity in accordance with local policies, and checks
+    in the patient.
 
 9.  The HL7 v2.9.1 message is converted to DICOM Modality Worklist (MWL)
     Attributes (partial SOP Instance contents) for the MWL query. After
@@ -195,61 +185,18 @@ In this scenario, the patient initiates the discussion with the clerk.
 
 11. The clerk notifies the technologist that the patient has arrived.
 
-**Example 2: Imaging Order (DICOM attributes in MWL)**
+**Example 02** depicts a HL7 v2.9.1 Demographics Update message for this
+patient with mapping to DICOM Modality Worklist attributes.
 
-
-
-|**V2**|**Attribute Name**|**Tag**|**VR**|**Value**|
-| -------- | --------------------- | --------------  | -------- | -------------------------------------------------------------|
-|PID-5    |Patient\'s Name       |(0010,0010)    |PN       |Smith\^Janet\^\^\^|
-|PID-8    |Patient\'s Sex        |(0010,0040)    |CS       |F|
-|GSP-5    |Patient's Gender      |(0010,xxxx)    |CS       |M|
-|GSR-10   |Sex Comment           |(0010, xxx1)   |LT       |Hormonal treatment, use affirmed gender Cr reference ranges|
-|PID-9    |Patient Name to Use   |(0010,xxx3)    |PN       |Smith\^John\^\^\^|
-
-**Example 3: Patient Name Update (HL7 v2.x message)**
-
-The HL7 v2.9.1 message to update the patient's name is sent in
-accordance with the IHE ADT feed policies:
-
-> MSH\|\^\~\\&\|\|\|\|\|20220715151029\|\|ADT\^A08\|TwxxneTRWE9JGX4U2p3hCLJH\|P\|2.9.1
->
-> EVN\|\|20220715151118\|\|01
->
-> PID\|\|\|patientID\^\^\^\^MR\|\|Smith\^John\^\^\^\^\^A\|\|\|F\|Smith\^Janet
->
-> GSP\|1\|X\|\|76691-5\^Gender
-> identity\^LN\|446151000124109\^Male\^SCT\|20220715
->
-> PV1\|\|O
-
-This information also corresponds to the following DICOM patient
-demographics attribute changes. Note: the Validity Period is the same as
-the date the name change was entered by the clerk.
-
-**Example 3: Patient Name Update (DICOM patient demographics
-attributes)**
-
- 
-|**V2**|**Attribute Name**|**Tag**|**VR**|**Value**|
-| -------- | --------------------- | --------------  | -------- | -------------------------------------------------------------|
-|PID-5    |Patient\'s Name       |(0010,0010)    |PN      |Smith\^John\^\^\^|
-|PID-8    |Patient\'s Sex        |(0010,0040)    |CS      |F|
-|GSP-5    |Patient's Gender      |(0010,xxxx)    |CS      |M|
-|GSR-10   |Sex Comment           |(0010, xxx1)   |LT      |Hormonal treatment, use affirmed gender Cr reference ranges|
-|PID-9    |Patient Name to Use   |(0010,xxx3)    |PN      |Smith\^John\^\^\^|
-
- 
-
-#### Patient Preparation
+#### x.1.6.2 Patient Preparation
 
 1.  The technologist checks their schedule for John, and finds the order
-    for "Janet Smith", Patient's Sex (0010,0040) "F" and Patient's
-    Gender (0010,xxxx) "M", and with a Patient Name to Use (0010,xxx3)
-    "John". Sex Comment (0010,xxx1) contains "Hormonal treatment, use
-    affirmed gender Cr reference ranges".
+    for “Janet Smith”, Patient’s Sex (0010,0040) “F” and Patient’s
+    Gender (0010,xxxx) “M”, and with a Patient Name to Use (0010,xxx3)
+    “John”. Sex Comment (0010,xxx1) contains “Hormonal treatment, use
+    affirmed gender Cr reference ranges”.
 
-2.  The technologist greets the patient as "John" and reconfirms
+2.  The technologist greets the patient as “John” and reconfirms
     birthdate.
 
 3.  The technologist directs the patient to a changing area and
@@ -268,17 +215,17 @@ attributes)**
 
 7.  The technologist confers with the radiologist to discuss acceptable
     lab values for safe contrast administration, given the Sex Comment
-    (0010,xxx1) as well as the patient's GFR, bun and creatine.
+    (0010,xxx1) as well as the patient’s GFR, bun and creatine.
 
 8.  The radiologist provides protocol alterations based on the order
-    indications and patient's transgender status, since the
+    indications and patient’s transgender status, since the
     pre-identified protocol was based on a female patient (see item 8 in
     preconditions).
 
-#### Examination
+#### x.1.6.3 Examination
 
-1.  The technologist knows to select the MWL entry for "Janet Smith" and
-    expects a Patient's Sex (0010,0040) of "F"; this does not trigger a
+1.  The technologist knows to select the MWL entry for “Janet Smith” and
+    expects a Patient’s Sex (0010,0040) of “F”; this does not trigger a
     wrong patient concern.
 
 2.  Patient demographics are loaded into the scanner demographics
@@ -287,7 +234,7 @@ attributes)**
 3.  The technologist applies alterations prescribed by the radiologist
     to scanner and contrast protocol. The radiotracer dose is not
     changed, as the department standardizes doses regardless of
-    Patient's Sex.
+    Patient’s Sex.
 
 4.  The technologist starts an IV, administers radiotracer, and connects
     the contrast injector for the contrast-enhanced CT portion of the
@@ -304,24 +251,24 @@ attributes)**
     transferred to the PACS, Dose Information Reporter and AI Task
     Performer systems.
 
-#### Analysis 
+#### x.1.6.4 Analysis 
 
 1.  The radiologist creates an SUV ROI on the PACS. The application
-    detects the presence of Patient's Sex (0010,0040) "F" and Patient's
-    Gender (0010,xxxx) "M" and prompts the radiologist to enter a value
-    "M" or "F".
+    detects the presence of Patient’s Sex (0010,0040) “F” and Patient’s
+    Gender (0010,xxxx) “M” and prompts the radiologist to enter a value
+    “M” or “F”.
 
 2.  The Dose Information Reporter collects the RDSR, without exception
-    since Patient's Sex or Gender is not likely to influence
+    since Patient’s Sex or Gender is not likely to influence
     deterministic risk calculation estimates.
 
 3.  The AI task performer processes the images based on female reference
     values and transfers evidence documents to the PACS.
 
-#### Reporting
+#### x.1.6.5 Reporting
 
 1.  The radiologist dictates findings pertaining to the procedure,
-    noting scanner and contrast protocol modifications in the "Request"
+    noting scanner and contrast protocol modifications in the “Request”
     section of the report.
 
 2.  The radiologist observes female reference values in the AI
@@ -329,86 +276,38 @@ attributes)**
     that the reference values are not deterministic for patients
     undergoing hormonal treatment.
 
-3.  The report format has been configured to include Patient's Sex
-    (0010,0040), Patient's Gender (0010,xxxx), Name to Use (0010,xxx3)
+3.  The report format has been configured to include Patient’s Sex
+    (0010,0040), Patient’s Gender (0010,xxxx), Name to Use (0010,xxx3)
     and Sex Comment (0010,xxx1) in the report header.
 
 4.  The initial report header includes:
+> Patient’s Name = “Janet Smith”  
+> Patient’s Sex = “F”  
+> Patient’s Gender = “M”  
+> Name to Use = “John Smith"  
 
-    1.  Patient's Name (0010,0010): "Janet Smith"
+5.  After the patient’s name change has been processed, the report is addended. The header of the addendum now reads:
+> Patient’s Name = “John Smith”  
+> Patient’s Sex = “F”  
+> Patient’s Gender = “M”  
+> Name to Use = “John Smith"  
 
-    2.  Patient's Sex (0010,0040): "F"
+The final report may be represented in FHIR, CDA or an HL7 v2:
 
-    3.  Patient's Gender (0010,xxxx): "M"
+  - **Example 03** depicts a mapping to the FHIR R5 Patient resource
+    that would be referenced as the subject of DiagnosticReport,
+    DocumentReference, ImagingStudy or ImagingSelection
 
-    4.  Sex Comment (0010,xxx1): "Hormonal treatment, use affirmed
-        gender Cr reference ranges"
+  - **Example 04** shows a CDA Release 2 Imaging Report based on the
+    [example](https://dicom.nema.org/medical/dicom/current/output/html/part20.html#sect_C.5.2)
+    from DICOM PS3.20. CDA is a typical format in cross-enterprise
+    ([XDS](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)) or
+    cross-community document sharing
+    ([XCA](https://profiles.ihe.net/ITI/TF/Volume1/ch-18.html)).
 
-5.  After the patient's name change has been processed, the report is
-    addended. The header of the addendum now reads:
+  - **Example 05** depicts a HL7 v2.9.1 Unsolicited Observation Result
+    containing the Imaging Report narrative.
 
-    1.  Patient's Name (0010,0010): "John Smith"
+<!-- end list -->
 
-    2.  Patient's Sex (0010,0040): "F"
-
-    3.  Patient's Gender (0010,xxxx): "M"
-
-    4.  Name to Use (0010,xxx2): "John Smith"
-
-    5.  Sex Comment (0010,xxx1): "Hormonal treatment, use affirmed
-        gender Cr reference ranges"
-
-**Example 4: Imaging Report**
-
-The mapping from temporary attribute definitions to FHIR are as shown
-below. The finished examination may result in reports that are converted
-to FHIR, CDA or an HL7 v2 as specified in existing mapping guidelines.
-The demographics portions of the mapping will change to those shown.
-
-**FHIR Patient Reference (<http://hl7.org/fhir>)**
-
-The patient is referenced as the subject of DiagnosticReport,
-ImagingStudy or ImagingSelection. Mapping to DICOM is as follows:
-
-  |** Maps to FHIR attribute** | **DICOM Attribute**|
-  |--------------------------------------------------------------------------------------------| ---------------------------------|
-  |Patient.name.use=official                                                                   |Patient's Name (0010,0010)|
-  |serviceRequest.sexForClinicalUse.value or Patient.gender, depending on local mapping rules  |Patient's Sex (0010,0040)|
-  |Patient.genderIdentity.value                                                                |Patient's Gender (0010,xxxx)|
-  |serviceRequest.sexForClinicalUse.comment or Patient.genderIdentity.comment                  |Sex Comment (0010, xxx1)|
-  |Patient.name.use=usual                                                                      |Patient Name to Use (0010,xxx3)|
-
-**CDA Basic Imaging Report
-([http://hl7.org/v3/cda](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7))**
-
-Mapping from Basic Imaging Reports CDA to DICOM is as follows:
-
-  | **CDA Business Name**                              |  **DICOM Attribute**|
-  |-----------------------------------------------------| ----------------------------|
-  |ImagingReport: [Patient:Name](http://patient.name/)   |Patient's Name (0010,0010)|
-  |ImagingReport: Patient:Gender                         |Patient\'s Sex (0010,0040)|
-
-The radiologist is likely to dictate details of the Patient's Gender,
-Name to Use and Sex Comment in the Request or Patient presentation
-sections ([LOINC 55115-0](https://loinc.org/18748-4/)). Alternatively,
-this information could be integrated as an Observation as in
-[this](https://build.fhir.org/ig/HL7/fhir-gender-harmony/branches/main/cdaexamples.html)
-example.
-
-**v2 Observation Result (http://hl7.org/v2)**
-
-Imaging Reports may also be transmitted as an unsolicited Observation
-Result:
-
-> MSH\|\^\~\\&\|\|\|\|\|20220715142240\|\|ORU\^R01\^ORU_R0\|WSA5mY0UBuCGrytRTAFR8UWJ\|P\|2.9.1PID\|\|\|patientID\^\^\^\^MR\|\|Smith\^Janet\^\^\^\^\^B\|\|\|F\|Smith\^JohnGSP\|1\|X\|\|76691-5\^Gender
-> identity\^LN\|446151000124109\^Male\^SCTGSC\|1\|X\|\|248152002\^Female\^SCT\|\|OBR\^4\|Hormonal
-> treatment, use affirmed gender Cr reference
-> rangesOBR\|1\|accessionNum\|\|82800-4\^PET+CT Heart W contrast
-> IV\^LN\|\|\|20220715142240\|\|\|\|OBX\|1\|CWE\|55115-0\^Request\^LN\|\|Imaging
-> technique (protocol, contrast, radiotracer) described
-> here\|\|\|\|\|\|F\|OBX\|2\|CWE\|19005-8\^Impression\^LN\|\|Report
-> narrative goes
-> here\|\|\|\|\|\|F\|OBX\|5\|CWE\|55110-1\^Conclusion\^LN\|\|Conclusion
-> goes here\|\|\|\|\|\|F\|
-
-[^1]: https://academic.oup.com/jes/article/5/Supplement_1/A790/6241237
+1.  https://academic.oup.com/jes/article/5/Supplement\_1/A790/6241237
