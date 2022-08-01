@@ -1,9 +1,11 @@
-<img style="vertical-align: top;" src="rainbow-1445337690d8q.png" width="100%" /> 
 
-# Note to Balloters
+ 
+<img style="vertical-align: top;" src="rainbowhands.png" width="100%" /> 
 
-This universal-realm implementation guide describes the changes incorporated in Hl7 product family specifications that can be used to align with the logical [Gender Harmony model published in 2021](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564). To accomplish that cross-paradigm goal, the guide provides:
+# Introduction and balloter notes
+This universal-realm implementation guide describes the changes incorporated in Hl7 product family specifications that can be used to align with the logical Gender Harmony model [published in 2021](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564). Through the content of this guide, and the other ballots referenced in this guide that provide key normative track content (the V2 specification and the FHIR R5 core content), this guide provides definative guidance on how to exchange cliinical sex and gender afirming information using Hl7 models. We also provide examples that align with that guidance.
 
+To accomplish that cross-paradigm goal, the guide provides:
 - Introductory and background information, much drawn from previously published material.
 - An overview on some of the design decisions that led to specific choices in modeling approach.
 - Separate discussions for each of FHIR, V2x, and CDA product family enhancements that are intended to provide a consistent alignment with the Gender Harmony (GH) logical model, noting that the initial 2021 model has had some minor improvements based upon our work done after the initial publication.
@@ -13,30 +15,27 @@ This universal-realm implementation guide describes the changes incorporated in 
   - Specified Note that the same terminology artifacts that are used in all product families. The value sets and code systems used are defined in the FHIR core R5 specification, bound to the GH extensions. The terminology is **not** defined in this guide. Please review the terminology and comment on the content in the FHIR R5 ballot.
 - Examples that illustrate how to use the product family-specific enhancements in consistent ways to meet a use case.
 
-# Conformance testable content
+## Conformance testable content
 
 Of the information provided within this initial version of guide, only the CDA templates described in this guide are conformance testable and therefore the CDA template content in this guide is **Standard for Trial Use (STU)** to normative track. The Version 2 Gender Harmony **Normative** material **is conformance testable**, but while that specification is discussed in this guide, the conformance testable material is in the official V2.9.1 ballot found elsewhere, and the material is this guide is additional informative content. All new FHIR enhancements to support Gender Harmony modeling are changes to FHIR included in the R5 FHIR core specification described in the separate R5 FHIR ballot specification and all comments on the extensions and the related terminology **must be made on the FHIR R5 ballot**, not on this ballot. Each GH FHIR enhancement, except Name To Use, is an extension in the core FHIR specification. Guidance on the use of these extensions is the focus on this guide. If the community would like conformance-testable FHIR profiles that ensure use of the new extensions, ballot comments clarifying the need and requirements for those profiles should be provided on this implementation guide.
 
 The approaches in data exchange discussed in this guide expand HL7 best practices to assist organizations that adapt and extend FHIR profiles and implementation guides in their jurisdictions (e.g., US, Canada) to meet business and regulatory requirements. We look forward to implementers embracing the approaches outlined.
 
-# Introduction
-The FHIR profiles and extensions in this implementation guide are intended to fill gaps in current implementations of HL7 Version 2 and RESTful APIs currently available to implementers. This implementation guide expands FHIR best practices to assist organizations that adapt and extend FHIR profiles and implementation guides required in their jurisdictions (e.g. US, Canada) to apply them to locally-applicable requirements that meet their stakeholders business needs. Currently there are several US Realm projects that need to use, manage, and collect information about gender identity and sex using information provided by patients. This specification also identifies code systems and terminology gaps that require require subsequent change proposals to LOINC and SNOMED CT consistent with the requirements summarized in the use cases.
 # Background
 
 As described in the original Gender Harmony logical model specification:
 
 > Health care is increasingly turning to technology to help improve systems and processes to benefit patients and their health. Ongoing efforts supported by governing agencies and standards committees are responding to the demonstrated need through standards that allow for seamless integration of patient information between systems.
 
-> It is imperative that both sex and gender vocabulary be formally integrated into clinical care because they are not interchangeable. Both influence health outcomes. Gender-marginalized individuals[^1] face significant barriers to adequate and culturally responsive healthcare, leading to numerous health disparities. By adopting structured data sets, agnostic systems will be better equipped to transmit (share) and accept data elements that will improve the accuracy of patient information. Furthermore, standardizing data enables information to be combined with other data sources used to evaluate clinical outcomes. While data collection and documentation are critical factors in clinical decision-making, these new data will also promote important dialogue between clinicians and patients. Ultimately, this will assist with improved quality of care, reduced clinician burden and less fragmentation of a person&#39;s clinical record.
+> It is imperative that both sex and gender vocabulary be formally integrated into clinical care because they are not interchangeable. Both influence health outcomes. Gender-marginalized individuals(fn1) face significant barriers to adequate and culturally responsive healthcare, leading to numerous health disparities. By adopting structured data sets, agnostic systems will be better equipped to transmit (share) and accept data elements that will improve the accuracy of patient information. Furthermore, standardizing data enables information to be combined with other data sources used to evaluate clinical outcomes. While data collection and documentation are critical factors in clinical decision-making, these new data will also promote important dialogue between clinicians and patients. Ultimately, this will assist with improved quality of care, reduced clinician burden and less fragmentation of a person&#39;s clinical record.
 
 Currently, it is common that a single data element is used to capture both sex and gender information, often assuming these two items are one unified idea. This specification describes the specific data elements to be used for independent consideration of sex and gender, and the assessment of their differences promotes the health of women, men, and people of diverse gender identities of all age. Implementing these changes can improve data accuracy for sex and gender information in health care systems.
-[^1]: A grouping term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.
+
 # Scope
 
 ## In-Scope
 
-The consultative process that has produced this HL7 guide continues the work of the initial GH project and reflects clinical end user needs on balance with contributors from 2SLGBTQIA+[^2] organizations such as Fenway Health and active participants with lived experience from the United States and Canada. Vendors were included from Japan, Germany, India, and the United States.
-[^2]: Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community is not a monolith.
+The consultative process that has produced this HL7 guide continues the work of the initial GH project and reflects clinical end user needs on balance with contributors from 2SLGBTQIA+(fn2) organizations such as Fenway Health and active participants with lived experience from the United States and Canada. Vendors were included from Japan, Germany, India, and the United States.
 
 The in-scope core list of specific gender and sex use-data elements described by the specification, are as follows:
 1. Gender Identity (GI)
@@ -72,7 +71,7 @@ This guide builds upon the prior GH logical model by providing HL7 product famil
     1. Given the constraint in CDA to *not include* null-flavor codes within the "clinical content" value sets, the CDA entry templates bind to value sets that do not contain null-value concepts. Those "core" value sets are then used to create the complete value set used elswhere. 
 
 The guide contains illustrative use cases and linked examples that exchange the same use-case patient information, but each using the proper new product-family-specfic artifacts. 
-## Out-of-Scope
+### Out-of-Scope
 
 The Gender Harmony Project considered other data elements or attributes for the specification but has deferred those for future consideration because these categories did not meet the rigor necessary for Balloting at the present time. Work reserved for future consideration include:
 1. Defining or modeling the representation of patient sexual orientation. 
@@ -121,3 +120,8 @@ FHIR kept the single element approach used by V2 and therefore also forced imple
 
 ### In CDA
 TBD
+
+## FootNote (fn)
+(fn1): A grouping term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.
+
+(fn2): Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community is not a monolith.
