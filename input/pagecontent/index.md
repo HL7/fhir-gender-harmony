@@ -21,21 +21,21 @@ Of the information provided within this initial version of guide, only the CDA t
 
 The approaches in data exchange discussed in this guide expand HL7 best practices to assist organizations that adapt and extend FHIR profiles and implementation guides in their jurisdictions (e.g., US, Canada) to meet business and regulatory requirements. We look forward to implementers embracing the approaches outlined.
 
-# Background
+## Background
 
 As described in the original Gender Harmony logical model specification:
 
 > Health care is increasingly turning to technology to help improve systems and processes to benefit patients and their health. Ongoing efforts supported by governing agencies and standards committees are responding to the demonstrated need through standards that allow for seamless integration of patient information between systems.
 
-> It is imperative that both sex and gender vocabulary be formally integrated into clinical care because they are not interchangeable. Both influence health outcomes. Gender-marginalized individuals(fn1) face significant barriers to adequate and culturally responsive healthcare, leading to numerous health disparities. By adopting structured data sets, agnostic systems will be better equipped to transmit (share) and accept data elements that will improve the accuracy of patient information. Furthermore, standardizing data enables information to be combined with other data sources used to evaluate clinical outcomes. While data collection and documentation are critical factors in clinical decision-making, these new data will also promote important dialogue between clinicians and patients. Ultimately, this will assist with improved quality of care, reduced clinician burden and less fragmentation of a person&#39;s clinical record.
+> It is imperative that both sex and gender vocabulary be formally integrated into clinical care because they are not interchangeable. Both influence health outcomes. Gender-marginalized individuals [(fn1)](#fn1)  face significant barriers to adequate and culturally responsive healthcare, leading to numerous health disparities. By adopting structured data sets, agnostic systems will be better equipped to transmit (share) and accept data elements that will improve the accuracy of patient information. Furthermore, standardizing data enables information to be combined with other data sources used to evaluate clinical outcomes. While data collection and documentation are critical factors in clinical decision-making, these new data will also promote important dialogue between clinicians and patients. Ultimately, this will assist with improved quality of care, reduced clinician burden and less fragmentation of a person&#39;s clinical record.
 
 Currently, it is common that a single data element is used to capture both sex and gender information, often assuming these two items are one unified idea. This specification describes the specific data elements to be used for independent consideration of sex and gender, and the assessment of their differences promotes the health of women, men, and people of diverse gender identities of all age. Implementing these changes can improve data accuracy for sex and gender information in health care systems.
 
-# Scope
+## Scope
 
-## In-Scope
+### In-Scope
 
-The consultative process that has produced this HL7 guide continues the work of the initial GH project and reflects clinical end user needs on balance with contributors from 2SLGBTQIA+(fn2) organizations such as Fenway Health and active participants with lived experience from the United States and Canada. Vendors were included from Japan, Germany, India, and the United States.
+The consultative process that has produced this HL7 guide continues the work of the initial GH project and reflects clinical end user needs on balance with contributors from 2SLGBTQIA+ [(fn2)](#fn2) organizations such as Fenway Health and active participants with lived experience from the United States and Canada. Vendors were included from Japan, Germany, India, and the United States.
 
 The in-scope core list of specific gender and sex use-data elements described by the specification, are as follows:
 1. Gender Identity (GI)
@@ -84,11 +84,10 @@ The Gender Harmony Project considered other data elements or attributes for the 
 
 Regulatory, legal and research organizations have a vested interest in a consistent approach to documenting sex, gender and related information not only for patient care purposes (primary/acute/tertiary care, lab/diagnostics, allied health, ADT/administration, insured/payor, etc.) but also for a wide range of research, social service integration, public health, population health, epidemiology, cancer staging and registry, and national/international medical record exchange purposes.
 
-
-
 ### Standards Development Organizations (SDO)
 
 Messaging and interchange standards developers and standardized terminology organizations play a role in implementing guidance around distinguishing, capturing, and sharing gender and sex information. Having all of these organizations subscribe to the guidance in this specification will assist to bridge the gap between technology and implementation requirements. 
+
 ### Vendors
 
 All the sex and gender information described in this document requires engaged review and implementation support from all EHR system vendors to have a meaningful impact on patient care and clinical interactions. By including guidance for v2, FHIR, CDA, and working closely with DICOM, X12, and others, we hope to enable adoption of the Gender Harmony approach across the vendor spectrum. Vendors are encouraged to incorporate the intent of the specification into the end-user workflow.
@@ -103,7 +102,7 @@ For an analysis of the current state of sex and gender representation we encourg
 
 Of particular note in HL7 models is the use of "Administrative Gender/Sex" as a core data element for sex or gender exchange. Given the lack of clarity and consistency in the use of this "administrative" element, and the lack of a well established clinical value of use for all populations, there has been inconsistency in understanding and significant cooncern regard proper patient care. This guide exists to improve upon that. 
 
-### In V2 
+<!-- ### In V2 
 PID-8 is "Sex" and is defined as
 
 ```
@@ -119,9 +118,11 @@ Administrative Gender - the gender that the patient is considered to have for ad
 FHIR kept the single element approach used by V2 and therefore also forced implementers to use this one field to represent clinical sex, gendder, or any other sex-related information needed. 
 
 ### In CDA
-TBD
+TBD -->
 
-## FootNote (fn)
-(fn1): A grouping term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.
+#### FootNote(s)
+##### fn1
+<sup>A grouping term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.</sup>
 
-(fn2): Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community is not a monolith.
+##### fn2
+<sup>Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community is not a monolith.</sup>

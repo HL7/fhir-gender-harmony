@@ -9,7 +9,7 @@ name: fhir-gender-harmony
 title: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 description: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 status: draft # draft | active | retired | unknown
-version: 0.1.9
+version: 0.1.11
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -47,13 +47,7 @@ pages:
   hl7v2examples.md:
     title:  V2 Examples    
   design.md:
-     title: Design Decisions
-  fhirdesign.md:
-    title: FHIR Design Decisions
-  cdadesign.md:
-    title: CDA Design Decisions
-  hl7v2design.md:
-    title: V2 Design Decisions    
+     title: Design Considerations   
   labratory_use_case.md:
     title: Laboratory Use Case for transgender woman presenting to laboratory facility for blood draw
   hysterectomy_use_case.md:
@@ -65,18 +59,12 @@ pages:
   externalstandards.md:
     title: External Standadrds  
   fhirextensions.md:
-    title: FHIR Extensions
-  
-   
+    title: FHIR Extensions   
 menu:
   Home: index.html
-  Design Decisions: 
-    Overview: design.html
-    FHIR Design: fhirdesign.html
-    CDA Design: cdadesign.html
-    V2 Design: hl7v2design.html
+  Design Considerations: design.html  
   Model: model.html
-  External Standadrds: externalstandards.html
+  External Standards: externalstandards.html
   Use Cases:  
     DICOM PET scan in patient with change in gender: dicom_use_case.html
     Health Screening with lab test in patient with change in gender: labratory_use_case.html 
@@ -89,6 +77,7 @@ menu:
     CDA Gender Harmony: cdagenderharmony.html
     Examples: cdaexamples.html
   FHIR:
+    FHIR  Gender Harmony: fhirgenderharmony.html
     FHIR Extensions: fhirextensions.html
     Sex For Clinical Use: http://build.fhir.org/extension-patient-sexforclinicaluse.html
     Gender Identity: http://build.fhir.org/extension-individual-genderidentity.html
