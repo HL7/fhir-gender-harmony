@@ -1,21 +1,68 @@
 #### DICOM
-The existing DICOM model dates back to 1985 and earlier work. It was frozen and has remained unchanged since 1995. Imaging medical records from 1995 onward all use this model.
-The DICOM model was originally specified to include a single mandatory field to capture Patient Sex with allowed values of Male, Female, Other and Unknown. The usage was not explicitly specified, but the implicit usage was Sex for Clinical Use. It is used in various places within DICOM, and by DICOM compliant equipment, to specify values for sex-linked characteristics. For example, it is used as input for Standard Update Value (SUV) computations in nuclear medicine and used as a parameter into patient dose sensitivity models for radiation dose reporting. These computations and models are based on statistical analysis of many patients and reflect the sex-linked characteristics of the studied populations.
 
-Operationally, this field is initially populated either by hand or based on an order. The order is frequently conveyed by HL7 message. The inconsistency and confusion caused by having one field for multiple concepts (administrative sex, gender identity and sex for clinical use) leads to occasional inconsistency in the image results and reports created by DICOM equipment. It also leads to operators occasionally making changes to reflect the patient’s sex for clinical use that then cause downstream inconsistencies with HL7 systems that were using administrative sex or gender identity.
+The existing DICOM model dates back to 1985 and earlier work. It was
+frozen and has remained unchanged since 1995. Imaging medical records
+from 1995 onward all use this model. The DICOM model was originally
+specified to include a single mandatory field to capture Patient's Sex
+(0010,0008) with allowed values of Male, Female, Other and
+Unknown. Initially, the usage was not explicitly specified. It can be
+used in various places within DICOM, and by DICOM compliant equipment,
+to specify values for sex-linked characteristics. For example, it is
+used as input for Standard Update Value (SUV) computations in nuclear
+medicine and used as a parameter into patient dose sensitivity models
+for radiation dose reporting. These computations and models are based
+on statistical analysis of many patients and reflect the sex-linked
+characteristics of the studied populations.
 
-### DICOM
-DICOM has a change proposal cp1927 Patient sex and gender in process to incorporate some of the changes from the HL7 Gender Harmony Project. The present expectation is to revise DICOM
-to:
-- Clarify that the current Patient Sex attribute corresponds to the Sex for Clinical Use element of the Gender Harmony model. The values of “intersex” will be merged with “Complex” and encoded as the original DICOM “Other” category. “Male”, “Female” and “Unknown” can remain as before. This preserves full compatibility with existing medical records archives and equipment. As gender harmonized applications take over upstream ordering this should also reduce inconsistencies. The time frame for this value will be defined to be the time of the order or study as appropriate.
-- Add an optional Patient Gender Identity attribute with the same required and optional value set as described here. The time frame for this value will be defined to be the time of the order or study as appropriate.
+Operationally, this field is initially populated either by hand or
+based on an order. The order is frequently conveyed by HL7 V2.x
+message. The inconsistency and confusion caused by having one field
+for multiple concepts (administrative sex, gender identity and sex for
+clinical use) leads to occasional inconsistency in the image results
+and reports created by DICOM equipment. It also leads to operators
+occasionally making changes to reflect the patient’s sex for clinical
+use that then cause downstream inconsistencies with other systems that
+were using administrative sex or gender identity.
+
+#### DICOM Change Process
+
+DICOM has a change proposal "cp1927 Patient sex and gender" in process
+to incorporate some of the changes from the HL7 Gender Harmony
+Project. The present expectation is to revise DICOM to:
+
+- Clarify that the current Patient Sex attribute corresponds to the
+originator's administrative choices.  This preserves compatibility
+with existing medical records archives and equipment. It also explains
+that SFCU should be used for clinical analysis when available.
+
+- Add an optional SFCU attribute to convey SFCU as defined in the
+logical model. As gender harmonized applications are installed
+upstream that support SFCU, this should reduce ambiguities resulting
+from the use of local administrative choices.
+
+- Add an optional Patient Gender Identity attribute with the same
+required and optional value set as described here. 
+
 - Add an optional Name to Use attribute.
-- Clarify existing DICOM patient and order comment fields to indicate that when Sex for
-Clinical Use is “complex” these comment fields should provide information explaining relevant information for operators and clinicians. They are presently used for operator instructions, so this usage is a continuation of current usage.
 
-These meet the strategic constraints from DICOM— that the existing medical archives must remain valid without modification, that existing medical devices must remain minimally compliant, and that systems can be upgraded to fully support these changes without introducing dependency on upgrading other equipment.
+- Add an optional Pronouns attribute.
 
-DICOM plans to synchronize the development and approval of this change proposal with the activity of the Gender Harmony project. DICOM does not presently have a use case for incorporating Recorded Sex and Gender. It is not part of cp1927. When a use case is found it will either be incorporated into cp1927 (if not yet final) or treated as a separate change proposal.
+- Add an optional Recorded Sex and Gender attribute.
+
+- Clarify existing DICOM patient and order comment fields to indicate
+that when Sex for Clinical Use is “complex” these comment fields
+should provide information explaining relevant information for
+operators and clinicians. They are presently used for operator
+instructions, so this usage is a continuation of current usage.
+
+These meet the strategic constraints on DICOM that the existing
+medical archives must remain valid without modification, that existing
+medical devices must remain minimally compliant, and that systems can
+be upgraded to fully support these changes without introducing
+dependency on upgrading other equipment.
+
+DICOM is coordinating the development and approval of this change
+proposal with the activity of the Gender Harmony project. 
 
 
 #### SNOMED International
