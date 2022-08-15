@@ -1,10 +1,10 @@
-# Modeling Sex and Gender Representation
+### Modeling Sex and Gender Representation
 The World Health Organization (WHO) defines Sex as the “different biological and physiological characteristics of males and females, such as reproductive organs, chromosomes, hormones, etcetera” and Gender as the “socially constructed characteristics of women and men, such as norms, roles, and relationships of and between groups of women and men” (WHO, 2020.) In clinical practice however, there can be a multiplicity of contextual variants over a single time horizon, across multiple applications and/or institutions where clinicians, vendors and interface developers have been grappling to create their own electronic ‘work around’ specification(s) to meet local and/or internal needs.
 
 The gender-marginalized community has health care requirements that demand improvements that will benefit all patients. This implementation guide provides structural and semantic guidance to vendors and interface developers to address these requirements.
 
 The Gender Harmony logical model provides necessary constructs to more accurately capture sex and gender along with associated context of use. While the framework provides the necessary infrastructure, the specific changes in individual standards to concretely specify actual implementable structures are detailed in separate specifications (insert links to (HL7 v2, FHIR, DICOM etc.) while this implementation guide provides additional guidance and use cases. 
-## Model Overview
+#### Model Overview
 The conceptual model outlines the data elements, element attributes, terminology bindings and relationships that clarify the meaning and context of the information presented to guide and inform changes within operational standards. The Model has five (5) major elements independent of other components that may also be part of the information model for a Person: Gender Identity (GI), Sex For Clinical Use (SfCU), Recorded Sex or Gender (RSG), Name to Use (NtU), and Pronouns. 
 
 Each of the following sections is structured to align with the UML Model in Figure 1 and provides a definition, description, usage notes (if applicable), cardinality, and attributes (with recommended terminology if applicable) for each model element. 
@@ -12,7 +12,7 @@ Each of the following sections is structured to align with the UML Model in Figu
 <img style="vertical-align: top;" src="ModelDiagram.png" width="100%" /> 
 
 *Figure 1 Logical Model for Gender Identity and Sex*
-### Person
+#### Person
 **Definition:** This is an abstract class to be mapped onto a concrete class in a specific standard or definition. The concrete class is expected to be a kind of person. 
 
 **Usage Note:** In FHIR a specific functional mapping might add attributes or modify existing attributes of the FHIR Patient Class. When used with standards that do not define classes, e.g., HL7 v2.x, this abstract Person class can be mapped into concrete changes to the standard.
@@ -20,7 +20,7 @@ Each of the following sections is structured to align with the UML Model in Figu
 Each of the Person sub-elements in the model describes a specific context of sex or gender information; in essence a sex and/or gender context type. Some of these types are multi-valued based in part on the need for independent, occasionally co-occurring, values that are specific to particular contexts of use within that type. The sensitivity of these situations heightens the importance of representing this data in a way that supports masking and access restrictions. The Sex for Clinical Use (SFCU) can also be affected by independent co-occurring contexts of use. Depending upon the procedure ordered, drug prescribed, or nature of a clinical report different SFCUs might be chosen. This can be reflected in the mapping chosen for a patient for specific clinical reasons. The medical record in an EHR system might have one set SFCU, and different specific selected SFCUs chosen for mapping to NCPDP for a drug prescription, to FHIR for an order, to HL7 v2.x for another order, and to DICOM for an imaging request. This will be especially common during the transition period when some systems have been upgraded and others have not.
 
 The rules for these context dependent mappings are not defined in this abstract information model. They depend upon the concrete capabilities of the target system, and upon the specific clinical context at the time. It will be normal to find that when there are many objects related to a single patient (orders, reports, observations, etc.) that there are different SFCU due to differences in the context of use. Information about the context and reason for selection may be incorporated into the link to observations or reports that are part of the SFCU, or in the comment associated with Gender Identity.
-### Gender Identity (GI)
+#### Gender Identity (GI)
 Gender Identity describes the identity or identities of the person. This is important in many social and cultural contexts. It might be missing, as for an infant, or multi-valued in some cultures and specific situations. The meaning, criteria, and implications of specific gender identities is defined by the local culture and society. The terms used to capture GI are expected to reflect the variations found in different cultures and locations, so only a minimum value set is defined in the logical model. Local terminology is expected to extend this value set.
 
 **Source:** Person, self-reported only
@@ -61,7 +61,7 @@ Comment
 - Cardinality: 0..1
 - Type: long text
 
-### Sex for Clinical Use (SfCU)
+#### Sex for Clinical Use (SfCU)
 Sex for Clinical Use is provided for use in orders, observations, and other clinical uses. SfCu can be highly contextual and allows specific considerations to be provided for potential automated uses and records. Examples include:
 
 - A person with polycystic ovary syndrome can be identified in a blood work order so that their unexpected hormone levels can be properly reported and not rejected as invalid results.
@@ -120,7 +120,7 @@ Linked Clinical Observation
 - Cardinality: 0..n 
 - Type: string
 
-### Recorded Sex or Gender (RSG)
+#### Recorded Sex or Gender (RSG)
 Recorded Sex or Gender information typically originates from a physical or electronic document that was provided to a medical provider. The rules for these documents have varied significantly over time and place, and the relationship to current Gender Identity or SFCU may be unclear. The RSG element includes source information so that the definition of “X” in a California driver’s license can be found if necessary and the Jurisdiction for the state of California can be recorded. The RSG also includes an internationally equivalent code to reduce the problems with unfamiliar sources. The original medical record source can provide an equivalent international code when it has one. 
 
 **Definition:** Documentation of a specific instance of sex and/or gender information. 
@@ -195,7 +195,7 @@ Source Field Description
 - Cardinality: 0..1
 - Type: string
 
-### Name to Use (NtU)
+#### Name to Use (NtU)
 The Name to Use enables care providers to use the name that is chosen by the person. This element may match but is distinct from a person’s legal name and is the appropriate name to be used in person-centered healthcare conversations. Some cultures have very long names, and expect that for all but mandatory legal situations, the person will use a more manageable name. Jurisdictions have different rules and processes for name changes, so there is often a mismatch that can be prolonged in difficult situations. 
 
 **Definition:** Text attribute that provides the name that should be used when addressing or referencing the patient. 
@@ -226,7 +226,7 @@ Comment
 - Cardinality: 0..1
 - Type: long text
 
-### Pronouns
+#### Pronouns
 **Definition:** Pronoun(s) specified by the patient to use when referring to the patient in speech, in clinical notes, and in written instructions to caregivers. 
 
 **Usage Note:** Personal pronouns are words used instead of a noun or a noun phrase used to refer to people. Understanding which pronoun(s) to use when referring to someone is important for providing affirming health care. Avoiding incorrect pronoun use and patient misgendering is crucial in transgender and gender-diverse care. It is important to reliably exchange personal pronouns that the individual has specifically reported they want used. The information could be considered a primary (first class) element associated with the demographic information for the patient. However, it may require representation as an observation about the patient. Local policy will determine how pronouns are chosen for infants and other similar situations. Policy and local custom will determine what to use when this attribute is not present, or when multiple are present.

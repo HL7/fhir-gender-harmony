@@ -21,17 +21,17 @@ Given that gender and sex-related data greatly impact individual care, it is cri
 
 Studies indicate that around 40% of transgender persons in the U.S. attempt suicide in their lifetime [26,103]. Afton Bradley at the Virginia League for Planned Parenthood noted in 2017 that there was a “dramatic reduction in those [suicide] attempts when people have access to affirmative care” (61). “We need SOGI data collection to develop effective interventions to reduce and eliminate these disparities,” Cahill and Makadon pointed out the same year, “... If they do not count us, we do not count” (1).
 
-### Sex and Gender in Quality Measurement
+#### Sex and Gender in Quality Measurement
 Clinical quality measures traditionally evaluate performance using manually abstracted clinical and administrative data. Electronic clinical quality measures (eCQMs) evaluate performance using data extracted from electronic health records and/or digital health information technology (HIT) systems. Patient demographic information is often used simply to specify eCQM inclusion and/or exclusion criteria. As described in the Current State section, Gender and Sex are often represented in a single data element utilizing various coding standards and that inconsistency in data capture and implementation leads to downstream issues for quality measurement instruments and outcomes.
 
 For example, the National Committee for Quality Assurance (NCQA) produces the Healthcare Effectiveness Data and Information Set (HEDIS). Approximately 191 million people are enrolled in plans that report HEDIS results, making it one of health care’s most widely used performance improvement tools. HEDIS covers six (6) domains of care utilization measures, including Child and Adolescent Well-Care Visits, Frequency of Selected Procedures, Identification of Alcohol and Other Drug Services, Mental Health Utilization, Antibiotic Utilization and Healthcare-Associated Infection (HAI) Standard Ratio. For all these measures, individuals with nonbinary gender are excluded from HEDIS utilization measures that currently require a specific gender (male or female). NCQA recognizes this as an issue and has stated that it “continues to track industry standards for nonbinary gender”. In other words, the guidance provided in this specification can help improve representation of nonbinary gender and therefore measurement.
 
-### Sex and Gender Reporting in Payment for Care
+#### Sex and Gender Reporting in Payment for Care
 Some EHR systems have already begun to suggest tests or workflows based on sex or gender data which is often inaccurate in describing the needs of transgender, gender-diverse, and intersex persons. For instance, a patient may need to switch their insurance “sex” for a procedure to avoid denial of coverage or to even be offered a procedure or test in the first place. Pharmacies may also have to administratively change “sex” for approvals for particular medications and then switch the “sex” back to avoid denial of coverage (per NCPDP page 11). In addition, providers may have to address dozens of automatically flagged lab results which are irrelevant to the patient but are nonetheless required due to compliance regulations (63).
 
 Switching “sex” fields back and forth may trigger hundreds of new results or diagnostic warnings or messages, adding to the already significant issue of alert fatigue among medical providers. Further, clinicians may miss proper risk assessments based on whether the “correct” sex field is provided. For instance, a transgender woman who is marked as “male” may miss crucial breast cancer screenings, but a transgender woman who is marked as “female” may miss prostate cancer screenings. Only by including contextual data about gender identity, sex assigned at birth, organ inventories, hormone levels, and chromosomal makeup can these issues be sufficiently avoided.
 
-### Sex and Gender Uses in Data Analysis
+#### Sex and Gender Uses in Data Analysis
 Storing and exchanging data in structured formats ensures that EHR and HIT systems are better equipped to notify health care teams of appropriate and preventive services, but this is not an end itself. It is critical to have standardized high-quality data in order to conduct data analysis to address health inequities. While there have been some scientific advancements, there continues to be a dearth of data and literature on health outcomes and experiences for transgender and gender diverse people. Many transgender and gender diverse people remain largely invisible to their care providers, face stigma, barriers to accessing care and related health disparities. Standardized data will facilitate information-sharing for clinical care, research, and public health interventions that can further reduce health care disparities in this underserved population.
 
 There are striking disparities in accessing health services that correlate with gender identity, as well as race/ethnicity and other factors. It is important to consider the intersecting identities and experiences of transgender and gender diverse people, to understand the cumulative discrimination and health inequities this community faces. Intersectionality is a framework for describing the disparities and culminating impact a person or group of people are affected by. Sex for Clinical Use (SFCU) and gender identity with other demographic data can be used to evaluate service utilization and health outcomes for subpopulations.
@@ -40,14 +40,14 @@ Currently, data resides in disparate systems with varying degrees of accuracy, p
 
 
 
-# Gender Harmony Examples
+#### Gender Harmony Examples
 
-## Additional Data Coding Examples
+#### Additional Data Coding Examples
 The following items are provided as examples that align with the data elements noted within the informative material.
 
 The following tables were created by Clair Kronk. See Suggested Tables in Google Docs [81] for additional detail. These tables include potential extensions to these tables which may be useful in various scenarios. This document includes a 75 other potential values for gender identities, pronoun sets, assigned sex at birth values, among other things. Additionally, it includes usage notes and information to consider in regional implementations.
 
-### Gender Identity (GI)
+#### Gender Identity (GI)
 <table>
     <thead>
         <tr>
@@ -112,11 +112,11 @@ Cases linked to “Unknown” could be theoretically mapped to ‘U’ and speci
 
 Kronk [81] also recommends certain additional terms be required in the US and Canada, specifically:
 
-### Name to Use
+#### Name to Use
 Name to Use per [81]:
 > *“This is a person’s name, specifically, the name that they use. This may differ from a patient’s legal name on certain identity documents, from the patient’s name registered with an insurance company, etc., but it is still their name. Do not use terms like “affirmed name”, “chosen name”, or “real name”, or “preferred name” as these imply that a transgender person’s name is somehow lesser than a cisgender (non-transgender) person’s name, and can be chosen to be ignored.”*
 
-### Personal Pronoun Standards
+#### Personal Pronoun Standards
 LOINC provides the following personal pronoun answer list:
 <table>
     <thead>

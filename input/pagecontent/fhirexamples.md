@@ -1,6 +1,6 @@
 # FHIR Examples
 
-## x.3 Example 03: FHIR 
+### x.3 Example 03: FHIR 
 
 The patient is referenced as the subject of DiagnosticReport,
 DocumentReference, ImagingStudy or ImagingSelection. Mapping to DICOM is as follows:
@@ -21,12 +21,12 @@ Add snippet of extension inlined
 
 # **TODO** Have examples for the use cases 
 
-## Laboratory Use Case Example
-### **TODO** Examples for this use cases 
-## Hysterectomy Use Case Example
-### **TODO** Examples for this use cases 
-## DICOM Use Case Example
-### **TODO** Examples for this use cases 
-## Health Maintanence Use Case Example
-### **TODO** Examples for this use cases 
+### Laboratory Use Case Example
+#### **TODO** Examples for this use cases 
+### Hysterectomy Use Case Example
+#### **TODO** Examples for this use cases 
+### DICOM Use Case Example
+#### **TODO** Examples for this use cases 
+### Health Maintanence Use Case Example
+#### **TODO** Examples for this use cases 
 

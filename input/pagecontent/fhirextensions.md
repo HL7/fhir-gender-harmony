@@ -1,16 +1,16 @@
-# FHIR Extensions
+### FHIR Extensions
 
-## Note to Balloters
+#### Note to Balloters
 
-## Gender Identity
+#### Gender Identity
 
-## Recorded Sex or Gender
+#### Recorded Sex or Gender
 
-## Sex for Clinical Use
+#### Sex for Clinical Use
 
-## Pronouns
+#### Pronouns
 
-## Name for Use
+#### Name for Use
 [NameToUse]
 
 {% include markdown-link-references.md %}

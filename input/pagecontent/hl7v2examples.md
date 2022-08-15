@@ -1,10 +1,10 @@
 V2 Examples
 
-# DICOM Use Case Example
+### DICOM Use Case Example
 
-## x.1 Example 01: Imaging Order
+#### x.1 Example 01: Imaging Order
 
-### Below is a HL7 v2.9.1 OMI Imaging Order for the DICOM Use Case.
+#### Below is a HL7 v2.9.1 OMI Imaging Order for the DICOM Use Case.
 
 MSH|\^\~\\&|||||20220715142240||OMI\^O23|WSA5mY0UBuCGrytRTAFR8UWJ|P|2.9.1  
 PID|||patientID^^^\^MR||Smith\^Janet^^^^\^B\~Smith\^John^^^^\^N|||F  
@@ -25,9 +25,9 @@ This maps to DICOM Modality Worklist as follows:
 | PID-5 Name Type Code = Nickname | Patient Name to Use | (0010,xxx3) | PN    | Smith\^John^^^                                             |
 
 
-## x.2 Example 02: Patient Name Update
+#### x.2 Example 02: Patient Name Update
 
-### Below is a HL7 v2.9.1 ADT Demographics Update for the DICOM Use Case.
+#### Below is a HL7 v2.9.1 ADT Demographics Update for the DICOM Use Case.
 
 MSH|\^\~\\&|||||20220715151029||ADT\^A08|TwxxneTRWE9JGX4U2p3hCLJH|P|2.9.1  
 EVN||20220715151118||01  
@@ -50,11 +50,4 @@ _Note: the Validity Period is the same as the date the name change was entered b
 
 
 
-### **TODO** Examples for this use cases 
-## Health Maintanence Use Case Example
-### **TODO** Examples for this use cases 
-# **TODO** Have examples for the use cases 
-## Laboratory Use Case Example
-### **TODO** Examples for this use cases 
-## Hysterectomy Use Case Example
-### **TODO** Examples for this use cases 
+# 

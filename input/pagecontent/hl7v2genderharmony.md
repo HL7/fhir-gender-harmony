@@ -1,18 +1,18 @@
-# V2 Gender Harmony 
+### V2 Gender Harmony 
 
-# **NOTE TO BALLOTERS**
-## V2.
+#### **NOTE TO BALLOTERS**
+#### V2.
 
 *In all product families there is debate around use of observations to represent the Gender Harmony concepts – v2 is no different. We are seeking feedback from the community around which solution is more acceptable / implementable / appropriate. Identification/Labeling of the Gender Harmony concepts uses the same vocabulary (LOINC) regardless if using the new segment approach (GSP-4), but for the other 2 we have specific segments (Recorded Sex or Gender (GSR) and Sex for Clinical Use (GSC)) or in the observation code (OBX-3). Similarly, the value sets used for the answers in the segments (GSP-5, GSR-4 and GSC-4) shall be the same as in FHIR or CDA. While we do not here describe an OBX-based approach, it may be possible to convey additional Gender Harmony concepts in this way, understanding that in order to create an equivalence for all concepts represented in the new segments, the observation segment would need to be extended with several fields. In your comments, please include the pros / cons you see for each approach.*
 
 
-# **7 V2 IMPLEMENTATION**
+#### **7 V2 IMPLEMENTATION**
 HL7’s Version 2.x (V2) messaging standard is the workhorse of electronic data exchange in the clinical domain and arguably the most widely implemented standard for healthcare in the world. This messaging standard allows the exchange of clinical data between systems. It is designed to support a central patient care system as well as a more distributed environment where data resides in departmental systems. It covers workflows and result automation and can be expected to be present for at least some of the data exchange that needs to convey Gender Harmony data.
-1. # **INTERIM SOLUTION**
+#### **INTERIM SOLUTION**
 [TO DO – need to define ‘interim solution and why it was created]
 
 In order to support the exchange of a limited set of Gender Harmony concepts for the patient using the existing base standard constructs, the creation of an observation group consisting of an Observation (OBX) segment, a participation (PRT) segment and a Comment (NTE) segment inserted in the respective message structures has been proposed here:  [www.hl7.org/permalink/?SOGIGuidance](http://www.hl7.org/permalink/?SOGIGuidance).
-1. # **GSP – Person Gender and Sex Segment**
+#### **GSP – Person Gender and Sex Segment**
 The GSP segment conveys person-level concepts relating to an individual. Common concepts known to be important include:
 
 - Gender Identity:  [TO DO - ADD CORRECT REFERENCE TO DEFINITION/CONCEPT] 
@@ -36,13 +36,13 @@ HL7 Attribute Table – GSP – Person Gender and Sex
 XE "HL7 Attribute Table: OH4"
 # 7.1.1.1 GSP-1   Set IDXE " OH4-1 Set id"   (SI)   03543
 Definition: This field contains the sequence number used to identify the GSP segment instances in a message. 
-2. # GSR-2   Action CodeXE " OH4-2   Action Code "   (ID)   00816
+#### GSR-2   Action CodeXE " OH4-2   Action Code "   (ID)   00816
 Definition: This field contains a code defining the action to be taken for this segment.
-2. # GSP-3   GSP Instance Identifier (EI) <TBD>
+#### GSP-3   GSP Instance Identifier (EI) <TBD>
 Definition: This field contains the value that uniquely identifiers a single GSP declaration for an individual. This field is conditionally required when the Action Code in GSP-2 indicates data is not being sent in Snapshot Mode (valued “S”).  
-2. # GSP-4   SOGI Concept  (CWE)   <TBD>
+#### GSP-4   SOGI Concept  (CWE)   <TBD>
 Definition: This field contains an identifer for the SOGI related concept being asserted (eg. Gender Identity, or Personal Pronouns). Refer to [TO DO - ADD CORRECT REFERENCE TO DEFINITION/CONCEPT]*,* for suggested values.
-2. # GSP-5   SOGI Concept Value  (CWE)   <TBD>
+#### GSP-5   SOGI Concept Value  (CWE)   <TBD>
 NOTE:  This reference was maintained in this IG for continunity only. Sexual orientation was not a part of the Gender Harmony Project.
 
 Definition: This field contains the value asserted for the concept conveyed in GSP-4. The appropriate value set to use will vary with the concept being communicated (i.e. the valid list of concepts for Gender Identity will likely be different than the valid list of concepts for Sexual Orientation).
@@ -50,9 +50,9 @@ Definition: This field contains the value asserted for the concept conveyed in G
 [TO DO - ADD CORRECT REFERENCE TO CODE SET/VALUE SET]  
 
 
-2. # GSP-6   Validity PeriodXE "OH4-4 Combat Zone End Date "   (DR)   <TBD>
+#### GSP-6   Validity PeriodXE "OH4-4 Combat Zone End Date "   (DR)   <TBD>
 Definition: This field asserts the time frame during which the value in GSP-5 applies to the individual. This field may contain values for both the Start Date/Time and End Date/Time for values known to no longer be in use. Alternatively, the field may be populated with just a Start Date/Time which indicates that the value is still currently in use. **Note that the Start Date/Time for the Validitity Period may be different than the date on which the data was collected and/or entered.**
-2. # GSP-7   Comment  (TX)   <TBD>
+#### GSP-7   Comment  (TX)   <TBD>
 Definition: This field contains a free text comment pertaining to the value conveyed in GSP-5.
 
 As an example, consider an individual who identified as male as of January 1 2021 and used he/him/his pronouns until July 1 2021 when the individual began to also identify as non-binary and adopt the they/them/theirs pronouns. If the individual had encounters with a provider in March and October, the following segments would represent the Person Gender and Sex information known at those times.
@@ -87,7 +87,7 @@ GSP|2|S||76691-5^Gender identity^LN |X^Non-binary^L|20210701
 
 GSP|3|S||90778-2^Personal pronouns – Reported^LN |LA29520-6^they/them/their/theirs/themselves^LN|20210701
 
-1. # **GSR – Recorded Gender and Sex Segment**
+#### **GSR – Recorded Gender and Sex Segment**
 The recorded sex and gender concept includes the various sex and gender concepts that are often used in existing systems but are not known to represent a gender identity or sex for clinical use. Examples of recorded sex or gender concepts include administrative gender, administrative sex, and sex assigned at birth. Other examples include the sex or gender marker on a birth certificate, insurance card, driver's license, passport, or other document. These sex or gender concepts vary widely in their use and possible values. For the purposes of exchanging these concepts, implementers are encouraged to define the specific sex or gender concept that is relevant for their use case and create a use-case specific property or extension to represent that specific concept. For example, if the sex assigned at birth is an important concept in a specific jurisdiction, that jurisdiction can create a realm-specific extension for that concept. 
 
 Documenting the recorded gender or sex is an important aspect of transgender and gender-diverse care as an individual’s identity documents may be updated at different rates or for different reasons. For instance, a trans woman may be able to update her driver’s license to ‘F’ but her state might not allow changing a value on her birth certificate, which may still read ‘M’. 
@@ -111,28 +111,28 @@ HL7 Attribute Table – GSR – Recorded Gender and SexXE "HL7 Attribute Table: 
 |9|||DR|O|||<TBD>|Validity Period|
 |10|||TX|O|||<TBD>|Comment|
 
-2. # OH4 field definitionsXE "OH4 field definitions"
-2. # GSR-1   Set IDXE " OH4-1 Set id"   (SI)   03543
+#### OH4 field definitionsXE "OH4 field definitions"
+#### GSR-1   Set IDXE " OH4-1 Set id"   (SI)   03543
 Definition: This field contains the sequence number used to identify the GSR segment instances in a message. 
-2. # GSR-2   Action CodeXE " OH4-2   Action Code "   (ID)   00816
+#### GSR-2   Action CodeXE " OH4-2   Action Code "   (ID)   00816
 Definition: This field contains a code defining the action to be taken for this  segment. Recorded Gender and Sex information for an individual must be sent in Snapshot Mode thus this field is constrained to a value of “S”. A “snapshot” for an individual may be defined as either a set of GSR segments conveying a snapshot of the current valid values for the individual or a set of GSR segments conveying a snapshot of the history of the individual as known by the system generating the message (including known values which are no longer valid (see use of Validity Period in GSP-6 for more information).
-2. # GSR-3   GSR Instance Identifier (EI) <TBD>
+#### GSR-3   GSR Instance Identifier (EI) <TBD>
 Definition: This field contains the value that uniquely identifiers a single GSR declaration for an individual. This field is conditionally required when the Action Code in GSR-2 indicates data is not being sent in Snapshot Mode (valued “S”).  
-2. # GSR-4   Recorded Gender or Sex   (CWE)   <TBD>
+#### GSR-4   Recorded Gender or Sex   (CWE)   <TBD>
 Definition: This field contains the sex or gender property for the individual from a document or other record. [TO DO: ADD CORRECT REFERENCE TO CODE SET/VALUE SET], for suggested values.
-2. # GSR-5   Document TypeXE "OH4-4 Combat Zone End Date "   (CWE)   <TBD>
+#### GSR-5   Document TypeXE "OH4-4 Combat Zone End Date "   (CWE)   <TBD>
 Definition: This field contains the source document where this sex or gender property is recorded. For instance national ID card, birth certificate, passport, patient medical record.
-2. # GSR-6   Source Field Name   (CWE)   <TBD>
+#### GSR-6   Source Field Name   (CWE)   <TBD>
 Definition: This field asserts the name of the source field on the document.
-2. # GSR-7   Jurisdiction   (CWE)   <TBD>
+#### GSR-7   Jurisdiction   (CWE)   <TBD>
 Definition: This field contains the jurisdiction or organization that issued the document from which the sex or gender was acquired.
-2. # GSR-8   Acquisition Date   (DTM)   <TBD>
+#### GSR-8   Acquisition Date   (DTM)   <TBD>
 Definition: This field contains the date/time when the sex or gender value was first recorded in the system.
-2. # GSR-9   Validity Period XE "OH4-4 Combat Zone End Date "   (DR)   <TBD>
+#### GSR-9   Validity Period XE "OH4-4 Combat Zone End Date "   (DR)   <TBD>
 Definition: This field asserts the time period during which the recorded gender or sex value in GSR-3 applies to the individual. May be just a Start Date/Time for values which are still valid.
-2. # GSR-10  Comment  (TX)   <TBD>
+#### GSR-10  Comment  (TX)   <TBD>
 Definition: This field contains a free text explanation about the context or source of the recorded sex or gender value.
-1. # **GSC – Sex For Clinical Use Segment**
+#### **GSC – Sex For Clinical Use Segment**
 [TO DO: ADD CORRECT REFERENCE TO DEFINITION/CONCEPT]  
 
 Sex for Clinical Use is a categorization of a patient's clinical sex derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. This property is intended for use in clinical decision making and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population.
@@ -172,28 +172,28 @@ HL7 Attribute Table – GSC –Sex for Clinical UseXE "HL7 Attribute Table: OH4"
 |7|||ERL|O|Y||<TBD>|Evidence|
 |8|||TX|O|||<TBD>|Comment|
 
-2. # OH4 field definitionsXE "OH4 field definitions"
-2. # GSC-1   Set IDXE " OH4-1 Set id"   (SI)   03543
+#### OH4 field definitionsXE "OH4 field definitions"
+#### GSC-1   Set IDXE " OH4-1 Set id"   (SI)   03543
 Definition: This field contains the sequence number used to identify the GSC segment instances in a message. 
-2. # GSC-2   Action CodeXE " OH4-2   Action Code "   (ID)   00816
+#### GSC-2   Action CodeXE " OH4-2   Action Code "   (ID)   00816
 Definition: This field contains a code defining the action to be taken for this  segment.  
-2. # GSC-3   GSR Instance Identifier (EI) <TBD>
+#### GSC-3   GSR Instance Identifier (EI) <TBD>
 Definition: This field contains the value that uniquely identifiers a single GSC declaration for an individual. This field is conditionally required when the Action Code in GSC-2 indicates data is not being sent in Snapshot Mode (valued “S”).  
-2. # GSC-4   Sex for Clinical Use   (CWE)   <TBD>
+#### GSC-4   Sex for Clinical Use   (CWE)   <TBD>
 Definition: This field asserts the context-specific categorization of a patient's sex for the purpose of clinical use. Refer to [TO DO: ADD CORRECT REFERENCE TO CODE SET/VALUE SET], for suggested values.
-2. # GSC-5   Validity PeriodXE "OH4-4 Combat Zone End Date "   (DR)   <TBD>
+#### GSC-5   Validity PeriodXE "OH4-4 Combat Zone End Date "   (DR)   <TBD>
 Definition: This field asserts the time frame during which this value applies to the patient context. May be just an initial dateTime.
-2. # GSC-6   Context   (ERL)   <TBD>
+#### GSC-6   Context   (ERL)   <TBD>
 Definition: This field asserts the clinical context(s) relevant for the declared SFCU value. The ERL data type is used to specify a location in the message which carries the clinical context. For example, GSC-5 may point to procedure (PR1) or order (ORC) segment within the message. This field is allowed to repeat to allow a single declared SFCU value to be applied to multiple contexts within the message. As well, the GSC segment is allowed to repeat within a message as an individual may have different SFCU values for different contexts within a single message. The GSC-6 field is required as any SFCU value declared within a message must relate to at least one context within the same message.
-2. # GSC-7   Evidence   (ERL)   <TBD>
+#### GSC-7   Evidence   (ERL)   <TBD>
 Definition: This field asserts clinical data (e.g. observations, diagnoses) that are used to determine the SFCU value. The linked information should clearly align with the chosen SFCU value. This field is allowed to repeat as multiple pieces of clinical data may contribute to the chosen SFCU value.
-2. # GSC-8  Comment  (TX)   <TBD>
+#### GSC-8  Comment  (TX)   <TBD>
 Definition: This field contains a free text comment pertaining to the sex for clinical use.
-1. # **INSERTING THE SEGMENTS INTO THE RESPECTIVE MESSAGES**
+#### **INSERTING THE SEGMENTS INTO THE RESPECTIVE MESSAGES**
 In v2 the event context determines the message structure, and the location in the order of segments in the message provided context. How and where these new segments are used depends on the context. This section is focused only on those events where *Gender Harmony concepts* are of importance, primarily for patient related events (though this could also be important to exchange for staff master files). 
 
 The GSP, GSR, and GSC segments are related and will be inserted in patient specific messages as a group at the end of the patient identification, indicating that these concepts belong to the patient. When placed in other message groups, for example following the Next of Kin (NK1) segment, the concepts are understood to relate to the person being described in the Next of Kin segment, though only the first two segment types make sense here.
-1. # **Admit / Transfer / Discharge (Patient Administration = Chapter 3)**
+#### **Admit / Transfer / Discharge (Patient Administration = Chapter 3)**
 ADT^A01^ADT\_A01: ADT Message XE "ADT"  XE "Messages:ADT" 
 
 |**Segments**|**Description**|**Status**|**Chapter**|
@@ -224,7 +224,7 @@ ADT^A01^ADT\_A01: ADT Message XE "ADT"  XE "Messages:ADT"
 |}]|--- NEXT\_OF\_KIN end|||
 |`   `[PV1](D:\Eigene Dateien\2018\HL7\Standards\v2.9 May\716 - New.doc##PV1)|Patient Visit||3|
 |[  [PV2](D:\Eigene Dateien\2018\HL7\Standards\v2.9 May\716 - New.doc##PV2)  ]|Patient Visit - Additional Info.||3|
-#
+ 
 
 
 

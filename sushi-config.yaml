@@ -64,12 +64,10 @@ menu:
   Home: index.html
   Design Considerations: design.html  
   Model: model.html
-  External Standards: externalstandards.html
   Use Cases:  
     DICOM PET scan in patient with change in gender: dicom_use_case.html
-    Health Screening with lab test in patient with change in gender: labratory_use_case.html 
-  Terminology: terminology.html 
-  Examples: ghexamples.html 
+    Health Screening with lab test in patient with change in gender: labratory_use_case.html   
+ 
   V2:
     V2 Gender Harmony: hl7v2genderharmony.html
     Examples: hl7v2examples.html
@@ -78,13 +76,16 @@ menu:
     Examples: cdaexamples.html
   FHIR:
     FHIR  Gender Harmony: fhirgenderharmony.html
-    FHIR Extensions: fhirextensions.html
-    Sex For Clinical Use: http://build.fhir.org/extension-patient-sexforclinicaluse.html
-    Gender Identity: http://build.fhir.org/extension-individual-genderidentity.html
-    Pronouns: http://build.fhir.org/extension-individual-pronouns.html
-    Recorded Sex or Gender: http://build.fhir.org/extension-individual-recordedsexorgender.html
+    # FHIR Extensions: fhirextensions.html
+    # Sex For Clinical Use: http://build.fhir.org/extension-patient-sexforclinicaluse.html
+    # Gender Identity: http://build.fhir.org/extension-individual-genderidentity.html
+    # Pronouns: http://build.fhir.org/extension-individual-pronouns.html
+    # Recorded Sex or Gender: http://build.fhir.org/extension-individual-recordedsexorgender.html
     Examples: fhirexamples.html
+  Examples: ghexamples.html   
+  Terminology: terminology.html 
   All Artifacts: artifacts.html
+  External Standards: externalstandards.html
   History: http://hl7.org/fhir/us/military-service/history.html
 
 

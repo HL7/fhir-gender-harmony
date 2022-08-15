@@ -22,11 +22,11 @@ DICOM plans to synchronize the development and approval of this change proposal 
 SNOMED International created, then disbanded, a Sex and Gender Clinical Project Group. The project group gathered SMEs to provide advice on the current clinical and administrative needs for sex and gender terminology standards. The group was disbanded in May 2021 pending completion of the ISO analysis and this Gender Harmony project.
 
 #### NCPDP
-The National Council for Prescription Drug Programs (NCPDP) is an ANSI accredited SDO representing the pharmacy services industry. The NCPDP SCRIPT ERx standard is used in EHR systems. The current values under the standard, labeled Gender, are F (Female), M (Male), U (Unknown), and N (Non-binary).
+The National Council for Prescription Drug Programs (NCPDP) is an ANSI accredited SDO representing the pharmacy services industry. The NCPDP SCRIPT ERx standard is used in EHR systems. The current values under the standard, labeled Gender, are F (Female), M (Male), and U (Unknown).
 
-owever, NCPDP is moving to include both Administrative Gender and Sex at Birth elements in its future state. NCPDP has identified a business need to identify when someone’s gender is different then their Sex Assigned at Birth (SAAB) to obtain medication without delay, in situations where gender mismatch edits may occur.
+However, NCPDP is moving to include both Administrative Gender and Sex at Birth elements in its future state. NCPDP has identified a business need to identify when someone’s gender is different then their Sex Assigned at Birth (SAAB) to obtain medication without delay, in situations where gender mismatch edits may occur.
 
-Currently, NCPDP has approved the field Sex Assigned at Birth (F32-W8) that will be used as an optional field in the event the Sex Assigned at Birth (if present) differs from the Patient Gender Code (305-C5), Gender Code (721-MD) or the current XML element Gender. For example, the Sex Assigned at Birth could be “Male” with the Gender/Patient Gender Code/Gender Code field “Female”.
+Currently, NCPDP has approved the field Sex Assigned at Birth that will be used as an optional field in the event the Sex Assigned at Birth (if present) differs from the current XML element Gender. For example, the Sex Assigned at Birth could be “Male” with the Gender field “Female”.
 
 Note: The NCPDP Gender Transition Task Group determined the Conditional Gender Code (C08- 4T), and Purchaser Gender Code (595-YY) were not applicable to patient matching. There was also an added element of “Reproductive Potential”.
 
