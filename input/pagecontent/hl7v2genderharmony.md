@@ -1,233 +1,117 @@
-### V2 Gender Harmony 
+### Introduction
 
-#### **NOTE TO BALLOTERS**
-#### V2.
+HL7’s Version 2.x (V2) messaging standard is the workhorse of electronic data exchange in the clinical domain and arguably the most widely implemented standard for healthcare in the world. This messaging standard allows the exchange of clinical data between systems. It is designed to support a central patient care system as well as a more distributed environment where data resides in departmental systems. While the breadth of scenarios covered by the V2 standard means that not all messages will require support for Gender Harmony concepts (e.g. master file management, workflows and result automation) it can be expected that many of the V2 data exchange scenarios will need to convey Gender Harmony data.
 
-*In all product families there is debate around use of observations to represent the Gender Harmony concepts – v2 is no different. We are seeking feedback from the community around which solution is more acceptable / implementable / appropriate. Identification/Labeling of the Gender Harmony concepts uses the same vocabulary (LOINC) regardless if using the new segment approach (GSP-4), but for the other 2 we have specific segments (Recorded Sex or Gender (GSR) and Sex for Clinical Use (GSC)) or in the observation code (OBX-3). Similarly, the value sets used for the answers in the segments (GSP-5, GSR-4 and GSC-4) shall be the same as in FHIR or CDA. While we do not here describe an OBX-based approach, it may be possible to convey additional Gender Harmony concepts in this way, understanding that in order to create an equivalence for all concepts represented in the new segments, the observation segment would need to be extended with several fields. In your comments, please include the pros / cons you see for each approach.*
+*NOTE TO BALLOTERS*
 
+*#1 In all product families there is debate around use of observations (OBX) to represent the Gender Harmony concepts as opposed to dedicated constructs (e.g. new v2 segments, FHIR extensions). While we do not describe the OBX-based approach here, there is the SOGI profile component for use with existing v2 implementations which uses a PATIENT\_OBSERVATION\_GROUP consisting of an Observation (OBX) segment, a Participation (PRT) segment and a Comment (NTE) segment inserted in the respective message structures. It is published here: [www.hl7.org/permalink/?SOGIGuidance](http://www.hl7.org/permalink/?SOGIGuidance). It may be possible to convey additional Gender Harmony concepts in this way, understanding that in order to create an equivalence for all concepts represented in the new segments (particularly Recorded Sex and Gender and Sex for Clinical Use), the observation segment would need to be extended with several fields. In this ballot we are seeking feedback from the community around which solution is more acceptable / implementable / appropriate, so please indicate that here. Detailed comments on the Long-Term Guidance in v2.9.1 should be submitted there on the <ADD LINK“HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments” ballot ([http://www.hl7.org/documentcenter/public/ballots/2022SEP/downloads/V291_R1_N1_2022SEP.zip]())>, including comments related to supporting the use of PATIENT\_OBSERVATION groups and suggestions for its implementation instead of the special segments.* 
 
-#### **7 V2 IMPLEMENTATION**
-HL7’s Version 2.x (V2) messaging standard is the workhorse of electronic data exchange in the clinical domain and arguably the most widely implemented standard for healthcare in the world. This messaging standard allows the exchange of clinical data between systems. It is designed to support a central patient care system as well as a more distributed environment where data resides in departmental systems. It covers workflows and result automation and can be expected to be present for at least some of the data exchange that needs to convey Gender Harmony data.
-#### **INTERIM SOLUTION**
-[TO DO – need to define ‘interim solution and why it was created]
+#### Regardless of the method ultimately selected, the exchange of the person-specific Gender Harmony concepts (e.g. pronouns, gender identity) uses the same vocabulary (LOINC) regardless if using the new segment approach (GSP-4) or an observation (OBX) segment. Similarly, the value sets used for the answers in the segments (GSP-5, GSR-4 and GSC-4) shall be the same as in FHIR or CDA or OBX-5 in the observation approach. Additional attributes to support Gender Harmony related data exchange also are using the same vocabulary across product families. Comments on vocabulary, where shared should be made in this FHIR R5the* “*HL7 FHIR® Release 5” ballot [<hl7.org/fhir/2022Sep](C:\Users\riki.merrick\OneDrive - Association of Public Health Laboratories\Documents\Supporting docs\HL7\HL7V291_Sep2022\background\hl7.org\fhir\2022Sep)LINK> ballot.*
 
-In order to support the exchange of a limited set of Gender Harmony concepts for the patient using the existing base standard constructs, the creation of an observation group consisting of an Observation (OBX) segment, a participation (PRT) segment and a Comment (NTE) segment inserted in the respective message structures has been proposed here:  [www.hl7.org/permalink/?SOGIGuidance](http://www.hl7.org/permalink/?SOGIGuidance).
-#### **GSP – Person Gender and Sex Segment**
-The GSP segment conveys person-level concepts relating to an individual. Common concepts known to be important include:
+##### Short Term Guidance
 
-- Gender Identity:  [TO DO - ADD CORRECT REFERENCE TO DEFINITION/CONCEPT] 
-- Pesonal Pronouns:  [TO DO - ADD CORRECT REFERENCE TO DEFINITION/CONCEPT]*.*
+During the COVID-19 pandemic some jurisdictions required the inclusion of Sexual Orientation (which is not in the current scope of this IG) and Gender Identity, collectively often referred to as SOGI, in result messages sent to Public Health known as Electronic Lab Reporting (ELR). While we created a short-term solution confined to the current mechanisms available in the base standard (currently V2.9) for use in ELR, we want to make clear that use of ELR during the pandemic should not be construed as an endorsement of requiring labs and other ELR submitters to collect and transmit this data, but rather recognition of the fact that it may be necessary in the immediate short-term to make this data available to Public Health, given that SOGI data is typically not collected by laboratories nor is it critical to performing and interpreting lab tests. In the longer term this data should come from the Electronic Health Record system (EHR-s) – using the electronic case reporting standards that already include a profile (FHIR) and template (CDA) for Gender Identity which should be expanded to support other SOGI-related concepts, such as Sexual Orientation, and then used to convey this data to Public Health.
 
-The HL7 base specification does not proscribe if/how a system maintains an audit trail of changes to the data represented in the GSP segment. Depending on system design and workflow needs, it may be necessary to retain the gender and sex history for an individual.
+Because laboratories often don’t have direct interaction with the patient, the specimen is often collected off-site and transported to the lab, the collection of SOGI data may need to be performed by providers and transmitted to the lab via the ordering process. Where electronic order exchange (e.g. LOI) is used, this will require updates to the order message to include this content. Implementers will need to consider the necessary data collection workflows and work with providers and other patient-facing groups to collect and share this data with the labs.
 
-The use of the GSP segment is not restricted to use with a patient alone. Other individuals represented in a message (e.g. a next of kin) may also have personal gender and sex values.  
+In order to support this need, initially driven by the laboratory use case, as a short-term solution a profile component that can be used in any message structure was created. This profile supports the use of a PATIENT\_OBSERVATION\_GROUP consisting of an Observation (OBX) segment, a Participation (PRT) segment (if part of the used version of the standard) and a Comment (NTE) segment inserted in the respective message structures and is published here: [www.hl7.org/permalink/?SOGIGuidance](http://www.hl7.org/permalink/?SOGIGuidance).
 
-HL7 Attribute Table – GSP – Person Gender and Sex
+##### Long Term Guidance
 
-|**SEQ**|**LEN**|**C.LEN**|**DT**|**OPT**|**RP/#**|**TBL#**|**ITEM#**|**ELEMENT NAME**|
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :- |
-|1|||SI|R|||03543|Set ID|
-|2|1..1||ID|R||0206|00816|Action Code|
-|3|||EI|C|||<TBD>|GSP Instance Identifier|
-|4|||CWE|R||<TBD>|<TBD>|SOGI Concept|
-|5|||CWE|R| |<TBD>|<TBD>|SOGI Concept Value|
-|6|||DR|O|||<TBD>|Validity Range|
-|7|||TX|O|||<TBD>|Comment|
-XE "HL7 Attribute Table: OH4"
-# 7.1.1.1 GSP-1   Set IDXE " OH4-1 Set id"   (SI)   03543
-Definition: This field contains the sequence number used to identify the GSP segment instances in a message. 
-#### GSR-2   Action CodeXE " OH4-2   Action Code "   (ID)   00816
-Definition: This field contains a code defining the action to be taken for this segment.
-#### GSP-3   GSP Instance Identifier (EI) <TBD>
-Definition: This field contains the value that uniquely identifiers a single GSP declaration for an individual. This field is conditionally required when the Action Code in GSP-2 indicates data is not being sent in Snapshot Mode (valued “S”).  
-#### GSP-4   SOGI Concept  (CWE)   <TBD>
-Definition: This field contains an identifer for the SOGI related concept being asserted (eg. Gender Identity, or Personal Pronouns). Refer to [TO DO - ADD CORRECT REFERENCE TO DEFINITION/CONCEPT]*,* for suggested values.
-#### GSP-5   SOGI Concept Value  (CWE)   <TBD>
-NOTE:  This reference was maintained in this IG for continunity only. Sexual orientation was not a part of the Gender Harmony Project.
+The V2 Management Group is concurrently balloting the Long Term Solution for V2, which matches this IG’s approach in FHIR to recognize these as patient specific constructs and proposes the use of 3 new segments that can be added to any message structure where appropriate which allows support to convey the person specific characteristics of Gender Identity, Pronouns and potentially Sexual Orientation as well as Recorded Sex or Gender not just for the patient but for other persons like the next of kin or personnel. Please review this ballot material *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments* and submit any detailed comments there. 
 
-Definition: This field contains the value asserted for the concept conveyed in GSP-4. The appropriate value set to use will vary with the concept being communicated (i.e. the valid list of concepts for Gender Identity will likely be different than the valid list of concepts for Sexual Orientation).
+In particular you should look at these sections:
 
-[TO DO - ADD CORRECT REFERENCE TO CODE SET/VALUE SET]  
+- Overarching Notes to Balloters in Chapter 1
+- To cover the 5 Gender Harmony IG specific data elements:
+  - Name to Use: Chapter 3, PID – Patient Identification Segment (3.4.2)
+  - Gender Identity: Chapter 3, GSP – Person Gender and Sex Segment (3.4.19)
+  - Pronouns: Chapter 3, GSP – Person Gender and Sex Segment (3.4.19)
+  - Recorded Sex: Chapter 3, GSR – Recorded Gender and Sex Segment (3.4.20)
+- Sex for Clinical Use: Chapter 3, GSC – Sex For Clinical Use Segment (3.4.21)
+- Not part of Gender Harmony IG, but supported: Sexual Orientation: Chapter 3, GSP – Person Gender and Sex Segment (3.4.19)Detailed description of the Gender Harmony related segments in Chapter 3:
+  - For self-describing Gender Identity, Pronouns and Sexual Orientation: GSP – Person Gender and Sex Segment (3.4.19)
+  - For Recorded Sex or Gender: GSR – Recorded Gender and Sex Segment (3.4.20)
+  - For Sex for Clinical Use: GSC – Sex For Clinical Use Segment (3.4.21)
+- Where to add into the message structures in V2.9.1 based on the use cases:
+- Use in Admission Transfer Discharge Use case in Chapter 3: 
+  - Trigger Events and Message Definitions (3.3)
+- Use in order Order messages in Chapter 4: 
+  - TBD
+- Use in result Result messages in Chapter 7: 
+  - TBD
+- Use in Financial Management Messages in Chapter 6:
+  - BAR/ACK – Add Patient Account (EVENT P01) (6.4.1)
+  - DFT/ACK – Post Detail Financial Transactions (EVENT P03) (6.4.3)
+  - BAR/ACK – Update Account (EVENT P05) (6.4.5)
+  - DFT/ACK – Post Detail Financial Transactions - Expanded (EVENT P11)
+- Use in Master files in Chapter 8:
+  - Staff/Practitioner Master Files (8.7)
+- Use in Medical Records in Chapter 9:
+  - MDM/ACK - Original Document Notification (Event T01) (9.6.1)
+  - MDM/ACK - Original Document Notification and Content (Event T02) (9.6.2)
+  - MDM/ACK - Document Status Change Notification (Event T03) (9.6.3)
+  - MDM/ACK - Document Status Change Notification and Content (Event T04) (9.6.4)
+  - MDM/ACK - Document Addendum Notification (Event T05) (9.6.5)
+  - MDM/ACK - Document Addendum Notification and Content (Event T06) (9.6.6)
+  - MDM/ACK - Document Edit Notification (Event T07) (9.6.7)
+  - MDM/ACK - Document Edit Notification and Content (Event T08) (9.6.8)
+  - MDM/ACK - Document Replacement Notification (Event T09) (9.6.9)
+  - MDM/ACK - Document Replacement Notification and Content (Event T10) (9.6.10)
+  - MDM/ACK - Document Cancel Notification (Event T11) (9.6.11)
+- Use in Scheduling in Chapter 10:
+  - Schedule Requests: Placer Application Requests and Trigger Events (10.3)
+  - Schedule Notifications: Filler Application Messages and Trigger Events Unsolicited (10.4)
+- Use in Patient Referral in Chapter 11:
+  - Patient Information Request Messages and Trigger Events (11.3)
+  - Patient Treatment Authorization Requests (11.4)
+  - Patient Referral Messages and Trigger Events (11.5)
+  - Collaborative Care Messages and Trigger Events (11.6)
+- Use in Patient Care in Chapter 12:
+  - Patient Goal Message (Events PC6, PC7, PC8) (12.3.1)
+  - Patient Problem Message (Events PC1, PC2, PC3) (12.3.2)
+  - Patient Pathway Message (Problem-Oriented) (Events PCB, PCC, PCD) (12.3.)
+  - Patient Pathway Message (Goal-Oriented) (Events PCG, PCH, PCJ) ()
+- Use in Personnel Management in Chapter 15:
+  - Add Personnel Record (Event B01) (15.3.1)
+  - Update Personnel Record (Event B02) (15.3.2)
+  - Query Information (Event Q25/K25) (15.3.7)
+  - Example for Add Personnel Record - Event B01 (15.5.1)
+- Use in eClaims in chapter 16:
+  - EHC^E01 – Submit HealthCare Services Invoice (event E01) (16.3.1)
 
+##### Using the Gender Harmony Segments in earlier versions of HL7 (Pre-adoption Profile)
 
-#### GSP-6   Validity PeriodXE "OH4-4 Combat Zone End Date "   (DR)   <TBD>
-Definition: This field asserts the time frame during which the value in GSP-5 applies to the individual. This field may contain values for both the Start Date/Time and End Date/Time for values known to no longer be in use. Alternatively, the field may be populated with just a Start Date/Time which indicates that the value is still currently in use. **Note that the Start Date/Time for the Validitity Period may be different than the date on which the data was collected and/or entered.**
-#### GSP-7   Comment  (TX)   <TBD>
-Definition: This field contains a free text comment pertaining to the value conveyed in GSP-5.
+In order to use these new segments in earlier versions of HL7 (before V2.9.1) the data exchange partners have to agree to support this functionality by pre-adopting this profile component as part of their data exchange agreement and specifications.
 
-As an example, consider an individual who identified as male as of January 1 2021 and used he/him/his pronouns until July 1 2021 when the individual began to also identify as non-binary and adopt the they/them/theirs pronouns. If the individual had encounters with a provider in March and October, the following segments would represent the Person Gender and Sex information known at those times.
+##### GenderHarmony\_Component – ID: <OID TBD>
 
-Message generated in March:
+This profile component can be used in ANY message structure in ANY version, when data about Gender Identity, Pronouns, Recorded Sex and Gender or Sexual Orientation and similar concepts need to be exchanged.
 
-[TO DO: ADD CORRECT REFERENCE TO CODE SET/VALUE SET]  
+##### Details for implementation
 
-GSP|1|S||76691-5^Gender identity^LN |M^Male^L|20210101
+##### Indicating use of this profile
 
-GSP|2|S||90778-2^Personal pronouns – Reported^LN |LA29518-0^he/him/his/his/himself^LN|20210101
+Populate one occurrence of MSH-21 as follows: 'GenderHarmony^^<OID TBD>^ISO'
 
-Message generated in October where the entire individual’s history is conveyed:
+##### Use of the Gender Harmony Specific Segments
 
-[TO DO: ADD CORRECT REFERENCE TO CODE SET/VALUE SET]  
+Follow the segment definition, including the applicable vocabulary bindings, as described in V2.9.1. 
 
-GSP|1|S||76691-5^Gender identity^LN |M^Male^L|20210101
+##### Rules for Inserting the Gender Harmony Segments into Existing Message Structures
 
-GSP|2|S||76691-5^Gender identity^LN |X^Non-binary^L|20210701
+In V2 the event context determines the message structure, and the location in the order of segments in the message provides context. So how / where these new segments are used depends on the context. This section is focused only on those events where Gender Harmony concepts are of importance, for patient related events, but also when important for next of kin or staff master files. 
 
-GSP|3|S||90778-2^Personal pronouns – Reported^LN |LA29518-0^he/him/his/his/himself^LN|20210101^20210630
+The 3 Gender Harmony segments are related and will be inserted in patient specific messages as needed at the end of the patient identification (after the PD1 segment if it exists, otherwise after the PID segment), indicating that these concepts belong to the patient. All 3 segments must be optional and repeating. When placed in other message groups, for example following the Next of Kin (NK1) segment, the concepts are understood to relate to the person being described in the Next of Kin segment, though only the GSP and GSR segments are applicable in this context and should be added as optional and repeating.
 
-GSP|4|S||90778-2^Personal pronouns – Reported^LN |LA29520-6^they/them/their/theirs/themselves^LN|20210701
+##### Additional Considerations when exchanging Gender Harmony concepts
 
-OR
+SOGI data is sensitive personal information with significant privacy and security considerations. Before exchanging SOGI data, trading partners should understand all the local regulatory and policy considerations surrounding patient consent and sharing SOGI data. Guidance in the area of when to exchange SOGI data and the necessary privacy, security and consent requirements around exchanging SOGI data is beyond the scope of this group and is left to the implementers who understand the local requirements. 
 
-Message generated in October where only the individual’s current valid values are being conveyed
+Since V2 has been used for a long time, the field Administrative Sex (PID-8) V2 is different from the concepts described in the Gender Harmony IG. Definitions and how this element is used may vary by project, as the definitional text from V2.9 is somewhat at odds with the location in the administrative patient information segment:
 
-GSP|1|S||76691-5^Gender identity^LN |M^Male^L|20210101
+Definition: This field contains the patient’s sex. Refer to User-defined Table 0001 - Administrative Sex in Chapter 2C, Code Tables, for suggested values. = <https://terminology.hl7.org/CodeSystem-v2-0001.html>
 
-GSP|2|S||76691-5^Gender identity^LN |X^Non-binary^L|20210701
+Due to the longstanding existence of this field, we are not planning to change the definition of this field, but rather ensure users understand that is should be used with care, while defining additional constructs to convey the more precisely defined attributes. 
 
-GSP|3|S||90778-2^Personal pronouns – Reported^LN |LA29520-6^they/them/their/theirs/themselves^LN|20210701
-
-#### **GSR – Recorded Gender and Sex Segment**
-The recorded sex and gender concept includes the various sex and gender concepts that are often used in existing systems but are not known to represent a gender identity or sex for clinical use. Examples of recorded sex or gender concepts include administrative gender, administrative sex, and sex assigned at birth. Other examples include the sex or gender marker on a birth certificate, insurance card, driver's license, passport, or other document. These sex or gender concepts vary widely in their use and possible values. For the purposes of exchanging these concepts, implementers are encouraged to define the specific sex or gender concept that is relevant for their use case and create a use-case specific property or extension to represent that specific concept. For example, if the sex assigned at birth is an important concept in a specific jurisdiction, that jurisdiction can create a realm-specific extension for that concept. 
-
-Documenting the recorded gender or sex is an important aspect of transgender and gender-diverse care as an individual’s identity documents may be updated at different rates or for different reasons. For instance, a trans woman may be able to update her driver’s license to ‘F’ but her state might not allow changing a value on her birth certificate, which may still read ‘M’. 
-
-The HL7 base specification does not proscribe if/how a system maintains an audit trail of changes to the data represented in the GSP segment. Depending on system design and workflow needs, it may be necessary to retain the recorded gender and sex history for an individual.
-
-The use of the GSR segment is not restricted to use with a patient alone. Other individuals represented in a message (e.g. a next of kin) may also have recorded gender and sex values.  
-
-HL7 Attribute Table – GSR – Recorded Gender and SexXE "HL7 Attribute Table: OH4"
-
-|**SEQ**|**LEN**|**C.LEN**|**DT**|**OPT**|**RP/#**|**TBL#**|**ITEM#**|**ELEMENT NAME**|
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :- |
-|1|||SI|R|||03543|Set ID|
-|2|1..1||ID|R||0206|00816|Action Code|
-|3|||EI|C|||<TBD>|GSR Instance Identifier|
-|4|||CWE|R||<TBD>|<TBD>|Recorded Gender or Sex|
-|5|||CWE|O|||<TBD>|Document Type|
-|6|||CWE|O|||<TBD>|Source Field |
-|7|||CWE|O|||<TBD>|Jurisdiction|
-|8|||DTM|O|||<TBD>|Acquisition Date|
-|9|||DR|O|||<TBD>|Validity Period|
-|10|||TX|O|||<TBD>|Comment|
-
-#### OH4 field definitionsXE "OH4 field definitions"
-#### GSR-1   Set IDXE " OH4-1 Set id"   (SI)   03543
-Definition: This field contains the sequence number used to identify the GSR segment instances in a message. 
-#### GSR-2   Action CodeXE " OH4-2   Action Code "   (ID)   00816
-Definition: This field contains a code defining the action to be taken for this  segment. Recorded Gender and Sex information for an individual must be sent in Snapshot Mode thus this field is constrained to a value of “S”. A “snapshot” for an individual may be defined as either a set of GSR segments conveying a snapshot of the current valid values for the individual or a set of GSR segments conveying a snapshot of the history of the individual as known by the system generating the message (including known values which are no longer valid (see use of Validity Period in GSP-6 for more information).
-#### GSR-3   GSR Instance Identifier (EI) <TBD>
-Definition: This field contains the value that uniquely identifiers a single GSR declaration for an individual. This field is conditionally required when the Action Code in GSR-2 indicates data is not being sent in Snapshot Mode (valued “S”).  
-#### GSR-4   Recorded Gender or Sex   (CWE)   <TBD>
-Definition: This field contains the sex or gender property for the individual from a document or other record. [TO DO: ADD CORRECT REFERENCE TO CODE SET/VALUE SET], for suggested values.
-#### GSR-5   Document TypeXE "OH4-4 Combat Zone End Date "   (CWE)   <TBD>
-Definition: This field contains the source document where this sex or gender property is recorded. For instance national ID card, birth certificate, passport, patient medical record.
-#### GSR-6   Source Field Name   (CWE)   <TBD>
-Definition: This field asserts the name of the source field on the document.
-#### GSR-7   Jurisdiction   (CWE)   <TBD>
-Definition: This field contains the jurisdiction or organization that issued the document from which the sex or gender was acquired.
-#### GSR-8   Acquisition Date   (DTM)   <TBD>
-Definition: This field contains the date/time when the sex or gender value was first recorded in the system.
-#### GSR-9   Validity Period XE "OH4-4 Combat Zone End Date "   (DR)   <TBD>
-Definition: This field asserts the time period during which the recorded gender or sex value in GSR-3 applies to the individual. May be just a Start Date/Time for values which are still valid.
-#### GSR-10  Comment  (TX)   <TBD>
-Definition: This field contains a free text explanation about the context or source of the recorded sex or gender value.
-#### **GSC – Sex For Clinical Use Segment**
-[TO DO: ADD CORRECT REFERENCE TO DEFINITION/CONCEPT]  
-
-Sex for Clinical Use is a categorization of a patient's clinical sex derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. This property is intended for use in clinical decision making and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population.
-
-While clinical decision-making processes could account for the specific physiological or anatomical attributes of the patient, there are several practical considerations, such as patient privacy and limited capabilities of existing systems which create the need for a categorization that is easy to exchange. The Sex for Clinical Use categorization is intended to bridge the gap between the hypothetical ideal and the practical needs of operational systems.
-
-Sex for Clinical Use is a contextual concept. For example, a patient may generally be categorized as male, but for a specific lab test, the resulting lab should use the reference ranges associated with a female reference population. In this case, systems may provide a patient-context [sexForClinicalUse](http://build.fhir.org/extension-patient-sexforclinicaluse.html) that acts as a 'default' for most care and annotate the lab order with a context-specific sexForClinicalUse. Systems may determine what enclosing contexts are useful, but Patient, Encounter and EpisodeOfCare are three enclosing contexts that may often apply.
-
-The Sex for Clinical Use segment can use GSR-6 to communicate a clinical sex category on the on relevant clinical context (e.g., order, diagnosis) or enclosing contexts (e.g., patient, encounter).
-
-For ease of interoperability, a patient’s sex for clinical use is constrained to four possible categories. Any patient for which special considerations apply should be categorized as 'Specified'. The 'Specified' category is often represented as 'Other' in existing systems.
-
-Female - Available data indicates diagnostic and treatment plans should consider best practices associated with female reference populations.
-
-Male - Available data indicates diagnostic and treatment plans should consider best practices associated with male reference populations.
-
-Specified - Patient data indicates the clinical diagnostic and treatment best practices may be undefined or not aligned with existing sex-derived reference populations. Individuals or systems providing care should either use default behavior that is safe for both male and female populations, individually review treatment options with the patient, or carefully inspect relevant observations in the chart before proceeding with treatment.
-
-Unknown - The sex for clinical use cannot be determined because there are no relevant evidence or documentation, or the evidence or documentation are not sufficient to determine a value.
-
-Because the SFCU can be context-specific, on rare occasions there may be more than one concurrent SFCU for a patient. For example, there could be multiple procedure results, each identifying a context specific SFCU determination used to set the normal range used.
-
-The SFCU values exchanged in a message should be limited to those appropriate for the context(s) in the message. That is, an individual may have different SFCU values for two different procedures, but if the message only contains one of the procedures, only the SFCU value related to that procedure should be included in the message. Note that a single SFCU value may apply to multiple contexts within a single message (i.e. GSC-5 is allowed to repeat and point to multiple locations within the message).
-
-The GSC segment should only be used to declare SFCU values for the patient conveyed in the message. Conveyance of a sex for clinical use for other individuals that may be described in the message (e.g. next of kin, guarantors, providers) is not permitted as these individuals will not have clinical contexts within the message and SFCU should not be used as a label for the person as a while.
-
-HL7 Attribute Table – GSC –Sex for Clinical UseXE "HL7 Attribute Table: OH4"
-
-|**SEQ**|**LEN**|**C.LEN**|**DT**|**OPT**|**RP/#**|**TBL#**|**ITEM#**|**ELEMENT NAME**|
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :- |
-|1|||SI|R|||03543|Set ID|
-|2|1..1||ID|R||0206|00816|Action Code|
-|3|||EI|C|||<TBD>|GSC Instance Identifier|
-|4|||CWE|R||<TBD>|<TBD>|Sex for Clinical Use|
-|5|||DR|O|||<TBD>|Validity Period|
-|6|||ERL|R|Y||<TBD>|Context|
-|7|||ERL|O|Y||<TBD>|Evidence|
-|8|||TX|O|||<TBD>|Comment|
-
-#### OH4 field definitionsXE "OH4 field definitions"
-#### GSC-1   Set IDXE " OH4-1 Set id"   (SI)   03543
-Definition: This field contains the sequence number used to identify the GSC segment instances in a message. 
-#### GSC-2   Action CodeXE " OH4-2   Action Code "   (ID)   00816
-Definition: This field contains a code defining the action to be taken for this  segment.  
-#### GSC-3   GSR Instance Identifier (EI) <TBD>
-Definition: This field contains the value that uniquely identifiers a single GSC declaration for an individual. This field is conditionally required when the Action Code in GSC-2 indicates data is not being sent in Snapshot Mode (valued “S”).  
-#### GSC-4   Sex for Clinical Use   (CWE)   <TBD>
-Definition: This field asserts the context-specific categorization of a patient's sex for the purpose of clinical use. Refer to [TO DO: ADD CORRECT REFERENCE TO CODE SET/VALUE SET], for suggested values.
-#### GSC-5   Validity PeriodXE "OH4-4 Combat Zone End Date "   (DR)   <TBD>
-Definition: This field asserts the time frame during which this value applies to the patient context. May be just an initial dateTime.
-#### GSC-6   Context   (ERL)   <TBD>
-Definition: This field asserts the clinical context(s) relevant for the declared SFCU value. The ERL data type is used to specify a location in the message which carries the clinical context. For example, GSC-5 may point to procedure (PR1) or order (ORC) segment within the message. This field is allowed to repeat to allow a single declared SFCU value to be applied to multiple contexts within the message. As well, the GSC segment is allowed to repeat within a message as an individual may have different SFCU values for different contexts within a single message. The GSC-6 field is required as any SFCU value declared within a message must relate to at least one context within the same message.
-#### GSC-7   Evidence   (ERL)   <TBD>
-Definition: This field asserts clinical data (e.g. observations, diagnoses) that are used to determine the SFCU value. The linked information should clearly align with the chosen SFCU value. This field is allowed to repeat as multiple pieces of clinical data may contribute to the chosen SFCU value.
-#### GSC-8  Comment  (TX)   <TBD>
-Definition: This field contains a free text comment pertaining to the sex for clinical use.
-#### **INSERTING THE SEGMENTS INTO THE RESPECTIVE MESSAGES**
-In v2 the event context determines the message structure, and the location in the order of segments in the message provided context. How and where these new segments are used depends on the context. This section is focused only on those events where *Gender Harmony concepts* are of importance, primarily for patient related events (though this could also be important to exchange for staff master files). 
-
-The GSP, GSR, and GSC segments are related and will be inserted in patient specific messages as a group at the end of the patient identification, indicating that these concepts belong to the patient. When placed in other message groups, for example following the Next of Kin (NK1) segment, the concepts are understood to relate to the person being described in the Next of Kin segment, though only the first two segment types make sense here.
-#### **Admit / Transfer / Discharge (Patient Administration = Chapter 3)**
-ADT^A01^ADT\_A01: ADT Message XE "ADT"  XE "Messages:ADT" 
-
-|**Segments**|**Description**|**Status**|**Chapter**|
-| :- | :- | :-: | :-: |
-|MSH|Message Header||2|
-|[{ [ARV](#_ARV_-_Access) }]|Access Restrictions||3|
-|[{ SFT }]|Software Segment||2|
-|[  UAC  ]|User Authentication Credential||2|
-|[EVN](#EVN)|Event Type||3|
-|[PID](#PID)|Patient Identification||3|
-|[  [PD1](D:\Eigene Dateien\2018\HL7\Standards\v2.9 May\716 - New.doc##PD1)  ]|Additional Demographics||3|
-|**[{ GS[P](D:\Eigene Dateien\2018\HL7\Standards\v2.9 May\716 - New.doc##NK1) }]**|**Person Gender and Sex**||**3**|
-|**[{ GSR }]** |**Recorded Gender and Sex**||**3**|
-|**[{ GSC }]** |**Sex for Clinical Use**||**3**|
-|[{ [OH1](#_OH1_-_Person) }]|Employment Status||3|
-|[{ [OH2](#OH2) }]|Past or Present Job||3|
-|[ [OH3](#OH3) ]|<p>Usual Work</p><p></p>||3|
-|[{ [OH4](#_OH4_-_Combat) }]|Combat Zone Work||3|
-|[{ [ARV](#_ARV_-_Access) }]|Access Restrictions|B|3|
-|[{ ROL }]|Role|B|15|
-|[{ PRT }]|Participation||7|
-|[{|--- NEXT\_OF\_KIN begin|||
-|`     `[NK1](D:\Eigene Dateien\2018\HL7\Standards\v2.9 May\716 - New.doc##NK1)   |Next of Kin / Associated Parties||3|
-|`    `**[{ [GSP](D:\Eigene Dateien\2018\HL7\Standards\v2.9 May\716 - New.doc##NK1) }]**|**Person Gender and Sex**||**3**|
-|`    `**[{ GSR }]** |**Recorded Gender and Sex**||**3**|
-|`    `[{ [OH2](#_OH2_-_Past) }]|Past or Present Job||3|
-|`    `[  [OH3](#_OH3_-_Usual)  ]|Usual Work||3|
-|}]|--- NEXT\_OF\_KIN end|||
-|`   `[PV1](D:\Eigene Dateien\2018\HL7\Standards\v2.9 May\716 - New.doc##PV1)|Patient Visit||3|
-|[  [PV2](D:\Eigene Dateien\2018\HL7\Standards\v2.9 May\716 - New.doc##PV2)  ]|Patient Visit - Additional Info.||3|
- 
-
-
-
-
-
-
+When conveying additional SOGI concepts in a message, implementers must consider how the business requirements of the receiving system will be satisfied when consuming SOGI data elements. Depending on the use case, a hierarchy of data elements may need to be constructed in order to ensure that business requirements are met appropriately. For example, in a billing use case, if both PID-8 and Gender Identity are populated in a message, the receiving system may choose to prioritize PID-8 over Gender Identity based on the needs of the use case.

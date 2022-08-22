@@ -9,7 +9,7 @@ name: fhir-gender-harmony
 title: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 description: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 status: draft # draft | active | retired | unknown
-version: 0.1.12
+version: 0.1.13
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -59,21 +59,37 @@ pages:
   externalstandards.md:
     title: External Standadrds  
   fhirextensions.md:
-    title: FHIR Extensions   
+    title: FHIR Extensions
+  bib.md:
+    title: Bibliography
+  background.md:
+    title:  Sex-gender Background
+  fhirdicom_use_case.md:
+    title: FHIR DICOM Example
+  fhirhealth_maintanence_use_case.md:
+    title: FHIR Health Maintanence Example
+  cdadicom_use_case.md:
+    title: CDA DICOM Example
+  cdahealth_maintanence_use_case.md:
+    title: CDA Health Maintanence Example
+  v2dicom_use_case.md:
+    title: FHIR DICOM Example
+  v2health_maintanence_use_case.md:
+    title: FHIR Health Maintanence Example    
 menu:
   Home: index.html
+  Sex-gender Background: background.html
   Design Considerations: design.html  
   Model: model.html
   Use Cases:  
     DICOM PET scan in patient with change in gender: dicom_use_case.html
     Health Screening with lab test in patient with change in gender: labratory_use_case.html   
- 
   V2:
     V2 Gender Harmony: hl7v2genderharmony.html
-    Examples: hl7v2examples.html
+    V2 Examples: hl7v2examples.html
   CDA:
     CDA Gender Harmony: cdagenderharmony.html
-    Examples: cdaexamples.html
+    CDA Examples: cdaexamples.html
   FHIR:
     FHIR  Gender Harmony: fhirgenderharmony.html
     # FHIR Extensions: fhirextensions.html
@@ -81,11 +97,15 @@ menu:
     # Gender Identity: http://build.fhir.org/extension-individual-genderidentity.html
     # Pronouns: http://build.fhir.org/extension-individual-pronouns.html
     # Recorded Sex or Gender: http://build.fhir.org/extension-individual-recordedsexorgender.html
-    Examples: fhirexamples.html
-  Examples: ghexamples.html   
-  Terminology: terminology.html 
+    FHIR Examples: fhirexamples.html
+  # Examples: ghexamples.html   
+  Terminology:
+    Gender Harmony Terminology: terminology.html 
+    External Standards: externalstandards.html
+  Bibliography: bib.html
+
   All Artifacts: artifacts.html
-  External Standards: externalstandards.html
+  
   History: http://hl7.org/fhir/us/military-service/history.html
 
 

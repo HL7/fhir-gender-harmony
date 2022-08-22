@@ -9,7 +9,7 @@ The conceptual model outlines the data elements, element attributes, terminology
 
 Each of the following sections is structured to align with the UML Model in Figure 1 and provides a definition, description, usage notes (if applicable), cardinality, and attributes (with recommended terminology if applicable) for each model element. 
  
-<img style="vertical-align: top;" src="ModelDiagram.png" width="100%" /> 
+<img style="vertical-align: top;" src="CrossParadigmIGModelDiagramV2.png" width="100%" /> 
 
 *Figure 1 Logical Model for Gender Identity and Sex*
 #### Person
