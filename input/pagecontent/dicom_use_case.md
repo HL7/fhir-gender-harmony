@@ -111,7 +111,7 @@ Use case covers admission, patient prep, examination, recovery, post processing 
 
 ## Workflow/Storyboard:
 
-![](media/gh-dicom-2.svg)
+![](gh-dicom-2.svg)
 
 Figure 1 Workflow Storyboard
 
