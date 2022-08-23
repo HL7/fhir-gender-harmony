@@ -1,242 +1,73 @@
-### FHIR Gender Harmony 
+### Summary of FHIR artifacts
+The [Patient Gender and Sex narrative](https://build.fhir.org/patient.html#gender) was updated to align with the Gender Harmony Project logical model.
 
-FHIR Basics
-For those new to FHIR, the material below describes basic FHIR principles and gives guidance for reading FHIR specifications.
+An new Patient example was created which represents a transgender patient: [Transgender Person Example](https://build.fhir.org/patient-example-sex-and-gender.html).
 
-[FHIR overview](http://hl7.org/fhir/R4/overview.html)
-[Developer’s introduction](http://hl7.org/fhir/R4/overview-dev.html)
-[FHIR data types](http://hl7.org/fhir/R4/datatypes.html)
-[Using codes](http://hl7.org/fhir/R4/terminologies.html)
-[References between resources](http://hl7.org/fhir/R4/references.html)
-[How to read resource & profile definitions](http://hl7.org/fhir/R4/formats.html)
-[Base resource](http://hl7.org/fhir/R4/resource.html)
- 
+Extensions were created or updated to align with the Gender Harmony Project logical model.
 
-## Gender Identity  
-GI will be an extension on Patient, RelatedPerson, Person, and Practitioner for R5 as structured below.  Discussion on 2/7/2022.  Motion: Lorraine Constable / Rob McClure: 12-0-5
-There is an existing genderIdentity extension.  This extension is conceptually aligned with the Gender Harmony model already.  However, we will make a few updates:
+|**Concept**|**FHIR Artifact**|**Contexts of Use**|
+| :- | :- | :- |
+|**Gender Identity**|[individual-genderIdentity](https://build.fhir.org/extension-individual-genderidentity.html)|Patient, RelatedPerson, Person, and Practitioner|
+|**Sex for Clinical Use**|[patient-sexForClinicalUse](https://build.fhir.org/extension-patient-sexforclinicaluse.html)|All Resource types|
+|**Pronouns**|[individual-pronouns](https://build.fhir.org/extension-individual-pronouns.html)|Patient, RelatedPerson, Person, and Practitioner|
+|**Recorded Sex orGender**|[individual-recordedSexOrGender](https://build.fhir.org/extension-individual-recordedsexorgender.html)|Patient, RelatedPerson, Person, and Practitioner|
+### Guidance on use of Sex and Gender artifacts
+We recognize that there are many systems that rely on a single patient-level Administrative Gender (a.k.a. Administrative Sex) concept communicated in Patient.gender.  Today, this semantically vague Patient.gender property is used to address a wide range of use cases, from identifying appropriate reference ranges for lab tests to performing patient matching when submitting claims to insurance companies. 
 
-Update the description in that extension to match with the definition in the model. 
-Make this extension available on all the various person resources.
-Add a period and comment as siblings to the existing CodableConcept (making this a complex extension)
-We may update the example value set, but it will remain an example binding.
+Systems are encouraged to use the new standard extensions to communicate semantically precise sex and gender concepts.  Patient.gender is retained for backwards compatibility.
 
+For systems that cannot immediately transition to the new semantically precise standard extensions, and must use Patient.gender for specific use cases like identifying reference ranges for lab tests, it is important to coordinate with your trading partners to ensure that they understand how you are using the property.  This coordination prevents issues where (for example) a sender is populating Patient.gender for administrative or social purposes, but a recipient is using it for clinical purposes.
+### Background and Rationale for FHIR design approach
+There were several options considered when representing these sex and gender concepts in FHIR:
 
-> genderIdentity 0..*  (BackboneElement-ish style Extension)
-> 
-> genderIdentity.value 1..1 CodableConcept GenderIdentity (preferred)
-> 
-> genderIdentity.period  0..1 Period
-> 
-> genderIdentity.comment 0..1  string
+- Add new properties in the relevant resources
+- Create extensions in the relevant resources
+- Create a profile on Observation
 
 
+|Option|Advantages|Disadvantages|
+| :- | :- | :- |
+|Property on resources|<p>1. Easily discoverable in the specification</p><p>2. Establishes the properties as first-class data elements.</p>|<p>1. Requires an alternative approach for pre-adoption in prior versions of FHIR.</p><p>2. For Patient, additional processes for the change are required to make updates to the normative resource.</p>|
+|Extension on resources|<p>1. The extension may be directly pre-adopted in prior versions of FHIR.</p><p>2. The extension can be defined in one location and applied to many resources, rather than having to copy and maintain an identical structure on many related resources.</p><p>3. We may consider changing the extension to a property in future versions of FHIR.</p>|<p>1. Extensions are somewhat hidden, so are moderately difficult for implementers to discover</p><p>2. Avoids problems with changing normative content.</p>|
+|Profile of Observation|<p>1. Enables collecting a broad set of metadata about the property. However, it is not expected that the metadata Observation enables is necessary or useful for most use cases.</p><p>2. Aligns with sexual orientation profile.</p>|<p>1. Observation profiles are somewhat hidden, so are moderately difficult for implementers to discover </p><p>2. Avoids problems with changing normative content.</p><p>3. Clients would require additional authorization scopes to access demographic data. For servers that provide only resource-level scopes, patients may not with to share Observation just to grant access to gender identity, when it would also grant access to labs, vitals, etc.</p>|
 
-There is some discussion whether we should have GI on RelatedPerson / Person / Practitioner.  Depending on how those resources are used, sometimes GI is relevant, but in some cases GI is irrelevant and RSG is the relevant property (for example the subscriber on a Coverage would need the payer's RSG.
+**Note to Balloters:** When creating the FHIR extensions, there were several proposed changes to the logical model that were identified. We chose to apply those changes to FHIR structures so that we can solicit feedback via the ballot.  After those changes have been balloted, we will go back and apply those changes to the logical model.
 
+##### Explicit Decisions:
+**Gender Identity: extension**
 
+*Context:* This extension is available on all “person” type resources, which includes Patient, RelatedPerson, Person, and Practitioner. It is not included on PracitionerRole, as PractitionerRole refers to Practitioner for demographics.
 
-For the  value set, use:
+**Sex for Clinical Use: extension**
 
-asked-declined from https://build.fhir.org/codesystem-data-absent-reason.html
-use other from null flavor
-concepts will come from whatever code system we end up creating http://hl7.org/fhir/gender-identity
-Sex for Clinical Use
-A new extension will be created for SFCU. 
+*Context:* The Sex for Clinical Use extension is available on all FHIR resource types; however, it is intended for use on clinical resource types (e.g., DiagnosticReport, Observation), and enclosing contextual resources (e.g., Encounter, EpisodeOfCare, Patient). We considered limiting the extension only to the resources we expect it to be used on, however there will likely be resources we incorrectly excluded, and new resources created to which it could apply, so we opted to allow it to all resources, understanding that it would not be applicable for many resource types.
 
-Description:  A categorization of a patient's sex derived from observable information (e.g., organ inventory, hormone lab test, genetic testing) that can be used for clinical purposes.  This categorization may be provided as an input for planned clinical care, or may be recorded on output documentation as a record of what value was actually used when providing that care.
+Structure: We considered two structural options for this extension:
 
+1) An extension applied to a contextual resource with the Sex for Clinical Use value in-line.
+1) An extension applied to a contextual resource with a reference to an Observation documenting the Sex for Clinical Use value.
 
-
-This extension will be allowed on all resources.  We initially considered limiting this to specific list of resources (below).  When considering inclusion for both input and output of clinical care, we ended up adding this to enough resources that we opted to just put it on all resources.
+We opted to include the Sex for Clinical Use value in-line rather than as a reference to Observation after discussion on tradeoffs between two options.  We felt that the in-line option was simpler while being sufficiently expressive.  An extension with a reference to Observation allows for the expression of complex metadata associated with the value, however we expect the need for that complex metadata would be sufficiently rare to not outweigh the benefits of the simpler in-line extension option.
 
-The bolded resources are those that we want to get examples into R5 with the SFCU extension.
-
-Include for sure:
+**Note to balloters**: Input on the approach of an extension with an in-line value vs. an extension with a reference to an Observation is appreciated.
 
-Patient (PA)
-ServiceRequest (O&O)
-Observation (O&O)
-MedicationRequest
-Procedure
-NutritionOrder
-DiagnosticReport
-ImagingStudy
-ClinicalImpression
-Specimen
-CarePlan
-Appointment
-Encounter
-EpisodeOfCare
-Immunization
-VisionPrescription
-MedicationAdministration
-MedicationUsage
-MedicationDispense
-ResearchSubject
-Consider for inclusion:
-
-DeviceDispense
-DeviceRequest
-DeviceUsage
-Considered but not included:
+**Recorded Sex and Gender: extension**
 
-Transport
+The [Patient Gender and Sex section](https://build.fhir.org/patient.html#gender) describes considerations for exchanging Recorded Sex and Gender concepts. The Recorded Sex and Gender extension is provided as option only when a use-case specific property or extension is not practical.
 
+*Context:* This extension is available on all “person” type resources, which includes Patient, RelatedPerson, Person, and Practitioner. It is not included on PracitionerRole, as PractitionerRole refers to Practitioner for demographics.
 
-Options include: 
+**Note to balloters**: Carefully review the guidance [Patient Gender and Sex section,](https://build.fhir.org/patient.html#gender) including the comments about how to represent Sex Assigned at Birth (Birth Sex) and Legal Sex.
 
-#### Inline extensions
+**Pronouns: extension**
 
-> sexForClinicalUse 0..*
-> 
-> sexForClinicalUse.value 1..1 CodableConcept SexForClinicalUse (Required)
-> 
-> sexForClinicalUse.period  0..1 Period
-> 
-> sexForClinicalUse.comment 0..1 string (Annotation?)
-> 
-> sexForClinicalUse.supportingInfo  0..*  Reference(Any)
+*Context:* This extension is available on all “person” type resources, which includes Patient, RelatedPerson, Person, and Practitioner. It is not included on PracitionerRole, as PractitionerRole refers to Practitioner for demographics.
 
+**Name to Use: Guidance on HumanName datatype**
 
+The Gender Harmony project has agreed that to represent the Name To Use when addressing an individual, the datatype HumanName.use = “usual” should be used.
 
-#### Reference extension
+##### Backwards Compatibility:
+[discuss use of R5 extensions in implementations based upon prior version of FHIR]
 
-> sexForClinicalUse  0..*  CodeableReference(Observation)
-
-
-
-These are some examples for the two options (in-line extension and reference extension).  These are "notional" and not necessarily syntatically correct.
-
-```xml
-<Patient xmlns="http://hl7.org/fhir">
-  <id value="sfcu-inline-extension"/>
-  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/sex-for-clincal-use">
-    <valueCodeableConcept>    
-      <coding> 
-        <system value="http://todo-valueset-url-for-sfcu"/> 
-        <code value="male"/> 
-        <display value="Male"/> 
-      </coding> 
-    </valueCodeableConcept>    
-  </extension>
-  <active value="true"/>
-  <name>
-    <family value="Example"/>
-    <given value="Child"/>
-  </name>
-  <gender value="male"/>
-  <birthDate value="2016-01-15"/>  
-</Patient>
-
-
-
-<Patient xmlns="http://hl7.org/fhir">
-  <id value="sfcu-reference-extension"/>
-  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/sex-for-clincal-use">
-    <valueReference>
-        <reference value="Observation/sfcu1"/> 
-        <display value="Contextual Sex for Clincial Use for Patient X"/> 
-    </valueReference>    
-  </extension>
-  <active value="true"/>
-  <name>
-    <family value="Example"/>
-    <given value="Child"/>
-  </name>
-  <gender value="male"/>
-  <birthDate value="2016-01-15"/>  
-</Patient>
-```
-
-Recorded Sex and Gender
-The gender property for the following resources will be updated (description/comment only) to indicate that these elements represent a recorded sex and gender and are explicitly not a gender identity of SFCU.  We will include a pointer to the SFCU extension for Patient.gender.  We will include pointers to the GI extension for these resources:
-
-Patient.gender
-Practitioner.gender
-RelatedPerson.gender
-Person.gender
-Note: PractitionerRole does not have a gender.  Practitioner gender is discovered via the reference to Practitioner.
-
-
-
-We will also create a swiss army knife extension for recording arbitrary recorded sex and gender concepts.  This extension would got on the person-type resources.
-
-> recordedSexOrGender.value   1..1 CodeableConcept (Example)
-> 
-> recordedSexOrGender.type 0..1 CodeableConcept (Example) - Indicates what the sex or gender value is representing. 
-> 
-> recordedSexOrGender.acquisitionDate 0..1 dateTime - The date/time when the sex or gender value was first recorded in the system.
-> 
-> recordedSexOrGender.effectivePeriod 0..1 Period
-> 
-> recordedSexOrGender.sourceDocument  0..*  CodeableReference(DocumentReference)  (example binding to document source list (based on a 
-> subset of https://www.hl7.org/fhir/identifier-registry.html?)). 
->
-> recordedSexOrGender.jurisdiction  0..1 CodeableConcept - 
->
-> recordedSexOrGender.comment 0..1 string
-
-
-
-We can suggest that US Core move Birth Sex into the (new) standard recorded sex and gender extension.  Or possibly add a comment to their extension indicating that recordedSexOrGender is an alternate way of representing Birth Sex.
-
-Name to Use (No Changes)
-The current HumanName data type already supports various name types including usual and official.   "Name to use" aligns with the usual name type.  It does not seem like updates are needed.
-
-## Pronouns
-A new extension will be added for pronouns on all person resources.
-
-> pronoun 0..*
->
-> pronoun.value  1..1 CodeableConcept (preferred) (ValueSet TBD)
->
-> pronoun.period 0..1 Period
->
-> pronoun.comment  0..1 string
-
-#### Questions:
-**Question**: Should we add GI on PractitionerRole?  Do provider want to use different GIs in different roles?
-
-**Answer**: Currently we are not considering this, but could do so if we get input that this would be useful.
-
-
-
-**Question**: Should we do something special for patient-context SFCU?
-
-**Answer**: No.  We'll have a single SFCU extension that can be added on all relevant contexts, including Patient.
-
-
-
-**Question**: Should GI be a first class property instead of an extension?
-
-**Answer**: This would be nice, if normative rules allow it (or can be made to allow it).
-
-
-
-**Question**: Should we deprecate Patient.gender in favor of explicit properties?
-
-**Answer**: Very likely not in R5.  We might possibly consider deprecating it in a future R6/R7 version.  Reuben Daniels was in favor of deprecating Patient.gender due to concerns with othering.  We'll have to balance the ideal vs. practical issues.
-
-
-
-**Question**:  Should we promote / offer a swiss army knife for recorded sex and gender?
-
-**Answer**: We will provide one, however it may not be surprising if adoption is low, as discretely capturing this information is not common.
-
-
-
-**Question**:  Should the properties have a recorded-on dateTime?
-
-**Answer**: Currently leaning toward "no", since you can infer that from resource history changes if necessary.  And we are not aware of any major use cases for this.  The primary use case for this information is getting the current value.
-
-
-
-**Question**: What binding strength should we use for the genderIdentity value set?
-
-**Answer**: TBD - currently proposed as Example, could consider Preferred.  
-
-
-
-
- {% include markdown-link-references.md %}
+[discuss guidance that if alternatives exist in a current implementation for sending information covered by the GH extensions, such as gender identity, we prefer the use of the GH approach but if needed, implementers should continue to send the alternative and note that they should align to all extent possible.]

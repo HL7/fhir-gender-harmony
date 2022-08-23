@@ -1,156 +1,101 @@
-# Health Maintenance Appropriate Screening - Intake, Annual Visit, etc.
+### Health maintenance screening laboratory use case** 
+
+#   Health maintenance screening laboratory use case
+
+##  	Use Case Description:
+
+In this use case, a patient calls a primary care health clinic to update her name, gender identity, and personal pronouns. Based on this information and age, the automated health-maintenance notification system requests that the patient schedule an in-person visit. The patient then attends the clinic for that scheduled visit and there is a lab test ordered as a result of an anatomy-specific finding.
+
+##  	Actors:
+### People
+1.	Patient (Julie Smith)
+2.	Administrative representative for the health system
+3.	Clinic Clerk 
+4.	Physician (Dr. Jones)
+
+### Systems
+1.	Clinic registration system
+2.	Clinic EHR
+3.	Order entry system
+4.	Lab information system
+
+##  	Scope Statement:
+
+Use case covers change of name, gender identity, and pronouns in the patient registration system and EHR, clinic check-in/registration, clinic visit, order entry, and results.
+
+##  	Precondition(s):
+
+1.	Patient ID has not changed
+2.	Patient medical history is available in the facility's EHR
+
+##  Workflow/Storyboard:
+###   Administrative update and record change
+1.	A patient, Julie Smith, calls her primary care health clinic and speaks with an administrative representative. 
+2.	The patient informs the clinic’s administrative representative that she is a transgender female and would like to update her name, gender identity, and pronouns in the clinic’s EHR system.
+3.	The clerk will then provide system-specific choices to the patient, usually being to (1) keep both the previous information and the newer information while demarking the previous information by providing a date for both the previous name, gender identity, and pronouns, or (2) entering the patient as a new patient with only the newer information available and not linking the profile to the previous profile in any way. With any choice, the clerk will inform the patient of the consequences of each choice pursuant to clinic- and system-specific guidelines.
+4.	Julie decides to keep her prior information and update the account with her new name, gender identity, and pronouns.
+5.	The administrative representative asks Julie for the name that is currently in the system.
+6.	Julie gives the name “Jack Smith.”
+7.	The administrative representative asks Julie for her date of birth as a second patient identifier.
+8.	Julie provides the birthdate, which matches the birthdate on the patient record for “Jack Smith.”
+9.	The administrative clerk will inform the patient of if and how previously recorded information (name, pronouns, gender identity, etc.) is retained in the system, and who might be able to access that information.
+10.	The administrative representative asks if Julie would like to update Name to Use in her record and explains that the staff who calls for her by name in the waiting room will use Name to Use to call for her and asks if she would like to be called back as Julie Smith.
+11.	Julie agrees.
+12.	The administrative representative notes that the patient profile currently labeled as “Jack Smith” has a gender identity of “Male” in the system and confirms with Julie that she would like to go through the process of changing the system profile to reflect her gender identity and personal pronoun as well. 
+13.	Julie agrees and the administrative representative asks if she would like to fill out the information herself (via a patient portal) or if she would like to dictate to the administrative representative the individual changes, with the administrative representative explaining some of the potential consequences of those changes.
+14.	Julie agrees to dictate changes to the administrative representative who enters edit mode in the patient registration system to record that the patient name “Jack Smith” is no longer active as of the current date and second-specific time. 
+15.	The administrative representative adds the new Name to Use of Julie Smith, along with any other relevant name-related variables, starting as of the current date and second-specific time.
+16.	The administrative representative follows the same approach to update the pronouns to she/her/hers. 
+17.	The administrative representative asks what gender identity Julie wishes to be recorded and Julie answers “Female.” The administrative representative records the prior gender identity in the system as inactive as of the current date and second-specific time and enters the gender identity of Female starting as of the current date and second-specific time. 
+18.	The administrative representative saves the patient demographic record that ends the call.
+19. The updated record sends a message to clinics in the health system to notify their systems of the change.
+
+
+####   Administrative update and record change workflow
+ 
+
+
+###  	Health screening automated process
+1.	The health maintenance system runs on a weekly basis and has a rule that when a patient changes their gender identity, it generates an e-mail to schedule an annual health screening appointment and requests the patient complete an anatomic inventory in their health profile.
+2.	Julie responds to the email by scheduling an appointment and completing the anatomic inventory.
+
+####  Health screening automated process workflow
+ 
+###  	Clinic appointment arrival and check-in
+1.	Julie Smith, age 52, arrives at an outpatient clinic for her health screening appointment and is greeted at the registration desk. 
+2.	The clerk asks for the patient's name and date of birth. 
+3.	The patient provides the name, Julie Smith with her date of birth. 
+4.	The clerk can find a patient in the appointment system with the name Julie Smith with a matching birthdate that has an appointment for today. 
+5.	The clerk checks Julie in for her appointment. 
+
+####   Clinic appointment arrival and check-in workflow
+ 
+
+###  Patient encounter and examination
+1.	Julie proceeds with her annual appointment with her physician, Dr. Jones. 
+2.	Upon starting the visit with Julie, Dr. Jones reviews the anatomic inventory questions with Julie, and it is noted that the patient has a prostate.
+3.	Based upon this updated information, the system notes Julie’s age is over 50 and she has an anatomic inventory with prostate present and no prostate exam or PSA value in the past 10 years. The EHR alerts Dr. Jones that a prostate exam and/or a PSA should be considered for the patient.
+4.	Dr. Jones reviews this recommendation with Julie and they agree a prostate exam should be performed as part of the examination.
+5.	Before the examination, Dr. Jones asks Julie about the medications she is taking regularly and on an as-needed basis. 
+6.	Julie informs Dr. Jones that she is utilizing an estrogenic therapy regimen. 
+7.	During the examination of her prostate, Dr. Jones notes a nodule on the prostate.
+8.	After a discussion with the patient, Dr. Jones enters a lab order for a PSA quantitative test and includes an SFCU value of “Male”, noting in the comment field that the patient has a prostate. 
+9.	The order is transmitted to the lab system. 
+10.	Julie proceeds to the lab department where she is checked in by her name and the lab technicians use her appropriate pronouns of she/her/hers as indicated in the record. Her blood specimen is collected, and the PSA test is performed by the lab.
+
+####   Patient encounter and examination workflow
+ 
+### 	Review of lab results 
+1.	The next day, Dr. Jones reviews the results of Julie Smith’s PSA. 
+2.	A PSA of 3.0 ng/ml is resulted with a reference range of normal as 0-4.0 ng/ml for Julie’s age. 
+3.	However, upon opening the result Dr. Jones is notified of a comment on the result: “Patients on testosterone suppressing medications, the upper limit of normal for the PSA should be reduced to 1.0 ng/ml.” 
+4.	Dr. Jones reviews Julie Smith’s previous testosterone levels, discusses the results with Julie, and together they decide to schedule her for additional testing based upon the specific situation noted for this PSA result.
+
+####  	Review of lab results workflow
+ 
+
+##   References
+1.	Wesp, L. “Prostate and testicular cancer considerations in transgender women.” UCSF Trangender Care, https://transcare.ucsf.edu/guidelines/prostate-testicular-cancer. Accessed July 15, 2022.
+2.	Bertoncelli Tanaka, M., Sahota, K., Burn, J., Falconer, A., Winkler, M., Ahmed, H.U., Rashid, T.G. (2022), Prostate cancer in transgender women: what does a urologist need to know?. BJU Int, 129: 113-122. https://doi.org/10.1111/bju.15521 (full article location: https://bjui-journals.onlinelibrary.wiley.com/doi/epdf/10.1111/bju.15521)
 
-A clinician is seeing a patient and considering which health maintenance screenings are appropriate.  The clinician, possibly seeing this patient for the first time, wishes to consider appropriateness by reviewing an up-to-date summary of relevant issues including
 
-1) what sexual organs the patient has (e.g. testicals, ovaries, uterus, cervix, breasts/mammography, osteopenia screening/estrogen status, prostate/PSA/DRE),
-
-2) previously determined screening needs (e.g. determined at the time of gender affirming surgery(s),
-
-3) previously recorded goals and preferences relative to health maintenance screening,
-
-4) appropriateness of using USPHTF screening based on guidelines based on recorded sex or gender at birth,
-
-5) need to update SFCU-specific screening status (e.g. diagnoses and/or surgeries since screening plan.)  
-
-
-
-Note: Roles and local workflows will vary.  This is intended to be a basic use case (specific instance; does not cover everything)
-
-Actors:
-People
-
-Patient -
-whose record indicates the existence of a SFCU-aware, health maintenance screening profile. 
-Need for such a screening profile is part of a different use case for classifying the patient.
-Profile may simply contain indication that patient does not have factors that require consideration outside of Recorded Sex or Gender at Birth driving selection of health maintenance screening considerations.
-Clinician
-Care Manager (reviewing/assuring a panel of patients is up-to-date on their screening)
-Are other clinical workers involved? Elsewhere referred to as "Intake Personnel" such as registration clerk, person rooming, roles of nurse practitioners, physician assistants, and other personnelle.
-System
-
-  EHR record may have current status for eligible screening
-
-  Referral for task of classifying the patient as concurrent or scheduled classification, based on local or plan policy.
-
-  Policy question: who (which roles) are qualified to classify the patient's needs?
-
-Scope Statement:
-Use case covers ambulatory annual visit when health maintenance is considered.
-
-
-
-Sex and Gender appropriate history and physical is either:
-
-    previously done relative to this use case
-
-      or
-
-    if not done, another use case covers collecting the necessary screening information.
-
-In other words, this use case does not exhaustively address health maintenance assessment, the underlying knowledge bases required, or a requisite workflow.  Instead, we are focusing on the HL7 standards and their use to insure the relevant content models (e.g. FHIR Resources, cCDA and v2 messaging) have specific defined means of capturing sex for clinical use (SFCU).  In this case, that 'Clinical Use' is determining the appropriate screening health maintenance tasks (history taking including patient-specific physiologic, anatomic, pharmacologic, and other factors including preferences).  Once those tasks are performed, clinical decision support (CDS) not elaborated in this use case will take those input factors and considerations to inform the provider's and patient's shared decision making on the appropriate health maintenance screening plan.  This use case focuses on the standardization and interoperability (information exchange) practices available and recommended with the three HL7 product lines (FHIR, cCDA, v2 messages). 
-
-Screening considerations beyond United States Public Health Task Force (USPHTF) screening recommendations (broader minimal survey, according to 2022 literature review)
-
-Blood pressure and heart rate screening
-Height and weight checks for body mass index
-Blood tests for cholesterol, triglyceride, and glucose levels
-Urine tests for glucose and protein levels, bacteria, blood cells, and more
-STI screenings
-Medication and hormone treatment monitoring
-Immunizations
-Mammograms
-Gynecological and anal exams
-Lung, prostate, testicular, and colon cancer screenings
-Exercise and diet counseling
-
-Precondition(s):
-Patient in EHR, being seen in an ambulatory setting.
-Their health maintenance needs
-have been classified or
-need to be classified on the current comprehensive visit.
-There is a system of record (EHR). 
-There minimal required health maintenance needs need to be assessed, including needs often not assessed and captured in prior decades.  This is in some ways exactly parallel to SDOH needs but in a GHP content.
-HL7:
-FHIR: Resource/Elements/Extensions relating to GHP classification reviewed and updated in this example
-Some organizations will recognize a task and status:  patient has been classified for health maintenance
-Information necessary for provider to reason over the patient's status could be in FHIR Resources including Patient, Observations, Service Requests, Conditions, Questionnaires, and other resources to a lesser degree (NEEDS TO BE REVIEWED BY CLINICAL AND OPERATIONAL ARCHITECTS)
-cCDA: Information to classify health maintenance needs will be contained in one or more existing documents, and include all that are relevant to GHP concepts (SFCU factors that drive health maintenance.
-v2 Messages and GHP-associated segments where relevant to Health Maintenance for all patients, in the genderbread person-aware sense.
-If patient not classified, provider may be scheduled for the classification task.
-Health Maintenance appropriateness assessment MAY be a required step based on local policies for annual health maintenance visit, with local implications beyond this use case.
-Postcondition(s):
-The clinician and patient involved have determined which health maintenance screening tests are appropriate based on previously captured information which relates the patient to the USPHTF guidelines.
-
-
-
-No new Resources and Elements or In-line extensions are populated.  There is no write-back as a result of completing this workflow.
-
-Workflow/Storyboard:
-== Before Gender Harmony Project:
-
-    Provider made health maintenance screening decisions based on age, gender (=male or female), and major risk factors including prior medical history and family history.
-
-
-
-== After Gender Harmony Project:
-
-  Workflow/thoughtflow is the same AND gender consideration reflects the patient's current and past gender history to ensure appropriate care.  For example, people who required Estrogen for bone health (most commonly women) without replacement of Estrogen after age-related cessation of endogenous Estrogen may require bone density determination, independent of current gender.
-
-
-
-The workflow demands to capture the health maintenance needs of a patient that are variably unmet in contemporary 2022 clinical practice parallel and in some cases overlap with uncaptured patients needs from a SDOH perspective.  They therefore share the following swimlane-based workflow example:  (see FIgure 1 here: 
-
-Evaluation of a social determinants [paralleling uncapture gender and sex related needs] of health screening questionnaire and workflow pilot within an adult ambulatory clinic
-https://bmcprimcare.biomedcentral.com/articles/10.1186/s12875-021-01598-3  )
-
-
-
-
-
-
-
-
-
-This use case and example will focus on the representation of HL7 content model and exchange for the GHP elements in this implementation guide, specific to this Health Maintenance use case.  For example, in the FHIR context,
-
-  -   GHP Information  swim lane position 1 may be a health maintenance-specific questionnaire (or questionnaire section which produces new resources, with elements of ressources expressed as SFCU content expressed as extensions.)  
-
-
-
-  - GHP conversation - swim lane position 6 - would be be expected to be communicated through a native EHR application, with the HL7 expression of the collected or reviewed information cast into SFCU unambiguous structures in each of the HL7 family constructs (FHIR, cCDA, v2.) 
-
-
-
-
-
-
-
-see USPHTF for inventory of health maintenance screening: https://www.uspreventiveservicestaskforce.org/uspstf/recommendation-topics/uspstf-a-and-b-recommendations?SORT=T
-
-Note: As of the 2021 update, there are 52 potential recommendations.  23 have no gender associated terms.  17 contain "Women".  2 contain "men" (AAA and IPV). 17 contain "Gestation" or "Pregnant".
-
-Note: There is also group-specific categorical "Top Issues" here: https://store.samhsa.gov/sites/default/files/d7/priv/sma12-4684.pdf
-
-
-
-Expected Workflow Variations:
-
-Arrival and check-in: some of this information and the questionnaire process, for various patient sub-populations, may take place through a portal prior to the scheduled visit.  Some content will not be appropriate to collect with an MA-mediated interaction.  ETc
-
-
-Patient and provider "prior direction" on health maintenance, will likely be facilitated through local and site specific documentation templates and builds.  The subsequent persistent information storage in native EHR repositories will need to facilitate expression in, for example, HL7 FHIR content and exchange models.  Today, (2022), these native systems are often incapable to meeting and populating required status field information in FHIR v4.  IT IS THE GOAL OF THIS USE CASE TO PROVIDE CONCRETE, CONFORMANT EXAMPLES OF SPECIFIC HEALTH MAINTENCE-RELATED EXAMPLE.
-
-
-Clinician workflow (decision making) is out-of-scope for this example.  That said, the many primary care providers will need help providing quality and non-stigmatizing care to various GHP-sensitive communities.
-
-
-
-
-
-
-
-
-Alternative and/or related Workflow(s):
-
-Alignment and/or Misalignment with Gender Harmony Model:
-Care must be taken to not exacerbate stigmatizing concerns for providers at various degrees of Gender Harmony awareness.  For example, providers must be trained in applying health maintenance screening based on Genderbread person characteristics.

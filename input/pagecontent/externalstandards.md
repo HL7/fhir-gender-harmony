@@ -83,9 +83,23 @@ Currently, NCPDP has approved the field Sex Assigned at Birth that will be used 
 Note: The NCPDP Gender Transition Task Group determined the Conditional Gender Code (C08- 4T), and Purchaser Gender Code (595-YY) were not applicable to patient matching. There was also an added element of “Reproductive Potential”.
 
 #### X12
-X12 is an ANSI accredited SDO that develops and maintains transactions based in electronic data interchange (EDI). Currently, all X12 transactions use the following values to classify the element Gender Code: F (Female), M (Male) and U (Unknown). The definition for this element is “Code indicating the sex of the individual,” X12 does not have separate fields for gender identity and has attempted to clarify reasoning behind the use of Unknown to represent nonbinary gender on claims as follows:
-    “...the value of “U” is the appropriate option when the sender cannot explicitly select either “M” or “F”. While the description of value “U” is Unknown, in this case, Unknown only means that neither “M” nor “F” can be sent. The reason that neither “M” nor “F” can be sent is what is unknown. “U” does not necessarily mean that the gender is unknown to the sender.”
-In a future state, X12 is considering expanding to the following available elements: F (Female), M (Male), I (Non-binary), T (Self-reported as transgender), A (Not provided), U (Unknown) and include the code notes:
-    Code value A = when gender cannot be sent due to reporting restrictions
-    Code value U = use when gender is unknown.
-X12 is currently deliberating on this and will hold future votes in 2021 to address the need for additional code values for the DMG03 in future versions.
+X12 is an ANSI-accredited Standards Developer (ASD) that develops and maintains business-to-business
+data exchange standards, including electronic data interchange (EDI) standards and schemas, which drive
+business processes globally. With more than 320 transaction standards available for use, X12 standards
+are used to conduct nearly every facet of business-to-business operations.
+
+X12 is actively participating in HL7’s Gender Harmony Project and intends to present recommendations
+based on the group's findings to X12's members. Currently, X12 transactions include gender codes from
+an X12 maintained list identified as data element 1068 - Gender Code. Data element (DE) 1068 is a set of
+codes indicating the sex of an individual. The X12 EDI Standard version 008030 supports the following
+codes for use in DE 1068.
+
+* A – Not Provided
+* B – Not Applicable
+* F – Female
+* I – Nonbinary
+* M – Male
+* N – Non-sexed *Gender is not known because observation or examination for such was not recorded or requested by the protocol*
+* T – Self-reported as Transgender
+* U – Unknown
+* X – Unsexable *Gender could not be determined because of ambiguity in external or internal genitalia*
