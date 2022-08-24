@@ -99,7 +99,7 @@ codes for use in DE 1068.
 * F – Female
 * I – Nonbinary
 * M – Male
-* N – Non-sexed *Gender is not known because observation or examination for such was not recorded or requested by the protocol*
+* N – Non-sexed <br />*Gender is not known because observation or examination for such was not recorded or requested by the protocol*
 * T – Self-reported as Transgender
 * U – Unknown
-* X – Unsexable *Gender could not be determined because of ambiguity in external or internal genitalia*
+* X – Unsexable <br />*Gender could not be determined because of ambiguity in external or internal genitalia*

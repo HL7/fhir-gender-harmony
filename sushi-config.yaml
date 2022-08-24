@@ -3,9 +3,9 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: fhir.gender.harmony
-canonical: http://example.org
-name: fhir-gender-harmony
+id: gender.harmony
+canonical: http://hl7.org
+name: gender-harmony
 title: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 description: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 status: draft # draft | active | retired | unknown
@@ -16,8 +16,8 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: Example Publisher
-  url: http://example.org/example-publisher
+  name: HL7
+  url: http://hl7.org
   # email: test@example.org
 
 
@@ -63,7 +63,7 @@ pages:
   bib.md:
     title: Bibliography
   background.md:
-    title:  Sex-gender Background
+    title: Background
   fhirdicom_use_case.md:
     title: FHIR DICOM Example
   fhirhealth_maintanence_use_case.md:
@@ -78,7 +78,7 @@ pages:
     title: V2 Health Maintanence Example    
 menu:
   Home: index.html
-  Sex-gender Background: background.html
+  Background: background.html
   Design Considerations: design.html  
   Model: model.html
   Use Cases:  
