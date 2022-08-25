@@ -1,127 +1,4 @@
 ### FHIR HEALTH 
-
-```
-{
-   "ServiceRequest": {
-      "id": {
-         "_value": "PSA"
-      },
-      "extension": [
-         {
-            "extension": [
-               {
-                  "valueCodeableConcept": {
-                     "coding": {
-                        "system": {
-                           "_value": "http://terminology.hl7.org/CodeSystem/sex-for-clinical-use"
-                        },
-                        "code": {
-                           "_value": "Male"
-                        },
-                        "display": {
-                           "_value": "Specified sex for clinical use"
-                        }
-                     }
-                  },
-                  "_url": "value"
-               },
-               {
-                  "valueString": {
-                     "_value": "Patient has a prostate."
-                  },
-                  "_url": "comment"
-               }
-            ],
-            "_url": "http://hl7.org/fhir/StructureDefinition/patient-sexForClinicalUse"
-         }
-      ],
-      "identifier": {
-         "type": {
-            "coding": {
-               "system": {
-                  "_value": "http://terminology.hl7.org/CodeSystem/v2-0203"
-               },
-               "code": {
-                  "_value": "PLAC"
-               }
-            },
-            "text": {
-               "_value": "Placer"
-            }
-         },
-         "system": {
-            "_value": "urn:oid:1.3.4.5.6.7"
-         },
-         "value": {
-            "_value": "2345234234234"
-         }
-      },
-      "status": {
-         "_value": "active"
-      },
-      "intent": {
-         "_value": "original-order"
-      },
-      "code": {
-         "coding": {
-            "system": {
-               "_value": "http://loinc.org"
-            },
-            "code": {
-               "_value": "2857-1"
-            },
-            "display": {
-               "_value": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
-            }
-         },
-         "text": {
-            "_value": "Prostate specific Ag [Mass/Vol]"
-         }
-      },
-      "subject": {
-         "reference": {
-            "_value": "Patient/patientID1"
-         },
-         "display": {
-            "_value": "Julie Smith"
-         }
-      },
-      "encounter": {
-         "reference": {
-            "_value": "Encounter/example"
-         }
-      },
-      "occurrenceDateTime": {
-         "_value": "2022-08-15T18:01:00+01:00"
-      },
-      "requester": {
-         "reference": {
-            "_value": "Practitioner/example"
-         }
-      },
-      "performer": {
-         "reference": {
-            "_value": "Practitioner/f005"
-         }
-      },
-      "reasonCode": {
-         "coding": {
-            "system": {
-               "_value": "http://hl7.org/fhir/sid/icd-10-cm"
-            },
-            "code": {
-               "_value": "N40.2"
-            },
-            "display": {
-               "_value": "Nodular prostate without lower urinary tract symptoms"
-            }
-         }
-      },
-      "_xmlns": "http://hl7.org/fhir"
-   }
-}
-```
-
 ```
 {
    "Patient": {
@@ -325,6 +202,128 @@
             }
          }
       ],
+      "_xmlns": "http://hl7.org/fhir"
+   }
+}
+```
+
+```
+{
+   "ServiceRequest": {
+      "id": {
+         "_value": "PSA"
+      },
+      "extension": [
+         {
+            "extension": [
+               {
+                  "valueCodeableConcept": {
+                     "coding": {
+                        "system": {
+                           "_value": "http://terminology.hl7.org/CodeSystem/sex-for-clinical-use"
+                        },
+                        "code": {
+                           "_value": "Male"
+                        },
+                        "display": {
+                           "_value": "Specified sex for clinical use"
+                        }
+                     }
+                  },
+                  "_url": "value"
+               },
+               {
+                  "valueString": {
+                     "_value": "Patient has a prostate."
+                  },
+                  "_url": "comment"
+               }
+            ],
+            "_url": "http://hl7.org/fhir/StructureDefinition/patient-sexForClinicalUse"
+         }
+      ],
+      "identifier": {
+         "type": {
+            "coding": {
+               "system": {
+                  "_value": "http://terminology.hl7.org/CodeSystem/v2-0203"
+               },
+               "code": {
+                  "_value": "PLAC"
+               }
+            },
+            "text": {
+               "_value": "Placer"
+            }
+         },
+         "system": {
+            "_value": "urn:oid:1.3.4.5.6.7"
+         },
+         "value": {
+            "_value": "2345234234234"
+         }
+      },
+      "status": {
+         "_value": "active"
+      },
+      "intent": {
+         "_value": "original-order"
+      },
+      "code": {
+         "coding": {
+            "system": {
+               "_value": "http://loinc.org"
+            },
+            "code": {
+               "_value": "2857-1"
+            },
+            "display": {
+               "_value": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+            }
+         },
+         "text": {
+            "_value": "Prostate specific Ag [Mass/Vol]"
+         }
+      },
+      "subject": {
+         "reference": {
+            "_value": "Patient/patientID1"
+         },
+         "display": {
+            "_value": "Julie Smith"
+         }
+      },
+      "encounter": {
+         "reference": {
+            "_value": "Encounter/example"
+         }
+      },
+      "occurrenceDateTime": {
+         "_value": "2022-08-15T18:01:00+01:00"
+      },
+      "requester": {
+         "reference": {
+            "_value": "Practitioner/example"
+         }
+      },
+      "performer": {
+         "reference": {
+            "_value": "Practitioner/f005"
+         }
+      },
+      "reasonCode": {
+         "coding": {
+            "system": {
+               "_value": "http://hl7.org/fhir/sid/icd-10-cm"
+            },
+            "code": {
+               "_value": "N40.2"
+            },
+            "display": {
+               "_value": "Nodular prostate without lower urinary tract symptoms"
+            }
+         }
+      },
       "_xmlns": "http://hl7.org/fhir"
    }
 }

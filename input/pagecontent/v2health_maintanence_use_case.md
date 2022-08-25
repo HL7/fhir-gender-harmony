@@ -39,4 +39,3 @@ PRT|123487690^LabInfoSystem|SP||POMD^Performing Organization Medical DirectorHL7
 NTE|1||Patients on testosterone suppressing medications, the upper limit of normal for the PSA should be reduced to 1.0 ng/ml
 SPM|1|^14MP000051&LabInfoSystem||119364003^Serum specimen^SCT|||||||||||||202208151601|202208151601
 ```
-

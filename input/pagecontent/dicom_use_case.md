@@ -1,4 +1,4 @@
-# DICOM® Use Case (DRAFT)
+# DICOM® Use Case
 
 ## Note to Balloters
 

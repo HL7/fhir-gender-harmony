@@ -9,7 +9,7 @@ name: fhir-gender-harmony
 title: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 description: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 status: draft # draft | active | retired | unknown
-version: 0.1.18
+version: 0.1.19
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -25,58 +25,55 @@ publisher:
 pages:
   index.md:
     title: Home
-  model.md:
-     title: Model
-  conformance-general.md:
-    title: Conformance Expectations
-  conformance-profiles.md:
-    title: Profile Conformance
-  cdagenderharmony.md:
-   title: CDA Gender Harmony
-  fhirgenderharmony.md:
-   title: FHIR Gender Harmony   
-  hl7v2genderharmony.md:
-   title: V2 Gender Harmony
-  terminology.md:
-    title: Terminology
-  ghexamples.md:
-    title: Gender Harmony Examples
-  cdaexamples.md:
-    title:  CDA Examples    
-  fhirexamples.md:
-    title:  FHIR Examples
-  hl7v2examples.md:
-    title:  V2 Examples    
-  design.md:
-     title: Design Considerations   
-  labratory_use_case.md:
-    title: Laboratory Use Case for transgender woman presenting to laboratory facility for blood draw
-  hysterectomy_use_case.md:
-    title: Transgender man needs hysterectomy and needs procedure approval
-  dicom_use_case.md:
-    title: DICOM
-  health_maintanence_use_case.md:
-    title:  Health Maintanence Use Case     
-  externalstandards.md:
-    title: External Standards  
-  fhirextensions.md:
-    title: FHIR Extensions
-  bib.md:
-    title: Bibliography
   background.md:
     title: Background
-  fhirdicom_use_case.md:
+  design.md:
+    title: Design Considerations        
+  model.md:
+    title: Model
+  dicom_use_case.md:
+    title: DICOM       
+  labratory_use_case.md:
+    title: Laboratory Use Case for transgender woman presenting to laboratory facility for blood draw   
+  hl7v2genderharmony.md:
+    title: V2 Gender Harmony
+  hl7v2examples.md:
+    title:  V2 Examples  
+  cdagenderharmony.md:
+   title: CDA Gender Harmony
+  cdaexamples.md:
+    title:  CDA Examples  
+  fhirgenderharmony.md:
+   title: FHIR Gender Harmony 
+  fhirexamples.md:
+    title:  FHIR Examples
+  terminology.md:
+    title: Terminology        
+  externalstandards.md:
+    title: External Standards  
+  bib.md:
+    title: Bibliography
+  v2dicom_use_case.md:
     title: FHIR DICOM Example
-  fhirhealth_maintanence_use_case.md:
-    title: FHIR Health Maintanence Example
+  v2health_maintanence_use_case.md:
+    title: V2 Health Maintanence Example       
   cdadicom_use_case.md:
     title: CDA DICOM Example
   cdahealth_maintanence_use_case.md:
     title: CDA Health Maintanence Example
-  v2dicom_use_case.md:
+  fhirdicom_use_case.md:
     title: FHIR DICOM Example
-  v2health_maintanence_use_case.md:
-    title: V2 Health Maintanence Example    
+  fhirhealth_maintanence_use_case.md:
+    title: FHIR Health Maintanence Example
+  conformance-general.md:
+    title: Conformance Expectations
+  conformance-profiles.md:
+    title: Profile Conformance
+  ghexamples.md:
+    title: Gender Harmony Examples
+  fhirextensions.md:
+    title: FHIR Extensions
+    
 menu:
   Home: index.html
   Background: background.html
@@ -106,7 +103,7 @@ menu:
 
   All Artifacts: artifacts.html
   
-  History: http://hl7.org/fhir/us/military-service/history.html
+  History: http://hl7.org/fhir/us/fhir-gender-harmony/history.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

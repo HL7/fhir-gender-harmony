@@ -41,12 +41,35 @@ To accomplish that cross-paradigm goal, the guide provides:
   - The CDA templates are balloted as **Standard for Trial Use (STU) on the normative track**
   - The remaining content of this IG is balloted **Informative**.
 - Value sets and code systems needed for the GH model artifacts.
-  - Specified Note that the same terminology artifacts that are used in all product families. The value sets and code systems used are defined in the FHIR core R5 specification, bound to the GH extensions. The terminology is **not** defined in this guide. Please review the terminology and comment on the content in the FHIR R5 ballot.
+  - Please Note that the same terminology artifacts that are used in all product families. The value sets and code systems used are defined in the FHIR core R5 specification, bound to the GH extensions. The terminology is **not** defined in this guide. Please review the terminology and comment on the content in the FHIR R5 ballot.
 - Examples that illustrate how to use the product family-specific enhancements in consistent ways to meet a use case.
+
+## Aligned but separate ballots that contain Gender Harmony content
+
+The official V2.9.1 ballot found [here](http://www.hl7.org/documentcenter/public/ballots/2022SEP/downloads/V291_R1_N1_2022SEP.zip) - Please note this is a link that downloads the ballot file. Please submit comments on that ballot [here](https://jira.hl7.org/issues/?jql=project%20%3D%20V2%20AND%20Specification%20%3D%20%22V2.x%20Message%20Specification%20(V2)%20%5BV2-core%5D%22%20and%20%22Raised%20in%20Version%22%20%3D%20%27V2.9.1%27), do not comment against this Gender Harmony ballot for content found in the V2.9.1 ballot.
+
+All new FHIR enhancements to support Gender Harmony modeling are changes to FHIR included in the R5 FHIR core specification described in the separate [R5 FHIR ballot specification](http://www.hl7.org/fhir/2022Sep) and all comments on the extensions and the related terminology **must be made against the FHIR R5 ballot** [at this location](https://jira.hl7.org/browse/FHIR-37986?jql=project%20%3D%20%22FHIR%20Specification%20Feedback%22%20%20AND%20Specification%20%3D%20%22FHIR%20Core%20(FHIR)%20%5BFHIR-core%5D%22%20%20and%20%22Raised%20in%20Version%22%20%3D%20%27R5%27), not on this ballot. To make a comment on content in the R5 FHIR ballot, please follow that link provided and first search to see if your issue has already been reported, and if found make a comment on the existing jira issue and link to it if you are voting based upon that issue, otherwise use the Create button to start a new change request issue.
+
+## Questions to balloters:
+
+We are particularly interested in comments on the following.
+
+- Should this guide define FHIR profiles that include the FHIR extensions to enable conformance testablity of the extension use?
+    - If so, which extensions should be included in a profile and the profile should be on what resources?
+        - One profile or individual profiles for the extensions: Gender Identity, Recorded Sex or Gender, Pronouns
+        - Name to Use profile (in combination with the others, or separate) with conformance specifics on HumanName dataType.
+        - Sex for clinical use profile using the SFCU extension
+        - What resources should have the profiles?
+        - Justification for this addition
+- What additional examples need to created and what unique characteristics need to be illustrated?
+
+
 
 # Conformance testable content
 
-Of the information provided within this initial version of guide, only the CDA templates described in this guide are conformance testable and therefore the CDA template content in this guide is **Standard for Trial Use (STU)** to normative track. The Version 2 Gender Harmony **Normative** material **is conformance testable**, but while that specification is discussed in this guide, the conformance testable material is in the official V2.9.1 ballot found elsewhere, and the material is this guide is additional informative content. All new FHIR enhancements to support Gender Harmony modeling are changes to FHIR included in the R5 FHIR core specification described in the separate R5 FHIR ballot specification and all comments on the extensions and the related terminology **must be made on the FHIR R5 ballot**, not on this ballot. Each GH FHIR enhancement, except Name To Use, is an extension in the core FHIR specification. Guidance on the use of these extensions is the focus on this guide. If the community would like conformance-testable FHIR profiles that ensure use of the new extensions, ballot comments clarifying the need and requirements for those profiles should be provided on this implementation guide.
+Of the information provided within this initial version of guide, only the CDA templates described in this guide are conformance testable and therefore the CDA template content in this guide is **Standard for Trial Use (STU)** to normative track. The Version 2 Gender Harmony **Normative** material **is conformance testable.**
+
+Each GH FHIR enhancement, except Name To Use, is an extension in the core FHIR specification. Guidance on the use of these extensions is the focus on this guide. As noteed in the questions to balloters above, if the community would like conformance-testable FHIR profiles that ensure use of the new extensions, ballot comments clarifying the need and requirements for those profiles should be provided on this implementation guide.
 
 The approaches in data exchange discussed in this guide expand HL7 best practices to assist organizations that adapt and extend FHIR profiles and implementation guides in their jurisdictions (e.g., US, Canada) to meet business and regulatory requirements. We look forward to implementers embracing the approaches outlined.
 
@@ -127,7 +150,7 @@ All the sex and gender information described in this document requires engaged r
 
 Demographic information that identifies male/men or female/women participants is a core segmentation in study design. It is clear that the historical binary approach to sex and gender data capture has affected gender and sex analysis and reporting. Some research studies refer to this cohort variable as sex, some refer to it as gender. Though the notion of sex is recognized implicitly as an important factor in clinical research, more work is needed to standardize the way sex and gender are reported and elucidate the way these characteristics function independently and together to influence health and health care. Incorporating clear distinctions between sex and gender using the approach noted in this guide will help ensure more accurate and precise data analysis.
 
-# Current State - Do we keep this?
+# Current State
 
 For an analysis of the current state of sex and gender representation we encourage the reader to review the material included in the [Gender Harmony model published in 2021](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564). 
 
@@ -152,25 +175,25 @@ FHIR kept the single element approach used by V2 and therefore also forced imple
 TBD -->
 
 # Implementation Guide Authorship
-## Authors
+
 The material in this implementation guide is is crafted through the hard work and persistent determination of the [Gender Harmony project](http://hl7.me/GHP). It is a continuation of the work published in Phase 1 of this project, available [here](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564).
 
-We consider documented members of the project, listed [here](https://confluence.hl7.org/display/VOC/Project+participants) to be authors of this guide.
+We are indebted to all members of the project, listed [here](https://confluence.hl7.org/display/VOC/Project+participants) who supported the creation of this implementation guide.
 ## Authors of the guide content
-### Overall Editors
-#### Robert C. McClure, Carol Macumber, Robert Horn, Mary Kay McDaniel, Lorraine Constable, Sean Muir, Clair Kronk
-### V2 material
-#### Riki Merrick, Craig Newman
-### CDA
-#### Jay Lyle, Russ Ott
-### FHIR
-#### Cooper Thompson
-### Use Cases
-#### Robert Horn, Steven Nichols, Cara Schlegel, Joseph Bormel
+- **Overall Editors**
+    - Robert C. McClure, Carol Macumber, Robert Horn, Mary Kay McDaniel, Lorraine Constable, Sean Muir, Clair Kronk
+- **V2 material**
+    - Riki Merrick, Craig Newman
+- **CDA**
+    - Jay Lyle, Russ Ott
+- **FHIR**
+    - Cooper Thompson
+- **Use Cases**
+    - Robert Horn, Steven Nichols, Cara Schlegel, Joseph Bormel
 
 # FootNote(s)
-## fn1
+1. fn1
 <sup>A groupong term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.</sup>
 
-## fn2
+1. fn2
 <sup>Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community is not a monolith.</sup> 

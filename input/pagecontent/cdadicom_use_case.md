@@ -1,5 +1,15 @@
 ### CDA DICOM
 
+This example was constructed to illustrate the DICOM use case.
+
+The patient is a transgender male, undergoing hormonal treatment. Based on physician instructions, affirmed gender	creatinine reference ranges were confirmed to be within normal values prior to the administration of non-ionic iodinated contrast agent. CT images for attenuation correction and anatomic localization followed by PET images were obtained.
+
+The Social History Section includes instance examples of the Gender Identity, Pronouns, and Recorded Sex or Gender templates.
+
+Examples of the use of the Sex for Clinical Use template can be found in the Imaging Procedure History Section.
+
+
+
 ```
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
