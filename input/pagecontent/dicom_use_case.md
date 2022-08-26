@@ -1,6 +1,4 @@
-# DICOM® Use Case
-
-## Note to Balloters
+### Note to Balloters
 
 This use case is illustrative of how ancillary systems in imaging, downstream from the EHR, are likely to consume and create evidence documents in response to Sex and Gender encoding. In this case, there are three instances of Sex For Clinical Use (SFCU). First, the ordering physicians provides instructions for interpreting lab values within a Sex for Clinical Use comment. In the second SFCU, an Artifical Intelligence (AI) application utilizes the Sex Assigned at Birth for the basis of reference values. Third, the radiologist determines the appropriate sex to use based on the patient's body composition for a Standard Uptake Value (SUV) calculation.
 The DICOM (Digital Imaging and COmmunications in Medicine) attributes in this use case are not normative, and details in DICOM are still being defined. If interested in participating in development of DICOM Sex and Gender encoding please contact the [DICOM Secretariat](mailto:dicom@dicomstandard.org).
@@ -39,15 +37,15 @@ Public comment, based on this use case is sought on the following Open Issues:
 
 10. In this Use Case, a single ADT message is created to communicate the patient name change. Is the order of the repeating elements in PID-5 significant? Should there be one ADT message or two (i.e. one message to communicate the new name, a second message to flag the old name as "NOUSE")?
 
-## Use Case Description:
+### Use Case Description:
 
 Post Gender Harmony model implementation with incorrect naming from the EHR.
 
 Patient with EHR Sex for Clinical Use (SFCU) of “female” and a EHR Gender Identity of “male” arrives for check-in at a facility using a DICOM worklist for a PET/CT examination. The examination is performed, the patient’s demographics are updated, and the report is delivered.
 
-## Actors:
+### Actors:
 
-### People
+#### People
 
 1.  Patient (John Smith) - whose previous records are for studies performed when his EHR Gender Identity was “female”. 
 
@@ -57,7 +55,7 @@ Patient with EHR Sex for Clinical Use (SFCU) of “female” and a EHR Gender Id
 
 4.  Recovery Nurse
 
-### Systems, (using IHE Actor names)
+#### Systems, (using IHE Actor names)
 
 1.  Hospital EHR (ADT, Order Placer)
 
@@ -71,11 +69,11 @@ Patient with EHR Sex for Clinical Use (SFCU) of “female” and a EHR Gender Id
 
 6.  AI (Artificial Intelligence) Task Performer
 
-## Scope Statement:
+### Scope Statement:
 
 Use case covers admission, patient prep, examination, recovery, post processing and reporting for a PET/CT examination order.
 
-## Precondition(s):
+### Precondition(s):
 
 1.  John Smith is registered in the hospital record system with his old name of “Janet Smith”
 
@@ -95,7 +93,7 @@ Use case covers admission, patient prep, examination, recovery, post processing 
 
 [**Example 01**](#example-01-imaging-order) depicts a HL7 v2.9.1 Imaging Order for this patient with mapping to DICOM Modality Worklist attributes.
 
-## Postcondition(s):
+### Postcondition(s):
 
 1.  PET/CT Examination is complete or cancelled
 
@@ -109,13 +107,13 @@ Use case covers admission, patient prep, examination, recovery, post processing 
     
     2.  Add a Name to Use (Janet Smith) whose validity period begins on day of exam
 
-## Workflow/Storyboard:
+### Workflow/Storyboard:
 
 ![](gh-dicom-2.svg)
 
 Figure 1 Workflow Storyboard
 
-### Arrival and check-in:
+#### Arrival and check-in:
 
 In this scenario, the patient initiates the discussion with the clerk.
 
@@ -143,7 +141,7 @@ In this scenario, the patient initiates the discussion with the clerk.
 
 [**Example 02**](#example-02-patient-name-update) depicts a HL7 v2.9.1 Demographics Update message for this patient with mapping to DICOM Modality Worklist attributes.
 
-### Patient Preparation
+#### Patient Preparation
 
 1.  The technologist checks their schedule for John, and finds the order for “Janet Smith”, Patient’s Sex “F” and Patient’s Gender “M”, and with a Patient Names to Use “John Smith”. Sex Comment contains “Hormonal treatment, use affirmed gender Cr reference ranges”.
 
@@ -165,7 +163,7 @@ In this scenario, the patient initiates the discussion with the clerk.
 
 Note: The pre-identified protocol was based on a female patient (see item [8 in Precondition(s)](#preconditions)).
 
-### Examination
+#### Examination
 
 1.  The technologist knows to select the MWL entry for “Janet Smith” and expects a Patient’s Sex of “F”; this does not trigger a wrong patient concern.
 
@@ -182,7 +180,7 @@ Note: The pre-identified protocol was based on a female patient (see item [8 in 
 7.  The images and Radiation Dose Structured Report (RDSR) are transferred to the PACS, Dose Information Reporter and AI Task
     Performer systems.
 
-### Analysis 
+#### Analysis 
 
 1.  The radiologist creates an SUV ROI on the PACS. The application detects the presence of Patient’s Sex (0010,0040) “F”, a Gender Code (0010,xxx4).(0008,0104) “Male” and Sex Assigned at Birth (0010,xx25) of “F” and prompts the radiologist to enter a value “M” or “F”.
 
@@ -192,7 +190,7 @@ Note: The pre-identified protocol was based on a female patient (see item [8 in 
 
 Note: Sex at Birth is required to determine reference values for AI and non-AI machine algorithims in various domains, such as cardiology and neurology.
 
-### Reporting
+#### Reporting
 
 1.  The radiologist dictates findings pertaining to the procedure, noting scanner and contrast protocol modifications in the “Request” section of the report.
 
@@ -213,9 +211,9 @@ Note: Sex at Birth is required to determine reference values for AI and non-AI m
 
 The final report may be represented in [FHIR](#example-03-fhir-mapping), [HL7 v2](#example-04-imaging-report), or a [CDA](#example-05-cda-release-2-imaging-report).
 
-## Examples
+### Examples
 
-### Example 01: Imaging Order
+#### Example 01: Imaging Order
 
 Below is a HL7 v2.9.1 OMI Imaging Order from [precondition(s)](#preconditions).
 
@@ -267,7 +265,7 @@ This maps to DICOM Modality Worklist as follows:
 |                                      | \>\>Coding Scheme Designator  | (0008,0102) | SH | SCT                                                         |
 |                                      | \>\>Code Meaning              | (0008,0104) | LO | Female                                                      |
 
-### Example 02: Patient Name Update
+#### Example 02: Patient Name Update
 
 Below is a HL7 v2.9.1 ADT Demographics Update from [arrival and check-in](#arrival-and-check-in).
 
@@ -320,7 +318,7 @@ This maps to DICOM Modality Worklist as follows:
 |                                      | \>\>Coding Scheme Designator  | (0008,0102) | SH | SCT                                                         |
 |                                      | \>\>Code Meaning              | (0008,0104) | LO | Female                                                      |
 
-### Example 03: FHIR Mapping
+#### Example 03: FHIR Mapping
 
 The patient is referenced as the subject of [DiagnosticReport](#reporting), DocumentReference, ImagingStudy or ImagingSelection. Mapping to DICOM is as follows:
 
@@ -359,7 +357,7 @@ The patient is referenced as the subject of [DiagnosticReport](#reporting), Docu
 | system                                   | \>\>Coding Scheme Designator  | (0008,0102) | SH | SCT                                                         |
 | display                                  | \>\>Code Meaning              | (0008,0104) | LO | Female                                                      |
 
-### Example 04: Imaging Report
+#### Example 04: Imaging Report
 
 Below is a HL7 v2.9.1 Unsolicited Observation Result containing the narrative from the final [Imaging Report](#reporting).
 
@@ -377,7 +375,7 @@ OBX|3|CWE|55110-1^Conclusion^LN||Conclusion goes here||||||F|
 
 *OBX Segments containing Imaging Report Narrative omitted for brevity*
 
-### Example 05: CDA Release 2 Imaging Report
+#### Example 05: CDA Release 2 Imaging Report
 Below is a CDA [Imaging Report](#reporting) example.
 
 ```
@@ -423,7 +421,7 @@ Below is a CDA [Imaging Report](#reporting) example.
 		<patientRole>
 			<id extension="12345" root="2.16.840.1.113883.19.5"/>
 			<addr use="HP">
-				<streetAddressLine>3300 Washtenaw Ave # 227</streetAddressLine>
+				<streetAddressLine>3300 Washtenaw Ave ## 227</streetAddressLine>
 				<city>Ann Arbor</city>
 				<state>MI</state>
 				<postalCode>48104</postalCode>
@@ -450,7 +448,7 @@ Below is a CDA [Imaging Report](#reporting) example.
 					<code code="GRFTH" displayName="Grandfather"
 						codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 Role code"/>
 					<addr use="HP">
-						<streetAddressLine>3300 Washtenaw Ave # 227</streetAddressLine>
+						<streetAddressLine>3300 Washtenaw Ave ## 227</streetAddressLine>
 						<city>Ann Arbor</city>
 						<state>MI</state>
 						<postalCode>48104</postalCode>
@@ -540,7 +538,7 @@ Below is a CDA [Imaging Report](#reporting) example.
 				<name>Good Imaging Clinic</name>
 				<telecom value="tel:(555)555-1212" use="WP"/>
 				<addr use="HP">
-					<streetAddressLine>3300 Washtenaw Ave # 227</streetAddressLine>
+					<streetAddressLine>3300 Washtenaw Ave ## 227</streetAddressLine>
 					<city>Ann Arbor</city>
 					<state>MI</state>
 					<postalCode>48104</postalCode>
