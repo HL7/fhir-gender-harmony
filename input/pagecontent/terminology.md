@@ -20,7 +20,9 @@ Any balloter that has a comment on these two items in V2.9.1 should comment on t
 
 The CDA normative track material **is completely included within this Gender Harmony ballot.** Yet, all terminology content used in the CDA Entry Templates is all defined within the FHIR R5 ballot. Please review the terminology there and comment on the R5 ballot if there is an issue.
 
+<div class="note-to-balloters">
 Balloters should note that the terminology artifacts (code systems and value sets) will all *eventually* be published as part of the content at terminology.hl7.org (THO). This will occur *after ballot reconciliation*. During the ballot period the terminology resources defined by this project exist as part of the FHIR R5 core build. This is evident when looking at the actual location when viewing the terminology resources, even though the canonical urls are all based in THO. We note this so that if the canonical url is pasted into a browser, the location will 404 until ballot reconciliation is completed and the content is moved to THO permanently.
+</div>
 
 Bottom line for comments: Essentially all terminology is defined in the FHIR R5 ballot so please review that ballot, focusing on the extensions noted in the FHIR section of this guide to know where to look. Make all comments on the terminology artifacts against that ballot.
 

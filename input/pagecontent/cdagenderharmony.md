@@ -57,9 +57,12 @@ One approach would be to use the Entry Reference template to associate an SFCU w
 The template defined here describes an approach using entryRelationship to establish context specific to an entry, to an encounter, or to the patient generally. This approach leverages context conduction appropriately, and it is a tactic with which many implementers are familiar. It also requires the use of the Entry Reference template where the SFCU applies to multiple entries.
 
 
-
-|<p>Notes for balloters</p><p>1. Is more directive guidance warranted for what kinds of artifacts may include these entry templates?</p><p>2. Is “derivationExpr” an appropriate representation of a natural language definition, or should that property of Recorded Sex or Gender be rendered as methodCode or another sub-entry?</p><p>3. Every effort has been made to ensure that Sex for Clinical Use is flexible enough to support a variety of use cases. However, the cases tend to fall into two classes: reference ranges for interpreting findings and context constraining the execution of a procedure. The latter is rare in clinical documents. Is this level of flexibility necessary or appropriate for this context?</p><p></p>|
-| :- |
-
+<div class="note-to-balloters">
+<ol>
+ <li>Is more directive guidance warranted for what kinds of artifacts may include these entry templates?</li>
+  <li>Is “derivationExpr” an appropriate representation of a natural language definition, or should that property of Recorded Sex or Gender be rendered as methodCode or another sub-entry?</li>
+  <li>Every effort has been made to ensure that Sex for Clinical Use is flexible enough to support a variety of use cases. However, the cases tend to fall into two classes: reference ranges for interpreting findings and context constraining the execution of a procedure. The latter is rare in clinical documents. Is this level of flexibility necessary or appropriate for this context? </li>
+</ol>
+</div>
 
 <embed src="pdf/RepresentingSexandGender.pdf" width="100%" height="4200px" />

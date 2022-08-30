@@ -49,7 +49,6 @@ if applicable) for each model element.
 
 ![media/2022May.svg](2022May.svg "Figure 1 Logical Model for Gender Identity and Sex")
 
-
 Each of the Gender Harmony model sub-elements described below are sex or
 gender information that may be context-dependent; in essence a sex
 and/or gender context type. Some of these types are multi-valued based
