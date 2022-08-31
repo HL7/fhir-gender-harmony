@@ -52,7 +52,7 @@ The official V2.9.1 ballot found [here](http://www.hl7.org/documentcenter/public
 
 All new FHIR enhancements to support Gender Harmony modeling are changes to FHIR included in the R5 FHIR core specification described in the separate [R5 FHIR ballot specification](http://www.hl7.org/fhir/2022Sep) and all comments on the extensions and the related terminology **must be made against the FHIR R5 ballot** [at this location](https://jira.hl7.org/browse/FHIR-37986?jql=project%20%3D%20%22FHIR%20Specification%20Feedback%22%20%20AND%20Specification%20%3D%20%22FHIR%20Core%20(FHIR)%20%5BFHIR-core%5D%22%20%20and%20%22Raised%20in%20Version%22%20%3D%20%27R5%27), not on this ballot. To make a comment on content in the R5 FHIR ballot, please follow that link provided and first search to see if your issue has already been reported, and if found make a comment on the existing jira issue and link to it if you are voting based upon that issue, otherwise use the Create button to start a new change request issue.
 
-#### Questions to balloters:
+#### Questions to Balloters:
 
 We are particularly interested in comments on the following.
 
@@ -67,11 +67,11 @@ We are particularly interested in comments on the following.
 
 
 
-### Conformance testable content
+### Conformance Testable Content
 
 Of the information provided within this initial version of guide, for CDA only the CDA Templates are conformance testable and therefore the CDA template content in this guide is **Standard for Trial Use (STU)** to normative track. For V2.9.1, the Gender Harmony content is **Normative** material and conformance testable.
 
-Each GH FHIR enhancement, except Name To Use, is an extension in the core FHIR specification. Guidance on the use of these extensions is the focus of this guide. As noteed in the questions to balloters above, if the community would like conformance-testable FHIR profiles that ensure use of the new extensions, ballot comments clarifying the need and requirements for those profiles should be provided on this implementation guide.
+Each GH FHIR enhancement, except Name To Use, is an extension in the core FHIR specification. Guidance on the use of these extensions is the focus of this guide. As noted in the questions to balloters above, if the community would like conformance-testable FHIR profiles that ensure use of the new extensions, ballot comments clarifying the need and requirements for those profiles should be provided on this implementation guide.
 
 The approaches in data exchange discussed in this guide expand HL7 best practices to assist organizations that adapt and extend FHIR profiles and implementation guides in their jurisdictions (e.g., US, Canada) to meet business and regulatory requirements. We look forward to implementers embracing the approaches outlined.
 
