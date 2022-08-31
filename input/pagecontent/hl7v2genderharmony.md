@@ -4,9 +4,11 @@ HL7’s Version 2.x (V2) messaging standard is the workhorse of electronic data 
 
 *NOTE TO BALLOTERS*
 
-*#1 In all product families there is debate around use of observations (OBX) to represent the Gender Harmony concepts as opposed to dedicated constructs (e.g. new v2 segments, FHIR extensions). While we do not describe the OBX-based approach here, there is the SOGI profile component for use with existing v2 implementations which uses a PATIENT\_OBSERVATION\_GROUP consisting of an Observation (OBX) segment, a Participation (PRT) segment and a Comment (NTE) segment inserted in the respective message structures. It is published here: [www.hl7.org/permalink/?SOGIGuidance](http://www.hl7.org/permalink/?SOGIGuidance). It may be possible to convey additional Gender Harmony concepts in this way, understanding that in order to create an equivalence for all concepts represented in the new segments (particularly Recorded Sex and Gender and Sex for Clinical Use), the observation segment would need to be extended with several fields. In this ballot we are seeking feedback from the community around which solution is more acceptable / implementable / appropriate, so please indicate that here. Detailed comments on the Long-Term Guidance in v2.9.1 should be submitted there on the <ADD LINK“HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments” ballot ([http://www.hl7.org/documentcenter/public/ballots/2022SEP/downloads/V291_R1_N1_2022SEP.zip]())>, including comments related to supporting the use of PATIENT\_OBSERVATION groups and suggestions for its implementation instead of the special segments.* 
+*#1 In all product families there is debate around use of observations (OBX) to represent the Gender Harmony concepts as opposed to dedicated constructs (e.g. new v2 segments, FHIR extensions). As part of this ballot we are matching the FHIR extension paradigm as the Long-Term Guidance approach in the “HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments” ballot ([http://www.hl7.org/documentcenter/public/ballots/2022SEP/downloads/V291_R1_N1_2022SEP.zip]()) (zip download).*
 
-*#2 Regardless of the method ultimately selected, the exchange of the person-specific Gender Harmony concepts (e.g. pronouns, gender identity) uses the same vocabulary (LOINC) regardless if using the new segment approach (GSP-4) or an observation (OBX) segment. Similarly, the value sets used for the answers in the segments (GSP-5, GSR-4 and GSC-4) shall be the same as in FHIR or CDA or OBX-5 in the observation approach. Additional attributes to support Gender Harmony related data exchange also are using the same vocabulary across product families. Comments on vocabulary, where shared should be made in this FHIR R5the* “*HL7 FHIR® Release 5” ballot [<hl7.org/fhir/2022Sep](C:\Users\riki.merrick\OneDrive - Association of Public Health Laboratories\Documents\Supporting docs\HL7\HL7V291_Sep2022\background\hl7.org\fhir\2022Sep)LINK> ballot.*
+` `*While we do not describe the OBX-based approach here, there is the SOGI profile component for use with existing v2 implementations which uses a PATIENT\_OBSERVATION\_GROUP consisting of an Observation (OBX) segment, a Participation (PRT) segment and a Comment (NTE) segment inserted in the respective message structures. It is published here: [www.hl7.org/permalink/?SOGIGuidance](http://www.hl7.org/permalink/?SOGIGuidance). It may be possible to convey additional Gender Harmony concepts in this way, understanding that in order to create an equivalence for all concepts represented in the new segments (particularly Recorded Sex and Gender and Sex for Clinical Use), the observation segment would need to be extended with several fields. In this ballot we are seeking feedback from the community around which solution is more acceptable / implementable / appropriate, so please indicate that here. Detailed comments on the Long-Term Guidance in v2.9.1 should be submitted there on the <ADD LINK“HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments” ballot (<https://jira.hl7.org/issues/?jql=project%20%3D%20V2%20AND%20Specification%20%3D%20%22V2.x%20Message%20Specification%20(V2)%20%5BV2-core%5D%22%20and%20%22Raised%20in%20Version%22%20%3D%20%27V2.9.1%27>*)*>, including comments related to supporting the use of PATIENT\_OBSERVATION groups and suggestions for its implementation instead of the special segments.* 
+
+*#2 Regardless of the method ultimately selected, the exchange of the person-specific Gender Harmony concepts (e.g. pronouns, gender identity) uses the same vocabulary (LOINC) regardless if using the new segment approach (GSP-4) or an observation (OBX) segment. Similarly, the value sets used for the answers in the segments (GSP-5, GSR-4 and GSC-4) shall be the same as in FHIR or CDA or OBX-5 in the observation approach. Additional attributes to support Gender Harmony related data exchange also are using the same vocabulary across product families. For the ballot the vocabulary is included in the*  “*HL7 FHIR® Release 5” ballot [hl7.org/fhir/2022Sep](C:\Users\riki.merrick\OneDrive - Association of Public Health Laboratories\Documents\Supporting docs\HL7\HL7V291_Sep2022\background\hl7.org\fhir\2022Sep). Comments on vocabulary, where shared should be made in in that ballot ([https://jira.hl7.org/issues/?jql=project%20%3D%20%22FHIR%20Specification%20Feedback%22%20%20AND%20Specification%20%3D%20%22FHIR%20Core%20(FHIR)%20%5BFHIR-core%5D%22%20%20and%20%22Raised%20in%20Version%22%20%3D%20%27R5%27](https://jira.hl7.org/browse/FHIR-37986?jql=project%20%3D%20%22FHIR%20Specification%20Feedback%22%20%20AND%20Specification%20%3D%20%22FHIR%20Core%20\(FHIR\)%20%5BFHIR-core%5D%22%20%20and%20%22Raised%20in%20Version%22%20%3D%20%27R5%27)*;  *please check first,* if the issue has already been reported *and add your vote there*, or use the Create button to start a new change request.*this FHIR R5 LINK> ballot.*
 
 ### Design considerations for V2
 
@@ -33,7 +35,7 @@ In the *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Dat
 - Sex for Clinical Use: Chapter 3, GSC – Sex For Clinical Use Segment (3.4.21)
 - Not part of Gender Harmony IG, but supported in V2: Sexual Orientation: Chapter 3, GSP – Person Gender and Sex Segment (3.4.19)
 
-#### Using the gender harmony artifacts for specific use cases
+### Using the gender harmony artifacts for specific use cases
 
 - In V2 the context of segments is often derived from the placement in the message structure – the following chapters in the *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments* address wOverarching Notes to Balloters in Chapter 1
 - Detailed description of the Gender Harmony related segments in Chapter 3:
@@ -44,9 +46,43 @@ In the *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Dat
 - Use in Admission Transfer Discharge Use case in Chapter 3: 
   - Trigger Events and Message Definitions (3.3)
 - Use in order Order messages in Chapter 4: 
-  - TBD
-- Use in result Result messages in Chapter 7: 
-  - TBD
+  - OMG – general clinical order message (event O19) (4.4.4)TBD
+  - OML – laboratory order message (event O21) (4.4.6)
+  - OML – Laboratory order for multiple orders related to a single specimen (event O33) (4.4.8)
+  - OML – Laboratory order for multiple orders related to a single container of a specimen (event O35) (4.4.10)
+  - OML – Specimen shipment centric laboratory order (event O39) (4.4.12)
+  - OMI – Imaging Order Message (Event O23) (4.4.14)
+  - OPL – Population/Location-Based Laboratory Order Message (Event O37) (4.4.16)
+  - OMQ – General Order Message with Document Payload (Event O57) (4.4.20)
+  - OML – Laboratory Result Interpretation Request Message (Event O59) (4.4.22)
+  - OMD - Dietary Order (Event O03) (4.7.1)
+  - OMB – Blood Product Order Message (Event O27) (4.13.2)
+  - BPS – Blood Product Dispense Status Message (Event O29) (4.13.4)
+  - BTS – Blood Product Transfusion/Disposition Message (Event O31) (4.13.6)
+  - Use in Order messages in Chapter 4A: 
+    - OMP - Pharmacy/Treatment Order Message (Event O09) (4A.3.3)
+    - RDE - Pharmacy/Treatment Encoded Order Message (Event O11) (4A.3.6)
+    - RDS - Pharmacy/Treatment Dispense Message (Event O13) (4A.3.8)
+    - RGV - Pharmacy/Treatment Give Message (Event O15) (4A.3.11)
+    - RAS - Pharmacy/Treatment Administration Message (Event O17)xe "RAS"xe "Message: RAS"xe "pharmacy/treatment"xe "pharmacy/treatment:administration message" (4A.3.14)
+    - RDE - Pharmacy/Treatment Refill Authorization Request Message (Event O25) (4A.3.16)
+    - RSP^K31^RSP\_K31 message in Pharmacy Query/Response Message Pair (4A.3.23)
+  - VXU - Unsolicited Vaccination Record Update (Event V04) (4A.7.6)
+- result Result messages in Chapter 7: 
+  - ORU – Unsolicited Observation Message (Event R01) (7.3.1)TBD
+  - ORU – Unsolicited Point-Of-Care Observation Message without Existing Order – Place an Order (Event R30) (7.3.4)
+  - ORU – Unsolicited New Point-Of-Care Observation Message – Search for an Order (Event R31) (7.3.5)
+  - ORU – Unsolicited Pre-Ordered Point-Of-Care Observation (Event R32) (7.3.6)
+  - OUL – Unsolicited Specimen Oriented Observation Message (Event R22 ) (7.3.8)
+  - OUL – Unsolicited Specimen Container Oriented Observation Message (Event R23) (7.3.9)
+  - OUL – Unsolicited Order Oriented Observation Message (Event R24) (7.3.10)
+  - OPU – Unsolicited Population/Location-Based Laboratory Observation Message (Event R25) (7.3.11)
+  - ORU – Unsolicited Alert Observation Message (Event R40) (7.3.12)
+  - ORU – Unsolicited Device Event Observation Message (Event R42) (7.3.14)
+  - ORU – Unsolicited Patient-Device Association Observation Message (Event R43) (7.3.15)
+  - CRM - Clinical Study Registration Message (Events C01-C08) (7.7.1)
+  - CSU - Unsolicited Study Data Message (Events C09-C12) (7.7.2)
+  - PEX - Product Experience Message (Events P07, P08) (7.11.1)
 - Use in Financial Management Messages in Chapter 6:
   - BAR/ACK – Add Patient Account (EVENT P01) (6.4.1)
   - DFT/ACK – Post Detail Financial Transactions (EVENT P03) (6.4.3)
@@ -91,21 +127,21 @@ In the *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Dat
 
 ` `In order to use these new segments in earlier versions of HL7 (before V2.9.1) the data exchange partners have to agree to support this functionality by pre-adopting this profile component as part of their data exchange agreement and specifications.
 
-#### GenderHarmony\_Component – ID: <OID TBD>
+#### GenderHarmony\_Component – ID: 2.16.840.1.113883.9.282
 
 This profile component can be used in ANY message structure in ANY version, when data about Gender Identity, Pronouns, Recorded Sex and Gender or Sexual Orientation and similar concepts need to be exchanged.
 
 #### Details for implementation
 
-###### Indicating use of this profile
+##### Indicating use of this profile
 
-Populate one occurrence of MSH-21 as follows: 'GenderHarmony^^<OID TBD>^ISO'
+Populate one occurrence of MSH-21 as follows: 'GenderHarmony^^2.16.840.1.113883.9.282^ISO'
 
-##### Use of the Gender Harmony Specific Segments
+###### Use of the Gender Harmony Specific Segments
 
 Follow the segment definition, including the applicable vocabulary bindings, as described in V2.9.1. 
 
-##### Rules for Inserting the Gender Harmony Segments into Existing Message Structures
+###### Rules for Inserting the Gender Harmony Segments into Existing Message Structures
 
 In V2 the event context determines the message structure, and the location in the order of segments in the message provides context. So how / where these new segments are used depends on the context. This section is focused only on those events where Gender Harmony concepts are of importance, for patient related events, but also when important for next of kin or staff master files. 
 
@@ -124,7 +160,3 @@ Definition: This field contains the patient’s sex. Refer to User-defined Table
 Due to the longstanding existence of this field, we are not planning to change the definition of this field, but rather ensure users understand that is should be used with care, while defining additional constructs to convey the more precisely defined attributes. 
 
 When conveying additional SOGI concepts in a message, implementers must consider how the business requirements of the receiving system will be satisfied when consuming SOGI data elements. Depending on the use case, a hierarchy of data elements may need to be constructed in order to ensure that business requirements are met appropriately. For example, in a billing use case, if both PID-8 and Gender Identity are populated in a message, the receiving system may choose to prioritize PID-8 over Gender Identity based on the needs of the use case.
-
-
-
-

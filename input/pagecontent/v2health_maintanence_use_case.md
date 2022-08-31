@@ -10,7 +10,7 @@ GSP|3|S||90778-2^Personal pronouns - Reported^LN|LA29518-0^He, Him, His, Himself
 GSP|4|S||90778-2^Personal pronouns - Reported^LN|LA29519-8^She, Her, Hers, Herself^LN|20220801
 PV1||O
 ```
-#### Using the pre-adoption profile in V2.5.1 <use file: JulieSmithADTV2\_2\_PreAdopt251.txt.>
+#### Using the pre-adoption profile in V2.5.1
 ```
 MSH|^~\&|||||20220815151129||ADT^A01|Tw1244563214559JGX4U2p3hCLJH|P|2.5.1|||||||||GenderHarmony^^2.16.840.1.113883.9.282^ISO
 EVN||20220815151118||01^Patient Event^HL70062
@@ -34,7 +34,7 @@ ORC|NW|911^ClinicOrderSystem|||||||20220815153120|||
 PRT|by87765446t21h^ClinicOrderSystem|SP||OP^Ordering Provider^HL70912|^Jones^^^^^MD
 OBR|1|911^ClinicOrderSystem||2857-1^Prostate specific Ag [Mass/volume] in Serum or Plasma^LN^^^^2.73
 ```
-#### Using the pre-adoption profile in V2.5
+#### Using the pre-adoption profile in V2.5.1
 ```
 MSH|^~\&|||||20220815153129||OML^O21^OML_O21|Tw1244563asdderfd9JGX4U2p3hCLJH|P|2.5.1|||||||||GenderHarmony^^2.16.840.1.113883.9.282^ISO
 PID|1||patientID1^^^^MR||Smith^Julie^^^^^N||19700103|
@@ -64,7 +64,7 @@ NTE|1||Patients on testosterone suppressing medications, the upper limit of norm
 SPM|1|^14MP000051&LabInfoSystem||119364003^Serum specimen^SCT|||||||||||||202208151601|202208151601
 ```
 
-#### Using the pre-adoption profile in V2.5
+#### Using the pre-adoption profile in V2.5.1
 
 ```
 MSH|^~\&|||||20220816103129||ORU^Ro1^ORU_R01|Tw1244563asdderfd2mnhdyhshCLJH|P|2.5.1|||||||||GenderHarmony^^2.16.840.1.113883.9.282^ISO

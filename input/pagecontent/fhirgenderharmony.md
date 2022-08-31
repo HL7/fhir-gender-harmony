@@ -69,6 +69,31 @@ The [Patient Gender and Sex section](https://build.fhir.org/patient.html#gender)
 The Gender Harmony project has agreed that to represent the Name To Use when addressing an individual, the datatype HumanName.use = “usual” should be used.
 
 ##### Backwards Compatibility:
-[discuss use of R5 extensions in implementations based upon prior version of FHIR]
+### Backwards Compatibility:
 
-[discuss guidance that if alternatives exist in a current implementation for sending information covered by the GH extensions, such as gender identity, we prefer the use of the GH approach but if needed, implementers should continue to send the alternative and note that they should align to all extent possible.]
+One of the benefits to using extensions in R5 is that they can be easily backported to prior versions. Implementers may use any of the new standard extensions in R5 in prior versions of FHIR.
+
+For gender identity, there are several extensions that exist:
+
+- **patient-genderIdentity**:  This extension is available in versions of FHIR prior to R5. In R5, it was replaced by individual-genderIdentity, as the scope of gender identity includes non-patient persons such as practitioners.
+
+- **individual-genderIdentity**: This extension replaced patient-genderIdentity, and is available in R5. In addition to expanding the scope to individuals other than the patient, it also added support for metadata such as a period of applicability and a comment.
+
+- **us-core-genderIdentity**: This extension was created by US Core to meet US-specific value set requirements which were not satisfied by the R4 patient-genderIdentity extension.
+
+For R4 implementations in the US that require conformance to US Core, our current recommendation is to use the us-core-genderIdentity extension to maintain consistency within the US implementer community. The patient-genderIdentity and individual-genderIdentity extensions may be supported simultaneously, so servers may consider supporting all three extensions and the associated value sets to ensure clients have access to their preferred extension. 
+
+For R5 implementations, our recommendation is to use the individual-genderIdentity extension.
+
+In the US, Sex assigned at Birth is part of the USCDIv1. There are two extensions that may be considered for communicating this concept:
+
+- **us-core-birthsex**: This extension was created by US Core to meet US-specific requirements.
+
+- **individual-recordedSexOrGender**: This extension was created by the Gender Harmony Project as a generic option for recording any sex or gender concept that does not have a more specific field or extension.
+
+For R4 implementations in the US that require conformance to US Core, our recommendation is to use the us-core-birthsex extension to maintain consistency within the US implementer community for exchanging the Sex assigned at Birth concept.
+
+For R5 implementations, our recommendation is to work with your jurisdiction-specific or use-case specific implementation guide authors to define jurisdiction or use-case specific extensions for any concept that can be categorized as a recorded sex and gender, including sex assigned at birth. We only recommend using the individual-recordedSexOrGender extension in the case where creating a use-case specific extension or property is not practical.
+
+SupportCancel
+Full-text Access 
