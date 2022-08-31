@@ -4,13 +4,18 @@ The [Patient Gender and Sex narrative](https://build.fhir.org/patient.html#gende
 An new Patient example was created which represents a transgender patient: [Transgender Person Example](https://build.fhir.org/patient-example-sex-and-gender.html).
 
 Extensions were created or updated to align with the Gender Harmony Project logical model.
-
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 |**Concept**|**FHIR Artifact**|**Contexts of Use**|
-| :- | :- | :- |
+|---|---|---|
 |**Gender Identity**|[individual-genderIdentity](https://build.fhir.org/extension-individual-genderidentity.html)|Patient, RelatedPerson, Person, and Practitioner|
 |**Sex for Clinical Use**|[patient-sexForClinicalUse](https://build.fhir.org/extension-patient-sexforclinicaluse.html)|All Resource types|
 |**Pronouns**|[individual-pronouns](https://build.fhir.org/extension-individual-pronouns.html)|Patient, RelatedPerson, Person, and Practitioner|
 |**Recorded Sex orGender**|[individual-recordedSexOrGender](https://build.fhir.org/extension-individual-recordedsexorgender.html)|Patient, RelatedPerson, Person, and Practitioner|
+
 ### Guidance on use of Sex and Gender artifacts
 We recognize that there are many systems that rely on a single patient-level Administrative Gender (a.k.a. Administrative Sex) concept communicated in Patient.gender.  Today, this semantically vague Patient.gender property is used to address a wide range of use cases, from identifying appropriate reference ranges for lab tests to performing patient matching when submitting claims to insurance companies. 
 
@@ -24,17 +29,21 @@ There were several options considered when representing these sex and gender con
 - Create extensions in the relevant resources
 - Create a profile on Observation
 
-
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 |Option|Advantages|Disadvantages|
-| :- | :- | :- |
-|Property on resources|<p>1. Easily discoverable in the specification</p><p>2. Establishes the properties as first-class data elements.</p>|<p>1. Requires an alternative approach for pre-adoption in prior versions of FHIR.</p><p>2. For Patient, additional processes for the change are required to make updates to the normative resource.</p>|
-|Extension on resources|<p>1. The extension may be directly pre-adopted in prior versions of FHIR.</p><p>2. The extension can be defined in one location and applied to many resources, rather than having to copy and maintain an identical structure on many related resources.</p><p>3. We may consider changing the extension to a property in future versions of FHIR.</p>|<p>1. Extensions are somewhat hidden, so are moderately difficult for implementers to discover</p><p>2. Avoids problems with changing normative content.</p>|
-|Profile of Observation|<p>1. Enables collecting a broad set of metadata about the property. However, it is not expected that the metadata Observation enables is necessary or useful for most use cases.</p><p>2. Aligns with sexual orientation profile.</p>|<p>1. Observation profiles are somewhat hidden, so are moderately difficult for implementers to discover </p><p>2. Avoids problems with changing normative content.</p><p>3. Clients would require additional authorization scopes to access demographic data. For servers that provide only resource-level scopes, patients may not with to share Observation just to grant access to gender identity, when it would also grant access to labs, vitals, etc.</p>|
+|---|---|---|
+|Property on resources|1. Easily discoverable in the specification<br />2. Establishes the properties as first-class data elements.|1. Requires an alternative approach for pre-adoption in prior versions of FHIR.<br />2. For Patient, additional processes for the change are required to make updates to the normative resource.</p>|
+|Extension on resources|1. The extension may be directly pre-adopted in prior versions of FHIR.<br />2. The extension can be defined in one location and applied to many resources, rather than having to copy and maintain an identical structure on many related resources.<br />3. We may consider changing the extension to a property in future versions of FHIR.| 1. Extensions are somewhat hidden, so are moderately difficult for implementers to discover<br />2. Avoids problems with changing normative content.|
+|Profile of Observation| 1. Enables collecting a broad set of metadata about the property. However, it is not expected that the metadata Observation enables is necessary or useful for most use cases.<br />2. Aligns with sexual orientation profile.|1. Observation profiles are somewhat hidden, so are moderately difficult for implementers to discover.<br />2. Avoids problems with changing normative content.<br />3. Clients would require additional authorization scopes to access demographic data. For servers that provide only resource-level scopes, patients may not with to share Observation just to grant access to gender identity, when it would also grant access to labs, vitals, etc.</p>|
 
 
 <div class="note-to-balloters">When creating the FHIR extensions, there were several proposed changes to the logical model that were identified. We chose to apply those changes to FHIR structures so that we can solicit feedback via the ballot.  After those changes have been balloted, we will go back and apply those changes to the logical model.</div>
 
-##### Explicit Decisions:
+#### Explicit Decisions:
 **Gender Identity: extension**
 
 *Context:* This extension is available on all “person” type resources, which includes Patient, RelatedPerson, Person, and Practitioner. It is not included on PracitionerRole, as PractitionerRole refers to Practitioner for demographics.
@@ -68,7 +77,6 @@ The [Patient Gender and Sex section](https://build.fhir.org/patient.html#gender)
 
 The Gender Harmony project has agreed that to represent the Name To Use when addressing an individual, the datatype HumanName.use = “usual” should be used.
 
-##### Backwards Compatibility:
 ### Backwards Compatibility:
 
 One of the benefits to using extensions in R5 is that they can be easily backported to prior versions. Implementers may use any of the new standard extensions in R5 in prior versions of FHIR.
@@ -94,6 +102,3 @@ In the US, Sex assigned at Birth is part of the USCDIv1. There are two extension
 For R4 implementations in the US that require conformance to US Core, our recommendation is to use the us-core-birthsex extension to maintain consistency within the US implementer community for exchanging the Sex assigned at Birth concept.
 
 For R5 implementations, our recommendation is to work with your jurisdiction-specific or use-case specific implementation guide authors to define jurisdiction or use-case specific extensions for any concept that can be categorized as a recorded sex and gender, including sex assigned at birth. We only recommend using the individual-recordedSexOrGender extension in the case where creating a use-case specific extension or property is not practical.
-
-SupportCancel
-Full-text Access 

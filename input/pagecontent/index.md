@@ -65,7 +65,7 @@ We are particularly interested in comments on the following.
         - Justification for the proposed addition
 - What additional examples need to created and what unique characteristics need to be illustrated?
 
-
+**Please note**: There are additional questions and notes we would like balloters to review on other pages, particularly the product family pages. 
 
 ### Conformance Testable Content
 
@@ -157,24 +157,6 @@ For an analysis of the current state of sex and gender representation we encoura
 
 Of particular note in HL7 models is the use of "Administrative Gender/Sex" as a core data element for sex or gender exchange. Given the lack of clarity and consistency in the use of this "administrative" element, and the lack of a well established clinical value of use for all populations, there has been inconsistency in understanding and significant concern regard proper patient care. This guide exists to improve upon that. 
 
-<!-- #### In V2 
-PID-8 is "Sex" and is defined as
-
-```
-This field contains the patient's sex. Refer to User-defined Table 0001 - Administrative Sex for suggested values.
-```
-This is often descrbed as a value used to determine what bed to assign the patient. Given that this element is the only sex or gender element and has been in use from the initial V2 standard, it has carried any information used for clinical sex, gender, or any other sex/gender related information. It therefore has not had a stable or consistent meaning.
-
-#### In FHIR
-The patient.gender element in the Patient resource is defined as
-```
-Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.
-```
-FHIR kept the single element approach used by V2 and therefore also forced implementers to use this one field to represent clinical sex, gendder, or any other sex-related information needed. 
-
-#### In CDA
-TBD -->
-
 ### Implementation Guide Authorship
 
 The material in this implementation guide is is crafted through the hard work and persistent determination of the [Gender Harmony project](http://hl7.me/GHP). It is a continuation of the work published in Phase 1 of this project, available [here](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564).
@@ -198,3 +180,5 @@ We are indebted to all members of the project, listed [here](https://confluence.
 
 1. fn2
 <p id="fn2"><sup>Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community is not a monolith.</sup></p>
+SupportCancel
+Full-text Access 
