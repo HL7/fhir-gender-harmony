@@ -44,7 +44,7 @@ To accomplish that cross-paradigm goal, the guide provides:
   - Please note that the same terminology artifacts are used in all product families. The value sets and code systems used are defined in the FHIR core R5 specification, bound to the GH extensions. The terminology is **not** defined in this guide. Please review the terminology and comment on the content in the FHIR R5 ballot.
 - Examples that illustrate how to use the product family-specific enhancements in consistent ways to meet a use case.
 
-Readers of this guide are encouraged to review the entire guide even if their particular focus is on one product family implementation. They are also encouraged to review the background material abstracted from the original Gender Harmony logical model publication provided in the [sex-gender background](background page) section of this guide.
+Readers of this guide are encouraged to review the entire guide even if their particular focus is on one product family implementation. They are also encouraged to review the background material abstracted from the original Gender Harmony logical model publication provided in the [Background](background.html) section of this guide.
 
 #### Aligned But Separate ballots That Contain Gender Harmony Content
 
