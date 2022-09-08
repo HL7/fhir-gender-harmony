@@ -15,8 +15,8 @@ Alias: NameToUse = http://hl7.org/fhir/name-use
 // * note 0..1 // "Text to further explain use of the Name. This may be related to social and/or cultural context."
 
 
-Profile:  NameToUse
-Parent:   HumanName
-Id:       NameToUse
-* use =  http://hl7.org/fhir/name-use#usual "Usual"
+// Profile:  NameToUse
+// Parent:   HumanName
+// Id:       NameToUse
+// * use =  http://hl7.org/fhir/name-use#usual "Usual"
 

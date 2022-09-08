@@ -1,5 +1,3 @@
-# Bibliography
-
 This is the original bibliography provided in the initial Gender Harmony logical model publication. 
 
 1. [If They Don't Count Us, We Don't Count: Trump Administration Rolls Back Sexual Orientation and Gender Identity Data Collection](https://doi.org/10.1089/lgbt.2017.0073)
@@ -104,7 +102,7 @@ This is the original bibliography provided in the initial Gender Harmony logical
 100.	[Ke M. How to make an LGBTQ+ inclusive survey [Internet]. Medium; 2020.](https://uxdesign.cc/how-to-make-an-lgbtq-inclusive-survey-bfd1d801cc21)
 101.	[Stock K. Changing the concept of “woman” will cause unintended harms [Internet]. The Economist Newspaper Limited; 2018 [cited 2021 Jan 8].](https://www.economist.com/open-future/2018/07/06/changing-the-concept-of-woman-will-cause-unintended-harms)
 102.	Jenkins K. Amelioration and Inclusion: Gender Identity and the Concept of Woman*. Ethics. 2016 Jan;126(2).
-103.	[Holston-Zannell LB. Black Trans Women Are Being Murdered in the Streets. Now the Trump Administration Wants to Turn Us Away From Shelters and Health Care [Internet]. American Civil Liberties Union; 2019.](ttps://www.aclu.org/blog/lgbt-rights/transgender-rights/black-trans-women-are-being-murdered-streets-now-trump)
+103.	[Holston-Zannell LB. Black Trans Women Are Being Murdered in the Streets. Now the Trump Administration Wants to Turn Us Away From Shelters and Health Care [Internet]. American Civil Liberties Union; 2019.](https://www.aclu.org/blog/lgbt-rights/transgender-rights/black-trans-women-are-being-murdered-streets-now-trump)
 104.	[Taylor L Boyer, Ada O Youk, Ann P Haas, George R Brown, Jillian C Shipherd, Michael R Kauth, Guneet K Jasuj, John R Blosnich, Suicide, Homicide, and All-Cause Mortality Among Transgender and Cisgender Patients in the Veterans Health Administration.](http://doi.org/10.1089/lgbt.2020.0235)
 105.	[Transgender data collection in the electronic health record: Current concepts and issues](https://doi.org/10.1093/jamia/ocab136)
 106.	[Sun, Simón(e) D. “Stop Using Phony Science to Justify Transphobia” (13 June 2019). Scientific American.](https://blogs.scientificamerican.com/voices/stop-using-phony-science-to-justify-transphobia/)

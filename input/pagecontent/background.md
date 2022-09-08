@@ -1,6 +1,6 @@
 
 ### Impact of Sex and Gender on Clinical Care
-In the initial [Gender Harmony initial ballot](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564), excerpted below, we noted the following (The original references are replicated here in our [Bibliography](bib.html).)
+In the initial [Gender Harmony initial ballot](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564), excerpted below, we noted the following (The original references are replicated here in our [Bibliography](bibliography.html).)
 
 In 2016, The Report of the 2015 U.S. Transgender Survey which asked 27,715 self-identified transgender persons about their experiences in health care, noted that 33% had at least one negative experience with a health care provider related to being transgender, that 23% did not seek the health care they needed due to fear of mistreatment, and 33% did not go to a health care provider when they really needed to because they could not afford it (26,75).
 

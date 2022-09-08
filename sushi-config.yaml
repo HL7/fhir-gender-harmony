@@ -9,8 +9,8 @@ name: hl7-gender-harmony
 title: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 description: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 status: draft # draft | active | retired | unknown
-version: 0.1.26
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+version: 0.1.27
+fhirVersion: 4.0.1
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
@@ -51,7 +51,7 @@ pages:
     title: Terminology        
   externalstandards.md:
     title: External Standards  
-  bib.md:
+  bibliography.md:
     title: Bibliography
   artifacts2.md:
     title: Artifacts
@@ -82,8 +82,8 @@ menu:
   Model: model.html
   Design Considerations: design.html  
   Use Cases:  
-    DICOM PET scan in patient with change in gender: dicom_use_case.html
-    Health Screening with lab test in patient with change in gender: health_maintanence_use_case.html   
+    DICOM PET Scan Use Case: dicom_use_case.html
+    Health Maintenance Lab Use Case: health_maintanence_use_case.html   
   V2:
     V2 Gender Harmony: hl7v2genderharmony.html
     V2 Examples: hl7v2examples.html
@@ -95,7 +95,7 @@ menu:
     FHIR Examples: fhirexamples.html
   Terminology: terminology.html 
   External Standards: externalstandards.html
-  Bibliography: bib.html
+  Bibliography: bibliography.html
 
   All Artifacts: artifacts2.html
   

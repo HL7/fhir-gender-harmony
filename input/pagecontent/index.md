@@ -44,7 +44,7 @@ To accomplish that cross-paradigm goal, the guide provides:
   - Please note that the same terminology artifacts are used in all product families. The value sets and code systems used are defined in the FHIR core R5 specification, bound to the GH extensions. The terminology is **not** defined in this guide. Please review the terminology and comment on the content in the FHIR R5 ballot.
 - Examples that illustrate how to use the product family-specific enhancements in consistent ways to meet a use case.
 
-Readers of this guide are encouraged to review the entire guide even if their particular focus is on one product family implementation. They are also encouraged to review the background material abstracted from the original Gender Harmony logical model publication provided in the [Background](background.html) section of this guide.
+Readers of this guide are encouraged to review the entire guide even if their particular focus is on one product family implementation. They are also encouraged to review the background material abstracted from the original Gender Harmony logical model publication provided in the [sex-gender background](background.html) section of this guide.
 
 #### Aligned But Separate ballots That Contain Gender Harmony Content
 
@@ -63,6 +63,10 @@ We are particularly interested in comments on the following.
         - Sex for Clinical Use profile using the SFCU extension?
         - What resources should have the profiles?
         - Justification for the proposed addition
+- We are interested in comments on a primary alternative approach for modeling this content within FHIR - the use of profiles on the Observation resource. We have elected to not do this (as discussed in the FHIR Gender Harmony page) but would like balloters to give feedback on if profiling observation would provide significant advantages. Please review this alternative approach using the Social Determinants of Health (SDOH) IG as an example.
+    - [The original SDOH Ballot](http://hl7.org/fhir/us/sdoh-clinicalcare/2022Jan/)
+    - The observation profile approach is described in the CI build [Personal Characteristic Observation](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/draft_specifications_for_personal_characteristics.html)
+    - The Observation profiles are listed in the artifacts summary [HERE](https://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/artifacts.html#draft-artifacts-for-personal-characteristic-observations)
 - What additional examples need to created and what unique characteristics need to be illustrated?
 
 **Please note**: There are additional questions and notes we would like balloters to review on other pages, particularly the product family pages. 
@@ -180,5 +184,3 @@ We are indebted to all members of the project, listed [here](https://confluence.
 
 1. fn2
 <p id="fn2"><sup>Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community is not a monolith.</sup></p>
-SupportCancel
-Full-text Access 
