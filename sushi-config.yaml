@@ -66,16 +66,7 @@ pages:
   fhirdicom_use_case.md:
     title: FHIR DICOM Example
   fhirhealth_maintanence_use_case.md:
-    title: FHIR Health Maintanence Example
-  conformance-general.md:
-    title: Conformance Expectations
-  conformance-profiles.md:
-    title: Profile Conformance
-  ghexamples.md:
-    title: Gender Harmony Examples
-  fhirextensions.md:
-    title: FHIR Extensions
-  
+    title: FHIR Health Maintanence Example   
 menu:
   Home: index.html
   Background: background.html
