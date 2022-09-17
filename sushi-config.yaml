@@ -4,13 +4,13 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.xprod.uv.gender-harmony
-canonical: http://hl7.org
+canonical: http://hl7.org/xprod/ig/uv/gender-harmony
 name: hl7-gender-harmony
 title: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 description: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 status: draft # draft | active | retired | unknown
 version: 1.0.0-ballot
-fhirVersion: 4.0.1
+fhirVersion: 5.0.0-ballot
 copyrightYear: 2022+
 releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
