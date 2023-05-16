@@ -10,15 +10,15 @@ title: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 description: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 status: draft # draft | active | retired | unknown
 version: 1.0.0-ballot
-fhirVersion: 5.0.0-ballot
+fhirVersion: 5.0.0
 copyrightYear: 2022+
 releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: Example Publisher
-  url: http://hl7.org
-  # email: test@example.org
+  name: HL7 Cross Group Projects Work Group
+  url: https://www.hl7.org/Special/committees/cgp
+  email: cgplist@lists.HL7.org
 
 
 
@@ -31,6 +31,8 @@ pages:
     title: Model    
   design.md:
     title: Design Considerations        
+  implementer.md:
+    title: Implementer Considerations      
   dicom_use_case.md:
     title: DICOM PET Scan Use Case
   health_maintanence_use_case.md:
@@ -71,7 +73,9 @@ menu:
   Home: index.html
   Background: background.html
   Model: model.html
-  Design Considerations: design.html  
+  Guidance:
+    Design Considerations: design.html  
+    Implementer Considerations: implementer.html 
   Use Cases:  
     DICOM PET Scan Use Case: dicom_use_case.html
     Health Maintenance Lab Use Case: health_maintanence_use_case.html   
