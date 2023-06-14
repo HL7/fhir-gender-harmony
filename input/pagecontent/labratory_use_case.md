@@ -1,4 +1,11 @@
 
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 #### Use Case Description:
 The Use Case below describes the process of a Care Manager identifying a patient in need of an annual visit including a scan for relevant Health Maintenance screenings, as well as the process of this patient’s clinic appointment for a transgender woman with lab testing as a result of a male organ-specific finding.
 #### Actors:

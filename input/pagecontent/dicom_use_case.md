@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 ### Introduction
 
 This use case is illustrative of how ancillary systems in imaging, downstream from the EHR, are likely to consume and create evidence documents in response to Sex and Gender encoding. In this case, there are three instances of Sex For Clinical Use (SFCU). First, the ordering physicians provides instructions for interpreting lab values within a Sex for Clinical Use comment. In the second SFCU, an Artifical Intelligence (AI) application utilizes the Sex Assigned at Birth for the basis of reference values. Third, the radiologist determines the appropriate sex to use based on the patient's body composition for a Standard Uptake Value (SUV) calculation.

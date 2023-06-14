@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 <!-- NOTES on ballot:
 DONE Home page numbering is off
 2 sections to be included

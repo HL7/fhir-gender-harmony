@@ -1,3 +1,11 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
+
 Artifacts referenced in this Guide:
 
 ### Extensions

@@ -1,4 +1,11 @@
 
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 ### V2 Examples
 
 #### [DICOM PET scan in patient with change in gender](v2dicom_use_case.html)

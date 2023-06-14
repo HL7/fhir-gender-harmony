@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 ### CDA HEALTH 
 
 These examples are taken from the Representing Sex & Gender Implementation Guide.

@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 #### FHIR Patient Example
 The Health Maintenance Lab use case narrative was constructed to demonstrate the workflow of a transgender female patient who presents to her clinic needing an update of her demographic name, gender, and pronouns. The following is a FHIR example for the updating of the patient’s name, gender identity, and pronouns:
 

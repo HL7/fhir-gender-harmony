@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 # Terminology, Code Systems and Value Sets
 THO Discussion
 ## Code Systems and Value Sets

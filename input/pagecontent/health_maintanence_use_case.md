@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 ### Use Case Description:
 
 In this use case, a patient calls a primary care health clinic to update her name, gender identity, and personal pronouns. Based on this information and age, the automated health-maintenance notification system requests that the patient schedule an in-person visit. The patient then attends the clinic for that scheduled visit and there is a lab test ordered as a result of an anatomy-specific finding.

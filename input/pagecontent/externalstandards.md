@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 ### DICOM
 
 The existing DICOM model dates back to 1985 and earlier work. It was

@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 This is the original bibliography provided in the initial Gender Harmony logical model publication. 
 
 1. [If They Don't Count Us, We Don't Count: Trump Administration Rolls Back Sexual Orientation and Gender Identity Data Collection](https://doi.org/10.1089/lgbt.2017.0073)

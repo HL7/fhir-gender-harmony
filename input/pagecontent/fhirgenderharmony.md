@@ -1,3 +1,11 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+2023-06-14       OTHER-2629         Joanie Harper                Corrected typo in section 11.3 (3rd row, 2nd column).
+
+
+-->
+
+
 ### Summary of FHIR artifacts
 The [Patient Gender and Sex narrative](https://build.fhir.org/patient.html#gender) was updated to align with the Gender Harmony Project logical model.
 
@@ -38,7 +46,7 @@ table, th, td {
 |---|---|---|
 |Property on resources|1. Easily discoverable in the specification<br />2. Establishes the properties as first-class data elements.|1. Requires an alternative approach for pre-adoption in prior versions of FHIR.<br />2. For Patient, additional processes for the change are required to make updates to the normative resource.</p>|
 |Extension on resources|1. The extension may be directly pre-adopted in prior versions of FHIR.<br />2. The extension can be defined in one location and applied to many resources, rather than having to copy and maintain an identical structure on many related resources.<br />3. We may consider changing the extension to a property in future versions of FHIR.| 1. Extensions are somewhat hidden, so are moderately difficult for implementers to discover<br />2. Avoids problems with changing normative content.|
-|Profile of Observation| 1. Enables collecting a broad set of metadata about the property. However, it is not expected that the metadata Observation enables is necessary or useful for most use cases.<br />2. Aligns with sexual orientation profile.|1. Observation profiles are somewhat hidden, so are moderately difficult for implementers to discover.<br />2. Avoids problems with changing normative content.<br />3. Clients would require additional authorization scopes to access demographic data. For servers that provide only resource-level scopes, patients may not with to share Observation just to grant access to gender identity, when it would also grant access to labs, vitals, etc.</p>|
+|Profile of Observation| 1. Enables collecting a broad set of metadata about the property. However, it is not expected that the metadata Observation enables is necessary or useful for most use cases.<br />2. Aligns with sexual orientation profile.|1. Observation profiles are somewhat hidden, so are moderately difficult for implementers to discover.<br />2. Avoids problems with changing normative content.<br />3. Clients would require additional authorization scopes to access demographic data. For servers that provide only resource-level scopes, patients may not want to share Observation just to grant access to gender identity, when it would also grant access to labs, vitals, etc.</p>|
 
 
 <div class="note-to-balloters">When creating the FHIR extensions, there were several proposed changes to the logical model that were identified. We chose to apply those changes to FHIR structures so that we can solicit feedback via the ballot.  After those changes have been balloted, we will go back and apply those changes to the logical model.</div>

@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 ### CDA DICOM
 
 This example was constructed to illustrate the DICOM use case.

@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 ### Version = 4.1.0
 - Publication Date: 2021-11-30
 - url: <http://hl7.org/fhir/us/core/2022Jan>

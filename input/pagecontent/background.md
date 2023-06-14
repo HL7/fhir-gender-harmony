@@ -1,3 +1,9 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
 
 ### Impact of Sex and Gender on Clinical Care
 In the initial [Gender Harmony initial ballot](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564), excerpted below, we noted the following (The original references are replicated here in our [Bibliography](bibliography.html).)

@@ -1,3 +1,9 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
 
 Because we do not yet support FHIR publication of CDA artifacts, we publish the CDA templates in the same format as prior CDA implementation guides, i.e., a pdf document. 
 
