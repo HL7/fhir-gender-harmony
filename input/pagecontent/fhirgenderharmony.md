@@ -63,6 +63,7 @@ table, th, td {
 Structure: We considered two structural options for this extension:
 
 1) An extension applied to a contextual resource with the Sex for Clinical Use value in-line.
+   
 2) An extension applied to a contextual resource with a reference to an Observation documenting the Sex for Clinical Use value.
 
 We opted to include the Sex for Clinical Use value in-line rather than as a reference to Observation after discussion on tradeoffs between two options.  We felt that the in-line option was simpler while being sufficiently expressive.  An extension with a reference to Observation allows for the expression of complex metadata associated with the value, however we expect the need for that complex metadata would be sufficiently rare to not outweigh the benefits of the simpler in-line extension option.
