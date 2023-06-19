@@ -2,7 +2,9 @@
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2411         Joanie Harper                Added closing parentheses per the Jira ticket https://jira.hl7.org/browse/OTHER-2411
 2023-06-16       OTHER-2586         Joanie Harper                Change field name from Jurisdiction to Issuer, added **Definition**, and put Cardinality on its own line per https://jira.hl7.org/browse/OTHER-2586
-
+2023-06-16       OTHER-2587         Joanie Harper                update Source Field Name and Source Field Desription per Jira ticket https://jira.hl7.org/browse/OTHER-2587
+2023-06-16       OTHER-2575         Joanie Harper                Added hyphens per Jira ticket https://jira.hl7.org/browse/OTHER-2575
+2023-06-16       OTHER-2578         Joanie Harper                Updated SPCU section per Jira ticket https://jira.hl7.org/browse/OTHER-2578
 -->
 
 ### Modeling Sex and Gender Representation
@@ -150,8 +152,8 @@ setting.
 to the person. May be just an initial dateTime.
 
 **Usage note:** Validity period may be overlapping in the case of
-multiple gender identities (such as for bigender persons, some
-genderfluid persons, and binary Two-Spirit persons who also identify as
+multiple gender identities (such as for bi-gender persons, some
+gender-fluid persons, and binary Two-Spirit persons who also identify as
 male or female).
 
 -   Cardinality: 0..1
@@ -193,14 +195,12 @@ specification (e.g., for radiation shielding). For detailed use cases
 and implementation guidance, see (insert link to Use Cases landing page
 in IG).
 
-In situations where there is no clinical impact, such as administrative
-activities, SFCU is not well defined and can be omitted. SFCU provides a
-general extendable structure. During the transition from old systems to
-new systems, and as medical technology and science evolve, the rules for
-SFCU selection and referenced clinical observations will change. As
-technology changes these business rules may change, and the ordering
-systems are expected to accommodate changes to the order filling
-systems. The gender harmony model enables adaptation of old systems and
+SPCU provides a general extendable structure. During the transition from 
+old systems to new systems, and as medical technology and science evolve, 
+the rules for SPCU selection and referenced clinical observations will 
+change. As technology changes these business rules may change, and the 
+ordering systems are expected to accommodate changes to the order filling 
+systems. The gender harmony model enables adaptation of old systems and 
 new technologies.
 
 In observations, SFCU is used to describe the specific contexts used in
@@ -430,9 +430,10 @@ initial dateTime.
 
 ###### Source Field Name
 
-**Definition:** Name of the source field on the document.
+**Definition:** Name of the source field in the document for this Recorded 
+Sex or Gender instance.
 
-Usage Note: This may be in any characters set. For example, on a Russian
+**Usage Note:** This may be in any character set. For example, on a Russian
 identity card it could be 'Пол'.
 
 -   Cardinality: 0..1
@@ -441,8 +442,8 @@ identity card it could be 'Пол'.
 
 ###### Source Field Description
 
-**Definition:** A description of the source field or source fields on
-the document.
+**Definition:** A description of the source field in the document for this 
+Recorded Sex or Gender instance.
 
 **Usage Note:** Further description of the source field to clarify
 intent of meaning. This may be a link or an external reference. For

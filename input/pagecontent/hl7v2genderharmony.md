@@ -3,6 +3,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2432         Joanie Harper                Fixed 3 typos per the Jira ticket https://jira.hl7.org/browse/OTHER-2432
 2023-06-16       OTHER-2433         Joanie Harper                Fixed typo per the Jira ticket https://jira.hl7.org/browse/OTHER-2433
 2023-06-16       OTHER-2431         Joanie Harper                Fixed typo per the Jira ticket https://jira.hl7.org/browse/OTHER-2431
+2023-06-16       OTHER-2550         Joanie Harper                Changed patient specific to person specific per the Jira ticket https://jira.hl7.org/browse/OTHER-2550
 -->
 
 ### Introduction to V2
@@ -29,7 +30,7 @@ In order to support this need, initially driven by the laboratory use case, as a
 
 #### Long Term Guidance
 
-- The V2 Management Group is concurrently balloting the Long Term Solution for V2, which matches this IG’s approach in FHIR to recognize these as patient specific constructs and proposes the use of 3 new segments that can be added to any message structure where appropriate which allows support to convey the person specific characteristics of Gender Identity, Pronouns and potentially Sexual Orientation as well as Recorded Sex or Gender not just for the patient but for other persons like the next of kin or personnel. Please review this ballot material *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments* and submit any detailed comments there.  and please make sure to read the Overarching Notes to Balloters Section in Chapter 1
+- The V2 Management Group is concurrently balloting the Long Term Solution for V2, which matches this IG’s approach in FHIR to recognize these as person specific constructs and proposes the use of 3 new segments that can be added to any message structure where appropriate which allows support to convey the person specific characteristics of Gender Identity, Pronouns and potentially Sexual Orientation as well as Recorded Sex or Gender not just for the patient but for other persons like the next of kin or personnel. Please review this ballot material *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments* and submit any detailed comments there.  and please make sure to read the Overarching Notes to Balloters Section in Chapter 1
 
 ### Outline of gender harmony artifacts in V2 (Long Term Guidance)
 

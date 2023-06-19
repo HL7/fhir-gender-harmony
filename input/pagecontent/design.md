@@ -1,11 +1,9 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2596         Joanie Harper                Fixed typo per the Jira ticket https://jira.hl7.org/browse/OTHER-2596
-
+2023-06-16       OTHER-2596         Joanie Harper                Remove line per the Jira ticket https://jira.hl7.org/browse/OTHER-2593
 
 -->
-
-Gender Harmony Design Considerations for HL7 Product Families
 
 The discussion around gender harmony has been on-going for several years. This implementation guide is based on the logical [Gender Harmony Model](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) published in 2021 and the evolution of the Gender Harmony Project (GHP) team’s understanding of how sex and gender information is currently and most effectively can be implemented in electronic healthcare systems. The Gender Harmony project considered alignment with an observation-based model template/profile (which has been implemented in the Gravity project work, and could be considered an alternative,) but the GHP has chosen to model more "close to user." Balloters should comment on this approach, drawing any comparisons to the Gravity approach in particular, against this implementation guide.
 

@@ -1,7 +1,7 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2533         Joanie Harper                Remove extra periods per the Jira ticket https://jira.hl7.org/browse/OTHER-2533
-
+2023-06-16       OTHER-2566         Joanie Harper                Removed extra space per the Jira ticket https://jira.hl7.org/browse/OTHER-2566
 
 -->
 
@@ -12,7 +12,7 @@ In 2016, The Report of the 2015 U.S. Transgender Survey which asked 27,715 self-
 
 As National LGBTQ Task Force Director Rea Carey noted:
 
-> It is outrageous that basic health care is being denied to transgender and gender non-conforming people and that so much additional trauma is being caused by doctors instead of being resolved by doctors. The medical profession must take these data seriously and ensure that everyone in the medical care system knows how to provide transgender- sensitive medical care.
+> It is outrageous that basic health care is being denied to transgender and gender non-conforming people and that so much additional trauma is being caused by doctors instead of being resolved by doctors. The medical profession must take these data seriously and ensure that everyone in the medical care system knows how to provide transgender-sensitive medical care.
 
 This pattern is not exclusive to the United States. Medical mistreatment and/or malpractice, as well as violence against transgender and gender-diverse persons is well documented in many countries.
 The situation for intersex individuals is not much better. Despite worldwide condemnation of intersex genital mutilation, the practice is still widespread and even hurts non-intersex (dyadic) persons, such as in the case of David Reimer. Reimer, known in medical circles as the patient involved in the “John/Joan” case, committed suicide in 2004 following years of abuse at the hands of medical professionals. Clinicians routinely lie to patients about their status as intersex, obfuscate clinical records, and promote practices which have been shown to have negative effects on patient mental health (46,47,50).
