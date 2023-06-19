@@ -1,6 +1,6 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-
+2023-06-16       OTHER-2561         Joanie Harper                Fixed three instances of guide/ per the Jira ticket https://jira.hl7.org/browse/OTHER-2561
 
 
 -->
@@ -111,21 +111,21 @@ The in-scope core list of specific gender and sex use-data elements described by
 
 This guide builds upon the prior GH logical model by providing HL7 product family specific additions that define how to send the information noted above in:
 1. FHIR
-    1. The FHIR core additions needed to support the GH model *are not defined in this guide/*, instead they are found in the R5 FHIR Core ballot.
+    1. The FHIR core additions needed to support the GH model *are not defined in this guide*, instead they are found in the R5 FHIR Core ballot.
     1. This guide contains:
         1. Informative description of the FHIR additions
         1. A discussion of design decisions that led to the chosen approach
         1. A discussion of how to "pre-adopt" the R5 extensions into implementations prior versions of FHIR
         1. Detailed FHIR examples based upon a common set of uses cases
 1. V2
-    1. The new V2 segments needed to support the GH model *are not defined in this guide/*, instead they are found in the V2.9.1 ballot.
+    1. The new V2 segments needed to support the GH model *are not defined in this guide*, instead they are found in the V2.9.1 ballot.
     1. This guide contains:
         1. Informative description of the V2 segment additions
         1. A discussion of design decisions that led to the chosen approach
         1. A discussion of how to "pre-adopt" the new v2.9.1 segments into implementations using prior version of V2
         1. Detailed V2 examples based upon a common set of uses cases
 1. CDA
-    1. The new CDA entry templates needed to support the GH model *are defined within this guide/*.
+    1. The new CDA entry templates needed to support the GH model *are defined within this guide*.
     1. This guide contains:
         1. The STU definition of entry templates to be used for the in-scope items noted above.
         1. A discussion of design decisions that led to the chosen approach

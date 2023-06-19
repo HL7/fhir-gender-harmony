@@ -1,7 +1,7 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-2023-06-14       OTHER-2629         Joanie Harper                Corrected typo in section 11.3 (3rd row, 2nd column).
-
+2023-06-14       OTHER-2629         Joanie Harper                Corrected typo in section 11.3 (3rd row, 2nd column) per Jira ticket https://jira.hl7.org/browse/OTHER-2629
+2023-06-14       OTHER-2411         Joanie Harper                Corrected "An new" to "A new" per Jira ticket  https://jira.hl7.org/browse/OTHER-2411
 
 -->
 
@@ -9,7 +9,7 @@ Date             Jira ticket        Updated by                   Comment
 ### Summary of FHIR artifacts
 The [Patient Gender and Sex narrative](https://build.fhir.org/patient.html#gender) was updated to align with the Gender Harmony Project logical model.
 
-An new Patient example was created which represents a transgender patient: [Transgender Person Example](https://build.fhir.org/patient-example-sex-and-gender.html).
+A new Patient example was created which represents a transgender patient: [Transgender Person Example](https://build.fhir.org/patient-example-sex-and-gender.html).
 
 Extensions were created or updated to align with the Gender Harmony Project logical model.
 <style>

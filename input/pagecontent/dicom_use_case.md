@@ -1,6 +1,6 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-
+2023-06-16       OTHER-2411         Joanie Harper                Corrected Example 01: Imaging Order per the Jira ticket https://jira.hl7.org/browse/OTHER-2411
 
 
 -->
@@ -232,11 +232,11 @@ Below is a HL7 v2.9.1 OMI Imaging Order from [precondition(s)](#preconditions).
 
 ```
 MSH|^~\&|||||20220715090000||OMI^O23|WSA5mY0UBuCGrytRTAFR8UWJ|P|2.9.1
-PID|||patientID^^^^MR||Smith^Janet^^^^^B~Smith^John^^^^^D|||F
+PID|||patientID^^{}MR||Smith^Janet{}^{}B~Smith^John{}^^^N|||F
 GSP|1|S||76691-5^Gender identity^LN|446151000124109^Identifies as male gender^SCT|20220715090000  
 GSC|1|S||248152002^Female^SCT|20220715090000|OBR^4||Hormonal treatment, use affirmed gender Cr reference ranges
 ORC|NW||||||||20220715090000|||^Cure^Matt^^^^MD
-OBR|1|entityID|fillrtOrderNum|82800-4^PET+CT Heart W contrast IV^LN||||||||||||||||||||NMS|||||||^Reason for Study|
+OBR||||241439007^PET heart study^SCT|||||||||||||||||||||||||||||||||||||||||82800-4^PET+CT Heart W contrast IV^LN
 IPC|accessionNum|procedureID|studyInstanceUID|schProcedureStepId|PT^Positron emission tomography^DCM|122793^PET Myocardial Perfusion, Rest and Stress^DCM
 ```
 

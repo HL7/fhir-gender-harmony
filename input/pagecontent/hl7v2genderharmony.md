@@ -1,8 +1,8 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-
-
-
+2023-06-16       OTHER-2432         Joanie Harper                Fixed 3 typos per the Jira ticket https://jira.hl7.org/browse/OTHER-2432
+2023-06-16       OTHER-2433         Joanie Harper                Fixed typo per the Jira ticket https://jira.hl7.org/browse/OTHER-2433
+2023-06-16       OTHER-2431         Joanie Harper                Fixed typo per the Jira ticket https://jira.hl7.org/browse/OTHER-2431
 -->
 
 ### Introduction to V2
@@ -44,15 +44,15 @@ In the *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Dat
 
 ### Using the gender harmony artifacts for specific use cases
 
-- In V2 the context of segments is often derived from the placement in the message structure – the following chapters in the *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments* address wOverarching Notes to Balloters in Chapter 1
+- In V2 the context of segments is often derived from the placement in the message structure – the following chapters in the *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments* address Overarching Notes to Balloters in Chapter 1
 - Detailed description of the Gender Harmony related segments in Chapter 3:
   - For self-describing Gender Identity, Pronouns and Sexual Orientation: GSP – Person Gender and Sex Segment (3.4.19)
   - For Recorded Sex or Gender: GSR – Recorded Gender and Sex Segment (3.4.20)
   - For Sex for Clinical Use: GSC – Sex For Clinical Use Segment (3.4.21)
-- here the above-described gender harmony artifacts should be add into the message structures in V2.9.1 based on the use cases:
+- here the above-described gender harmony artifacts should be added into the message structures in V2.9.1 based on the use cases:
 - Use in Admission Transfer Discharge Use case in Chapter 3: 
   - Trigger Events and Message Definitions (3.3)
-- Use in order Order messages in Chapter 4: 
+- Use in order messages in Chapter 4: 
   - OMG – general clinical order message (event O19) (4.4.4)TBD
   - OML – laboratory order message (event O21) (4.4.6)
   - OML – Laboratory order for multiple orders related to a single specimen (event O33) (4.4.8)
@@ -75,7 +75,7 @@ In the *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Dat
     - RDE - Pharmacy/Treatment Refill Authorization Request Message (Event O25) (4A.3.16)
     - RSP^K31^RSP\_K31 message in Pharmacy Query/Response Message Pair (4A.3.23)
   - VXU - Unsolicited Vaccination Record Update (Event V04) (4A.7.6)
-- result Result messages in Chapter 7: 
+- Use in result messages in Chapter 7: 
   - ORU – Unsolicited Observation Message (Event R01) (7.3.1)TBD
   - ORU – Unsolicited Point-Of-Care Observation Message without Existing Order – Place an Order (Event R30) (7.3.4)
   - ORU – Unsolicited New Point-Of-Care Observation Message – Search for an Order (Event R31) (7.3.5)
@@ -164,6 +164,6 @@ Since V2 has been used for a long time, the field Administrative Sex (PID-8) V2 
 
 Definition: This field contains the patient’s sex. Refer to User-defined Table 0001 - Administrative Sex in Chapter 2C, Code Tables, for suggested values. = <https://terminology.hl7.org/CodeSystem-v2-0001.html>
 
-Due to the longstanding existence of this field, we are not planning to change the definition of this field, but rather ensure users understand that is should be used with care, while defining additional constructs to convey the more precisely defined attributes. 
+Due to the longstanding existence of this field, we are not planning to change the definition of this field, but rather ensure users understand that it should be used with care, while defining additional constructs to convey the more precisely defined attributes. 
 
 When conveying additional SOGI concepts in a message, implementers must consider how the business requirements of the receiving system will be satisfied when consuming SOGI data elements. Depending on the use case, a hierarchy of data elements may need to be constructed in order to ensure that business requirements are met appropriately. For example, in a billing use case, if both PID-8 and Gender Identity are populated in a message, the receiving system may choose to prioritize PID-8 over Gender Identity based on the needs of the use case.

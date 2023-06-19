@@ -1,7 +1,6 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-
-
+2023-06-16       OTHER-2411         Joanie Harper                Added closing parentheses per the Jira ticket https://jira.hl7.org/browse/OTHER-2411
 
 -->
 
@@ -42,7 +41,7 @@ Person: Gender Identity (GI), Sex For Clinical Use (SfCU), Recorded Sex
 or Gender (RSG), Name to Use (NtU), and Pronouns.
 
 With the exception of one addition (Recorded Sex or Gender attribute =
-type with datatype = code or constrained text, the model included in
+type with datatype = code or constrained text, the model included) in
 this implementation guide is exactly in the published Gender Harmony
 Informative Specification. The addition was made to clarify and cover
 the original intent of Record Sex or Gender, including the ability to
