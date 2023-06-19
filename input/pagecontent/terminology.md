@@ -1,6 +1,6 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-
+2023-06-16       OTHER-2553         Joanie Harper                Remove extra periods per the Jira ticket https://jira.hl7.org/browse/OTHER-2553
 
 
 -->
@@ -62,7 +62,7 @@ The [Sex For Clinical Use](http://build.fhir.org/valueset-sex-for-clinical-use.h
 The LOINC code for the "observable encoding" of the Sex For Clinical Use is [99501-9](https://loinc.org/99501-9/)
 
 ### Pronouns
-Pronouns are an important aspect of identity reference in many languages, and when used are often aligned with gender differences. The Gender Harmony project includes a minimal set of English language third-person personal pronoun set as used by the patient to enable affirming interactions during patient care. The provided minimal pronoun set is defined as a set of personal pronouns (subject and object pronouns) and their respective possessive pronoun(s), reflexive pronoun(s), and possessive determiner(s) (colloquially referred to as “possessive adjectives”). These values are specified by the patient for use in healthcare interactions, clinical notes, and in written instructions to caregivers. As is true of the other minimal value sets, those provided are to enable common exchange covering most of the need but are **not** a complete set and many patients will desire pronouns that are not included in this value set. Jurisdictions and regulators are strongly encouraged to add additional values to this minimal set. As is true for Gender Identity, overlapping sets are common but always distinct. 
+Pronouns are an important aspect of identity reference in many languages, and when used are often aligned with gender differences. The Gender Harmony project includes a minimal set of English language third-person personal pronouns as used by a person to enable affirming interactions during patient care. The provided minimal pronoun set is defined as a set of personal pronouns (subject and object pronouns) and their respective possessive pronoun(s), reflexive pronoun(s), and possessive determiner(s) (colloquially referred to as “possessive adjectives”). These values are specified by the patient for use in healthcare interactions, clinical notes, and in written instructions to caregivers. As is true of the other minimal value sets, those provided are to enable common exchange covering most of the need but are **not** a complete set and many patients will desire pronouns that are not included in this value set. Jurisdictions and regulators are strongly encouraged to add additional values to this minimal set. As is true for Gender Identity, overlapping sets are common but always distinct. 
 
 The set chosen for this value set are derived from [LOINC](https://terminology.hl7.org/CodeSystem-v3-loinc.html) code system and are based upon the [Answer List](https://loinc.org/LL5144-2/) for the LOINC code [90778-2](https://loinc.org/90778-2/) "Personal pronouns - Reported"
 
