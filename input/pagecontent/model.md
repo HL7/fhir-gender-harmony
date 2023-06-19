@@ -563,7 +563,7 @@ May just include a start date.
 **Usage Note:** Multiple pronoun entries may exist and overlap as some
 persons utilize multiple pronouns simultaneously or switch usage based
 on context, familiarity, comfortability, and/or gender identity (for
-instance, in the case of bigender or genderfluid persons).
+instance, in the case of bi-gender or gender-fluid persons).
 
 -   Cardinality: 0..1
 
