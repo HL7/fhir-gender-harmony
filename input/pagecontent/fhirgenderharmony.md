@@ -56,9 +56,9 @@ table, th, td {
 
 *Context:* This extension is available on all “person” type resources, which includes Patient, RelatedPerson, Person, and Practitioner. It is not included on PracitionerRole, as PractitionerRole refers to Practitioner for demographics.
 
-**Sex for Clinical Use: extension**
+**Sex Parameter for Clinical Use: extension**
 
-*Context:* The Sex for Clinical Use extension is available on all FHIR resource types; however, it is intended for use on clinical resource types (e.g., DiagnosticReport, Observation), and enclosing contextual resources (e.g., Encounter, EpisodeOfCare, Patient). We considered limiting the extension only to the resources we expect it to be used on, however there will likely be resources we incorrectly excluded, and new resources created to which it could apply, so we opted to allow it to all resources, understanding that it would not be applicable for many resource types.
+*Context:* The Sex Parameter for Clinical Use extension is available on all FHIR resource types; however, it is intended for use on clinical resource types (e.g., DiagnosticReport, Observation), and enclosing contextual resources (e.g., Encounter, EpisodeOfCare, Patient). We considered limiting the extension only to the resources we expect it to be used on, however there will likely be resources we incorrectly excluded, and new resources created to which it could apply, so we opted to allow it to all resources, understanding that it would not be applicable for many resource types.
 
 Structure: We considered two structural options for this extension:
 
@@ -66,9 +66,7 @@ Structure: We considered two structural options for this extension:
    
 2) An extension applied to a contextual resource with a reference to an Observation documenting the Sex for Clinical Use value.
 
-We opted to include the Sex for Clinical Use value in-line rather than as a reference to Observation after discussion on tradeoffs between two options.  We felt that the in-line option was simpler while being sufficiently expressive.  An extension with a reference to Observation allows for the expression of complex metadata associated with the value, however we expect the need for that complex metadata would be sufficiently rare to not outweigh the benefits of the simpler in-line extension option.
-
-**Note to balloters**: Input on the approach of an extension with an in-line value vs. an extension with a reference to an Observation is appreciated.
+We opted to include the Sex Parameter for Clinical Use value in-line rather than as a reference to Observation after discussion on tradeoffs between two options.  We felt that the in-line option was simpler while being sufficiently expressive.  An extension with a reference to Observation allows for the expression of complex metadata associated with the value, however we expect the need for that complex metadata would be sufficiently rare to not outweigh the benefits of the simpler in-line extension option.
 
 **Recorded Sex and Gender: extension**
 
