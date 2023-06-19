@@ -2,7 +2,7 @@
 Date             Jira ticket        Updated by                   Comment
 2023-06-14       OTHER-2629         Joanie Harper                Corrected typo in section 11.3 (3rd row, 2nd column) per Jira ticket https://jira.hl7.org/browse/OTHER-2629
 2023-06-14       OTHER-2411         Joanie Harper                Corrected "An new" to "A new" per Jira ticket  https://jira.hl7.org/browse/OTHER-2411
-
+2023-06-14       OTHER-2616         Joanie Harper                Updated second option to 2) per Jira ticket https://jira.hl7.org/browse/OTHER-2616
 -->
 
 
@@ -63,7 +63,7 @@ table, th, td {
 Structure: We considered two structural options for this extension:
 
 1) An extension applied to a contextual resource with the Sex for Clinical Use value in-line.
-1) An extension applied to a contextual resource with a reference to an Observation documenting the Sex for Clinical Use value.
+2) An extension applied to a contextual resource with a reference to an Observation documenting the Sex for Clinical Use value.
 
 We opted to include the Sex for Clinical Use value in-line rather than as a reference to Observation after discussion on tradeoffs between two options.  We felt that the in-line option was simpler while being sufficiently expressive.  An extension with a reference to Observation allows for the expression of complex metadata associated with the value, however we expect the need for that complex metadata would be sufficiently rare to not outweigh the benefits of the simpler in-line extension option.
 

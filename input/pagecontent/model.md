@@ -1,6 +1,7 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2411         Joanie Harper                Added closing parentheses per the Jira ticket https://jira.hl7.org/browse/OTHER-2411
+2023-06-16       OTHER-2586         Joanie Harper                Change field name from Jurisdiction to Issuer, added **Definition**, and put Cardinality on its own line per https://jira.hl7.org/browse/OTHER-2586
 
 -->
 
@@ -419,9 +420,11 @@ initial dateTime.
 
 -   Type: duration
 
-###### Jurisdiction
+###### Issuer
 
-Jurisdiction or organization that issued the document Cardinality: 0..1
+**Definition:** Jurisdiction or organization that issued the document 
+
+-   Cardinality: 0..1
 
 -   Type: string
 
