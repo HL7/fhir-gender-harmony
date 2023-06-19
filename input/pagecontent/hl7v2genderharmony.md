@@ -50,7 +50,7 @@ In the *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Dat
   - For self-describing Gender Identity, Pronouns and Sexual Orientation: GSP – Person Gender and Sex Segment (3.4.19)
   - For Recorded Sex or Gender: GSR – Recorded Gender and Sex Segment (3.4.20)
   - For Sex for Clinical Use: GSC – Sex For Clinical Use Segment (3.4.21)
-- here the above-described gender harmony artifacts should be added into the message structures in V2.9.1 based on the use cases:
+- here The above-described gender harmony artifacts should be added into the message structures in V2.9.1 based on the use cases:
 - Use in Admission Transfer Discharge Use case in Chapter 3: 
   - Trigger Events and Message Definitions (3.3)
 - Use in order messages in Chapter 4: 
@@ -67,7 +67,7 @@ In the *HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Dat
   - OMB – Blood Product Order Message (Event O27) (4.13.2)
   - BPS – Blood Product Dispense Status Message (Event O29) (4.13.4)
   - BTS – Blood Product Transfusion/Disposition Message (Event O31) (4.13.6)
-  - Use in Order messages in Chapter 4A: 
+  - Use in order messages in Chapter 4A: 
     - OMP - Pharmacy/Treatment Order Message (Event O09) (4A.3.3)
     - RDE - Pharmacy/Treatment Encoded Order Message (Event O11) (4A.3.6)
     - RDS - Pharmacy/Treatment Dispense Message (Event O13) (4A.3.8)

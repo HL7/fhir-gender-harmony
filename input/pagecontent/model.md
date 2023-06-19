@@ -44,7 +44,7 @@ Person: Gender Identity (GI), Sex For Clinical Use (SfCU), Recorded Sex
 or Gender (RSG), Name to Use (NtU), and Pronouns.
 
 With the exception of one addition (Recorded Sex or Gender attribute =
-type with datatype = code or constrained text, the model included) in
+type with datatype = code or constrained text), the model included in
 this implementation guide is exactly in the published Gender Harmony
 Informative Specification. The addition was made to clarify and cover
 the original intent of Record Sex or Gender, including the ability to
@@ -86,7 +86,7 @@ about the context and reason for selection may be incorporated into the
 link to observations or reports that are part of the SFCU, or in the
 comment associated with Gender Identity.
 
-#### Person
+### Person
 
 **Definition:** This is an abstract class to be mapped onto a concrete
 class in a specific standard or definition. The concrete class is
@@ -98,7 +98,7 @@ used with standards that do not define classes, e.g., HL7 v2.x, this
 abstract Person class can be mapped into concrete changes to the
 standard.
 
-#### Gender Identity (GI)
+### Gender Identity (GI)
 
 Gender Identity describes the identity or identities of the person. This
 is important in many social and cultural contexts. It might be missing,
@@ -130,11 +130,13 @@ setting.
 
 **Cardinality:** 0..n
 
-##### Attributes: 
+#### Attributes: 
 
-###### Gender 
+##### Gender 
 
-> **Definition:** See element Definition
+-   Definition:  An individual's personal sense of being a man, woman,
+boy, girl, nonbinary, or something else. This datum represents an
+individual's identity, ascertained by asking them what that identity is.
 
 -   Cardinality 1..1
 
@@ -146,12 +148,12 @@ setting.
 
     -   binding Strength: extensible
 
-###### Validity Period 
+##### Validity Period 
 
-**Definition:** The time frame during which this gender identity applies
+-   Definition: The time frame during which this gender identity applies
 to the person. May be just an initial dateTime.
 
-**Usage note:** Validity period may be overlapping in the case of
+-   Usage note: Validity period may be overlapping in the case of
 multiple gender identities (such as for bi-gender persons, some
 gender-fluid persons, and binary Two-Spirit persons who also identify as
 male or female).
@@ -160,12 +162,12 @@ male or female).
 
 -   Type: duration or datetime
 
-###### Comment 
+##### Comment 
 
-**Definition:** Text to further explain the use of the specified gender
+-   Definition: Text to further explain the use of the specified gender
 identity or identities.
 
-**Usage note:** Content included may be related to social and/or
+-   Usage note: Content included may be related to social and/or
 cultural context to be considered when using the gender identity,
 particularly with overlapping active values.
 
@@ -173,7 +175,7 @@ particularly with overlapping active values.
 
 -   Type: long text
 
-#### Sex for Clinical Use (SfCU)
+### Sex for Clinical Use (SfCU)
 
 Sex for Clinical Use is provided for use in orders, observations, and
 other clinical uses. SfCu can be highly contextual and allows specific
@@ -245,11 +247,11 @@ value and linked comment or specific observation could be summarized as
 
 **Cardinality**: 0..n, expected to be zero unless in a clinical context.
 
-##### Attributes: 
+#### Attributes: 
 
-###### SFCU Category 
+##### SFCU Category 
 
-**Definition:** Sex value based on clinical observations.
+-   Definition: Sex value based on clinical observations.
 
 -   Cardinality: 1..1
 
@@ -261,21 +263,21 @@ value and linked comment or specific observation could be summarized as
 
     -   binding Strength: required
 
-###### Validity Period
+##### Validity Period
 
-**Definition:** Time frame during which this summary value applies to
+-   Definition: Time frame during which this summary value applies to
 the patient. May be just an initial dateTime
 
-**Usage Note:** Validity period may overlap among different SFCU values
+-   Usage Note: Validity period may overlap among different SFCU values
 based on procedure or process used to determine the value
 
 -   Cardinality: 0..1
 
 -   Type: duration
 
-###### Comment
+##### Comment
 
-**Definition:** Text to further explain the context for this specific
+-   Definition: Text to further explain the context for this specific
 SFCU categorization. Usage note: Content included may be related to
 social and/or cultural context to be considered or additional
 information related to the linked observations, particularly with
@@ -285,12 +287,12 @@ overlapping active values
 
 -   Type: long text
 
-###### Linked Clinical Observation
+##### Linked Clinical Observation
 
-**Definition:** Link or identifier to observation(s) or report(s) that
+-   Definition: Link or identifier to observation(s) or report(s) that
 are used to determine the sex category value
 
-**Usage Note:** The specific implementation of these links will vary
+-   Usage Note: The specific implementation of these links will vary
 based on the standard used. This GH model does not specify the encoding
 mechanism for a link. It could be a DOI, a URL, a DICOM SCOORD-3D, etc.
 The specific standards and implementations will specify this. The linked
@@ -303,7 +305,7 @@ information may be provided in the Comment attribute.
 
 -   Type: string
 
-#### Recorded Sex or Gender (RSG)
+### Recorded Sex or Gender (RSG)
 
 Recorded Sex or Gender information typically originates from a physical
 or electronic document that was provided to a medical provider. The
@@ -351,11 +353,11 @@ acknowledging the previous limitation to information at birth.
 
 **Cardinality:** 0..n
 
-##### Attributes: 
+#### Attributes: 
 
-###### Source Recorded Sex or Gender 
+##### Source Recorded Sex or Gender 
 
-**Definition:** The actual value found on the document. This may be in
+-   Definition: The actual value found on the document. This may be in
 any character set. For example. a Russian identity card might have the
 value 'ж' for sex.
 
@@ -363,9 +365,9 @@ value 'ж' for sex.
 
 -   Type: Code or constrained short text
 
-###### International Equivalent Recorded Sex or Gender
+##### International Equivalent Recorded Sex or Gender
 
-**Definition:** An international representation of the value found on
+-   Definition: An international representation of the value found on
 the document. This should be recorded in ISO/IEC 8859-1 (Latin 1) or
 equivalent. For example. a Russian identity card might have the value
 'ж' for sex which is the source value, but the international equivalent
@@ -384,17 +386,17 @@ Organization (ICAO).
 
     -   binding Strength: extensible
 
-###### Type
+##### Type
 
-**Definition**: The type or category of sex or gender that is recorded
+-   Definition: The type or category of sex or gender that is recorded
 
 -   Cardinality: 0..1
 
 -   Type: code or constrained text
 
-###### Record Description
+##### Record Description
 
-**Definition:** A short phrase that describes the document or record
+-   Definition: A short phrase that describes the document or record
 that includes the sex or gender value. E.g., national ID card, birth
 certificate, passport.
 
@@ -402,50 +404,50 @@ certificate, passport.
 
 -   Type: string
 
-###### Acquisition Date
+##### Acquisition Date
 
-**Definition:** The date that the document was scanned, processed, etc.
+-   Definition: The date that the document was scanned, processed, etc.
 to extract the sex or gender information.
 
 -   Cardinality: 0..1
 
 -   Type: datetime
 
-###### Validity Period
+##### Validity Period
 
-The time frame during which the document is valid. May be just an
+-   Definition: The time frame during which the document is valid. May be just an
 initial dateTime.
 
 -   Cardinality: 0..1
 
 -   Type: duration
 
-###### Issuer
+##### Issuer
 
-**Definition:** Jurisdiction or organization that issued the document 
+-   Definition: Jurisdiction or organization that issued the document 
 
 -   Cardinality: 0..1
 
 -   Type: string
 
-###### Source Field Name
+##### Source Field Name
 
-**Definition:** Name of the source field in the document for this Recorded 
+-   Definition: Name of the source field in the document for this Recorded 
 Sex or Gender instance.
 
-**Usage Note:** This may be in any character set. For example, on a Russian
+-   Usage Note: This may be in any character set. For example, on a Russian
 identity card it could be 'Пол'.
 
 -   Cardinality: 0..1
 
 -   Type: string
 
-###### Source Field Description
+##### Source Field Description
 
-**Definition:** A description of the source field in the document for this 
+-   Definition: A description of the source field in the document for this 
 Recorded Sex or Gender instance.
 
-**Usage Note:** Further description of the source field to clarify
+-   Usage Note: Further description of the source field to clarify
 intent of meaning. This may be a link or an external reference. For
 example, there is an international standard for the fields on an
 international travel passport.
@@ -454,7 +456,7 @@ international travel passport.
 
 -   Type: string
 
-#### Name to Use (NtU)
+### Name to Use (NtU)
 
 The Name to Use enables care providers to use the name that is chosen by
 the person. This element may match but is distinct from a person's legal
@@ -476,38 +478,39 @@ This may be a nickname or formal name. Multiple cardinalities are
 required to support changes in desired name over time, such as when a
 patient desires a change in name to align with expressed gender. This
 means a validity period and a comment attribute to allow text that can
-be used to capture context for use of the name.\
+be used to capture context for use of the name.
+
 **Cardinality:** 0..n
 
-##### Attributes: 
+#### Attributes: 
 
-###### Name 
+##### Name 
 
-**Definition:** Name to Use when addressing or referencing the patient.
+-   Definition: Name to Use when addressing or referencing the patient.
 
 -   Cardinality: 1..1
 
 -   Type: string
 
-###### Validity Period
+##### Validity Period
 
-**Definition:** The timeframe during which the name is to be used. May
+- Definition: The timeframe during which the name is to be used. May
 just include a start date.
 
 -   Cardinality: 0..1
 
 -   Type: duration
 
-###### Comment
+##### Comment
 
-**Definition:** Text to further explain use of the Name. This may be
+--  Definition: Text to further explain use of the Name. This may be
 related to social and/or cultural context.
 
 -   Cardinality: 0..1
 
 -   Type: long text
 
-#### Pronouns
+### Pronouns
 
 **Definition:** Pronoun(s) specified by the patient to use when
 referring to the patient in speech, in clinical notes, and in written
@@ -529,15 +532,17 @@ multiple are present.
 
 Different pronouns may be used in one care setting than another care
 setting. The pronouns used in the work environment may be different than
-those in the care setting. Cardinality: 0..n
+those in the care setting. 
 
-##### Attributes: 
+**Cardinality:** 0..n
 
-###### Pronoun 
+#### Attributes: 
 
-**Definition:** The noun or a noun phrase used for the patient.
+##### Pronoun 
 
--   Cardinality 1..1
+-   Definition: The noun or a noun phrase used for the patient.
+
+-   Cardinality: 1..1
 
 -   Type: Code or constrained short text
 
@@ -547,20 +552,20 @@ those in the care setting. Cardinality: 0..n
 
     -   binding Strength: extensible
 
-###### Validity Period
+##### Validity Period
 
-**Definition:** The timeframe during which the pronoun is to be used.
+-   Definition: The timeframe during which the pronoun is to be used.
 May just include a start date.
 
 -   Cardinality: 0..1
 
 -   Type: duration
 
-###### Comment
+##### Comment
 
-**Definition:** Text to further explain use of the pronoun.
+-   Definition: Text to further explain use of the pronoun.
 
-**Usage Note:** Multiple pronoun entries may exist and overlap as some
+-   Usage Note: Multiple pronoun entries may exist and overlap as some
 persons utilize multiple pronouns simultaneously or switch usage based
 on context, familiarity, comfortability, and/or gender identity (for
 instance, in the case of bi-gender or gender-fluid persons).
