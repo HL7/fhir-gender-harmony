@@ -1,6 +1,7 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2411         Joanie Harper                Corrected Example 01: Imaging Order per the Jira ticket https://jira.hl7.org/browse/OTHER-2411
+2023-06-16       OTHER-2488         Joanie Harper                Fixed spelling of narrative per the Jira ticket https://jira.hl7.org/browse/OTHER-2488
 
 
 -->
@@ -1022,7 +1023,7 @@ the basis on which the SFCU is assigned.
 					<text>
 						<paragraph>
 							<caption>Finding</caption>
-							<content ID="Fndng2">Findings narritive goes here...</content>
+							<content ID="Fndng2">Findings narrative goes here...</content>
 						</paragraph>
 						<paragraph>
 							<caption>Standardized uptake value</caption>
