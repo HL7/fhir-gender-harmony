@@ -2,6 +2,7 @@
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2561         Joanie Harper                Fixed three instances of guide/ per the Jira ticket https://jira.hl7.org/browse/OTHER-2561
 2023-06-19      Other-2562          RCM                          Improved formatting of In-scope section. fixed wording on CDA section https://jira.hl7.org/browse/OTHER-2562
+2023-06-20      https://jira.hl7.org/browse/OTHER-2528  Rob M   Added to out of scope
 
 
 -->
@@ -150,6 +151,7 @@ The Gender Harmony Project considered other data elements or attributes for the 
 1. Defining or modeling the representation of patient **sexual orientation**. We do note that the V2.9.1 ballot does include this element.
 1. Titles, Honorifics and/or Salutations.
 1. Representations of the provenance and qualifications needed for the collection of sex and gender identity information.
+2. Privacy and Sensitivity of gender harmony related concepts. This topic is of vital importance for standards and implementations and while not addressed in this guide, we note that there is significant coverage of the negative outcomes when an individual's gender attributes are exposed (or used) incorrectly. We also note that there are sensitivity vocabulary in HL7 IGs that can be used to tag data that is "GENDER" sensitive. Additional work will be necessary to fully characterize how to best address this topic.
 
 ### Intended Audience
 
