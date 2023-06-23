@@ -5,6 +5,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2587         Joanie Harper                update Source Field Name and Source Field Desription per Jira ticket https://jira.hl7.org/browse/OTHER-2587
 2023-06-16       OTHER-2575         Joanie Harper                Added hyphens per Jira ticket https://jira.hl7.org/browse/OTHER-2575
 2023-06-16       OTHER-2578         Joanie Harper                Updated SPCU section per Jira ticket https://jira.hl7.org/browse/OTHER-2578
+2023-06-23       OTHER-2671         Rob McClure                 Changed all to SPCU or Sex Parameter for Clinical Use
 -->
 
 ### Modeling Sex and Gender Representation
@@ -40,7 +41,7 @@ terminology bindings and relationships that clarify the meaning and
 context of the information presented to guide and inform changes within
 operational standards. The Model has five (5) major elements independent
 of other components that may also be part of the information model for a
-Person: Gender Identity (GI), Sex For Clinical Use (SfCU), Recorded Sex
+Person: Gender Identity (GI), Sex Parameter for Clinical Use (SPCU), Recorded Sex
 or Gender (RSG), Name to Use (NtU), and Pronouns.
 
 With the exception of one addition (Recorded Sex or Gender attribute =
@@ -65,12 +66,12 @@ in part on the need for independent, occasionally co-occurring, values
 that are specific to particular contexts of use within that type. The
 sensitivity of these situations heightens the importance of representing
 this data in a way that supports masking and access restrictions. The
-Sex for Clinical Use (SFCU) can also be affected by independent
+Sex Parameter for Clinical Use (SPCU) can also be affected by independent
 co-occurring contexts of use. Depending upon the procedure ordered, drug
-prescribed, or nature of a clinical report different SFCUs might be
+prescribed, or nature of a clinical report different SPCUs might be
 chosen. This can be reflected in the mapping chosen for a patient for
 specific clinical reasons. The medical record in an EHR system might
-have one set SFCU, and different specific selected SFCUs chosen for
+have one set SPCU, and different specific selected SPCUs chosen for
 mapping to NCPDP for a drug prescription, to FHIR for an order, to HL7
 v2.x for another order, and to DICOM for an imaging request. This will
 be especially common during the transition period when some systems have
@@ -81,9 +82,9 @@ abstract information model. They depend upon the concrete capabilities
 of the target system, and upon the specific clinical context at the
 time. It will be normal to find that when there are many objects related
 to a single patient (orders, reports, observations, etc.) that there are
-different SFCU due to differences in the context of use. Information
+different SPCU due to differences in the context of use. Information
 about the context and reason for selection may be incorporated into the
-link to observations or reports that are part of the SFCU, or in the
+link to observations or reports that are part of the SPCU, or in the
 comment associated with Gender Identity.
 
 ### Person
@@ -120,7 +121,7 @@ uncommunicative new patient) is unable to express a personal sense of
 being a man, woman, boy, girl or any point on the gender spectrum,
 gender identity may be recorded as Unknown. Unknown can be used in cases
 where parents do not want to specify a value but one must be recorded.
-Gender identity can be congruent or incongruent with one's SfCU or RSG.
+Gender identity can be congruent or incongruent with one's SPCU or RSG.
 Persons may identify using different terms at different times for
 various reasons, or use multiple identities simultaneously, depending on
 culture. For example, a specific gender identity may be used in one care
@@ -175,10 +176,10 @@ particularly with overlapping active values.
 
 -   Type: long text
 
-### Sex for Clinical Use (SfCU)
+### Sex Parameter for Clinical Use (SPCU)
 
-Sex for Clinical Use is provided for use in orders, observations, and
-other clinical uses. SfCu can be highly contextual and allows specific
+Sex Parameter for Clinical Use is provided for use in orders, observations, and
+other clinical uses. SPCU can be highly contextual and allows specific
 considerations to be provided for potential automated uses and records.
 Examples include:
 
@@ -190,7 +191,7 @@ Examples include:
     mammography order is properly performed.
 
 There are many other situations involving tumors, resections, congenital
-conditions (i.e., ovotestes), and transgender patients where SFCU can be
+conditions (i.e., ovotestes), and transgender patients where SPCU can be
 used to provide information that is needed to perform a procedure
 properly. Many procedures need at least a "male" or "female"
 specification (e.g., for radiation shielding). For detailed use cases
@@ -205,16 +206,16 @@ ordering systems are expected to accommodate changes to the order filling
 systems. The gender harmony model enables adaptation of old systems and 
 new technologies.
 
-In observations, SFCU is used to describe the specific contexts used in
+In observations, SPCU is used to describe the specific contexts used in
 the observation. For example, the computation of glomerular filtration
 rate (GFR) based on blood chemistry uses formulas that are different for
-"male" and "female". The SFCU for the GFR report can indicate which
+"male" and "female". The SPCU for the GFR report can indicate which
 formula was used in the computation of that result. The expectation is
-that the patient level SFCU is the default value used in all
-observations in a report and have an individual SFCU for individual
-observations when that observation was performed using a different SFCU.
+that the patient level SPCU is the default value used in all
+observations in a report and have an individual SPCU for individual
+observations when that observation was performed using a different SPCU.
 The Gender Harmony model does not cover the description of individual
-observations, but the SFCU attribute can be used.
+observations, but the SPCU attribute can be used.
 
 **Definition**: A categorization of sex derived from observable
 information such as an organ inventory, recent hormone lab tests,
@@ -226,7 +227,7 @@ information this element summarizes (such as a comment or a linked data
 observation) in order to clarify the context and resulting value. This
 element is intended to characterize observations that align with or vary
 from female or male when the observation(s) are intended for use in a
-clinical activity. In some systems the SFCU value may be automatically
+clinical activity. In some systems the SPCU value may be automatically
 determined based on the medical record so that they match the recipient
 system's needs.
 
@@ -235,13 +236,13 @@ The value multiplicity for a specific protocol or target may be 1..1 or
 0..1. The GH model does not specify how such restrictions should be
 implemented. They should reflect the purpose of the communication and
 the capabilities of the systems involved. This may require individual
-site specific business rules to map a multi-valued SFCU into a single
+site specific business rules to map a multi-valued SPCU into a single
 value that is appropriate for this context.
 
-As SFCU can be context-specific, on rare occasions there may be more
-than one concurrent SFCU for a patient. For example, there could be
-multiple procedure results, each identifying a context specific SFCU
-determination used to set the normal range used. For example an SFCU
+As SPCU can be context-specific, on rare occasions there may be more
+than one concurrent SPCU for a patient. For example, there could be
+multiple procedure results, each identifying a context specific SPCU
+determination used to set the normal range used. For example an SPCU
 value and linked comment or specific observation could be summarized as
 "male, based on hormonal measurement."
 
@@ -249,7 +250,7 @@ value and linked comment or specific observation could be summarized as
 
 #### Attributes: 
 
-##### SFCU Category 
+##### SPCU Category 
 
 -   Definition: Sex value based on clinical observations.
 
@@ -268,7 +269,7 @@ value and linked comment or specific observation could be summarized as
 -   Definition: Time frame during which this summary value applies to
 the patient. May be just an initial dateTime
 
--   Usage Note: Validity period may overlap among different SFCU values
+-   Usage Note: Validity period may overlap among different SPCU values
 based on procedure or process used to determine the value
 
 -   Cardinality: 0..1
@@ -278,7 +279,7 @@ based on procedure or process used to determine the value
 ##### Comment
 
 -   Definition: Text to further explain the context for this specific
-SFCU categorization. Usage note: Content included may be related to
+SPCU categorization. Usage note: Content included may be related to
 social and/or cultural context to be considered or additional
 information related to the linked observations, particularly with
 overlapping active values
@@ -296,7 +297,7 @@ are used to determine the sex category value
 based on the standard used. This GH model does not specify the encoding
 mechanism for a link. It could be a DOI, a URL, a DICOM SCOORD-3D, etc.
 The specific standards and implementations will specify this. The linked
-information should clearly align with the chosen SFCU. For example, a
+information should clearly align with the chosen SPCU. For example, a
 patient with an initial diagnosis of an intersex condition could have
 supporting clinical observations specific to the diagnosis. Additional
 information may be provided in the Comment attribute.
@@ -310,7 +311,7 @@ information may be provided in the Comment attribute.
 Recorded Sex or Gender information typically originates from a physical
 or electronic document that was provided to a medical provider. The
 rules for these documents have varied significantly over time and place,
-and the relationship to current Gender Identity or SFCU may be unclear.
+and the relationship to current Gender Identity or SPCU may be unclear.
 The RSG element includes source information so that the definition of
 "X" in a California driver's license can be found if necessary and the
 Jurisdiction for the state of California can be recorded. The RSG also
