@@ -1,0 +1,92 @@
+@startuml
+
+
+scale 320 width
+scale 320 height
+
+!theme toy
+
+skinparam headerFontSize 20
+header "Figure 1"
+
+Person o-- "0..n" "Gender Identity"
+Person o-- "0..n" "Sex Parameter for Clinical Use"
+Person o-- "0..n" "Name to Use"
+Person o-- "0..n" "Pronouns"
+Person o-- "0..n" "Recorded Sex or Gender"
+
+class Person {
+   }
+
+note right of "Person" : Some standards have person or patient classes to be extended\nOthers have segments or attributes to be extended.\n\nThe following model elements can change over time.
+
+class "Gender Identity" {
+..Definition..
+An individual's personal sense of being a man, woman,\nboy, girl, nonbinary, or something else.
+_Elements_
+   code or constrained text: Gender 1..1
+   duration: Validity Period 0..1
+   string: Comment 0..1
+   }
+
+note bottom of "Gender Identity" : Used to inform interpersonal\ncommunications
+
+note bottom of "Sex Parameter for Clinical Use" : Used during clinical activities like orders,\nprescriptions, reports, and observations.
+
+class "Recorded Sex or Gender" {
+..Definition..
+Documentation of a specific instance of sex and/or gender information.
+_Elements_
+   code or constrained text: Recorded Sex or Gender 1..1
+   code or constrained text: International Equivalent Recorded Sex or Gender 0..1
+   code or constrained text: Type 0..1
+   string: Record Description 0..1
+   datetime: Acquisition Date 0..1
+   duration: Validity Period 0..1
+   string: Issuer 0..1
+   string: Source Field Name 0..1
+   string: Source Field Description 0..1
+   }
+
+note bottom of "Recorded Sex or Gender" : This captures a recorded value that\nmay be labeled as sex or gender:\n - Birth Records \n - Insurance Records \n - Official document
+
+
+class "Sex Parameter for Clinical Use" {
+..Definition..
+A context-specific categorization of sex,\nderived from observable information,\nfor use in diagnostics, analytics, and treatments.
+_Elements_
+   code or constrained text: SPCU Category 1..1
+   duration: Validity Period 0..1
+   string: Comment 0..1
+   string: Linked Clinical Observation 0..n
+   }
+
+class "Name to Use" {
+..Definition..
+Name to be used with interactions.
+_Elements_
+   string: Name 1..1
+   duration: Validity Period 0..1
+   string: Comment 0..1
+   }
+
+note bottom of "Name to Use" : Name usage applies to more than sex and gender uses.\nThe use of the appropriate name is important\n  in many social situations.
+
+class "Pronouns" {
+..Definition..
+Pronouns to be used with interactions.
+_Elements_
+   code or constrained text: Pronoun 1..1
+   duration: Validity Period 0..1
+   string: Comment 0..1
+   }
+
+note bottom of "Pronouns" : Pronoun usage is defined just for English language usage.  \nSimilar issues in other languages are a future effort.
+
+hide "Gender Identity" circle
+hide "Name to Use" circle
+hide "Recorded Sex or Gender" circle 
+hide "Sex Parameter for Clinical Use" circle
+hide "Person" circle
+hide "Pronouns" circle
+@enduml

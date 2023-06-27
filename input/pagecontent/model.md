@@ -57,7 +57,13 @@ in Figure 1 and provides a definition, description, usage notes (if
 applicable), cardinality, and attributes (with recommended terminology
 if applicable) for each model element.
 
-![media/2022May.svg](2022May.svg "Figure 1 Logical Model for Gender Identity and Sex")
+
+<figure>
+{%include genderharmony.svg%}
+<figcaption><b>Figure 1: Logical Model for Gender Identity and Sex</b></figcaption>
+</figure>
+<br clear="all" />
+
 
 Each of the Gender Harmony model sub-elements described below are sex or
 gender information that may be context-dependent; in essence a sex
