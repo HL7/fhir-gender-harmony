@@ -38,7 +38,6 @@ class "Recorded Sex or Gender" {
 Documentation of a specific instance of sex and/or gender information.
 _Elements_
    code or constrained text: Recorded Sex or Gender 1..1
-   code or constrained text: International Equivalent Recorded Sex or Gender 0..1
    code or constrained text: Type 0..1
    string: Record Description 0..1
    datetime: Acquisition Date 0..1

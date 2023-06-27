@@ -59,7 +59,7 @@ if applicable) for each model element.
 
 
 <figure>
-{%include genderharmony.svg%}
+{%include 2023genderharmony.svg%}
 <figcaption><b>Figure 1: Logical Model for Gender Identity and Sex</b></figcaption>
 </figure>
 <br clear="all" />
