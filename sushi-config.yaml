@@ -27,6 +27,8 @@ pages:
     title: Home
   background.md:
     title: Background
+  standards-history.md:
+    title: Standards History
   model.md:
     title: Model    
   design.md:
@@ -46,7 +48,9 @@ pages:
   cdaexamples.md:
     title:  CDA Examples  
   fhirgenderharmony.md:
-   title: FHIR Gender Harmony 
+   title: FHIR Guidance
+  fhirdesignbackground.md:
+   title: FHIR Design Background
   fhirexamples.md:
     title:  FHIR Examples
   terminology.md:
@@ -71,7 +75,9 @@ pages:
     title: FHIR Health Maintanence Example   
 menu:
   Home: index.html
-  Background: background.html
+  Background: 
+    Background: background.html
+    HL7 History: standards-history.html
   Model: model.html
   Guidance:
     Design Considerations: design.html  
@@ -86,7 +92,8 @@ menu:
     CDA Gender Harmony: cdagenderharmony.html
     CDA Examples: cdaexamples.html
   FHIR:
-    FHIR  Gender Harmony: fhirgenderharmony.html
+    FHIR Guidance: fhirgenderharmony.html
+    FHIR Design Background: fhirdesignbackground.html
     FHIR Examples: fhirexamples.html
   Terminology: terminology.html 
   External Standards: externalstandards.html
