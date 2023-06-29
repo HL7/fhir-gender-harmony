@@ -27,6 +27,8 @@ pages:
     title: Home
   background.md:
     title: Background
+  standards-history.md:
+    title: Standards History
   model.md:
     title: Model    
   design.md:
@@ -71,7 +73,9 @@ pages:
     title: FHIR Health Maintanence Example   
 menu:
   Home: index.html
-  Background: background.html
+  Background: 
+    Background: background.html
+    HL7 History: standards-history.html
   Model: model.html
   Guidance:
     Design Considerations: design.html  
