@@ -157,8 +157,16 @@ In this case, you may choose to exchange the recorded answer along with the othe
 
 Using the SPCU-specific structures does let you communicate additional supporting information if that is relevant, but it also requires that receiving systems support and inspect two different structures (e.g., OBX and GSP) to gather all the relevant information AOE information.  This is a tradeoff that should be considered when authoring a use-case specific IG, or when coordinating an approach with your trading partners.  
        
+### Sex Parameter for Clinical Use vs. Anatomical Characteristics (Organ Inventory)
+For many clinical contexts, the "ideal" information for clinical decision making would be the specific details about the patient's anatmoical characteristics, such as whether the patient has a prostate.  However, even if clinical systems support disrete organ inventories, that information may be missing for a variety of reasons.  A patient might decline to provide detailed organ information for privacy reasons, or they may be incapable of providing the information, either because they are unconsious or have other communication issues.  An clinical end user may forget to collect the information from the patient, either because they are busy, or because they forgot.  A clinical system may electronically receive a copy of a patient's records from some other system that doesn't support the collection of discrete organ invenvory.
 
-## Guidance Recorded Sex and Gender
+For all of these reasons, and others, clinical systems will need to provide care to patients for which an organ inventory is incomplete or unavailable.  In those cases, using a Sex Parameter for Clinical Use as an alternative to an organ inventory will be necessary.  However, individuals or systems providing care should either use default behavior that is safe for both male and female populations, individually review treatment options with the patient, or carefully inspect comments and relevant observations before proceeding with treatment.
+
+       
+	   
+	   
+
+## Guidance on Recorded Sex and Gender
 The Gender Harmony Project defines a methodology for how to send Recorded Sex or Gender information.  This methodology involves two steps:
 1. Determine which sex or gender concept is relevant for the jurisdiction and use case.
 2. Determine the best way to exchange this information between systems.
