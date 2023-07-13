@@ -92,7 +92,7 @@ CDA and FHIR are aligned with regard to the *concept* of gender identity.  Howev
 
 ### Handling Gender Identity in FHIR and HL7v2
 ## Exchanging Pronouns
-The individual-pronouns extension was added in FHIR R5 to support exchanging pronouns to use for Patients, Practitioners, RelatedPersons, and Persons.  Implementers who need to exchange pronouns in prior versions of FHIR are encouraged to pre-adopt the R5 extension.
+The [individual-pronouns](http://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html) extension was added in FHIR R5 to support exchanging pronouns to use for Patients, Practitioners, RelatedPersons, and Persons.  Implementers who need to exchange pronouns in prior versions of FHIR are encouraged to pre-adopt the R5 extension.
 
 ## Exchanging Name to Use
 The Name to Use for a person should be exchanged using the HumanName data type in the relevant resource, with a HumanName.use = "usual".
@@ -107,24 +107,24 @@ See the [guidance on Recorded Sex and Gender](#guidance-on-recorded-sex-and-gend
 ## Exchanging Sex Assigned at Birth
 *Note: In the Gender Harmony logical model, Sex Assigned at Birth is considered a type of Recorded Sex or Gender.*
 
-In the US, Sex Assigned at Birth is part of the USCDIv1.  US Core has established the us-core-birthsex extension to meet US-specific requirements.  For R4 implementations in the US that require conformance to US Core, our recommendation is to use the us-core-birthsex extension to maintain consistency within the US implementer community for exchanging the Sex assigned at Birth concept.
+In the US, Sex Assigned at Birth is part of the USCDIv1.  US Core has established extensions to meet US-specific requirements.  For R4 implementations in the US that require conformance to US Core, our recommendation is to use the the US Core extensions to maintain consistency within the US implementer community for exchanging the Sex assigned at Birth concept.
 
 
 Outside the US, if your jurisdiction has a "Core" implementation guide, and that guide includes an extension for Sex Assigned at Birth, our recommendation is to use that extension to align with your jurisdiction's implementer community.
 
-Otherwise, our recommendation is to work with your jurisdiction-specific or use-case specific implementation guide authors to define jurisdiction or use-case specific methods to exchange concepts that can be categorized as a recorded sex and gender, including sex assigned at birth. Refer to the guidance on exchanging Recorded Sex and Gender for considerations.
+Otherwise, our recommendation is to work with your jurisdiction-specific or use-case specific implementation guide authors to define jurisdiction or use-case specific methods to exchange concepts that can be categorized as a recorded sex and gender, including sex assigned at birth. Refer to the [guidance on Recorded Sex and Gender](#guidance-on-recorded-sex-and-gender) for considerations.
 
 ## Exchanging Administrative Sex or Gender
 *Note: In the Gender Harmony logical model, Administrative Sex and Administrative Gender are considered types of Recorded Sex or Gender.* 
 
-Administrative Sex and Administrative Gender have sometimes been used interchangeably.  Generally, Patient.gender may be used to exchange either Administrative Sex or Administrative Gender.  However, if a system differentiates between the two, Patient.gender may be used for Administrative Gender, and an extension or Observation may be used for Administrative Sex.  See <TODO Link> for considerations on whether an extension or Observation may best meet your needs.
+Administrative Sex and Administrative Gender have sometimes been used interchangeably.  Generally, Patient.gender may be used to exchange either Administrative Sex or Administrative Gender.  However, if a system differentiates between the two, Patient.gender may be used for Administrative Gender, and an extension or Observation may be used for Administrative Sex.  The considerations for using an extension vs. an Observation for Administrative Sex are similar to [those for Gender Identity](#exchanging-gender-identity).
 
 ## Exchanging Legal Sex or Gender
-*Note: In the Gender Harmony logical model, Legal Sex and Legal Gender are considered types of Recorded Sex or Gender.   *
+*Note: In the Gender Harmony logical model, Legal Sex and Legal Gender are considered types of Recorded Sex or Gender.*
 
 Legal Sex and Legal Gender have sometimes been used interchangeably.  Generally, Patient.gender may be used to exchange either Legal Sex or Legal Gender.  
 
-TODO
+However, if a system differentiates between Legal Sex/Gender and Administrative Gender, an extension or Observation may be used for exchanging Legal Sex.  
 
 ## Exchanging Billing Sex
 *Note: In the Gender Harmony logical model, Billing Sex is considered a type of Recorded Sex or Gender.*   
@@ -194,12 +194,6 @@ When applying this methodology in FHIR, there are some considerations:
    * Creating jurisdiction or use case specific structures that are directly tied to the specific concept being exchanged, such as [us-core-birthsex](http://hl7.org/fhir/us/core/StructureDefinition-us-core-birthsex.html), ukcore-birthsex, or new jurisdictional or use case specific extensions
    * Using a generic structure such as the individual-recordedSexOrGender FHIR extension if available for the context in question or a FHIR Observation resource
 
-### US Specific Guidance
-In the US, Birth Sex (a.k.a. Sex Assigned at Birth) is part of the USCDIv1. There are two extensions that may be considered for communicating this concept:
-* us-core-birthsex: This extension was created by US Core to meet US-specific requirements.
-* individual-recordedSexOrGender: This extension was created by the Gender Harmony Project as a generic option for recording any sex or gender concept that does not have a more specific field or extension.
-
-For R4 implementations in the US that require conformance to US Core, our recommendation is to use the us-core-birthsex extension to maintain consistency within the US implementer community for exchanging the Sex Assigned at Birth concept.
 
 ### General Guidance
 
