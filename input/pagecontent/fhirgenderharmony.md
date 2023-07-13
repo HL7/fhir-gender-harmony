@@ -45,9 +45,10 @@ Using an extension on Patient, or the other "person" resources like Practitioner
 * The standard extension supports multiple gender identities, with relevant periods to account for a patient’s gender identity changing over time.
 
 There are several extensions that exist for gender identity:
-| Extension | Comment |
+
+| **Extension** | **Comments** |
 | -------- | -------- |
-| [patient-genderIdentity](https://www.hl7.org/fhir/R4/extension-patient-genderidentity.html) | This extension is available in versions of FHIR prior to R5. In R5, it was replaced by individual-genderIdentity to enable the exchange of gender identity for  non-patient persons such as practitioners. |
+| [patient-genderIdentity](https://www.hl7.org/fhir/R4/extension-patient-genderidentity.html) | This extension is available in versions of FHIR prior to R5. In R5, it was replaced by individual-genderIdentity to enable the exchange of gender identity for  non-patient persons such as practitioners. | 
 | [individual-genderIdentity](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html)     | This extension replaced the R4 patient-genderIdentity, and is available starting in R5. In addition to expanding the scope to individuals other than the patient, it also added support for metadata such as a period of applicability and a comment.     |
 | [us-core-genderIdentity](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-genderIdentity.html) | This extension was created by US Core to meet US-specific value set requirements which were not satisfied by the R4 patient-genderIdentity extension. |
 
@@ -71,7 +72,7 @@ Using an Observation resource for communicating gender identity has several cons
 
 The Gravity Project has created a draft SDOHCC Observation Gender Identity profile.
 
-**Both Gender Harmony and Gravity would like to solicit feedback on the approaches of using extensions vs. Observations for exchanging gender identity.**
+**Both Gender Harmony and Gravity continue to solicit feedback on the approaches of using extensions vs. Observations for exchanging gender identity.**
 
 ### Handling Gender Identity in FHIR and CDA
 FHIR supports two primary options for exchanging gender identity, as discussed above:
@@ -141,13 +142,11 @@ In the FHIR Coverage resource, both Coverage.beneficiary and Coverage.subscriber
 ### Patient Level Sex Parameter for Clinical Use
 Sex Parameters for Clinical Use (SPCU) may be used in specific clinical contexts, for example, when placing an order or when interpreting a result.  However, there are cases where having a context-free categorization of a patient can be useful, for example, when doing outreach for cervical cancer screening to patients for which you don't have access to any specific clinical information.  Or when you don't have access to the specific clinical information **yet**.
     
-      
 When using SPCU at a patient level, consider if any information is available suggesting that the patient is NOT male-typical or female-typical *across all clinical contexts*, then using **specified** as the patient-level SPCU is most appropriate, as that indicates that individuals or systems providing care should either use default behavior that is safe for both male and female populations, individually review treatment options with the patient, or carefully inspect comments and relevant observations before proceeding with treatment.   Additionally, consider if there are any risks related to patient care or equitable treatment when using a patient-level SPCU.  For example, when bifurcating a cohort based on a patient-context SPCU for research, carefully consider which groups may be inappropriately categorized.
 
 ### Contextual Sex Parameter for Clinical Use
 A Sex Parameter for Clinical Use (SPCU) may be used in specific clinical contexts, for example, when placing an order or when interpreting a result.  In these contexts, consider whether using a categorization such as Sex Parameter for Clinical Use is sufficient, or if using a more specific clinical observation such as an Observation about the presense or absense of an organ is most appropriate.  If a categorization is sufficient, then the [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension may be added to the resource that best represents the context.  For example, if the context is a referral order or lab order, then the extension could be added to the ServiceRequest.
-     
-
+    
 ### Sex Parameter for Clinical Use vs. Ask at Order Entry Questions
 In some clinical scenarios, such as ordering workflows, "Ask at Order Entry" (AOE) questions are commonly used for capturing a broad range of clinical context.  Examples may be unrelated to sex or gender concepts, such as "Has the patient fasted for 24 hours?", but some may overlap or be adjacent to sex or gender concepts, such as "Is the patient pregnant?" or "Does the patient have a prostate?".  
 
