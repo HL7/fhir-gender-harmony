@@ -7,6 +7,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2578         Joanie Harper                Updated SPCU section per Jira ticket https://jira.hl7.org/browse/OTHER-2578
 2023-06-23       OTHER-2671         Rob McClure                  Changed all to SPCU or Sex Parameter for Clinical Use
 2023-07-13       OTHER-2463         Cooper Thompson              Updated RSG model definition and other narrative
+2023-07-13       V2-25452           Cooper Thompson              Removed international equivalent references
 -->
 
 ### Modeling Sex and Gender Representation
@@ -318,7 +319,7 @@ information may be provided in the Comment attribute.
 Recorded Sex or Gender information may originate from a physical or electronic document that was provided to a medical provider. This information may also originate from fields in medical systems that were initially populated using those documents, or via patient attestations.  The rules for collection of these documents and fields have varied significantly over time and place therefore  the relationship to current Gender Identity or Sex Parameters for Clinical Use may be unclear. 
 
 
-The RSG element includes source information so that the definition of “X” in a driver’s license can be found if necessary and the jurisdiction can be recorded. The RSG also includes an internationally equivalent code to reduce the problems with unfamiliar sources. The original medical record source can provide an equivalent international code when it has one.
+The RSG element includes source information so that the definition of “X” in a driver’s license can be found if necessary and the jurisdiction can be recorded.
 
 
 **Definition:**  Recorded sex or gender (RSG) information includes the various sex and gender concepts that are often used in existing systems but are known to NOT represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction.
@@ -375,26 +376,6 @@ value 'ж' for sex.
 
 -   Type: Code or constrained short text
 
-##### International Equivalent Recorded Sex or Gender
-
--   Definition: An international representation of the value found on
-the document. This should be recorded in ISO/IEC 8859-1 (Latin 1) or
-equivalent. For example. a Russian identity card might have the value
-'ж' for sex which is the source value, but the international equivalent
-would be 'F' for interoperability and international legal purposes, as
-outlined in documentation by the International Civil Aviation
-Organization (ICAO).
-
--   Cardinality: 0..1
-
--   Type: Code or constrained short text
-
--   Proposed Terminology:
-
-    -   minValueSet: RecordedSexOrGender InternationalEquivalent
-        valueSet
-
-    -   binding Strength: extensible
 
 ##### Type
 
