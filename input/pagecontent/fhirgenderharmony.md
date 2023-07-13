@@ -35,7 +35,7 @@ We recognize that there are many systems that rely on a single patient-level Adm
 
 Systems are encouraged to use the new standard extensions to communicate semantically precise sex and gender concepts. Patient.gender is retained for backwards compatibility.
 
-For systems that cannot immediately transition to the new semantically precise concepts and must use Patient.gender for specific use cases like identifying reference ranges for lab tests, it is important to coordinate with your trading partners to ensure that they understand how you are using the property. This coordination prevents issues where (for example) a sender is populating Patient.gender for administrative or social purposes, but a recipient is using it for clinical purposes.
+For systems that cannot immediately transition to the new semantically precise concepts and must use Patient.gender for specific use cases like identifying reference ranges for lab tests, it is important to coordinate with your exchange partners to ensure that they understand how you are using the property. This coordination prevents issues where (for example) a sender is populating Patient.gender for administrative or social purposes, but a recipient is using it for clinical purposes.
 
 ## Exchanging Gender Identity
 There are several options for exchanging gender identity in FHIR. Which option is appropriate may vary by use case, jurisdiction, or other business requirements.  The two primary options are extensions or Observations.
@@ -58,7 +58,7 @@ There are several extensions that exist for gender identity:
 | [us-core-genderIdentity](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-genderIdentity.html) | This extension was created by US Core to meet US-specific value set requirements which were not satisfied by the R4 patient-genderIdentity extension. |
 
 
-For FHIR R4 implementations in the US that require conformance to US Core, the recommendation is to use the [us-core-genderIdentity](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-genderIdentity.html) extension to maintain consistency within the US implementer community. The [patient-genderIdentity](https://www.hl7.org/fhir/R4/extension-patient-genderidentity.html) and [us-core-genderIdentity](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-genderIdentity.html) extensions may be supported simultaneously, so servers may consider supporting all three extensions and the associated value sets to ensure clients have access to their preferred extension.
+For FHIR R4 implementations in the US that require conformance to US Core, the recommendation is to use the [us-core-genderIdentity](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-genderIdentity.html) extension to maintain consistency within the US implementer community. The [patient-genderIdentity](https://www.hl7.org/fhir/R4/extension-patient-genderidentity.html), [individual-genderIdentity](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html), and [us-core-genderIdentity](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-genderIdentity.html) extensions may be supported simultaneously, so servers may consider supporting all three extensions and the associated value sets to ensure clients have access to their preferred extension.
 
 For FHIR R5 implementations, our recommendation is to use the [individual-genderIdentity](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html) extension.
 
@@ -66,7 +66,7 @@ For FHIR R5 implementations, our recommendation is to use the [individual-gender
 ### Using Observation for Gender Identity
 Using an Observation resource for communicating gender identity has several considerations:
 * When using SMART App Launch, users must authorize an additional scope (e.g., user/Observation.read).
-  * SMART authorization servers may need to consider supporting granular scope so that users may authorize access to Gender Identity Observation resources, but not other Observation resources such as Labs or Vitals.
+  * SMART authorization servers may need to consider supporting granular scopes so that users may authorize access to Gender Identity Observation resources, but not other Observation resources such as Labs or Vitals.
   * SMART authorization servers may need to consider how authorized scopes are granted for Observations describing different individuals (e.g. Patient vs. Practitioner) in the same integration, and how the scope of those authorizations are displayed to the end user performing the authorization.  For example, is the user granting access to all Gender Identity Observations that the user has access to (including Practitioner and RelatedPerson), or only those for the Patient?
   * Systems that only support resource-level authorization can protect gender identity information when necessary.
 * If the method or actor documenting the gender identity is relevant, those may be recorded directly in the Observation resource, or in a Provenance resource associated with the Observation.

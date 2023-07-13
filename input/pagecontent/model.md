@@ -319,7 +319,7 @@ information may be provided in the Comment attribute.
 Recorded Sex or Gender information may originate from a physical or electronic document that was provided to a medical provider. This information may also originate from fields in medical systems that were initially populated using those documents, or via patient attestations.  The rules for collection of these documents and fields have varied significantly over time and place therefore  the relationship to current Gender Identity or Sex Parameters for Clinical Use may be unclear. 
 
 
-The RSG element includes source information so that the definition of “X” in a driver’s license can be found if necessary and the jurisdiction can be recorded.
+The RSG model includes source information so that the definition of “X” in a driver’s license can be found if necessary and the jurisdiction can be recorded.
 
 
 **Definition:**  Recorded sex or gender (RSG) information includes the various sex and gender concepts that are often used in existing systems but are known to NOT represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction.
@@ -353,7 +353,7 @@ When evaluating when and how to exchange sex or gender concepts, consider whethe
       * Birth Sex Observation template or Patient.administrativeGenderCode in CDA
    * Creating jurisdiction or use case specific structures that are directly tied to the specific concept being exchanged, such as:
       * New jurisdictional or use case specific extensions for FHIR
-      * [us-core-birthsex](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-birthsex.html)
+      * [us-core-birthsex](http://hl7.org/fhir/us/core/StructureDefinition-us-core-birthsex.html)
 	  * [us-core-sex](http://hl7.org/fhir/us/core/StructureDefinition-us-core-sex.html)
       * [ukcore-birthsex](https://simplifier.net/hl7fhirukcorer4/extension-ukcore-birthsex)
       * New template for CDA
