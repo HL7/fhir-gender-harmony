@@ -1,6 +1,7 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-06-29       OTHER-2558         Cooper Thompson              Split design background into a separate page, independent of the guidance page.
+2023-07-13       OTHER-2618         Cooper Thompson              Added a link to the R4 SPCU backport extension.
 -->
 
 # Background and Rationale for FHIR design approach
@@ -58,4 +59,4 @@ The Gender Harmony project has agreed that to represent the Name To Use when add
 
 One of the benefits to using extensions in R5 is that they can be easily backported to prior versions. Implementers may use any of the new standard extensions in R5 in prior versions of FHIR.
 
-However, the [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension makes use of the CodeableReference data type, which was added in R5.  In hindsight, we would have used R4 compatible data types to make this extension backportable to R4.  However, given that this issue was discovered after the extension was published, we have created a separate RR-compatible extension that may be used.
+However, the [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension makes use of the CodeableReference data type, which was added in R5. In hindsight, we would have used R4 compatible data types to make this extension backportable to R4. However, given that this issue was discovered after the extension was published, we have created a separate [patient-sexParameterForClinicalUse-backport](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-backport.html) extension that may be used for versions prior to R5.
