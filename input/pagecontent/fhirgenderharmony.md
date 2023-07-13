@@ -4,6 +4,8 @@ Date             Jira ticket        Updated by                   Comment
 2023-06-14       OTHER-2411         Joanie Harper                Corrected "An new" to "A new" per Jira ticket  https://jira.hl7.org/browse/OTHER-2411
 2023-06-14       OTHER-2616         Joanie Harper                Updated second option to 2) per Jira ticket https://jira.hl7.org/browse/OTHER-2616
 2023-06-29       OTHER-2558         Cooper Thompson              Split design background into a new document.  Updated FHIR guidance with much more detail.
+2023-07-13       OTHER-2618         Cooper Thompson              Added guidance on the R4 backport extension for SPCU
+
 -->
 
 
@@ -20,9 +22,12 @@ table, th, td {
 | **Concept** | **FHIR Artifact** | **Contexts of Use** |
 | -------- | -------- | -------- |
 | Gender Identity     | [individual-genderIdentity](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html)     | Patient, RelatedPerson, Person, Practitioner, and PractitionerRole     |
-| Sex Parameter for Clinical Use     | [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html)     | All Resource types     |
+| Sex Parameter for Clinical Use (R5 and later)     | [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html)     | All Resource types     |
+| Sex Parameter for Clinical Use (R4 and prior)    | [patient-sexParameterForClinicalUse-backport](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-backport.html)     | All Resource types     |
 | Pronouns     | [individual-pronouns](http://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html)     | Patient, RelatedPerson, Person, and Practitioner     |
 | Gender      | [individual-recordedSexOrGender](http://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html)     | Patient, RelatedPerson, Person, and Practitioner     |
+
+The [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension makes use of the CodeableReference data type, which was added in R5. In hindsight, we would have used R4 compatible data types to make this extension backportable to R4. However, given that this issue was discovered after the extension was published, we have created a separate [patient-sexParameterForClinicalUse-backport](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-backport.html) extension that may be used for versions prior to R5.
 
 
 ## General Guidance Sex and Gender
@@ -139,6 +144,9 @@ In the FHIR Coverage resource, both Coverage.beneficiary and Coverage.subscriber
 
 
 ## Exchanging Sex Parameters for Clinical Use
+
+Note:  See [Backwards Compatability](fhirdesignbackground.html#backwards-compatibility) for considerations around exchanging Sex Parameters for Clinical Use in versions of FHIR prior to R5.
+
 ### Patient Level Sex Parameter for Clinical Use
 Sex Parameters for Clinical Use (SPCU) may be used in specific clinical contexts, for example, when placing an order or when interpreting a result.  However, there are cases where having a context-free categorization of a patient can be useful, for example, when doing outreach for cervical cancer screening to patients for which you don't have access to any specific clinical information.  Or when you don't have access to the specific clinical information **yet**.
     
@@ -157,9 +165,9 @@ In this case, you may choose to exchange the recorded answer along with the othe
 Using the SPCU-specific structures does let you communicate additional supporting information if that is relevant, but it also requires that receiving systems support and inspect two different structures (e.g., OBX and GSP) to gather all the relevant information AOE information.  This is a tradeoff that should be considered when authoring a use-case specific IG, or when coordinating an approach with your trading partners.  
        
 ### Sex Parameter for Clinical Use vs. Anatomical Characteristics (Organ Inventory)
-For many clinical contexts, the "ideal" information for clinical decision making would be the specific details about the patient's anatmoical characteristics, such as whether the patient has a prostate.  However, even if clinical systems support disrete organ inventories, that information may be missing for a variety of reasons.  A patient might decline to provide detailed organ information for privacy reasons, or they may be incapable of providing the information, either because they are unconsious or have other communication issues.  An clinical end user may forget to collect the information from the patient, either because they are busy, or because they forgot.  A clinical system may electronically receive a copy of a patient's records from some other system that doesn't support the collection of discrete organ invenvory.
+For many clinical contexts, the "ideal" information for clinical decision making would be the specific details about the patient's anatmoical characteristics, such as whether the patient has a prostate.  However, even if clinical systems support disrete organ inventories, that information may be missing for a variety of reasons.  A patient might decline to provide detailed organ information for privacy reasons, or they may be incapable of providing the information, either because they are unconsious or have other communication issues.  A clinical end user may not collect the information from the patient, either because they are busy, or they forgot.  A clinical system may electronically receive a copy of a patient's records from some other system that doesn't support the collection of discrete organ invenvory.
 
-For all of these reasons, and others, clinical systems will need to provide care to patients for which an organ inventory is incomplete or unavailable.  In those cases, using a Sex Parameter for Clinical Use as an alternative to an organ inventory will be necessary.  However, individuals or systems providing care should either use default behavior that is safe for both male and female populations, individually review treatment options with the patient, or carefully inspect comments and relevant observations before proceeding with treatment.
+For all of these reasons, and others, clinical systems will need to provide care to patients for which an organ inventory is incomplete or unavailable.  In those cases, using a Sex Parameter for Clinical Use as an alternative to an organ inventory can be beneficial.  However, individuals or systems providing care should either use default behavior that is safe for both male and female populations, individually review treatment options with the patient, or carefully inspect comments and relevant observations before proceeding with treatment.
 
        
 	   
