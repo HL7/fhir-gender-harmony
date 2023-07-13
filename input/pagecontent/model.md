@@ -5,7 +5,8 @@ Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2587         Joanie Harper                update Source Field Name and Source Field Desription per Jira ticket https://jira.hl7.org/browse/OTHER-2587
 2023-06-16       OTHER-2575         Joanie Harper                Added hyphens per Jira ticket https://jira.hl7.org/browse/OTHER-2575
 2023-06-16       OTHER-2578         Joanie Harper                Updated SPCU section per Jira ticket https://jira.hl7.org/browse/OTHER-2578
-2023-06-23       OTHER-2671         Rob McClure                 Changed all to SPCU or Sex Parameter for Clinical Use
+2023-06-23       OTHER-2671         Rob McClure                  Changed all to SPCU or Sex Parameter for Clinical Use
+2023-07-13       OTHER-2463         Cooper Thompson              Updated RSG model definition and other narrative
 -->
 
 ### Modeling Sex and Gender Representation
@@ -314,51 +315,53 @@ information may be provided in the Comment attribute.
 
 ### Recorded Sex or Gender (RSG)
 
-Recorded Sex or Gender information typically originates from a physical
-or electronic document that was provided to a medical provider. The
-rules for these documents have varied significantly over time and place,
-and the relationship to current Gender Identity or SPCU may be unclear.
-The RSG element includes source information so that the definition of
-"X" in a California driver's license can be found if necessary and the
-Jurisdiction for the state of California can be recorded. The RSG also
-includes an internationally equivalent code to reduce the problems with
-unfamiliar sources. The original medical record source can provide an
-equivalent international code when it has one.
+Recorded Sex or Gender information may originate from a physical or electronic document that was provided to a medical provider. This information may also originate from fields in medical systems that were initially populated using those documents, or via patient attestations.  The rules for collection of these documents and fields have varied significantly over time and place therefore  the relationship to current Gender Identity or Sex Parameters for Clinical Use may be unclear. 
 
-**Definition:** Documentation of a specific instance of sex and/or
-gender information.
 
-**Usage Note:** This element is to be used to differentiate existing
-poorly specified sex or gender data, and new context-laden sex or gender
-information, from the other proposed sex and gender information in this
-specification. This element is to be used for an existing "sex" element
-in a document or record when the intent and meaning is unclear so that
-existing data is preserved but separated from the other proposed but
-very specific sex and gender information. A single patient may have zero
-to many such attributes. For example, the person's birth certificate
-information, passport information, and national identity document
-information may all be present. This is necessary because an
-individual's identity documents may be updated at different rates or for
-different reasons. For instance, a trans woman may be able to update her
-driver's license to 'F' but her state might not allow changing a value
-on her birth certificate, which may still read 'M'.
+The RSG element includes source information so that the definition of “X” in a driver’s license can be found if necessary and the jurisdiction can be recorded. The RSG also includes an internationally equivalent code to reduce the problems with unfamiliar sources. The original medical record source can provide an equivalent international code when it has one.
 
-Sex assigned at birth (SAAB), while very common and considered essential
-in some jurisdictions, is considered a RSG entry. In these cases, the
-"identity type" could be specified as "sex assigned at birth" or another
-regionally specific short text string. As a result of feedback from the
-Gender Harmony project and in-line with the Gender Harmony model, the US
-Office of the National Coordinator (ONC) recognized in it's Standards
-Bulletin (SB22-2), regarding the development and finalization of United
-States Core Data for Interoperability (USCDI) Version 3, that "the data
-element Sex (Assigned at Birth) is used to represent different concepts
-not necessarily associated with what is assigned at the time of birth,
-such as clinically relevant sex for labs or diagnostic imaging, as well
-as administrative sex as recorded on birth certificates and health
-forms." As a result, ONC changed the name of the data element to "Sex"
-acknowledging the previous limitation to information at birth.
+
+**Definition:**  Recorded sex or gender (RSG) information includes the various sex and gender concepts that are often used in existing systems but are known to NOT represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction.
+
+**Usage Note:** If a medical system needs to exchange a single internal field labeled “sex” which, over time, has been used to capture both sex and gender, recorded sex or gender may be an appropriate way to exchange such data. 
+
+Note that administrative gender, administrative sex, and sex assigned at birth are exchanged today, but are not gender identity (GI) or sex parameter for clinical use (SPCU), and thus are examples of recorded sex or gender (RSG). It is expected that these existing concepts may be exchanged using established methods.
+
 
 **Cardinality:** 0..n
+
+
+**Guidance:**
+When evaluating when and how to exchange sex or gender concepts, consider whether Gender Identity or Sex Parameters for Clinical Use may be better for the relevant use case.  If those concepts are not appropriate or available, then the following approach for exchanging Recorded Sex or Gender may be used:
+
+1. Determine which sex or gender concept is relevant for the jurisdiction and use case.  For example, you might identify concepts such as:
+   * Sex Assigned at Birth
+      * For clinical purposes, consider whether Sex Parameters for Clinical Use may more accurately represent the patient’s relevant clinical status.
+      * Sex Assigned at Birth may not reflect current clinical attributes of adults.
+      * Understand that the Sex Assigned at Birth value in medical systems may not be the value recorded on the birth certificate at the time of birth due to operational and training issues around its collection.
+
+   * Administrative Sex/Gender
+      * For the purpose of communicating with a patient, consider whether Gender Identity may be more appropriate.
+   * Legal Sex/Gender
+   * Billing Sex/Gender
+   * Etc.
+2. Determine the best way to exchange this information between systems.  This could involve:
+   * Using existing fields, such as:
+      * Patient.gender in FHIR
+      * PID-8, GT1-9, NK1-15 in HL7v2
+      * Birth Sex Observation template or Patient.administrativeGenderCode in CDA
+   * Creating jurisdiction or use case specific structures that are directly tied to the specific concept being exchanged, such as:
+      * New jurisdictional or use case specific extensions for FHIR
+      * [us-core-birthsex](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-birthsex.html)
+	  * [us-core-sex](http://hl7.org/fhir/us/core/StructureDefinition-us-core-sex.html)
+      * [ukcore-birthsex](https://simplifier.net/hl7fhirukcorer4/extension-ukcore-birthsex)
+      * New template for CDA
+   * Using a generic structure
+      * The individual-recordedSexOrGender FHIR extension if available for the context in question
+      * A FHIR Observation resource
+      * OBX or GSR segments in HL7v2
+      * Observation template in CDA
+
 
 #### Attributes: 
 
