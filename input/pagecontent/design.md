@@ -4,6 +4,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2593         Joanie Harper                Remove line per the Jira ticket https://jira.hl7.org/browse/OTHER-2593
 2023-07-17       OTHER-2598         Joanie Harper                Updated links for Pronouns, GenderIdentity, and RSG per https://jira.hl7.org/browse/OTHER-2598
                                                                  Did not update links for SFCU.  Needs to be changed to SPCU.
+                                                                 replaced text for International equivalent in RSG table.
 2023-07-17       OTHER-2595         Joanie Harper                updated paragraph 1 based on https://jira.hl7.org/browse/OTHER-2595
 -->
 
@@ -82,7 +83,7 @@ table, th, td {
 |Value is coded and allows text|Recorded Gender or Sex (GSR-4) with datatype Coded with Exceptions (CWE) |Datatype of CodableConcept|CE datatype|
 |Designated value set|AdministrativeGender<br>example binding|AdministrativeGender example binding|` `MAY be selected from ValueSet Administrative Gender (HL7 V3) urn:oid:2.16.840.1.113883.1.11.1 (CONF:4536-89)|
 |Additional representation of value using international equivalent|International Equivalent Sex Value (GSR-5) with datatype Coded with Exceptions (CWE)|Optional InternationalEquivalent element|translation (CONF:4536-95)|
-|International equivalent value set|ICAO Sex or Gender (https://build.fhir.org/valueset-international-civil-aviation-organization-sex-or-gender.html)<br>Required binding|ICAO Sex or Gender (https://build.fhir.org/valueset-international-civil-aviation-organization-sex-or-gender.html) , Required binding|ICAO Sex or Gender (https://build.fhir.org/valueset-international-civil-aviation-organization-sex-or-gender.html) , SHALL binding (CONF:4536-95)|
+|International equivalent value set|International equivalent element has been removed from the final publication|International equivalent element has been removed from the final publication|International equivalent element has been removed from the final publication|
 |Support GH attribute = Source Field Name, Type = String|Source Document Field Type and or Label (GSR-5) with datatype Coded With Exception (CWE) using Original text (CWE.9)|sourceField, DataType: String|code.originalText (CONF:4536-90)|
 |Support source field "type", indicating the type or category of sex or gender that is recorded|Source Document Field Type and or Label (GSR-5) with datatype Coded With Exception (CWE)|Type, DataType of CodeableConcept|entryRelationship: Patient record type value with @xsi:type="CD" (CONF:4536-136)|
 |Source Type value set|[Recorded Sex or Gender Type (http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type)](http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type)<br>Preferred binding|[Recorded Sex or Gender Type (http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type)](http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type)<br>Preferred binding|SHOULD be selected from ValueSet Recorded Sex Or Gender Type urn:oid:2.16.840.1.113883.11.19757 (CONF:4536-136).|
