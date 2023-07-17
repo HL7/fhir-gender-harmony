@@ -29,7 +29,7 @@ guide provides structural and semantic guidance to vendors and interface
 developers to address these requirements.
 
 The Gender Harmony logical model provides necessary constructs to more
-accurately capture sex and gender along with associated context of use.
+accurately capture sex and gender identity along with associated context of use.
 While the framework provides the necessary infrastructure, the specific
 changes in individual standards to concretely specify actual
 implementable structures are detailed in separate specifications (insert
@@ -127,12 +127,12 @@ individual's identity, ascertained by asking them what that identity is.
 **Usage Note:** If the Person (such as a fetus, infant, or
 uncommunicative new patient) is unable to express a personal sense of
 being a man, woman, boy, girl or any point on the gender spectrum,
-gender identity may be recorded as Unknown. Unknown can be used in cases
+Gender Identity may be recorded as Unknown. Unknown can be used in cases
 where parents do not want to specify a value but one must be recorded.
 Gender identity can be congruent or incongruent with one's SPCU or RSG.
 Persons may identify using different terms at different times for
 various reasons, or use multiple identities simultaneously, depending on
-culture. For example, a specific gender identity may be used in one care
+culture. For example, a specific Gender Identity may be used in one care
 setting and a different identity in another care setting. The gender
 identity in the work environment may be different than that in a care
 setting.
@@ -159,7 +159,7 @@ individual's identity, ascertained by asking them what that identity is.
 
 ##### Validity Period 
 
--   Definition: The time frame during which this gender identity applies
+-   Definition: The time frame during which this Gender Identity applies
 to the person. May be just an initial dateTime.
 
 -   Usage note: Validity period may be overlapping in the case of
@@ -177,7 +177,7 @@ male or female).
 identity or identities.
 
 -   Usage note: Content included may be related to social and/or
-cultural context to be considered when using the gender identity,
+cultural context to be considered when using the Gender Identity,
 particularly with overlapping active values.
 
 -   Cardinality: 0..1
@@ -275,7 +275,7 @@ value and linked comment or specific observation could be summarized as
 ##### Validity Period
 
 -   Definition: Time frame during which this summary value applies to
-the patient. May be just an initial dateTime
+the patient. May be just an initial dateTime.
 
 -   Usage Note: Validity period may overlap among different SPCU values
 based on procedure or process used to determine the value
@@ -299,7 +299,7 @@ overlapping active values
 ##### Linked Clinical Observation
 
 -   Definition: Link or identifier to observation(s) or report(s) that
-are used to determine the sex category value
+are used to determine the sex category value.
 
 -   Usage Note: The specific implementation of these links will vary
 based on the standard used. This GH model does not specify the encoding
@@ -322,11 +322,11 @@ Recorded Sex or Gender information may originate from a physical or electronic d
 The RSG model includes source information so that the definition of “X” in a driver’s license can be found if necessary and the jurisdiction can be recorded.
 
 
-**Definition:**  Recorded sex or gender (RSG) information includes the various sex and gender concepts that are often used in existing systems but are known to NOT represent a gender identity, sex parameter for clinical use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction.
+**Definition:**  Recorded Sex or Gender (RSG) information includes the various sex and gender concepts that are often used in existing systems but are known to NOT represent a Gender Identity, Sex Parameter for Clinical Use, or attributes related to sexuality, such as sexual orientation, sexual activity, or sexual attraction.
 
-**Usage Note:** If a medical system needs to exchange a single internal field labeled “sex” which, over time, has been used to capture both sex and gender, recorded sex or gender may be an appropriate way to exchange such data. 
+**Usage Note:** If a medical system needs to exchange a single internal field labeled “sex” which, over time, has been used to capture both sex and gender, Recorded Sex or Gender may be an appropriate way to exchange such data. 
 
-Note that administrative gender, administrative sex, and sex assigned at birth are exchanged today, but are not gender identity (GI) or sex parameter for clinical use (SPCU), and thus are examples of recorded sex or gender (RSG). It is expected that these existing concepts may be exchanged using established methods.
+Note that administrative gender, administrative sex, and sex assigned at birth are exchanged today, but are not Gender Identity (GI) or Sex Parameter for Clinical Use (SPCU), and thus are examples of Recorded Sex or Gender (RSG). It is expected that these existing concepts may be exchanged using established methods.
 
 
 **Cardinality:** 0..n
@@ -379,7 +379,7 @@ value 'ж' for sex.
 
 ##### Type
 
--   Definition: The type or category of sex or gender that is recorded
+-   Definition: The type or category of sex or gender identity that is recorded.
 
 -   Cardinality: 0..1
 
@@ -388,7 +388,7 @@ value 'ж' for sex.
 ##### Record Description
 
 -   Definition: A short phrase that describes the document or record
-that includes the sex or gender value. E.g., national ID card, birth
+that includes the sex or gender identity value. E.g., national ID card, birth
 certificate, passport.
 
 -   Cardinality: 0..1
@@ -398,7 +398,7 @@ certificate, passport.
 ##### Acquisition Date
 
 -   Definition: The date that the document was scanned, processed, etc.
-to extract the sex or gender information.
+to extract the sex or gender identity information.
 
 -   Cardinality: 0..1
 
@@ -415,7 +415,7 @@ initial dateTime.
 
 ##### Issuer
 
--   Definition: Jurisdiction or organization that issued the document 
+-   Definition: Jurisdiction or organization that issued the document.
 
 -   Cardinality: 0..1
 
@@ -467,7 +467,7 @@ encoded within a Person/Patient Name field with an appropriate name type
 qualifier but is independent of any other name type or name component.
 This may be a nickname or formal name. Multiple cardinalities are
 required to support changes in desired name over time, such as when a
-patient desires a change in name to align with expressed gender. This
+patient desires a change in name to align with expressed gender identity. This
 means a validity period and a comment attribute to allow text that can
 be used to capture context for use of the name.
 
@@ -558,7 +558,7 @@ May just include a start date.
 
 -   Usage Note: Multiple pronoun entries may exist and overlap as some
 persons utilize multiple pronouns simultaneously or switch usage based
-on context, familiarity, comfortability, and/or gender identity (for
+on context, familiarity, comfortability, and/or Gender Identity (for
 instance, in the case of bi-gender or gender-fluid persons).
 
 -   Cardinality: 0..1
