@@ -81,7 +81,7 @@ The RSG element is intended to support the exchange of any sex or gender recorde
 
 When exchanging a Recorded Sex or Gender concept, it is expected that there are existing value sets that can be used.  For example, when using Recorded Sex or Gender to exchange Sex Assigned at Birth, a jurisdiction may have an existing value set for Sex Assigned at Birth, which would be used to exchange the value for the Sex Assigned at Birth as a Recorded Sex or Gender.
 
-The [RSG](http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type) value set is defined in THO.
+The [Recorded Sex or Gender](http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type) value set is defined in THO.
 
 The LOINC code for the "observable encoding" of the Recorded Sex or Gender is [99502-7](https://loinc.org/99502-7/)
 
