@@ -5,6 +5,12 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-10       OTHER-2552         Joanie Harper                Update values in the Sex For Clinical Use section, to Male-typical and Female-typical 
                                                                    per https://jira.hl7.org/browse/OTHER-2552
 2023-07-10       OTHER-2637         Joanie Harper                Add paragraph to the RSG section per https://jira.hl7.org/browse/OTHER-2637
+2023-07-17       OTHER-2636         Joanie Harper                Updated Gender Identity section per https://jira.hl7.org/browse/OTHER-2636
+2023-07-17       OTHER-2606         Joanie Harper                Updated the line about 'table 396' entries per https://jira.hl7.org/browse/OTHER-2606
+2023-07-17       OTHER-2630         Joanie Harper                Updated note to balloters regarding v2.9.1 afrtifacts per https://jira.hl7.org/browse/OTHER-2630
+2023-07-17       OTHER-2557         Joanie Harper                Removed references to ICAO in RSG section.  Added THO link to value set per https://jira.hl7.org/browse/OTHER-2557
+2023-07-17       OTHER-2557         Joanie Harper                Updated text in general section as per https://jira.hl7.org/browse/OTHER-2409.  This removes references to rolling up
+
 -->
 
 > Words are singularly the most powerful force available to humanity. We can choose to use this force constructively with words of encouragement, or destructively using words of despair. Words have energy and power with the ability to help, to heal, to hinder, to hurt, to harm, to humiliate and to humble.
@@ -20,10 +26,10 @@ There is a **separate** V2 ballot that describes all V2.x normative track change
 The only terminology artifacts that are V2.9.1-specific are:
 
 - The value set Concept Domains
-- The "table 396" entries (actually this is now in THO as the "Code System" code system.)
+- The "table 396" entries (actually, this is now in [THO](https://terminology.hl7.org/) as the "Code System" code system.)
 - The Sexual Orientation value set. Sexual Orientation was deemed out of scope for the Gender Harmony project
 
-Any balloter that has a comment on these two items in V2.9.1 should comment on the V2.9.1 ballot noting the concern.
+Any balloter that has a comment on these three items in V2.9.1 should comment on the V2.9.1 ballot noting the concern.
 
 The CDA normative track material **is completely included within this Gender Harmony ballot.** Yet, all terminology content used in the CDA Entry Templates is all defined within the FHIR R5 ballot. Please review the terminology there and comment on the R5 ballot if there is an issue.
 
@@ -38,16 +44,14 @@ A primary objective of this project is to create and collect terminology that wi
 
 As an international standard, the Gender Harmony terminology is mostly focused on defining ***minimum required value sets.*** This means that implementers need to pay attention to the binding strength used when binding the value set noted. In most cases the value set will be bound *Extensible* (which in CDA would be *SHOULD*) which means that the values provided are to be used when sending information that is *scoped* or means the same as the values provided. It is very important to understand that only when the binding is *Required* (*SHALL* in CDA) are the values provided in the bound value set **the only set to be used where one of the provided set **MUST** be sent (additional values can also be sent, but one from the value set needs to be included.) This means that for any binding other than Required, the concepts, codes, and even text that are not included in the defined value set **may be sent instead.** This guide assumes that jurisdictions will build upon the minimum set included in the defined value sets to produce operational value sets to be noted in jurisdictional guides or regulations. It is also noted that only text or codes from other code systems may be sent in conformant exchange when the value set is not bound Required. 
 
-In addition, it is important to note that in all value sets not bound Required, there is explicit guidance to **NOT ROLL-UP other codes as "a kind of"** one of the provided minimum codes. By this we mean that if a patient uses some other word, or concept, to represent the exchanged information, such as Gender Identity or Pronoun, the exchange should only provide the desired additional text or concept *and not also "roll-up"* to a code provided in the minimum set. **Meanings in these domains can overlap and yet should always be considered distinct.**
+For all value sets bound EXTENSIBLE or PREFERRED, implementers are discouraged from mapping to one of the included concepts other codes that do not exactly match in meaning. By this we mean that if a patient uses some other word, or concept, to represent the exchanged information, such as gender identity of "non-conforming", the instance would consider this an additional concept that could be considered acceptable. In this case the instance would include the additional text or concept as the CodableConcept value and not also "roll-up" to a code provided in the minimum set. **Meanings in these domains can overlap and yet should always be considered distinct.**
 
 ### Gender Identity terminology (GI)
-Gender Identity minimum value set is built using concepts from the [SNOMED CT International edition](https://terminology.hl7.org/NamingSystem-v3-snomed-CT.html) code system. [SNOMED International](https://www.snomed.org) has put significant effort into improving the representation of gender concepts and while that work is not complete, the concepts included in the gender identity value set represent affirming and useful representations of gender concepts. This universal realm value set is a minimum set of commonly used values and it is expected and encouraged that specific jurisdictions or communities will use additional gender identity concepts that are relevant within their community. In addition the value set includes the HL7 null flavor UNK to be used if the gender is not known. We encourage comments on the use of the null flavor code system in this situation versus the Data Absent Reason (DAR) code system used in FHIR. Of particular interest is the difficulty for implementers moving from prior use of null flavor value sets to DAR.
+There are two different terminologies that are relevant for gender identity. The LOINC code [76691-5](https://loinc.org/76691-5/) identities the Gender Identity concept itself, while a value set using SNOMED codes can be used to represent the gender identities.
+
+The [gender identity value set](http://terminology.hl7.org/ValueSet/gender-identity) in this guide is intended to be a minimum value set of commonly used values and it is expected and encouraged that specific jurisdictions or communities will use additional gender identity concepts that are relevant within their community. For example, in the United States, two-spirit may be included in the value set, while in South Asia, hijra may be included. The gender identity minimum value set is built using concepts from the [SNOMED CT International edition](https://terminology.hl7.org/NamingSystem-v3-snomed-CT.html) code system. [SNOMED International](https://www.snomed.org) has put significant effort into improving the representation of gender concepts and while that work is not complete, the concepts included in the gender identity value set represent affirming and useful representations of gender concepts. In addition the value set includes the HL7 null flavor UNK to be used if the gender is not known. We encourage comments on the use of the null flavor code system in this situation versus the Data Absent Reason (DAR) code system used in FHIR. Of particular interest is the difficulty for implementers moving from prior use of null flavor value sets to DAR.
 
 Please note that CDA requires the use of value sets that do not include null flavor concepts, therefore the CDA entry templates bind to a separate "core" value set of SNOMED CT concepts, and that value set is used to build the overall gender identity minimum value set.
-
-The [Gender Identity](http://build.fhir.org/valueset-gender-identity.html) value set is defined as part of the R5 FHIR ballot.
-
-The LOINC code for the "observable encoding" of the Gender Identity is [76691-5](https://loinc.org/76691-5/)
 
 ### Sex For Clinial Use (SFCU)
 As noted in our JAMIA publication
@@ -68,7 +72,7 @@ Pronouns are an important aspect of identity reference in many languages, and wh
 
 The set chosen for this value set are derived from [LOINC](https://terminology.hl7.org/CodeSystem-v3-loinc.html) code system and are based upon the [Answer List](https://loinc.org/LL5144-2/) for the LOINC code [90778-2](https://loinc.org/90778-2/) "Personal pronouns - Reported"
 
-The [Pronouns](http://build.fhir.org/valueset-pronouns.html) value set is defined as part of the the R5 FHIR ballot.
+The [Pronouns](http://terminology.hl7.org/ValueSet/pronouns) value set is defined in THO.
 
 The LOINC code for the "observable encoding" of the Personal pronouns - Reported is [90778-2](https://loinc.org/90778-2/)
 
@@ -77,13 +81,7 @@ The RSG element is intended to support the exchange of any sex or gender recorde
 
 When exchanging a Recorded Sex or Gender concept, it is expected that there are existing value sets that can be used.  For example, when using Recorded Sex or Gender to exchange Sex Assigned at Birth, a jurisdiction may have an existing value set for Sex Assigned at Birth, which would be used to exchange the value for the Sex Assigned at Birth as a Recorded Sex or Gender.
 
-The international equivalent exchange uses the set of values defined by the International Civil Aviation Organization (ICAO) for use in travel documents in Doc 9303: Machine Readable Travel Documents, Part 7: Machine Readable Visas published by the ICAO. This is the exchange standard code system used in all passports, visas, and identity records.
-
-The optional use of this additional field will require that the sender either have the aligned ICAO value, or determine that mapping themselves. The set of allowed values is restricted (Required/SHALL) based upon the approach defined by the  ICAO standard and is limited to M, F, and a code that is used throughout the ICAO standard as "anything else, including filler" but in this particular use - the "Sex" field - the code is represented in a display as "X".
-
-The code system used for this value set is the external code system "[International Civil Aviation Organization Sex or Gender](https://build.fhir.org/codesystem-international-civil-aviation-organization-sex-or-gender.html)".
-
-The [International Civil Aviation Organization Sex Or Gender](https://build.fhir.org/valueset-international-civil-aviation-organization-sex-or-gender.html) value set is defined as part of the the R5 FHIR ballot.
+The [RSG](http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type) value set is defined in THO.
 
 The LOINC code for the "observable encoding" of the Recorded Sex or Gender is [99502-7](https://loinc.org/99502-7/)
 
