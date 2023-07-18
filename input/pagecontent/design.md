@@ -14,7 +14,7 @@ The table below lists design requirements considered by GHP for each Gender Harm
 
 Detailed design considerations for each HL7 product family are included in the appropriate sections in this IG and include notes to balloters asking for feedback on the approaches taken. 
 
-**Gender Identity**
+**Gender Identity** 
 <style>
 table, th, td {
   border: 1px solid black;
@@ -83,7 +83,7 @@ table, th, td {
 |Value is coded and allows text|Recorded Gender or Sex (GSR-4) with datatype Coded with Exceptions (CWE) |Datatype of CodableConcept|CE datatype|
 |Designated value set|AdministrativeGender<br>example binding|AdministrativeGender example binding|` `MAY be selected from ValueSet Administrative Gender (HL7 V3) urn:oid:2.16.840.1.113883.1.11.1 (CONF:4536-89)|
 |Additional representation of value using international equivalent|International Equivalent Sex Value (GSR-5) with datatype Coded with Exceptions (CWE)|Optional InternationalEquivalent element|translation (CONF:4536-95)|
-|International equivalent value set|International equivalent element has been removed from the final publication|International equivalent element has been removed from the final publication|International equivalent element has been removed from the final publication|
+|International equivalent value set|International equivalent element has been removed from the final publication |International equivalent element has been removed from the final publication|International equivalent element has been removed from the final publication|
 |Support GH attribute = Source Field Name, Type = String|Source Document Field Type and or Label (GSR-5) with datatype Coded With Exception (CWE) using Original text (CWE.9)|sourceField, DataType: String|code.originalText (CONF:4536-90)|
 |Support source field "type", indicating the type or category of sex or gender that is recorded|Source Document Field Type and or Label (GSR-5) with datatype Coded With Exception (CWE)|Type, DataType of CodeableConcept|entryRelationship: Patient record type value with @xsi:type="CD" (CONF:4536-136)|
 |Source Type value set|[Recorded Sex or Gender Type (http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type)](http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type)<br>Preferred binding|[Recorded Sex or Gender Type (http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type)](http://terminology.hl7.org/ValueSet/recorded-sex-or-gender-type)<br>Preferred binding|SHOULD be selected from ValueSet Recorded Sex Or Gender Type urn:oid:2.16.840.1.113883.11.19757 (CONF:4536-136).|
