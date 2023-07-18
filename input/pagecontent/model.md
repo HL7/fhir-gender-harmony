@@ -67,7 +67,7 @@ if applicable) for each model element.
 <br clear="all" />
 
 
-Each of the Gender Harmony model sub-elements described below are sex or
+The Gender Harmony model sub-elements described below are sex or
 gender information that may be context-dependent; in essence a sex
 and/or gender context type. Some of these types are multi-valued based
 in part on the need for independent, occasionally co-occurring, values
