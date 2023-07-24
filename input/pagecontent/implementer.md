@@ -7,9 +7,9 @@ Date             Jira ticket        Updated by                   Comment
 
 Gender Harmony Implementer Considerations for HL7 Product Families
 
-## Exchanging Sex Parameters for Clinical Use
+## Exchanging a Sex Parameter for Clinical Use
 ### Patient Level Sex Parameter for Clinical Use
-Sex Parameters for Clinical Use (SPCU) may be used in specific clinical contexts, for example, when placing an order or when interpreting a result.  However, there are cases where having a context-free categorization of a patient can be useful, for example, when doing outreach for cervical cancer screening to patients for which you don't have access to any specific clinical information.  Or when you don't have access to the specific clinical information **yet**.
+A Sex Parameter for Clinical Use (SPCU) may be used in specific clinical contexts, for example, when placing an order or when interpreting a result.  However, there are cases where having a context-free categorization of a patient can be useful, for example, when doing outreach for cervical cancer screening to patients for which you don't have access to any specific clinical information.  Or when you don't have access to the specific clinical information **yet**.
     
       
 When using SPCU at a patient level, consider if any information is available suggesting that the patient is NOT male-typical or female-typical *across all clinical contexts*, then using **specified** as the patient-level SPCU is most appropriate, as that indicates that individuals or systems providing care should either use default behavior that is safe for both male and female populations, individually review treatment options with the patient, or carefully inspect comments and relevant observations before proceeding with treatment.   Additionally, consider if there are any risks related to patient care or equitable treatment when using a patient-level SPCU.  For example, when bifurcating a cohort based on a patient-context SPCU for research, carefully consider which groups may be inappropriately categorized.
@@ -21,7 +21,7 @@ A Sex Parameter for Clinical Use (SPCU) may be used in specific clinical context
 ### Sex Parameter for Clinical Use vs. Ask at Order Entry Questions
 In some clinical scenarios, such as ordering workflows, "Ask at Order Entry" (AOE) questions are commonly used for capturing a broad range of clinical context.  Examples may be unrelated to sex or gender concepts, such as "Has the patient fasted for 24 hours?", but some may overlap or be adjacent to sex or gender concepts, such as "Is the patient pregnant?" or "Does the patient have a prostate?".  
 
-Clinical experts should consider whether an SPCU-level categorization is sufficient for the care being provided, or asking more specific questions is more appropriate.  If an SPCU-level categorization is sufficient, then the SPCU may be treated as a specific type of AOE. Systems may also consider using a patient-level SPCU to pre-populate the answer to an AOE, allowing clinicians to change the setting where appropriate.
+Clinical experts should consider whether a contextual SPCU-level categorization is sufficient for the care being provided, or asking more specific questions is more appropriate.  If a contextual SPCU-level categorization is sufficient, then the SPCU may be treated as a specific type of AOE. Systems may also consider using a patient-level SPCU to pre-populate the answer to an AOE, allowing clinicians to change the setting where appropriate.
     
 In this case, you may choose to exchange the recorded answer along with the other relevant AOEs, for example, in OBX segments in HL7v2 or Observations in FHIR.  Or you may choose to communicate the recorded answer in the dedicated SPCU structures, for example, in GSP segments in HL7v2, or in the patient-SexParameterForClinicalUse extension in FHIR. 
 

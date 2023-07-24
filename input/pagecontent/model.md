@@ -8,6 +8,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-06-23       OTHER-2671         Rob McClure                  Changed all to SPCU or Sex Parameter for Clinical Use
 2023-07-13       OTHER-2463         Cooper Thompson              Updated RSG model definition and other narrative
 2023-07-13       V2-25452           Cooper Thompson              Removed international equivalent references
+2023-07-17       OTHER-2557         Cooper Thompson              Clarified terminology expectations for RSG
 -->
 
 ### Modeling Sex and Gender Representation
@@ -347,7 +348,7 @@ When evaluating when and how to exchange sex or gender concepts, consider whethe
    * Billing Sex/Gender
    * Etc.
 2. Determine the best way to exchange this information between systems.  This could involve:
-   * Using existing fields, such as:
+   * Using existing fields (and their associated terminology) such as:
       * Patient.gender in FHIR
       * PID-8, GT1-9, NK1-15 in HL7v2
       * Birth Sex Observation template or Patient.administrativeGenderCode in CDA
@@ -363,6 +364,8 @@ When evaluating when and how to exchange sex or gender concepts, consider whethe
       * OBX or GSR segments in HL7v2
       * Observation template in CDA
 
+
+The value sets used to exchange Recorded Sex or Gender values are expected to be defined by the owner of the specific concept being exchanged.  For example, if you are exchanging the sex on the driver's license in a specific region, that region's driver registraton authority would define the value set, and those values would be used in the exchange.  As such, creating new value sets to represent Recorded Sex or Gender values is not necessary and should be avoided.
 
 #### Attributes: 
 
