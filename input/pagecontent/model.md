@@ -9,7 +9,8 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-13       OTHER-2463         Cooper Thompson              Updated RSG model definition and other narrative
 2023-07-13       V2-25452           Cooper Thompson              Removed international equivalent references
 2023-07-17       OTHER-2557         Cooper Thompson              Clarified terminology expectations for RSG
-2023-07-25	 OTHER-2708	    Carol Macumber		 GI Usage Note change per OTHER-2708
+2023-07-25		 OTHER-2708	    	Carol Macumber		 		 GI Usage Note change per OTHER-2708
+2023-07-25    	 OTHER-2539	    	Carol Macumber		 		 GI Usage Note change per OTHER-2539
 -->
 
 ### Modeling Sex and Gender Representation
@@ -134,7 +135,7 @@ Given that the gender identity element supports representing multiple gender ide
 
 #### Attributes: 
 
-##### Gender 
+##### Gender Identity
 
 -   Definition:  An individual's personal sense of being a man, woman,
 boy, girl, nonbinary, or something else. This datum represents an
