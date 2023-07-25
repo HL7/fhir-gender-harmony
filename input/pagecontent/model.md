@@ -9,6 +9,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-13       OTHER-2463         Cooper Thompson              Updated RSG model definition and other narrative
 2023-07-13       V2-25452           Cooper Thompson              Removed international equivalent references
 2023-07-17       OTHER-2557         Cooper Thompson              Clarified terminology expectations for RSG
+2023-07-25	 OTHER-2708	    Carol Macumber		 GI Usage Note change per OTHER-2708
 -->
 
 ### Modeling Sex and Gender Representation
@@ -125,18 +126,9 @@ logical model. Local terminology is expected to extend this value set.
 boy, girl, nonbinary, or something else. This datum represents an
 individual's identity, ascertained by asking them what that identity is.
 
-**Usage Note:** If the Person (such as a fetus, infant, or
-uncommunicative new patient) is unable to express a personal sense of
-being a man, woman, boy, girl or any point on the gender spectrum,
-Gender Identity may be recorded as Unknown. Unknown can be used in cases
-where parents do not want to specify a value but one must be recorded.
-Gender identity can be congruent or incongruent with one's SPCU or RSG.
-Persons may identify using different terms at different times for
-various reasons, or use multiple identities simultaneously, depending on
-culture. For example, a specific Gender Identity may be used in one care
-setting and a different identity in another care setting. The gender
-identity in the work environment may be different than that in a care
-setting.
+**Usage Note:** If the Person (such as a fetus, infant, or uncommunicative new patient) is unable to express a personal sense of being a man, woman, boy, girl or any point on the gender spectrum, gender identity may be recorded as Unknown. Unknown can be used in cases where parents do not want to specify a value but one must be recorded. Gender identity can be congruent or incongruent with one’s SPCU or RSG. Persons may identify using different terms at different times for various reasons, or use multiple identities simultaneously, depending on culture.
+
+Given that the gender identity element supports representing multiple gender identities (cardinality is 0..n), individuals who identify as having both Male and Female gender identities (or any other combination) at the same time, each gender identity can be modeled with the same validity period. Alternatively, if implementers and/or systems prefer to use a single code, the gender identity value set is expected to be used as a minimum value set that can be extended to meet jurisdictional requirements. One possible concept that could be considered is bigender.
 
 **Cardinality:** 0..n
 
