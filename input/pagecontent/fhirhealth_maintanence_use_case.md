@@ -1,4 +1,13 @@
-### FHIR HEALTH 
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
+#### FHIR Patient Example
+The Health Maintenance Lab use case narrative was constructed to demonstrate the workflow of a transgender female patient who presents to her clinic needing an update of her demographic name, gender, and pronouns. The following is a FHIR example for the updating of the patient’s name, gender identity, and pronouns:
+
 ```
 {
    "Patient": {
@@ -206,6 +215,8 @@
    }
 }
 ```
+#### FHIR ServiceRequest Example
+Following the update of information, the patient is notified of the need for a health screening appointment. During the meeting with her physician, the examination of the patient’s prostate noted the presence of nodules. Due to this finding, a PSA is ordered for the patient using the Sex for Clinical Use as male with a note that the patient has a prostate. The following is a FHIR example for the service request for a PSA:
 
 ```
 {
@@ -329,6 +340,8 @@
 }
 ```
 
+#### FHIR Observation Example
+The PSA is performed and resulted. The following is a FHIR example for the observation of the PSA result:
 ```
 {
    "Observation": {

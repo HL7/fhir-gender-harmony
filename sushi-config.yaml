@@ -3,22 +3,22 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: fhir.gender.harmony
-canonical: http://hl7.org
-name: fhir-gender-harmony
+id: hl7.xprod.uv.gender-harmony
+canonical: http://hl7.org/xprod/ig/uv/gender-harmony
+name: hl7-gender-harmony
 title: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 description: "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation"
 status: draft # draft | active | retired | unknown
-version: 0.1.21
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+version: 1.0.0
+fhirVersion: 5.0.0
 copyrightYear: 2022+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build  # | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: Example Publisher
-  url: http://example.org/example-publisher
-  # email: test@example.org
+  name: HL7 Cross Group Projects Work Group
+  url: https://www.hl7.org/Special/committees/cgp
+  email: cgplist@lists.HL7.org
 
 
 
@@ -27,14 +27,18 @@ pages:
     title: Home
   background.md:
     title: Background
+  standards-history.md:
+    title: Standards History
+  model.md:
+    title: Model    
   design.md:
     title: Design Considerations        
-  model.md:
-    title: Model
+  implementer.md:
+    title: Implementer Considerations      
   dicom_use_case.md:
-    title: DICOM Use Case
+    title: DICOM PET Scan Use Case
   health_maintanence_use_case.md:
-    title: Health Maintanence Use Case 
+    title: Health Maintanence Lab Use Case 
   hl7v2genderharmony.md:
     title: V2 Gender Harmony
   hl7v2examples.md:
@@ -44,19 +48,23 @@ pages:
   cdaexamples.md:
     title:  CDA Examples  
   fhirgenderharmony.md:
-   title: FHIR Gender Harmony 
+   title: FHIR Guidance
+  fhirdesignbackground.md:
+   title: FHIR Design Background
   fhirexamples.md:
     title:  FHIR Examples
   terminology.md:
     title: Terminology        
   externalstandards.md:
     title: External Standards  
-  bib.md:
+  bibliography.md:
     title: Bibliography
+  artifacts2.md:
+    title: Artifacts
   v2dicom_use_case.md:
     title: FHIR DICOM Example
   v2health_maintanence_use_case.md:
-    title: V2 Health Maintanence Example       
+    title: V2 Health Maintanence Example
   cdadicom_use_case.md:
     title: CDA DICOM Example
   cdahealth_maintanence_use_case.md:
@@ -64,24 +72,19 @@ pages:
   fhirdicom_use_case.md:
     title: FHIR DICOM Example
   fhirhealth_maintanence_use_case.md:
-    title: FHIR Health Maintanence Example
-  conformance-general.md:
-    title: Conformance Expectations
-  conformance-profiles.md:
-    title: Profile Conformance
-  ghexamples.md:
-    title: Gender Harmony Examples
-  fhirextensions.md:
-    title: FHIR Extensions
-
+    title: FHIR Health Maintanence Example   
 menu:
   Home: index.html
-  Background: background.html
-  Design Considerations: design.html  
+  Background: 
+    Background: background.html
+    HL7 History: standards-history.html
   Model: model.html
+  Guidance:
+    Design Considerations: design.html  
+    Implementer Considerations: implementer.html 
   Use Cases:  
-    DICOM PET scan in patient with change in gender: dicom_use_case.html
-    Health Screening with lab test in patient with change in gender: health_maintanence_use_case.html   
+    DICOM PET Scan Use Case: dicom_use_case.html
+    Health Maintenance Lab Use Case: health_maintanence_use_case.html   
   V2:
     V2 Gender Harmony: hl7v2genderharmony.html
     V2 Examples: hl7v2examples.html
@@ -89,19 +92,14 @@ menu:
     CDA Gender Harmony: cdagenderharmony.html
     CDA Examples: cdaexamples.html
   FHIR:
-    FHIR  Gender Harmony: fhirgenderharmony.html
-    # FHIR Extensions: fhirextensions.html
-    # Sex For Clinical Use: http://build.fhir.org/extension-patient-sexforclinicaluse.html
-    # Gender Identity: http://build.fhir.org/extension-individual-genderidentity.html
-    # Pronouns: http://build.fhir.org/extension-individual-pronouns.html
-    # Recorded Sex or Gender: http://build.fhir.org/extension-individual-recordedsexorgender.html
+    FHIR Guidance: fhirgenderharmony.html
+    FHIR Design Background: fhirdesignbackground.html
     FHIR Examples: fhirexamples.html
-  # Examples: ghexamples.html   
   Terminology: terminology.html 
   External Standards: externalstandards.html
-  Bibliography: bib.html
+  Bibliography: bibliography.html
 
-  All Artifacts: artifacts.html
+  All Artifacts: artifacts2.html
   
   History: http://hl7.org/fhir/us/fhir-gender-harmony/history.html
 

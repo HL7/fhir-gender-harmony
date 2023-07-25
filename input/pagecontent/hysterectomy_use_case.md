@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 ### Use Case Description:
 A trans man (patient) has applied for a hysterectomy and has been denied, as having a "Male" Administrative Sex means that a denial.
 

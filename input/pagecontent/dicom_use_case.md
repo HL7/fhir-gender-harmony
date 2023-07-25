@@ -1,9 +1,18 @@
-### Note to Balloters
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+2023-06-16       OTHER-2411         Joanie Harper                Corrected Example 01: Imaging Order per the Jira ticket https://jira.hl7.org/browse/OTHER-2411
+2023-06-16       OTHER-2488         Joanie Harper                Fixed spelling of narrative per the Jira ticket https://jira.hl7.org/browse/OTHER-2488
+
+
+-->
+
+### Introduction
 
 This use case is illustrative of how ancillary systems in imaging, downstream from the EHR, are likely to consume and create evidence documents in response to Sex and Gender encoding. In this case, there are three instances of Sex For Clinical Use (SFCU). First, the ordering physicians provides instructions for interpreting lab values within a Sex for Clinical Use comment. In the second SFCU, an Artifical Intelligence (AI) application utilizes the Sex Assigned at Birth for the basis of reference values. Third, the radiologist determines the appropriate sex to use based on the patient's body composition for a Standard Uptake Value (SUV) calculation.
 The DICOM (Digital Imaging and COmmunications in Medicine) attributes in this use case are not normative, and details in DICOM are still being defined. If interested in participating in development of DICOM Sex and Gender encoding, please contact the [DICOM Secretariat](mailto:dicom@dicomstandard.org).
 
-Public comment, based on this use case, is sought on the following Open Issues:
+Public comment, based on this use case is sought on the following Open Issues:
+
 
 1.  Technologist may be in a position to observe a discrepancy between the current medical record and “observed” information. Where and how is this communicated to other actors? Where and how is reconciliation performed? Considerations include:
     
@@ -36,6 +45,8 @@ Public comment, based on this use case, is sought on the following Open Issues:
 9.  Should name to use be PN or LT VR? A patient, may want to be referred to as “Commander Bob”.
 
 10. In this Use Case, a single ADT message is created to communicate the patient name change. Is the order of the repeating elements in PID-5 significant? Should there be one ADT message or two (i.e. one message to communicate the new name, a second message to flag the old name as "NOUSE")?
+
+ 
 
 ### Use Case Description:
 
@@ -219,11 +230,11 @@ Below is a HL7 v2.9.1 OMI Imaging Order from [precondition(s)](#preconditions).
 
 ```
 MSH|^~\&|||||20220715090000||OMI^O23|WSA5mY0UBuCGrytRTAFR8UWJ|P|2.9.1
-PID|||patientID^^^^MR||Smith^Janet^^^^^B~Smith^John^^^^^D|||F
+PID|||patientID^^{}MR||Smith^Janet{}^{}B~Smith^John{}^^^N|||F
 GSP|1|S||76691-5^Gender identity^LN|446151000124109^Identifies as male gender^SCT|20220715090000  
 GSC|1|S||248152002^Female^SCT|20220715090000|OBR^4||Hormonal treatment, use affirmed gender Cr reference ranges
 ORC|NW||||||||20220715090000|||^Cure^Matt^^^^MD
-OBR|1|entityID|fillrtOrderNum|82800-4^PET+CT Heart W contrast IV^LN||||||||||||||||||||NMS|||||||^Reason for Study|
+OBR||||241439007^PET heart study^SCT|||||||||||||||||||||||||||||||||||||||||82800-4^PET+CT Heart W contrast IV^LN
 IPC|accessionNum|procedureID|studyInstanceUID|schProcedureStepId|PT^Positron emission tomography^DCM|122793^PET Myocardial Perfusion, Rest and Stress^DCM
 ```
 
@@ -421,7 +432,7 @@ Below is a CDA [Imaging Report](#reporting) example.
 		<patientRole>
 			<id extension="12345" root="2.16.840.1.113883.19.5"/>
 			<addr use="HP">
-				<streetAddressLine>3300 Washtenaw Ave ## 227</streetAddressLine>
+				<streetAddressLine>3300 Washtenaw Ave # 227</streetAddressLine>
 				<city>Ann Arbor</city>
 				<state>MI</state>
 				<postalCode>48104</postalCode>
@@ -448,7 +459,7 @@ Below is a CDA [Imaging Report](#reporting) example.
 					<code code="GRFTH" displayName="Grandfather"
 						codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 Role code"/>
 					<addr use="HP">
-						<streetAddressLine>3300 Washtenaw Ave ## 227</streetAddressLine>
+						<streetAddressLine>3300 Washtenaw Ave # 227</streetAddressLine>
 						<city>Ann Arbor</city>
 						<state>MI</state>
 						<postalCode>48104</postalCode>
@@ -538,7 +549,7 @@ Below is a CDA [Imaging Report](#reporting) example.
 				<name>Good Imaging Clinic</name>
 				<telecom value="tel:(555)555-1212" use="WP"/>
 				<addr use="HP">
-					<streetAddressLine>3300 Washtenaw Ave ## 227</streetAddressLine>
+					<streetAddressLine>3300 Washtenaw Ave # 227</streetAddressLine>
 					<city>Ann Arbor</city>
 					<state>MI</state>
 					<postalCode>48104</postalCode>
@@ -1009,7 +1020,7 @@ the basis on which the SFCU is assigned.
 					<text>
 						<paragraph>
 							<caption>Finding</caption>
-							<content ID="Fndng2">Findings narritive goes here...</content>
+							<content ID="Fndng2">Findings narrative goes here...</content>
 						</paragraph>
 						<paragraph>
 							<caption>Standardized uptake value</caption>

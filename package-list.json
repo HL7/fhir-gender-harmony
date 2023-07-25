@@ -1,0 +1,25 @@
+{
+  "package-id": "hl7.xprod.uv.gender-harmony",
+  "title": "HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation",
+  "canonical": "http://hl7.org/xprod/ig/uv/gender-harmony",
+  "category": "Administration",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "https://build.fhir.org/ig/HL7/fhir-gender-harmony",
+      "fhirversion": "5.0.0",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "1.0.0-ballot",
+      "desc": "STU 1 Ballot",
+      "path": "http://hl7.org/xprod/ig/uv/gender-harmony/2022Sep",
+      "sequence": "STU 1",
+      "fhirversion": "5.0.0-ballot",
+      "status": "ballot",
+      "date": "2022-09-13"
+    }
+  ]
+}

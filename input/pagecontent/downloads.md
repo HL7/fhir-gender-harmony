@@ -1,3 +1,10 @@
+<!-- Updates based on Jira tickets 
+Date             Jira ticket        Updated by                   Comment
+
+
+
+-->
+
 ### Download Links
 
 -   [Full Specification (zip)](full-ig.zip)
