@@ -181,14 +181,15 @@ Of particular note in HL7 models is the use of "Administrative Gender/Sex" as a 
 
 The material in this implementation guide is is crafted through the hard work and persistent determination of the [Gender Harmony project](http://hl7.me/GHP). It is a continuation of the work published in Phase 1 of this project, available [here](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564).
 
-We are indebted to all members of the project, listed [here](https://confluence.hl7.org/display/VOC/Project+participants) who supported the creation of this implementation guide.
+We are indebted to all members of the project, listed [here](https://confluence.hl7.org/display/VOC/Project+participants) who supported the creation of this implementation guide. In particular, the following organizations provided mission-critical administrative, technical and subject matter expertise for ballot resolution and publication: US Department of Veterans Affairs and Canada Health Infoway. 
+
 #### Authors Of The Guide Content
 - **Overall Authors and Editors**
-    - Robert C. McClure, Carol Macumber, Robert Horn, Mary Kay McDaniel, Lorraine Constable, Sean Muir, Clair Kronk
+    - Robert C. McClure, Carol Macumber, Robert Horn, Mary Kay McDaniel, Lorraine Constable, Sean Muir, Clair Kronk, Joanie Harper
 - **V2 material**
     - Riki Merrick, Craig Newman
 - **CDA**
-    - Jay Lyle, Russ Ott
+    - Jay Lyle, Russ Ott, Sean Muir. Gay Dolin
 - **FHIR**
     - Cooper Thompson
 - **Use Cases**
