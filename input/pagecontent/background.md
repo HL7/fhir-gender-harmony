@@ -2,11 +2,12 @@
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2533         Joanie Harper                Remove extra periods per the Jira ticket https://jira.hl7.org/browse/OTHER-2533
 2023-06-16       OTHER-2566         Joanie Harper                Removed extra space per the Jira ticket https://jira.hl7.org/browse/OTHER-2566
+2023-07-26		 OTHER-2570			Carol Macumber				 Standardized the use of "Gender Harmony initial informative specification"  when referring to initial specification
 
 -->
 
 ### Impact of Sex and Gender on Clinical Care
-In the initial [Gender Harmony initial ballot](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564), excerpted below, we noted the following (The original references are replicated here in our [Bibliography](bibliography.html).)
+In the [Gender Harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564), excerpted below, we noted the following (The original references are replicated here in our [Bibliography](bibliography.html).)
 
 In 2016, The Report of the 2015 U.S. Transgender Survey which asked 27,715 self-identified transgender persons about their experiences in health care, noted that 33% had at least one negative experience with a health care provider related to being transgender, that 23% did not seek the health care they needed due to fear of mistreatment, and 33% did not go to a health care provider when they really needed to because they could not afford it (26,75).
 

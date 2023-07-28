@@ -1,11 +1,11 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-
+2023-07-26		 OTHER-2570			Carol Macumber				 Standardized the use of "Gender Harmony initial informative specification"  when referring to initial specification
 
 
 -->
 
-This is the original bibliography provided in the initial Gender Harmony logical model publication. 
+This is the original bibliography provided in the [Gender Harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564). 
 
 1. [If They Don't Count Us, We Don't Count: Trump Administration Rolls Back Sexual Orientation and Gender Identity Data Collection](https://doi.org/10.1089/lgbt.2017.0073)
 1. [Evolving Sex and Gender in Electronic Health Records](https://www.ncbi.nlm.nih.gov/pubmed/31258320)

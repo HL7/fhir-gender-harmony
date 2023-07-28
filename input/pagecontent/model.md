@@ -11,6 +11,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-17       OTHER-2557         Cooper Thompson              Clarified terminology expectations for RSG
 2023-07-25		 OTHER-2708	    	Carol Macumber		 		 GI Usage Note change per OTHER-2708
 2023-07-25    	 OTHER-2539	    	Carol Macumber		 		 GI Usage Note change per OTHER-2539
+2023-07-26		 OTHER-2570			Carol Macumber				 Standardized the use of "Gender Harmony initial informative specification"  when referring to initial specification
 -->
 
 ### Modeling Sex and Gender Representation
@@ -31,7 +32,7 @@ demand improvements that will benefit all patients. This implementation
 guide provides structural and semantic guidance to vendors and interface
 developers to address these requirements.
 
-The Gender Harmony logical model provides necessary constructs to more
+The [Gender Harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) provides necessary constructs to more
 accurately capture sex and gender identity along with associated context of use.
 While the framework provides the necessary infrastructure, the specific
 changes in individual standards to concretely specify actual
