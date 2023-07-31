@@ -1,11 +1,13 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2561         Joanie Harper                Fixed three instances of guide/ per the Jira ticket https://jira.hl7.org/browse/OTHER-2561
-2023-06-19      Other-2562          RCM                          Improved formatting of In-scope section. fixed wording on CDA section https://jira.hl7.org/browse/OTHER-2562
-2023-06-20      https://jira.hl7.org/browse/OTHER-2528  Rob M   Added to out of scope
+2023-06-19       OTHER-2562         RCM                          Improved formatting of In-scope section. fixed wording on CDA section https://jira.hl7.org/browse/OTHER-2562
+2023-06-20       OTHER-2562         Rob M                        Added to out of scope   https://jira.hl7.org/browse/OTHER-2528
 2023-07-26		 OTHER-2570			Carol Macumber				 Standardized the use of "Gender Harmony initial informative specification"  when referring to initial specification
-
-
+2023-07-31       OTHER-2594         Joanie Harper                Update the "Our Goal" section per the Jira ticket https://jira.hl7.org/browse/OTHER-2594
+2023-07-31       OTHER-2564         Joanie Harper                Added links for DICOM and X12 to "Vendors" section per the Jira ticket https://jira.hl7.org/browse/OTHER-2564
+2023-07-31       OTHER-2421         Joanie Harper                Update the first sentence of the "Vendors" section per the Jira ticket https://jira.hl7.org/browse/OTHER-2421
+2023-07-31       OTHER-2515         Joanie Harper                Update the name of the "Vendors" section to "HIT System solution providers" per the Jira ticket https://jira.hl7.org/browse/OTHER-2515
 -->
 
 <!-- NOTES on ballot:
@@ -97,7 +99,7 @@ As described in the original Gender Harmony logical model specification:
 
 > It is imperative that both sex and gender vocabulary be formally integrated into clinical care because they are not interchangeable. Both influence health outcomes. Gender-marginalized individuals <a href="#fn1">fn1</a>   face significant barriers to adequate and culturally responsive healthcare, leading to numerous health disparities. By adopting structured data sets, agnostic systems will be better equipped to transmit (share) and accept data elements that will improve the accuracy of patient information. Furthermore, standardizing data enables information to be combined with other data sources used to evaluate clinical outcomes. While data collection and documentation are critical factors in clinical decision-making, these new data will also promote important dialogue between clinicians and patients. Ultimately, this will assist with improved quality of care, reduced clinician burden and less fragmentation of a person&#39;s clinical record.
 
-Currently, it is common that a single data element is used to capture both sex and gender information, often assuming these two items are one unified idea. The goal of this specification is to firmly and irrevocably clarify that clinical sex characterization, where useful, is distinct from gender identity and when sharing of other sex or gender datums is important for interoperability, they be identified as a particular recorded sex or recorded gender. In addition, name to use and pronouns are critical information for affirming interactions. To accomplish these goals, this implementation guide describes the specific data elements to be used for independent consideration of sex and gender. The assessment of their differences promotes the health of women, men, and people of diverse gender identities of all age. Implementing these changes can improve data accuracy for sex and gender information in health care systems.
+Currently, it is common that a single data element is used to capture both sex and gender information, often assuming these two items are one unified idea. The goal of this specification is to firmly and irrevocably clarify that clinical sex characterization, where useful, is distinct from gender identity and when sharing of other sex or gender datums is important for interoperability, they be identified as a particular recorded sex or recorded gender. In addition, name to use and pronouns are critical information for affirming interactions. Central to the goal of this guide is to "harmonize" Hl7 standards and through that work we hope for consistency in clinical system representation of the specific data elements to be used for independent consideration of sex and gender.  The assessment of their differences promotes the health of women, men, and people of diverse gender identities of all age. Implementing these changes can improve data accuracy for sex and gender information in health care systems.
 
 ### Scope
 
@@ -164,9 +166,9 @@ Regulatory, legal and research organizations have a vested interest in a consist
 
 Messaging and interchange standards developers and standardized terminology organizations play a role in implementing guidance around distinguishing, capturing, and sharing gender and sex information. Having all of these organizations subscribe to the guidance in this specification will assist to bridge the gap between technology and implementation requirements. 
 
-#### Vendors
+#### HIT System solution providers
 
-All the sex and gender information described in this document requires engaged review and implementation support from all EHR system vendors to have a meaningful impact on patient care and clinical interactions. By including guidance for v2, FHIR, CDA, and working closely with DICOM, X12, and others, we hope to enable adoption of the Gender Harmony approach across the vendor spectrum. Vendors are encouraged to incorporate the intent of the specification into the end-user workflow.
+All the sex and gender information described in this document requires engaged review and implementation support from all HIT-system vendors (EHR, LIS, IS, governmental, etc.) to have a meaningful impact on patient care and clinical interactions. By including guidance for v2, FHIR, CDA, and working closely with [DICOM](https://www.dicomstandard.org/), [X12](https://x12.org/), and others, we hope to enable adoption of the Gender Harmony approach across the vendor spectrum. Vendors are encouraged to incorporate the intent of the specification into the end-user workflow.
 
 #### Researchers
 
