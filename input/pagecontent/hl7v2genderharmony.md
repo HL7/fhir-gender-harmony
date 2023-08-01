@@ -13,14 +13,12 @@ HL7’s Version 2.x (V2) messaging standard is the workhorse of electronic data 
 ### Design considerations for V2
 Just like FHIR, V2 supports two approaches to conveying gender harmony concepts and either one can be pre-adopted into existing interface specifications based upon an earlier V2 version through the use of profile components (an equivalent to FHIR extensions). They are introduced here in the order in which they were developed:
 
-#### [SOGI Observation-Based Data Exchange
-Profile](https://www.hl7.org/permalink/?SOGIGuidance)
+#### [SOGI Observation-Based Data Exchange Profile](https://www.hl7.org/permalink/?SOGIGuidance)
 
 During the COVID-19 pandemic some jurisdictions required the inclusion of Sexual Orientation (which is not in the current scope of this IG) and Gender Identity, collectively often referred to as SOGI, in result messages sent to Public Health known as Electronic Lab Reporting (ELR). While this solution was confined to the mechanisms available in the base standard at the time (V2.9) and created for use in ELR, we want to make clear that use of ELR for SOGI data during the pandemic should not be construed as an endorsement of requiring labs and other ELR submitters to collect and transmit this data, but rather recognition of the fact that it may be necessary in the immediate short-term to make this data available to Public Health, given that SOGI data is typically not collected by laboratories nor is it critical to performing and interpreting lab tests. In the longer term this data should come from the Electronic Health Record system (EHR-s) -- using the electronic case reporting standards that already include a profile (FHIR) and template (CDA) for Gender Identity which should be expanded to support other SOGI-related concepts, such as Sexual Orientation, and then used to convey this data to Public Health.
 
 Because laboratories often don't have direct interaction with the patient, the specimen is often collected off-site and transported to the lab, collection of information discussed in this Gender Harmony IG may need to be performed by providers and transmitted to the lab via the ordering process. Where electronic order exchange (e.g. LOI) is used, this will require updates to the order message to include this content. Implementers will need to consider the necessary data collection workflows and work with providers and other patient-facing groups to collect and share this data with the labs. In order to support the laboratory use case requirement for gender information, the [SOGI Observation-Based Data Exchange Profile](https://www.hl7.org/permalink/?SOGIGuidance) describes the use of a PATIENT_OBSERVATION_GROUP consisting of an Observation (OBX) segment, a Participation (PRT) segment (if part of the used version of the standard) and a Comment (NTE) segment inserted in the respective message structures and covers rules for exchange of Sexual Orientation, Gender Harmony and Pronouns.
-#### [Full Gender Harmony Concept
-Support](http://www.hl7.org/documentcenter/public/ballots/2022SEP/downloads/V291_R1_N1_2022SEP.zip)
+#### [Full Gender Harmony Concept Support](http://www.hl7.org/documentcenter/public/ballots/2022SEP/downloads/V291_R1_N1_2022SEP.zip)
 
 The updates in the underlying V2 base standard in V2.9.1 match the gender harmony approach as represented in FHIR. This has been accomplished by defining person specific constructs in three (3) new segments that can be added to any message structure, where appropriate, which allows support to convey the person specific characteristics of gender identity, pronouns and sexual orientation (like the SOGI Observation-Based Profile). In addition this supports Recorded Sex or Gender not just for the patient but for other persons like the next of kin or personnel and the concept of Sex Parameter for Clinical Use for the patient.
 
@@ -29,7 +27,7 @@ Regardless of the method ultimately selected, the exchange of the person-specifi
 Additional attributes to support gender harmony related data exchange use the same vocabulary across product families.
 ### Outline of gender harmony artifacts in V2
 
-The elements described in this profile match the FHIR extension paradigm as first published in the [[HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments ballot]{.underline}](http://www.hl7.org/documentcenter/public/ballots/2022SEP/downloads/V291_R1_N1_2022SEP.zip) (zip download) specifically in these sections:
+The elements described in this profile match the FHIR extension paradigm as first published in the [HL7 Standard: Version 2.9.1 - An application Protocol for Electronic Data Exchange in Healthcare Environments ballot](http://www.hl7.org/documentcenter/public/ballots/2022SEP/downloads/V291_R1_N1_2022SEP.zip) (zip download) specifically in these sections:
 
 - Name to Use: Chapter 3, PID – Patient Identification Segment (3.4.2)
 - Gender Identity: Chapter 3, GSP – Person Gender and Sex Segment (3.4.19)
@@ -127,7 +125,7 @@ The above-described gender harmony artifacts should be added into the message st
 - Use in eClaims in chapter 16:
   - EHC^E01 – Submit HealthCare Services Invoice (event E01) (16.3.1)
 
-### Backwards compatibility of GH artifacts
+### Backwards compatibility of Gender Harmony artifacts
 
 In order to use these new segments in earlier versions of HL7 (before V2.9.1) the data exchange partners have to agree to support this functionality by pre-adopting this profile component as part of their data exchange agreement and specifications.
 
