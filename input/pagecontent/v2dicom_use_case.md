@@ -1,7 +1,7 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-08-01      OTHER-2454          Rob M                          Used this ticket to update per changes in RM updates to SCT and SPCU value sets
-
+2023-08-02      none                Rob M                   Fixed incorrect SPCU coce system name
 
 -->
 
@@ -28,7 +28,7 @@ PV1||O
 MSH|^~\&|||||20220715142240||OMI^O23|WSA5mY0UBuCGrytRTAFR8UWJ|P|2.9.1
 PID|||patientID^^^^MR||Smith^John^^^^^N|||F|
 GSP|1|S||76691-5^Gender identity^LN|446151000124109^Identifies as male gender^SCT
-GSC|1|S||female-typical^Apply female-typical setting or reference range^sexForClinicalUseCS||OBR^4||Hormonal treatment, use affirmed gender Cr reference ranges
+GSC|1|S||female-typical^Apply female-typical setting or reference range^SexParameterForClinicalUseCS||OBR^4||Hormonal treatment, use affirmed gender Cr reference ranges
 ORC|NW
 OBR||||241439007^PET heart study^SCT|||||||||||||||||||||||||||||||||||||||||82800-4^PET+CT Heart W contrast IV^LN
 IPC|accessionNum|procedureID|studyInstanceUID|schProcedureStepId|PT^Positron emission tomography^DCM|122793^PET Myocardial Perfusion, Rest and Stress^DCM
@@ -38,7 +38,7 @@ IPC|accessionNum|procedureID|studyInstanceUID|schProcedureStepId|PT^Positron emi
 MSH|^~\&|||||20220715142240||OMI^O23|WSA5mY0UBuCGrytRTAFR8UWJ|P|2.5|||||||||GenderHarmony^^2.16.840.1.113883.9.282^ISO
 PID|||patientID^^^^MR||Smith^John^^^^^N|||F|
 GSP|1|S||76691-5^Gender identity^LN|446151000124109^Identifies as male gender^SCT
-GSC|1|S||female-typical^Apply female-typical setting or reference range^sexForClinicalUseCS||OBR^4||Hormonal treatment, use affirmed gender Cr reference ranges
+GSC|1|S||female-typical^Apply female-typical setting or reference range^SexParameterForClinicalUseCS||OBR^4||Hormonal treatment, use affirmed gender Cr reference ranges
 ORC|NW
 OBR||||241439007^PET heart study^SCT|||||||||||||||||||||||||||||||||||||||||82800-4^PET+CT Heart W contrast IV^LN
 IPC|accessionNum|procedureID|studyInstanceUID|schProcedureStepId|PT^Positron emission tomography^DCM|122793^PET Myocardial Perfusion, Rest and Stress^DCM
@@ -49,7 +49,7 @@ IPC|accessionNum|procedureID|studyInstanceUID|schProcedureStepId|PT^Positron emi
 MSH|^~\&|||||20220715142240||ORU^R01^ORU_R01|WSA5mY0UBuCGrytRTAFR8UWJ|P|2.9.1|
 PID|||patientID^^^^MR||Smith^John^^^^^N|||F|
 GSP|1|S||76691-5^Gender identity^LN|446151000124109^Identifies as male gender^SCT
-GSC|1|S||female-typical^Apply female-typical setting or reference range^sexForClinicalUseCS||OBR^4||Hormonal treatment, use affirmed gender Cr reference ranges
+GSC|1|S||female-typical^Apply female-typical setting or reference range^SexParameterForClinicalUseCS||OBR^4||Hormonal treatment, use affirmed gender Cr reference ranges
 OBR|1|accessionNum||82800-4^PET+CT Heart W contrast IV^LN|||20220715142240||||
 OBX|1|ST|55115-0^Request^LN||Imaging technique (protocol, contrast, radiotracer) described here||||||F|
 OBX|2|FT|19005-8^Impression^LN||Report narrative goes here||||||F|
@@ -60,7 +60,7 @@ OBX|3|TX|55110-1^Conclusion^LN||Conclusion goes here||||||F|
 MSH|^~\&|||||20220715142240||ORU^R01^ORU_R01|WSA5mY0UBuCGrytRTAFR8UWJ|P|2.5|||||||||GenderHarmony^^2.16.840.1.113883.9.282^ISO
 PID|||patientID^^^^MR||Smith^John^^^^^N|||F|
 GSP|1|S||76691-5^Gender identity^LN|446151000124109^Identifies as male gender^SCT
-GSC|1|S||female-typical^Apply female-typical setting or reference range^sexForClinicalUseCS||OBR^4||Hormonal treatment, use affirmed gender Cr reference ranges
+GSC|1|S||female-typical^Apply female-typical setting or reference range^SexParameterForClinicalUseCS||OBR^4||Hormonal treatment, use affirmed gender Cr reference ranges
 OBR|1|accessionNum||82800-4^PET+CT Heart W contrast IV^LN|||20220715142240||||
 OBX|1|ST|55115-0^Request^LN||Imaging technique (protocol, contrast, radiotracer) described here||||||F|
 OBX|2|FT|19005-8^Impression^LN||Report narrative goes here||||||F|
