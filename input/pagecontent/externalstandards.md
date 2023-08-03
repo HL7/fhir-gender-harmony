@@ -33,7 +33,8 @@ were using administrative sex or gender identity.
 
 #### DICOM Change Process
 
-DICOM has a change proposal "cp1927 Patient sex and gender" in process
+At time of publication of this Implementation Guide, DICOM has a supplement, 
+"Supplement 233, Patient Model Gender Enhancements" in process
 to incorporate some of the changes from the HL7 Gender Harmony
 Project. The present expectation is to revise DICOM to:
 
@@ -57,7 +58,7 @@ required and optional value set as described here.
 - Add an optional Recorded Sex and Gender attribute.
 
 - Clarify existing DICOM patient and order comment fields to indicate
-that when Sex for Clinical Use is “complex” these comment fields
+that when Sex for Clinical Use is “complex”, these comment fields
 should provide information explaining relevant information for
 operators and clinicians. They are presently used for operator
 instructions, so this usage is a continuation of current usage.
