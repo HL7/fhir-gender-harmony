@@ -74,7 +74,7 @@ Use case covers admission, patient prep, examination, post processing and report
 
 Note: IHE transactions are noted in brackets
 <div>
-{%include gh-dicom-2.puml%}
+{%include gh-dicom-2.plantuml%}
 </div>
 
 Figure 1 Workflow Storyboard

@@ -1,0 +1,105 @@
+@startuml
+
+scale 320 width
+scale 320 height
+
+actor "John Smith" as patient
+actor "Referring Physician" as referring
+actor "Facility Clerk" as clerk
+actor "Technologist" as tech
+actor Radiologist as radiologist
+participant "PET/CT Modality" as pet
+participant "EHR" as EHR
+participant "Image Manager/Archive \n DSS/Order Filler (RIS/PACS)" as PACS
+participant "Dose Info Reporter" as dose
+participant "AI Task Performer" as ai
+
+group Precondition(s)
+referring -> EHR : place order
+rnote right #motivation: Example 01
+clerk <-> patient : pre-register
+clerk -> EHR : obtain insurance authorization
+PACS -> PACS : retrieve relevant priors
+radiologist -> EHR : assign protocol based on order
+end
+
+group Arrival and check-in
+patient -> clerk : announce name
+activate patient #whitesmoke
+activate clerk #whitesmoke
+clerk <-> EHR : find appointment(s)
+clerk -> patient : confirm identity information
+patient -> clerk : provide identity details
+clerk <-> EHR : find patient appointment
+clerk <-> patient : choose name change process
+clerk -> EHR : update patient name
+activate EHR #whitesmoke
+EHR -> EHR : patient update
+rnote right #motivation
+*Local procedure deferrs updates for in-process studies.
+*Study proceeds using personal communication with staff about pending updates.
+*Updates will be applied when study is complete.
+end note
+clerk -> tech : notify of patient arrival and new information
+activate tech #whitesmoke
+deactivate clerk
+end
+
+group Patient Preparation
+tech -> EHR : review order
+tech -> EHR : check creatine results
+tech -> patient : greet patient
+tech <-> patient : patient interview
+EHR -> PACS : patient update [RAD-12]
+deactivate EHR
+activate PACS #whitesmoke
+rnote right #motivation: Example 02
+tech -> tech : prep patient
+tech <-> radiologist : confer on protocol modifications
+activate radiologist #whitesmoke
+deactivate radiologist
+end
+
+group Examination
+pet -> PACS : query modality worklist [RAD-5]
+activate pet #whitesmoke
+PACS --> pet : modality worklist response
+deactivate PACS
+tech -> pet : adjust protocol
+pet -> pet : acquire images
+pet -> PACS : modality image stored [RAD-8]
+activate PACS #whitesmoke
+pet -> ai : modality image stored [RAD-8]
+activate ai #whitesmoke
+pet -> dose : store dose information [RAD-62]
+deactivate PACS
+activate dose #whitesmoke
+dose -> dose : dose summary
+tech -> pet : end exam
+deactivate dose
+deactivate pet
+tech -> patient : release patient
+deactivate tech
+deactivate patient
+end
+
+group Analysis
+ai -> ai : process images
+ai -> PACS : evidence documents stored [RAD-43]
+deactivate ai
+activate PACS #whitesmoke
+radiologist -> PACS : create ROI
+end
+
+group Report
+radiologist -> PACS : dictate report narrative
+radiologist -> PACS : sign report
+deactivate radiologist
+PACS -> PACS : apply deferred demographics update\nto images and report
+PACS -> EHR : report 
+deactivate PACS
+referring -> EHR : view report
+rnote right #motivation: Examples 03 (FHIR), 04 (v2), and 05 (CDA)
+end
+
+@enduml
