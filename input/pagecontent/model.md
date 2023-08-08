@@ -9,9 +9,19 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-13       OTHER-2463         Cooper Thompson              Updated RSG model definition and other narrative
 2023-07-13       V2-25452           Cooper Thompson              Removed international equivalent references
 2023-07-17       OTHER-2557         Cooper Thompson              Clarified terminology expectations for RSG
-2023-07-25		 OTHER-2708	    	Carol Macumber		 		 GI Usage Note change per OTHER-2708
-2023-07-25    	 OTHER-2539	    	Carol Macumber		 		 GI Usage Note change per OTHER-2539
-2023-07-26		 OTHER-2570			Carol Macumber				 Standardized the use of "Gender Harmony initial informative specification"  when referring to initial specification
+2023-07-25		  OTHER-2708	    	Carol Macumber		 	     	  GI Usage Note change per OTHER-2708
+2023-07-25       OTHER-2539	    	Carol Macumber		 		     GI Usage Note change per OTHER-2539
+2023-07-26		  OTHER-2570			Carol Macumber				     Standardized the use of "Gender Harmony initial informative specification"  when referring to initial specification
+2023-08-08       OTHER-2577         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2585         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2420         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2420         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2625         Joanie Harper                removed sentence per Jira ticket 
+2023-08-08       OTHER-2582         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2581         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2494         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2540         Joanie Harper                add links for minValueSets per Jira ticket 
+2023-08-08       OTHER-2576         Joanie Harper                update text per Jira ticket 
 -->
 
 ### Modeling Sex and Gender Representation
@@ -101,19 +111,17 @@ comment associated with Gender Identity.
 
 ### Person
 
-**Definition:** This is an abstract class to be mapped onto a concrete
-class in a specific standard or definition. The concrete class is
-expected to be a kind of person.
+**Definition:** This is an abstract representing a person.
 
-**Usage Note:** In FHIR a specific functional mapping might add
-attributes or modify existing attributes of the FHIR Patient Class. When
-used with standards that do not define classes, e.g., HL7 v2.x, this
-abstract Person class can be mapped into concrete changes to the
-standard.
+**Usage Note:** This class may be mapped onto a concrete class when 
+implemented using a model with concrete classes representing a person 
+where additional attributes can be added or existing attributes can be 
+enhanced. In FHIR currently this would be the following resources: Person, 
+Patient, Practitioner, and RelatedPerson
 
 ### Gender Identity (GI)
 
-Gender Identity describes the identity or identities of the person. This
+Gender Identity describes the identity of the person. This
 is important in many social and cultural contexts. It might be missing,
 as for an infant, or multi-valued in some cultures and specific
 situations. The meaning, criteria, and implications of specific gender
@@ -148,7 +156,7 @@ individual's identity, ascertained by asking them what that identity is.
 
 -   Proposed Terminology:
 
-    -   minValueSet: GenderIdentity valueSet
+    -   minValueSet: [Gender Identity](http://terminology.hl7.org/ValueSet/gender-identity) valueSet
 
     -   binding Strength: extensible
 
@@ -160,7 +168,7 @@ to the person. May be just an initial dateTime.
 -   Usage note: Validity period may be overlapping in the case of
 multiple gender identities (such as for bi-gender persons, some
 gender-fluid persons, and binary Two-Spirit persons who also identify as
-male or female).
+both male and female).
 
 -   Cardinality: 0..1
 
@@ -181,8 +189,8 @@ particularly with overlapping active values.
 
 ### Sex Parameter for Clinical Use (SPCU)
 
-Sex Parameter for Clinical Use is provided for use in orders, observations, and
-other clinical uses. SPCU can be highly contextual and allows specific
+Sex Parameter for Clinical Use is provided for use in orders, observations, 
+and other clinical uses. SPCU can be highly contextual and allows specific
 considerations to be provided for potential automated uses and records.
 Examples include:
 
@@ -190,16 +198,16 @@ Examples include:
     work order so that their unexpected hormone levels can be properly
     reported and not rejected as invalid results.
 
--   A person with BRCA2 mutations can be identified so that a screening
-    mammography order is properly performed.
+-   A female to male transgender patient early in transition undergoing imaging 
+wherein the device requires selection of either M or F to complete the set up 
+would benefit from an imaging context-specific SPCU noting the patient needs to 
+have the setup for “Female-typical”
 
 There are many other situations involving tumors, resections, congenital
 conditions (i.e., ovotestes), and transgender patients where SPCU can be
 used to provide information that is needed to perform a procedure
 properly. Many procedures need at least a "male" or "female"
-specification (e.g., for radiation shielding). For detailed use cases
-and implementation guidance, see (insert link to Use Cases landing page
-in IG).
+specification (e.g., for radiation shielding). 
 
 SPCU provides a general extendable structure. During the transition from 
 old systems to new systems, and as medical technology and science evolve, 
@@ -209,20 +217,25 @@ ordering systems are expected to accommodate changes to the order filling
 systems. The gender harmony model enables adaptation of old systems and 
 new technologies.
 
-In observations, SPCU is used to describe the specific contexts used in
-the observation. For example, the computation of glomerular filtration
-rate (GFR) based on blood chemistry uses formulas that are different for
-"male" and "female". The SPCU for the GFR report can indicate which
-formula was used in the computation of that result. The expectation is
-that the patient level SPCU is the default value used in all
-observations in a report and have an individual SPCU for individual
-observations when that observation was performed using a different SPCU.
-The Gender Harmony model does not cover the description of individual
-observations, but the SPCU attribute can be used.
+The SPCU, when used for a specific observation, describes a context that 
+clarifies the settings or reference ranges for the observation. For example, 
+the computation of glomerular filtration rate (GFR) based on blood chemistry 
+may use formulas that are different for “male” and “female”. The SPCU for 
+the GFR report can indicate which formula should be used in the computation 
+of that result. In cases where there is a patient level SPCU, the patient 
+level value can be used as a default (any specific use) value unless a 
+specific SPCU for that observation has been specified, in which case, the 
+specified SPCU should apply. The Gender Harmony model does not cover the 
+description of the use of SPCU in type of observation, but the approach for 
+each is the same.
 
-**Definition**: A categorization of sex derived from observable
-information such as an organ inventory, recent hormone lab tests,
-genetic testing, menstrual status, obstetric history, etc.
+**Definition**: A Sex Parameter for Clinical Use is a parameter that 
+provides guidance on how a recipient should apply settings or reference 
+ranges that are derived from observable information such as an organ 
+inventory, recent hormone lab tests, genetic testing, menstrual status, 
+obstetric history, etc.. This property is intended for use in clinical 
+decision making, and indicates that treatment or diagnostic tests should 
+consider best practices associated with the relevant reference population.
 
 **Usage Note(s)**: A sex category that supports context specificity,
 derived from observable information, preferably directly linked to the
@@ -255,7 +268,13 @@ value and linked comment or specific observation could be summarized as
 
 ##### SPCU Category 
 
--   Definition: Sex value based on clinical observations.
+-   Definition: A parameter that provides guidance on how a recipient 
+should apply settings or reference ranges that are derived from observable 
+information such as an organ inventory, recent hormone lab tests, genetic 
+testing, menstrual status, obstetric history, etc..
+
+In addition, all the attributes of SPCU should have text that is drawn from 
+the FHIR R5 page listed here: [Sex Parameter for Clinical Use](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse.html)
 
 -   Cardinality: 1..1
 
@@ -263,7 +282,7 @@ value and linked comment or specific observation could be summarized as
 
 -   Proposed Terminology:
 
-    -   minValueSet: SexForClinicalUseCategory valueSet
+    -   minValueSet: [SexForClinicalUseCategory](http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use) valueSet
 
     -   binding Strength: required
 
@@ -293,7 +312,7 @@ overlapping active values
 
 ##### Linked Clinical Observation
 
--   Definition: Link or identifier to observation(s) or report(s) that
+-   Definition: Link to, or identifier of, the observation(s) or report(s) that
 are used to determine the sex category value.
 
 -   Usage Note: The specific implementation of these links will vary
@@ -537,7 +556,7 @@ those in the care setting.
 
 -   Proposed Terminology:
 
-    -   minValueSet: Pronoun valueSet
+    -   minValueSet: [Pronouns](http://terminology.hl7.org/ValueSet/pronouns) valueSet
 
     -   binding Strength: extensible
 
