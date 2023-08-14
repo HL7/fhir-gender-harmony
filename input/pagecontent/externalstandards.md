@@ -7,7 +7,7 @@ Date             Jira ticket        Updated by                   Comment
 
 ### DICOM
 
-The existing DICOM model dates back to 1985 and earlier work. It was
+The existing [DICOM](https://www.dicomstandard.org) model dates back to 1985 and earlier work. It was
 frozen and has remained unchanged since 1995. Imaging medical records
 from 1995 onward all use this model. The DICOM model was originally
 specified to include a single mandatory field to capture Patient's Sex
@@ -74,7 +74,7 @@ proposal with the activity of the Gender Harmony project.
 
 
 ### SNOMED International
-SNOMED International produces and maintains SNOMED CT, a globally recognized and used terminology standard for electronic health data. In 2021, a group of subject matter experts were gathered to participate in a Sex and Gender Clinical Project Group to provide advice on sex and gender terminology requirements for health record data. The group was closed in May 2021, pending the results of the ISO TC215 (Health Informatics) WG3. 
+[SNOMED International](https://www.snomed.org) produces and maintains SNOMED CT, a globally recognized and used terminology standard for electronic health data. In 2021, a group of subject matter experts were gathered to participate in a Sex and Gender Clinical Project Group to provide advice on sex and gender terminology requirements for health record data. The group was closed in May 2021, pending the results of the ISO TC215 (Health Informatics) WG3. 
 
 As a consensus standard that strives to align with international standards groups working in the same domain, SNOMED International will participate with ISO TC215 WG3 in their efforts in this domain to ensure international alignment. 
 
@@ -82,7 +82,7 @@ SNOMED International recognizes that there may be omissions, outdated or erroneo
 
 
 ### NCPDP
-The National Council for Prescription Drug Programs (NCPDP) is an ANSI-accredited SDO representing the pharmacy services industry. The NCPDP SCRIPT ERx standard is used in EHR systems. The current values under the standard, labeled Gender, are F (Female), M (Male), and U (Unknown).
+The [National Council for Prescription Drug Programs (NCPDP)](https://www.ncpdp.org) is an ANSI-accredited SDO representing the pharmacy services industry. The NCPDP SCRIPT ERx standard is used in EHR systems. The current values under the standard, labeled Gender, are F (Female), M (Male), and U (Unknown).
 
 However, NCPDP is moving to include both Administrative Gender and Sex at Birth elements in its future state. NCPDP has identified a business need to identify when someone’s gender is different then their Sex Assigned at Birth (SAAB) to obtain medication without delay, in situations where gender mismatch edits may occur.
 
@@ -91,7 +91,7 @@ Currently, NCPDP has approved the field Sex Assigned at Birth that will be used 
 Note: The NCPDP Gender Transition Task Group determined the Conditional Gender Code (C08- 4T), and Purchaser Gender Code (595-YY) were not applicable to patient matching. There was also an added element of “Reproductive Potential”.
 
 ### X12
-X12 is an ANSI-accredited Standards Developer (ASD) that develops and maintains business-to-business
+[X12](https://x12.org) is an ANSI-accredited Standards Developer (ASD) that develops and maintains business-to-business
 data exchange standards, including electronic data interchange (EDI) standards and schemas, which drive
 business processes globally. With more than 320 transaction standards available for use, X12 standards
 are used to conduct nearly every facet of business-to-business operations.
