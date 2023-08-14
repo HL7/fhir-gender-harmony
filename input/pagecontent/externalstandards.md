@@ -7,8 +7,9 @@ Date             Jira ticket        Updated by                   Comment
 
 ### DICOM
 
-The existing [DICOM](https://www.dicomstandard.org) model dates back to 1985 and earlier work. It was
-frozen and has remained unchanged since 1995. Imaging medical records
+The existing [DICOM](https://www.dicomstandard.org) (Digital Imaging and 
+COmmunications in Medicine) model dates back to 1985 and earlier work. It 
+was frozen and has remained unchanged since 1995. Imaging medical records
 from 1995 onward all use this model. The DICOM model was originally
 specified to include a single mandatory field to capture Patient's Sex
 (0010,0008) with allowed values of Male, Female, Other and
