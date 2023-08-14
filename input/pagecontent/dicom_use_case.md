@@ -2,7 +2,8 @@
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2411         Joanie Harper                Corrected Example 01: Imaging Order per the Jira ticket https://jira.hl7.org/browse/OTHER-2411
 2023-06-16       OTHER-2488         Joanie Harper                Fixed spelling of narrative per the Jira ticket https://jira.hl7.org/browse/OTHER-2488
-2023-08-02		All Usecase updates	Rob M				Updated the entirew document using DICOm file from Steven N. Issues above are included.
+2023-08-02		All Usecase updates	Rob M				         Updated the entirew document using DICOm file from Steven N. Issues above are included.
+2023-08-14                          Joanie Harper                Updated some numbering and spacing.
 
 -->
 ### Introduction
@@ -19,7 +20,7 @@ The DICOM (Digital Imaging and COmmunications in Medicine) Standard attributes i
 
 1.  Patient (John Smith) - whose previous records are for studies performed when his EHR Gender Identity was “Identifies as female gender”. 
 
-2. Referring Physician
+2.  Referring Physician
 
 3.  Facility Clerk - admits patient, utilizes the Radiology Information System (RIS)
 
@@ -49,7 +50,7 @@ Use case covers admission, patient prep, examination, post processing and report
 
 1.  John Smith is registered in the hospital record system under the name “Janet Smith”.
 
-2. Physician places the order in the EHR for "Janet Smith"
+2.  Physician places the order in the EHR for "Janet Smith"
 
 3.  John Smith arrives at an outpatient facility with an appointment.
 
@@ -99,9 +100,9 @@ In this scenario, the patient initiates the discussion with the clerk.
 
 8.  After check-in, the Scheduled Procedure Step is visible in the MWL.
 
-9. The clerk asks whether John wants to go through the name change update at the clinic to reflect his preferred name. Name change is initiated.
+9.  The clerk asks whether John wants to go through the name change update at the clinic to reflect his preferred name. Name change is initiated.
 
-11. The clerk notifies the technologist that the patient has arrived.
+10. The clerk notifies the technologist that the patient has arrived.
 
 [**Example 02**](#example-02-patient-name-update) depicts an HL7 Demographics Update message for this patient with mapping to DICOM Modality Worklist attributes.
 

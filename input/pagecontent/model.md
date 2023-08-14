@@ -21,6 +21,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-08       OTHER-2494         Joanie Harper                update text per Jira ticket 
 2023-08-08       OTHER-2540         Joanie Harper                add links for minValueSets per Jira ticket 
 2023-08-08       OTHER-2576         Joanie Harper                update text per Jira ticket 
+2023-08-14       OTHER-2709         Joanie Harper                update text per Jira ticket 
 -->
 
 ### Modeling Sex and Gender Representation
@@ -254,14 +255,15 @@ the capabilities of the systems involved. This may require individual
 site specific business rules to map a multi-valued SPCU into a single
 value that is appropriate for this context.
 
-As SPCU can be context-specific, on rare occasions there may be more
-than one concurrent SPCU for a patient. For example, there could be
-multiple procedure results, each identifying a context specific SPCU
-determination used to set the normal range used. For example an SPCU
-value and linked comment or specific observation could be summarized as
-"male, based on hormonal measurement."
+The model supports multiple instances of SPCU to allow, when necessary, 
+more than one concurrent SPCU for a patient. For example, there could be 
+multiple procedure results, each identifying a context specific SPCU 
+determination used to set the normal range used. For example an SPCU value 
+and linked comment or specific observation could be summarized as “male, 
+based on hormonal measurement.”
 
-**Cardinality**: 0..n, expected to be zero unless in a clinical context.
+**Cardinality**: 0..n, Multiple instances of an SPCU can exist and each 
+instance will have the attributes listed below.
 
 #### Attributes: 
 

@@ -197,5 +197,5 @@ When applying this methodology in FHIR, there are some considerations:
 
 ### General Guidance
 
-For R4 or R5 implementations, our recommendation is to work with your jurisdiction-specific or use-case specific implementation guide authors to define jurisdiction or use-case specific extensions for any concept that can be categorized as a recorded sex and gender, including sex assigned at birth. We only recommend using the individual-recordedSexOrGender extension in the case where creating a use-case specific extension or property is not practical.
+For R4 or R5 implementations, our recommendation is to work with your jurisdiction-specific or use-case specific implementation guide authors to define jurisdiction or use-case specific extensions for any concept that can be categorized as a recorded sex and gender, including sex assigned at birth. Replacing a use-case specific extension or property (which is already in use) with the individual-recordedSexOrGender extension is not recommended.
  
