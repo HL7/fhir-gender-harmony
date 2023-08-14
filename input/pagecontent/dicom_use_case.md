@@ -6,7 +6,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-14                          Joanie Harper                Updated some numbering and spacing.
 
 -->
-### Introduction
+### Introduction & Use Case Description
 
 This use case illustrates DICOM Sex and Gender encoding, including: admission, patient prep, examination, post processing and reporting for a PET/CT examination order. A patient with EHR Sex Parameter for Clinical Use (SPCU) of “Female-typical” and an EHR Gender Identity of “Identifies a male gender” checks-in for a PET/CT examination. The examination is performed, the patient’s demographics are updated, and the report is delivered.
 
