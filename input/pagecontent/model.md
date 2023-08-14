@@ -15,7 +15,6 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-08       OTHER-2577         Joanie Harper                update text per Jira ticket 
 2023-08-08       OTHER-2585         Joanie Harper                update text per Jira ticket 
 2023-08-08       OTHER-2420         Joanie Harper                update text per Jira ticket 
-2023-08-08       OTHER-2420         Joanie Harper                update text per Jira ticket 
 2023-08-08       OTHER-2625         Joanie Harper                removed sentence per Jira ticket 
 2023-08-08       OTHER-2582         Joanie Harper                update text per Jira ticket 
 2023-08-08       OTHER-2581         Joanie Harper                update text per Jira ticket 
