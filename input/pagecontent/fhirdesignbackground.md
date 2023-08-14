@@ -3,6 +3,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-06-29       OTHER-2558         Cooper Thompson              Split design background into a separate page, independent of the guidance page.
 2023-07-13       OTHER-2618         Cooper Thompson              Added a link to the R4 SPCU backport extension.
 2023-08-14       OTHER-2633         Joanie Harper                Move phrase from Disadvantages column to advantages column per the Jira ticket
+2023-08-14       OTHER-2610         Joanie Harper                Updated text per the Jira ticket
 -->
 
 # Background and Rationale for FHIR design approach
@@ -18,7 +19,7 @@ table, th, td {
 </style>
 |Option|Advantages|Disadvantages|
 |---|---|---|
-|Property on resources|1. Easily discoverable in the specification<br />2. Establishes the properties as first-class data elements.|1. Requires an alternative approach for pre-adoption in prior versions of FHIR.<br />2. For Patient, additional processes for the change are required to make updates to the normative resource.|
+|Property on resources|1. Easily discoverable in the specification<br />2. Establishes the properties as first-class data elements.|1. Requires an alternative approach for pre-adoption in prior versions of FHIR.<br />2. For the Patient resource, which is Normative, a change such as this requires additional implementer and standards community acceptance/review processes.|
 |Extension on resources|1. The extension may be directly pre-adopted in prior versions of FHIR.<br />2. The extension can be defined in one location and applied to many resources, rather than having to copy and maintain an identical structure on many related resources.<br />3. We may consider changing the extension to a property in future versions of FHIR.<br />4. Avoids problems with changing normative content.| 1. Extensions are somewhat hidden, so are moderately difficult for implementers to discover|
 |Profile of Observation| 1. Enables collecting a broad set of metadata about the property. However, it is not expected that the metadata Observation enables is necessary or useful for most use cases.<br />2. Aligns with sexual orientation profile.|1. Observation profiles are somewhat hidden, so are moderately difficult for implementers to discover.<br />2. Avoids problems with changing normative content.<br />3. Clients would require additional authorization scopes to access demographic data. For servers that provide only resource-level scopes, patients may not wish to share Observation just to grant access to gender identity, when it would also grant access to labs, vitals, etc.|
 
