@@ -22,6 +22,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-31       OTHER-2676         Joanie Harper                Updated the CDA column wherever the phrase 'responsibility of template container' exist per https://jira.hl7.org/browse/OTHER-2627
                                                                  --- note that each instance has a placeholder for the template name.
 2023-07-31       OTHER-2677         Joanie Harper                Updated the CDA column of 'Support GH attribute = validity period, type = duration' in the GI table per https://jira.hl7.org/browse/OTHER-2677
+2023-08-15    OTHER-2589  RCM Changed Pronouns model "Supports additional values to example
 -->
 
 The discussion around gender harmony has been on-going for several years. This implementation guide is based on the logical [Gender Harmony initial informative specification ](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) published in 2021 and the evolution of the Gender Harmony Project (GHP) team’s understanding of how sex and gender information is implemented currently and how it could be more effectively implemented in electronic healthcare systems. Based upon input from the community, the Gender Harmony project has defined (and prefers) implementing a model using extensions so that the added information is “close to user,” but it is clear that as an alternative users may choose to implement the information as observations in a manner similar to that found in the Gravity Project, for example [Observation Recorded Sex Gender](http://hl7.org/fhir/us/sdoh-clinicalcare/STU2/StructureDefinition-SDOHCC-ObservationRecordedSexGender.html).
@@ -58,7 +59,7 @@ table, th, td {
 |Value is coded and allows text|SOGI Concept Value (GSP-5), when SOGI Concept (GSP-4) = 90778-2^Personal pronouns - Reported^LN with datatype Coded with Exceptions (CWE)|Datatype: CodableConcept (http://build.fhir.org/datatypes.html#CodeableConcept)|CD (CONF:4536-61)|
 |Designated value set|[Pronouns](http://terminology.hl7.org/ValueSet/pronouns) (http://terminology.hl7.org/ValueSet/pronouns)|[Pronouns](http://terminology.hl7.org/ValueSet/pronouns) (http://terminology.hl7.org/ValueSet/pronouns)|[Pronouns](http://terminology.hl7.org/ValueSet/pronouns) (http://terminology.hl7.org/ValueSet/pronouns)<br>(CONF:4536-61)|
 |Support notion of value =  "unknown" |Can be extended, since example binding|If unknown, no value would be sent|Asked but Unknown and Other  (CONF:4536-67)|
-|Supports additional values (extensible)|Example Binding|Example Binding|MAY (CONF:4536-61)|
+|Supports additional values (example)|Example Binding|Example Binding|MAY (CONF:4536-61)|
 |Support GH attribute = validity period, type = duration|Validity Range (GSP-6) with datatype Date Range(DR)|[Datatype: Period](http://build.fhir.org/datatypes.html#Period) (http://build.fhir.org/datatypes.html#Period)|effectiveTime (CONF:4536-69)|
 |Support GH attribute = comment, type = string|Comment (GSP-7) with datatype Text (TX)|Comment, datatype: string|Text (CONF:4536-72)|
 
