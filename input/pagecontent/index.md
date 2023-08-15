@@ -188,15 +188,15 @@ We are indebted to all members of the project, listed [here](https://confluence.
 
 #### Authors Of The Guide Content
 - **Overall Authors and Editors**
-    - Robert C. McClure, Carol Macumber, Robert Horn, Lorraine Constable, Clair Kronk and Joanie Harper
+    - Robert C. McClure, Carol Macumber, Robert Horn, Lorraine Constable, Clair Kronk, and Joanie Harper
 - **V2 material**
     - Riki Merrick and Craig Newman
 - **CDA**
-    - Jay Lyle, Russ Ott and Gay Dolin
+    - Jay Lyle, Russel Ott, Gay Dolin, and Benjamin Flessner
 - **FHIR**
     - Cooper Thompson
 - **Use Cases**
-    - Robert Horn, Steven Nichols, Cara Schlegel and Joseph Bormel
+    - Robert Horn, Steven Nichols, Riki Merrick, Cara Schlegel, and Joseph Bormel
 - **Resources Provided by the Department of Veterans Affairs**
 	- Dr. Jonathan Nebeker, National CMIO and Executive Director of Clinical Informatics and Data Management Office (CIDMO)
 	- Steven Brown, MD, Director, CIDMO Knowledge-Based Systems (KBS)
