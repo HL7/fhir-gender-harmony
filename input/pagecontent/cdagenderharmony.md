@@ -1,7 +1,7 @@
 <!-- Updates based on Jira tickets 
-Date             Jira ticket        Updated by                   Comment
-
-
+Date             Jira ticket              Updated by               Comment
+2023-8-16        spell/grammar check      MaryKay McDaniel         timeframes to time frames, 
+2023-8-16        OTHER-2602               MaryKay McDaniel         commented out the Note to balloter, incase it was needed for something in other tickets
 
 -->
 
@@ -20,7 +20,7 @@ The following overview is taken from the document introduction.
 
 This guide provides entry templates to support the representation of sex and gender as proposed in the Gender Harmony logical model in forms that can be unambiguously translated among HL7 V2, CDA, and FHIR representations. 
 
-The Gender Harmony logical model identifies five classes: “gender identity,” “pronouns,” “name to use,” “recorded sex or gender,” and “sex for clinical use.” Because the CDA person name supports name use timeframes, this guide does not specify a template for “name to use.” It includes templates for each of the remaining four classes. It also includes one inherited template used by “sex for clinical use.”
+The Gender Harmony logical model identifies five classes: “gender identity,” “pronouns,” “name to use,” “recorded sex or gender,” and “sex for clinical use.” Because the CDA person name supports name use time frames, this guide does not specify a template for “name to use.” It includes templates for each of the remaining four classes. It also includes one inherited template used by “sex for clinical use.”
 
 **Guidance on use of gender harmony artifacts in systems**
 
@@ -63,12 +63,13 @@ One approach would be to use the Entry Reference template to associate an SFCU w
 The template defined here describes an approach using entryRelationship to establish context specific to an entry, to an encounter, or to the patient generally. This approach leverages context conduction appropriately, and it is a tactic with which many implementers are familiar. It also requires the use of the Entry Reference template where the SFCU applies to multiple entries.
 
 
-<div class="note-to-balloters">
+<!--<div class="note-to-balloters">
 <ol>
  <li>Is more directive guidance warranted for what kinds of artifacts may include these entry templates?</li>
   <li>Is “derivationExpr” an appropriate representation of a natural language definition, or should that property of Recorded Sex or Gender be rendered as methodCode or another sub-entry?</li>
   <li>Every effort has been made to ensure that Sex for Clinical Use is flexible enough to support a variety of use cases. However, the cases tend to fall into two classes: reference ranges for interpreting findings and context constraining the execution of a procedure. The latter is rare in clinical documents. Is this level of flexibility necessary or appropriate for this context? </li>
 </ol>
 </div>
+-->
 
 <embed src="pdf/RepresentingSexandGender.pdf" width="100%" height="4200px" />

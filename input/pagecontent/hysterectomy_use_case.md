@@ -1,6 +1,6 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-
+2023-08-16       None               MaryKay McDaniel             This page does not appear in the actual GHIG. Should it? Note to Skype asking
 
 
 -->

@@ -5,7 +5,8 @@ Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2431         Joanie Harper                Fixed typo per the Jira ticket https://jira.hl7.org/browse/OTHER-2431
 2023-06-16       OTHER-2550         Joanie Harper                Changed patient specific to person specific per the Jira ticket https://jira.hl7.org/browse/OTHER-2550
 2023-07-31       multiple           Rob McClure                  Updated to align with changes made by Riki. Removed ballot comments
-8/15/2023        OTHER-2530         MaryKay McDaniel             Updated to align with changes made by Riki - file V2 md 2023 07 25 for Fiki ChangesOTHER-2530
+2023-08-15       OTHER-2530         MaryKay McDaniel             Updated to align with changes made by Riki - file V2 md 2023 07 25 for Riki Changes
+2023-08-16       spell/grammar chk  MaryKay McDaniel             row 27 FHIR, CDA. to FHIR and CDA, 136 added (SPCU) for consistency across pages in IG
 -->
 
 ### Introduction to V2
@@ -23,7 +24,7 @@ Because laboratories often don't have direct interaction with the patient, the s
 
 The updates in the underlying V2 base standard in V2.9.1 match the gender harmony approach as represented in FHIR. This has been accomplished by defining person specific constructs in three (3) new segments that can be added to any message structure, where appropriate, which allows support to convey the person specific characteristics of gender identity, pronouns and sexual orientation (like the SOGI Observation-Based Profile). In addition this supports Recorded Sex or Gender not just for the patient but for other persons like the next of kin or personnel and the concept of Sex Parameter for Clinical Use for the patient.
 
-Regardless of the method ultimately selected, the exchange of the person-specific gender harmony concepts (e.g. pronouns, gender identity) uses the same vocabulary (LOINC) in either GSP-4 or in OBX-3 and similarly, the value sets used for the answers in the segment GSP-5 or in OBX-5 shall be the same as in FHIR, CDA.
+Regardless of the method ultimately selected, the exchange of the person-specific gender harmony concepts (e.g. pronouns, gender identity) uses the same vocabulary (LOINC) in either GSP-4 or in OBX-3 and similarly, the value sets used for the answers in the segment GSP-5 or in OBX-5 shall be the same as in FHIR and CDA.
 
 Additional attributes to support gender harmony related data exchange use the same vocabulary across product families.
 ### Outline of gender harmony artifacts in V2
@@ -132,7 +133,7 @@ In order to use these new segments in earlier versions of HL7 (before V2.9.1) th
 
 #### GenderHarmony\_Component – ID: 2.16.840.1.113883.9.282
 
-This profile component can be used in ANY message structure in ANY version, when data about gender identity, pronouns, a recorded Sex or a recorded gender, or sexual orientation and similar concepts need to be exchanged. It also supports the exchange of any necessary Sex Parameter for Clinical Use for the patient.
+This profile component can be used in ANY message structure in ANY version, when data about gender identity, pronouns, a recorded Sex or a recorded gender, or sexual orientation and similar concepts need to be exchanged. It also supports the exchange of any necessary Sex Parameter for Clinical Use (SPCU) for the patient.
 
 #### Details for implementation
 

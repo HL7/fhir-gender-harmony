@@ -1,7 +1,7 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2488         Joanie Harper                Fixed spelling of narrative per the Jira ticket https://jira.hl7.org/browse/OTHER-2488
-
+2023-8-16		 Spell Check	    MaryKay McDaniel             "Recieve" changed to Receive, identifes to identifies
 
 -->
 
@@ -112,7 +112,7 @@ Examples of the use of the Sex for Clinical Use template can be found in the Ima
 				</birthplace>
 				<languageCommunication>
 					<languageCode code="fr-CN"/>
-					<modeCode code="RWR" displayName="Recieve Written"
+					<modeCode code="RWR" displayName="Receive Written"
 						codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
 					<preferenceInd value="true"/>
 				</languageCommunication>
@@ -352,7 +352,7 @@ Social History Section
 					<templateId root="2.16.840.1.113883.10.20.22.2.17"/>
 					<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
 					<title>Social History</title>
-					<text> The patient was born female, identifes as male and is currently
+					<text> The patient was born female, identifies as male and is currently
 						undergoing gender affirming hormone therapy. <table border="1" width="100%"
 							cellpadding="0" cellspacing="0">
 							<thead>

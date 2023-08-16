@@ -4,6 +4,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-13       OTHER-2618         Cooper Thompson              Added a link to the R4 SPCU backport extension.
 2023-08-14       OTHER-2633         Joanie Harper                Move phrase from Disadvantages column to advantages column per the Jira ticket
 2023-08-14       OTHER-2610         Joanie Harper                Updated text per the Jira ticket
+2023-08-16       OTHER-2579         MaryKay McDaniel             Added (SPCU) in line 36 for consistency across pages, i.e., 1st time include 
 -->
 
 # Background and Rationale for FHIR design approach
@@ -32,7 +33,7 @@ When creating the FHIR extensions, there were several proposed changes to the lo
 
 **Sex Parameter for Clinical Use: extension**
 
-*Note*: The Sex Parameter for Clinical Use concept was formerly known as Sex for Clincal Use.
+*Note*: The Sex Parameter for Clinical Use (SFCU) concept was formerly known as Sex for Clincal Use.
 
 *Context:* The Sex Parameter for Clinical Use extension is available on all FHIR resource types; however, it is intended for use on clinical resource types (e.g., DiagnosticReport, Observation), and enclosing contextual resources (e.g., Encounter, EpisodeOfCare, Patient). We considered limiting the extension only to the resources we expect it to be used on, however there will likely be resources we incorrectly excluded, and new resources created to which it could apply, so we opted to allow it to all resources, understanding that it would not be applicable for many resource types.
 
