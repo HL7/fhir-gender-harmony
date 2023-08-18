@@ -1,8 +1,12 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-
-
-
+2023-8-18        OTHER-2706         Sean Muir                    Replaced SFCU with SPCU
+2023-8-18        OTHER-2497         Sean Muir                    Updated CL Example    
+2023-8-18        OTHER-2471         Sean Muir                    Update example per issue
+2023-8-18        OTHER-2436         Sean Muir                    Updated CL Example  
+2023-8-18        OTHER-2464         Sean Muir                    Update example per issue
+2023-8-18        OTHER-2466         Sean Muir                    Update example per issue
+2023-8-18        OTHER-2487         Sean Muir                    Update example per issue
 -->
 
 ### CDA DICOM Use Case Example

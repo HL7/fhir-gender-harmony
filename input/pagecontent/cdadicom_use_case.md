@@ -2,6 +2,10 @@
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2488         Joanie Harper                Fixed spelling of narrative per the Jira ticket https://jira.hl7.org/browse/OTHER-2488
 2023-8-16		 Spell Check	    MaryKay McDaniel             "Recieve" changed to Receive, identifes to identifies
+2023-8-18        OTHER-2706         Sean Muir                    Replaced SFCU with SPCU
+2023-8-18        OTHER-2497         Sean Muir                    Updated CL Example    
+2023-8-18        OTHER-2471         Sean Muir                    Update example per issue
+2023-8-18        OTHER-2436         Sean Muir                    Updated CL Example  
 
 -->
 
