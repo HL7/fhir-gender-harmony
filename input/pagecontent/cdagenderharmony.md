@@ -20,11 +20,11 @@ The following overview is taken from the document introduction.
 
 This guide provides entry templates to support the representation of sex and gender as proposed in the Gender Harmony logical model in forms that can be unambiguously translated among HL7 V2, CDA, and FHIR representations. 
 
-The Gender Harmony logical model identifies five classes: “gender identity,” “pronouns,” “name to use,” “recorded sex or gender,” and “sex for clinical use.” Because the CDA person name supports name use time frames, this guide does not specify a template for “name to use.” It includes templates for each of the remaining four classes. It also includes one inherited template used by “sex for clinical use.”
+The Gender Harmony logical model identifies five classes: “gender identity,” “pronouns,” “name to use,” “recorded sex or gender,” and “Sex Parameter for Clinical Use.” Because the CDA person name supports name use time frames, this guide does not specify a template for “name to use.” It includes templates for each of the remaining four classes. It also includes one inherited template used by “Sex Parameter for Clinical Use.”
 
 **Guidance on use of gender harmony artifacts in systems**
 
-This guide does not define any document or section templates, and it does not specify what documents or document sections should contain these templates. The templates can be adopted by any organization that finds them useful, in any way it finds useful. It is expected that entries based on three templates (Gender Identity, Pronouns, and Recorded Sex or Gender) will be contained in a Social History section, but this is not a constraint. The Sex for Clinical Use template has its own rules for where it should be used.
+This guide does not define any document or section templates, and it does not specify what documents or document sections should contain these templates. The templates can be adopted by any organization that finds them useful, in any way it finds useful. It is expected that entries based on three templates (Gender Identity, Pronouns, and Recorded Sex or Gender) will be contained in a Social History section, but this is not a constraint. The Sex Parameter for Clinical Use template has its own rules for where it should be used.
 
 As most guides specify “open” templates, inclusion of these entries where appropriate should be feasible. Open templates allow HL7 implementers to develop additional structured content not defined within any specific guide. In open templates, all of the features of the CDA R2 base specification are allowed except as constrained by the templates. By contrast, a closed template specifies everything that is allowed and nothing further may be included.
 
@@ -34,7 +34,7 @@ Name to use, as noted above, is not templated, as it is supported by Person Name
 
 Pronouns is a new template.
 
-Sex for Clinical Use is a new template.
+Sex Parameter for Clinical Use is a new template.
 
 The Gender Identity template is very similar to an existing template in the C-CDA companion guide, which many may have already implemented. The new template was designed to be compatible with the prior one, and all of its constraints are looser, so it is feasible to use both template IDs in a template instance. The most significant difference, and one we hope implementers will find useful, is a value set that addresses gender only, without precoordinated history. 
 
@@ -52,22 +52,22 @@ One concern was translation: would adopting the “name-value” option in CDA c
 
 Another consideration is semantic scope. Three of the templates – gender identity, pronouns, and recorded sex or gender – have patient scope. Their inclusion in a Social History section seems appropriate for anticipated use cases.
 
-Sex for Clinical Use (SFCU) is different. It is designed to contextualize clinical operations. It may constrain the execution of a specific intervention, or it may affect the interpretation of a specific result. The target activity scopes the validity of the observation. The requirement unique to SFCU is to associate the SFCU observation with the appropriate target or targets.
+Sex Parameter for Clinical Use (SPCU) is different. It is designed to contextualize clinical operations. It may constrain the execution of a specific intervention, or it may affect the interpretation of a specific result. The target activity scopes the validity of the observation. The requirement unique to SPCU is to associate the SPCU observation with the appropriate target or targets.
 
 CDA supports multiple approaches for asserting relationships among entries.
 
-Putting the SFCU observation in a section with the entries it constrains would not imply the required information. Document section boundaries do not carry or imply semantics.
+Putting the SPCU observation in a section with the entries it constrains would not imply the required information. Document section boundaries do not carry or imply semantics.
 
-One approach would be to use the Entry Reference template to associate an SFCU with those entries to which it applies. This is a quite flexible approach, but it may rely on a level of sophistication that not all implementers can support, and it makes visual rendering difficult.
+One approach would be to use the Entry Reference template to associate an SPCU with those entries to which it applies. This is a quite flexible approach, but it may rely on a level of sophistication that not all implementers can support, and it makes visual rendering difficult.
 
-The template defined here describes an approach using entryRelationship to establish context specific to an entry, to an encounter, or to the patient generally. This approach leverages context conduction appropriately, and it is a tactic with which many implementers are familiar. It also requires the use of the Entry Reference template where the SFCU applies to multiple entries.
+The template defined here describes an approach using entryRelationship to establish context specific to an entry, to an encounter, or to the patient generally. This approach leverages context conduction appropriately, and it is a tactic with which many implementers are familiar. It also requires the use of the Entry Reference template where the SPCU applies to multiple entries.
 
 
 <!--<div class="note-to-balloters">
 <ol>
  <li>Is more directive guidance warranted for what kinds of artifacts may include these entry templates?</li>
   <li>Is “derivationExpr” an appropriate representation of a natural language definition, or should that property of Recorded Sex or Gender be rendered as methodCode or another sub-entry?</li>
-  <li>Every effort has been made to ensure that Sex for Clinical Use is flexible enough to support a variety of use cases. However, the cases tend to fall into two classes: reference ranges for interpreting findings and context constraining the execution of a procedure. The latter is rare in clinical documents. Is this level of flexibility necessary or appropriate for this context? </li>
+  <li>Every effort has been made to ensure that Sex Parameter for Clinical Use is flexible enough to support a variety of use cases. However, the cases tend to fall into two classes: reference ranges for interpreting findings and context constraining the execution of a procedure. The latter is rare in clinical documents. Is this level of flexibility necessary or appropriate for this context? </li>
 </ol>
 </div>
 -->

@@ -11,20 +11,35 @@ Date             Jira ticket        Updated by                   Comment
 ### Representing Sex & Gender Implementation Guide Examples.
 #### Gender Identity Observation Example
 ```
+<!-- Examples - Identifies as male gender since DOB to 15; then as non binary starting in 2014 -->
 <observation classCode="OBS" moodCode="EVN">
-     <templateId root="2.16.840.1.113883.10.15.1" extension="2022-09-01"/>
-     <code code="76691-5" codeSystem="2.16.840.1.113883.6.1"
-           displayName="Gender Identity"/>
-     <statusCode code="completed"/>
-     <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96"
-          codeSystemName="SNOMED CT" code="446151000124109"
-          displayName="Identifies as male gender">
-     </value>
+    <templateId root="2.16.840.1.113883.10.15.1" extension="2022-09-01" />
+    <code code="76691-5" codeSystem="2.16.840.1.113883.6.1" displayName="Gender Identity" />
+    <statusCode code="completed" />
+    <effectiveTime>
+        <low value="19990103" />
+        <high value="2014" />
+    </effectiveTime>
+    <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="446151000124109" displayName="Identifies as male gender"></value>
 </observation>
+...
+  
+<observation classCode="OBS" moodCode="EVN">
+    <templateId root="2.16.840.1.113883.10.15.1" extension="2022-09-01" />
+    <code code="76691-5" codeSystem="2.16.840.1.113883.6.1" displayName="Gender Identity" />
+    <statusCode code="completed" />
+    <effectiveTime>
+        <low value="2014" />
+    </effectiveTime>
+    <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" code="33791000087" displayName="Identifies as nonbinary gender"></value>
+</observation>
+
+...
+ 
 ```
 #### Pronouns Observation Example
 ```
-<observation classCode="OBS" moodCode="EVN">
+ <observation classCode="OBS" moodCode="EVN">
      <templateId root="2.16.840.1.113883.10.15.2" extension="2022-09-01"/>
      <code code="90778-2" codeSystem="2.16.840.1.113883.6.1"
           displayName="Personal pronouns"/>
@@ -33,68 +48,59 @@ Date             Jira ticket        Updated by                   Comment
           codeSystemName="LOINC" code="LA29518-0"
           displayName="He, Him, His, Himself"/>
 </observation>
+
 ```
 #### Recorded Sex or Gender
 ```
 <observation classCode="OBS" moodCode="EVN">
-    <templateId root="2.16.840.1.113883.10.15.4" extension="2022-09-01"/>
-    <code code="99502-7" codeSystem="2.16.840.1.113883.6.1"
-          displayName="Recorded sex or gender"/>
-    <derivationExpr>Enter whether the infant is male, female, or if the sex
-          of the infant is ambiguous, enter “unknown.”</derivationExpr>
-    <statusCode code="completed"/>
-    <value xsi:type="CD" code="F">
-        <translation code="F" codeSystem="2.16.840.1.113883.11.19756"
-          codeSystemName="International Civil Aviation Organization Sex or Gender"
-          displayName="Female"/>
-    </value>
-    <entryRelationship typeCode="COMP">
+    <templateId root="2.16.840.1.113883.10.15.4" extension="2022-09-01" />
+    
+    <!--  http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender/type  -->
+    <code code="76689-9" codeSystem="2.16.840.1.113883.6.1" displayName="Sex assigned at birthr" />
+    <statusCode code="completed" />
+    <!--  http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender/effectivePeriod -->
+    <effectiveTime>
+        <low value="202103" />
+    </effectiveTime>
+    <!--  http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender/value -->
+    <value xsi:type="CD" code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male" codeSystemName="AdministrativeGender" />
+    <author>
+        <!--  http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender/acquisitionDate -->
+        <time value="20230115" />
+    </author>
+    <entryRelationship typeCode="QUALF">
         <!-- Jurisdiction -->
         <observation classCode="OBS" moodCode="EVN">
-            <code code="77969-4" codeSystem="2.16.840.1.113883.6.1"
-                    displayName="Jurisdiction code"/>
-            <statusCode code="completed"/>
+            <templateId root="22.16.840.1.113883.10.15.4.1" extension="2022-09-01" />
+            <code code="77969-4" codeSystem="2.16.840.1.113883.6.1" displayName="Jurisdiction code" />
+            <statusCode code="completed" />
             <value xsi:type="CD" nullFlavor="OTH" codeSystem="NP">
                 <!-- This may be coded but does not have to be -->
                 <originalText>California</originalText>
             </value>
         </observation>
     </entryRelationship>
-    <entryRelationship typeCode="COMP">
-        <!-- Document Type -->
+    <entryRelationship typeCode="REFR">
+        <!-- Source Record Field Type -->
         <observation classCode="OBS" moodCode="EVN">
-            <code code="92183-3" codeSystem="2.16.840.1.113883.6.1"
-                    displayName="Document type"/>
-            <statusCode code="completed"/>
-            <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.1"
-                    codeSystemName="LOINC" code="71230-7"
-                    displayName="Birth Certificate"/>
+            <templateId root="2.16.840.1.113883.10.15.4.74" extension="2022-09-01" />
+            <code code="48766-0" codeSystem="2.16.840.1.113883.6.1" displayName="Information Source" />
+            <statusCode code="completed" />
+            <value xsi:type="ED">BIRTH SEX</value>
         </observation>
     </entryRelationship>
-    <entryRelationship typeCode="COMP">
-        <!-- Date of Entry -->
-        <observation classCode="OBS" moodCode="EVN">
-            <code code="50786-3" codeSystem="2.16.840.1.113883.6.1"
-                    displayName="Date of entry"/>
-            <statusCode code="completed"/>
-            <value xsi:type="TS" value="201201011450+0600"/>
-        </observation>
-    </entryRelationship>
-    <!-- Element Type -->
-    <entryRelationship>
-        <observation classCode="OBS" moodCode="EVN">
-            <code code="TempElementType" codeSystem="2.16.840.1.113883.6.1"
-displayName="Element type"/>
-            <statusCode code="completed"/>
-            <value xsi:type="CD" codeSystem="2.16.840.1.113883.6.1"
-codeSystemName="LOINC" code="76689-9"
-displayName="Sex assigned at birth"/>
-        </observation>
-    </entryRelationship>
+    <reference typeCode="REFR">
+        <!--  http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender/sourceDocument -->
+        <externalDocument classCode="DOCCLIN" moodCode="EVN">
+            <code codeSystem="" codeSystemName="" code="" displayName="" />
+            <text>California Drivers License</text>
+        </externalDocument>
+    </reference>
 </observation>
 ```
-#### Sex for Clinical Use
-```<observation classCode="OBS" moodCode="EVN">
+#### Sex Parameter for Clinical Use
+```
+<observation classCode="OBS" moodCode="EVN">
     <templateId root="2.16.840.1.113883.10.15.3"
         extension="2022-09-01"/>
     <code code="99501-9" codeSystem="2.16.840.1.113883.6.1"
@@ -110,11 +116,12 @@ displayName="Sex assigned at birth"/>
         <act classCode="ACT" moodCode="EVN">
             <templateId root="2.16.840.1.113883.10.20.22.4.122"/>
             <id root="6C844C75-AA34-411C-B7BD-5E4A9F206E29"/>
-            <code nullFlavor="OTH" codeSystem="NP"/>
+            <code nullFlavor="OTH" />
             <statusCode code="completed"/>
         </act>
     </entryRelationship>
 </observation>
+
 ```
 
 
