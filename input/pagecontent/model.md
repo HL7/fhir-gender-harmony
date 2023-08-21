@@ -1,7 +1,8 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2411         Joanie Harper                Added closing parentheses per the Jira ticket https://jira.hl7.org/browse/OTHER-2411
-2023-06-16       OTHER-2586         Joanie Harper                Change field name from Jurisdiction to Issuer, added **Definition**, and put Cardinality on its own line per https://jira.hl7.org/browse/OTHER-2586
+2023-06-16       OTHER-2586         Joanie Harper                Change field name from Jurisdiction to Issuer, added **Definition**, and put Cardinality on its own
+                                                                   line per https://jira.hl7.org/browse/OTHER-2586
 2023-06-16       OTHER-2587         Joanie Harper                update Source Field Name and Source Field Desription per Jira ticket https://jira.hl7.org/browse/OTHER-2587
 2023-06-16       OTHER-2575         Joanie Harper                Added hyphens per Jira ticket https://jira.hl7.org/browse/OTHER-2575
 2023-06-16       OTHER-2578         Joanie Harper                Updated SPCU section per Jira ticket https://jira.hl7.org/browse/OTHER-2578
@@ -11,7 +12,8 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-17       OTHER-2557         Cooper Thompson              Clarified terminology expectations for RSG
 2023-07-25		  OTHER-2708	    	Carol Macumber		 	     	  GI Usage Note change per OTHER-2708
 2023-07-25       OTHER-2539	    	Carol Macumber		 		     GI Usage Note change per OTHER-2539
-2023-07-26		  OTHER-2570			Carol Macumber				     Standardized the use of "Gender Harmony initial informative specification"  when referring to initial specification
+2023-07-26		  OTHER-2570			Carol Macumber				     Standardized the use of "Gender Harmony initial informative specification"  when referring to initial 
+                                                                  specification
 2023-08-08       OTHER-2577         Joanie Harper                update text per Jira ticket 
 2023-08-08       OTHER-2585         Joanie Harper                update text per Jira ticket 
 2023-08-08       OTHER-2420         Joanie Harper                update text per Jira ticket 
@@ -370,7 +372,7 @@ When evaluating when and how to exchange sex or gender concepts, consider whethe
    * Creating jurisdiction or use case specific structures that are directly tied to the specific concept being exchanged, such as:
       * New jurisdictional or use case specific extensions for FHIR
       * [us-core-birthsex](http://hl7.org/fhir/us/core/StructureDefinition-us-core-birthsex.html)
-	  * [us-core-sex](http://hl7.org/fhir/us/core/StructureDefinition-us-core-sex.html)
+	   * [us-core-sex](http://hl7.org/fhir/us/core/StructureDefinition-us-core-sex.html)
       * [ukcore-birthsex](https://simplifier.net/hl7fhirukcorer4/extension-ukcore-birthsex)
       * New template for CDA
    * Using a generic structure

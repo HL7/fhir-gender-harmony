@@ -9,6 +9,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-31       OTHER-2421         Joanie Harper                Update the first sentence of the "Vendors" section per the Jira ticket https://jira.hl7.org/browse/OTHER-2421
 2023-07-31       OTHER-2515         Joanie Harper                Update the name of the "Vendors" section to "HIT System solution providers" per the Jira ticket https://jira.hl7.org/browse/OTHER-2515
 2023-08-20       OTHER-2602         Rob McClure                  Remove Notes to balloters
+2023-08-21       OTHER-2532         Joanie Harper                Added links to the model page for the items that are In Scope
 -->
 
 <!-- NOTES on ballot:
@@ -78,11 +79,12 @@ Currently, it is common that a single data element is used to capture both sex a
 The consultative process that has produced this HL7 guide continues the work of the initial GH project and reflects clinical end user needs on balance with contributors from 2SLGBTQIA+ <a href="#fn2">fn2</a>  organizations such as Fenway Health and active participants with lived experience from the United States and Canada. Vendors were included from Japan, Germany, India, and the United States.
 
 The in-scope core list of specific gender and sex use-data elements described by the specification, are as follows:
-1. Gender Identity (GI)
-1. Sex Parameter for Clinical Use (SPCU)
-1. Recorded Sex and Gender (RSG)
-1. Pronouns 
-1. Name to Use
+The in-scope core list of specific gender and sex use-data elements described by the specification, are as follows:
+1. [Gender Identity (GI)](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#gender-identity-gi)
+2. [Sex Parameter for Clinical Use (SPCU)](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#sex-parameter-for-clinical-use-spcu)
+3. [Recorded Sex and Gender (RSG)](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#recorded-sex-or-gender-rsg)
+4. [Pronouns](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#pronouns) 
+5. [Name to Use](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#name-to-use-ntu)
 
 This guide builds upon the [Gender Harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) by providing HL7 product family specific additions that define how to send the information noted above in:
 ##### FHIR

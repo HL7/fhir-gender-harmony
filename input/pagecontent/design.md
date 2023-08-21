@@ -25,6 +25,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-15    OTHER-2589          Rob McClure                   Changed Pronouns model "Supports additional values to example
 2023-08-18    No JIRA              Rob McClure                  RSG "Designated value set" is listing incorrect value set - this is the Admin gender value set. This is switched with Source field value set
 2023-08-18    OTHER-2479, OTHER-2496   Rob McClure               Updated RSG section to aling with change in source document to be a concept domain (table 0826). Also updated GSR field ids in RSG table for V2 after removal of International equivalent field
+2023-07-24       OTHER-2544         Joanie Harper                Fixed some link formatting in the Name to Use table.
 -->
 
 The discussion around gender harmony has been on-going for several years. This implementation guide is based on the logical [Gender Harmony initial informative specification ](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) published in 2021 and the evolution of the Gender Harmony Project (GHP) team’s understanding of how sex and gender information is implemented currently and how it could be more effectively implemented in electronic healthcare systems. Based upon input from the community, the Gender Harmony project has defined (and prefers) implementing a model using extensions so that the added information is “close to user,” but it is clear that as an alternative users may choose to implement the information as observations in a manner similar to that found in the Gravity Project, for example [Observation Recorded Sex Gender](http://hl7.org/fhir/us/sdoh-clinicalcare/STU2/StructureDefinition-SDOHCC-ObservationRecordedSexGender.html).
@@ -65,15 +66,15 @@ table, th, td {
 |Support GH attribute = validity period, type = duration|Validity Range (GSP-6) with datatype Date Range(DR)|[Datatype: Period](http://build.fhir.org/datatypes.html#Period) (http://build.fhir.org/datatypes.html#Period)|effectiveTime (CONF:4536-69)|
 |Support GH attribute = comment, type = string|Comment (GSP-7) with datatype Text (TX)|Comment, datatype: string|Text (CONF:4536-72)|
 
-**Name to Use**
+**Name to Use**https://jira.hl7.org/browse/OTHER-2674
 
 |[**Logical Model Requirement**](https://build.fhir.org/ig/HL7/fhir-gender-harmony/branches/main/model.html)|**V2**|**FHIR**|**CDA**|
 | :- | :- | :- | :- |
 |Support recording a Name to Use|Patient Name PID-5<br>applicable to ANY name, where datatype: Extended Person Name (XPN) is used and name type code (XPN.7) is valued 'N'<br>Applicable to ANY name, where datatype: Extended (XCN) is used and name type code (XCN.10) is valued 'N'|Resource.name using HumanName datatype, HumanName.use element |Record Target name|
-|Support structured type = Name |Datatype: Extended Person Name (XPN)|[Datatype: HumanName](http://hl7.org/fhir/2022Sep/datatypes.html#HumanName) (http://hl7.org/fhir/2022Sep/datatypes.html#HumanName)<br>Element: HumanName.use set to value "usual"|[Patient.name](http://patient.name/)|
+|Support structured type = Name |Datatype: Extended Person Name (XPN)|Datatype: [HumanName](http://hl7.org/fhir/2022Sep/datatypes.html#HumanName) <br>Element: HumanName.use set to value "usual"|[Patient.name](http://patient.name/)|
 |Associate with person|XPN: Patient Name (PID-5), Next of Kin Name (NK1-2), Staff Name (STF-3), Guarantor Name (GT1-3), Payee Person Name (PYE-5), etc.<br>XCN: Ordering Provider (ORC-12/OBR-16), Participating Person (PRT-5), Attending Doctor (PV1-7), Referring Doctor (PV1-8), etc.|Include in following Resources: Patient, Person, RelatedPerson, Practioner|[Patient.name](http://patient.name/)|
 |Support zero to many instances|[0..\*]|[0..\*]|[0..\*]|
-|Support GH attribute = validity period, type = duration|XPN.12 for start date with datatype Time Stamp (TS)<br>XPN.13 for Expiration date with datatype Time Stamp (TS)|Datatype: Period (http://build.fhir.org/datatypes.html#Period)|PersonName.validTime|
+|Support GH attribute = validity period, type = duration|XPN.12 for start date with datatype Time Stamp (TS)<br>XPN.13 for Expiration date with datatype Time Stamp (TS)|Datatype: [Period](http://build.fhir.org/datatypes.html#Period)|PersonName.validTime|
 
 **Sex Parameter for Clinical Use**
 
