@@ -127,6 +127,7 @@ With the exception of the following noted changes, the model included in this im
 #### Pronouns
 - Update of Pronoun binding strength to Example.
    -  The binding strength to the Pronoun value set was originally extensible. In reviewers agreed that this needed to be loosened to example across products to allow for greater flexibility in establishing a base set of jurisdiction appropriate pronouns. 
+
 ### Person
 
 **Definition:** This is an abstract representing a person.
