@@ -1,14 +1,14 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-06-14       OTHER-2609         Joanie Harper                Added hyphen per Jira ticket https://jira.hl7.org/browse/OTHER-2609
-
+2023-08-22      OTHER-2710          Rob McClure                 Added LOINC section, arranged sections in alpha order
 
 -->
 
 ### DICOM
 
 The existing [DICOM](https://www.dicomstandard.org) (Digital Imaging and 
-COmmunications in Medicine) model dates back to 1985 and earlier work. It 
+Communications in Medicine) model dates back to 1985 and earlier work. It 
 was frozen and has remained unchanged since 1995. Imaging medical records
 from 1995 onward all use this model. The DICOM model was originally
 specified to include a single mandatory field to capture Patient's Sex
@@ -73,14 +73,18 @@ dependency on upgrading other equipment.
 DICOM is coordinating the development and approval of this change
 proposal with the activity of the Gender Harmony project. 
 
+### LOINC
+[Logical Observation Identifiers Names and Codes (LOINC)](https://loinc.org/) is "the international standard for identifying health measurements, observations, and documents." LOINC is released twice a year (Feburary and August) under Creative Commons Attribution 4.0 International Public License. Gender harmony project uses LOINC clinical identifiers to represent the following observations:
 
-### SNOMED International
-[SNOMED International](https://www.snomed.org) produces and maintains SNOMED CT, a globally recognized and used terminology standard for electronic health data. In 2021, a group of subject matter experts were gathered to participate in a Sex and Gender Clinical Project Group to provide advice on sex and gender terminology requirements for health record data. The group was closed in May 2021, pending the results of the ISO TC215 (Health Informatics) WG3. 
+- Gender identity (GI): [76691-5](https://loinc.org/76691-5/)
+- Sex parameter for clinical use (SPCU): [99501-9](https://loinc.org/99501-9/)
+- Recorded sex or gender (RSG): [99502-7](https://loinc.org/99502-7/)
+- Personal pronouns - Reported: [90778-2](https://loinc.org/90778-2/)
+- LOINC does not have an observable that specifically represents a person's chosen name to use.
 
-As a consensus standard that strives to align with international standards groups working in the same domain, SNOMED International will participate with ISO TC215 WG3 in their efforts in this domain to ensure international alignment. 
+All of the above observations align directly with the gender harmony content, including expected values. 
 
-SNOMED International recognizes that there may be omissions, outdated or erroneous content in the disorders and procedure hierarchies related to sex and gender in SNOMED CT and encourages submissions of content requests for change through the appropriate National Release Centers (NRCs). 
-
+In addition to the above, LOINC also includes the useful observation Sexual orientation ([76690-7](https://loinc.org/76690-7/)).
 
 ### NCPDP
 The [National Council for Prescription Drug Programs (NCPDP)](https://www.ncpdp.org) is an ANSI-accredited SDO representing the pharmacy services industry. The NCPDP SCRIPT ERx standard is used in EHR systems. The current values under the standard, labeled Gender, are F (Female), M (Male), and U (Unknown).
@@ -90,6 +94,13 @@ However, NCPDP is moving to include both Administrative Gender and Sex at Birth 
 Currently, NCPDP has approved the field Sex Assigned at Birth that will be used as an optional field in the event the Sex Assigned at Birth (if present) differs from the current XML element Gender. For example, the Sex Assigned at Birth could be “Male” with the Gender field “Female”.
 
 Note: The NCPDP Gender Transition Task Group determined the Conditional Gender Code (C08- 4T), and Purchaser Gender Code (595-YY) were not applicable to patient matching. There was also an added element of “Reproductive Potential”.
+
+### SNOMED International
+[SNOMED International](https://www.snomed.org) produces and maintains SNOMED CT, a globally recognized and used terminology standard for electronic health data. In 2021, a group of subject matter experts were gathered to participate in a Sex and Gender Clinical Project Group to provide advice on sex and gender terminology requirements for health record data. The group was closed in May 2021, pending the results of the ISO TC215 (Health Informatics) WG3. 
+
+As a consensus standard that strives to align with international standards groups working in the same domain, SNOMED International will participate with ISO TC215 WG3 in their efforts in this domain to ensure international alignment. 
+
+SNOMED International recognizes that there may be omissions, outdated or erroneous content in the disorders and procedure hierarchies related to sex and gender in SNOMED CT and encourages submissions of content requests for change through the appropriate National Release Centers (NRCs). 
 
 ### X12
 [X12](https://x12.org) is an ANSI-accredited Standards Developer (ASD) that develops and maintains business-to-business
