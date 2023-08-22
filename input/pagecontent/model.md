@@ -24,6 +24,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-08       OTHER-2540         Joanie Harper                add links for minValueSets per Jira ticket 
 2023-08-08       OTHER-2576         Joanie Harper                update text per Jira ticket 
 2023-08-14       OTHER-2709         Joanie Harper                update text per Jira ticket 
+2023-08-22       OTHER-2532         Rob McClure                   Clarify use of "sex or gender"
 -->
 
 ### Modeling Sex and Gender Representation
@@ -51,6 +52,8 @@ changes in individual standards to concretely specify actual
 implementable structures are detailed in separate specifications (insert
 links to (HL7 v2, FHIR, DICOM etc.) while this implementation guide
 provides additional guidance and use cases.
+
+In this document, and elsewhere, the phrase “sex or gender” is used to characterize data in which the contextual meaning of the the datum is unclear and its use is an acknowledgement that human discourse regarding this information is often equally unclear. Use of this phrase is not intended to mean a unification of information that is more clearly either SPCU or gender identity.
 
 ### Model Overview
 

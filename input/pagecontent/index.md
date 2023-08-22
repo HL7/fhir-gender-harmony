@@ -80,11 +80,11 @@ The consultative process that has produced this HL7 guide continues the work of 
 
 The in-scope core list of specific gender and sex use-data elements described by the specification, are as follows:
 The in-scope core list of specific gender and sex use-data elements described by the specification, are as follows:
-1. [Gender Identity (GI)](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#gender-identity-gi)
-2. [Sex Parameter for Clinical Use (SPCU)](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#sex-parameter-for-clinical-use-spcu)
-3. [Recorded Sex and Gender (RSG)](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#recorded-sex-or-gender-rsg)
-4. [Pronouns](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#pronouns) 
-5. [Name to Use](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#name-to-use-ntu)
+1. [Gender Identity (GI)](model.html#gender-identity-gi)
+2. [Sex Parameter for Clinical Use (SPCU)](model.html#sex-parameter-for-clinical-use-spcu)
+3. [Recorded Sex and Gender (RSG)](model.html#recorded-sex-or-gender-rsg)
+4. [Pronouns](model.html#pronouns) 
+5. [Name to Use](model.html#name-to-use-ntu)
 
 This guide builds upon the [Gender Harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) by providing HL7 product family specific additions that define how to send the information noted above in:
 ##### FHIR
