@@ -25,6 +25,8 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-08       OTHER-2576         Joanie Harper                update text per Jira ticket 
 2023-08-14       OTHER-2709         Joanie Harper                update text per Jira ticket 
 2023-08-22       OTHER-2532         Rob McClure                   Clarify use of "sex or gender"
+2023-08-22        various           Rob McClure                Updated RSG description and Usage Notes to clarify that SAAB (and Administrative Gender) can be directly exchanged without "wrapping" in RSG template and as such they should be considered a conformant exchange of USCDI v4 "Sex"
+2023-08-22        OTHER-2512        Rob McClure                Confirmed removal of ICAO element and added explanation of change.
 -->
 
 ### Modeling Sex and Gender Representation
@@ -338,10 +340,6 @@ information may be provided in the Comment attribute.
 
 Recorded Sex or Gender information may originate from a physical or electronic document that was provided to a medical provider. This information may also originate from fields in medical systems that were initially populated using those documents, or via patient attestations.  The rules for collection of these documents and fields have varied significantly over time and place therefore  the relationship to current Gender Identity or Sex Parameters for Clinical Use may be unclear. 
 
-
-
-Sex assigned at birth (SAAB), while very common and considered essential in some jurisdictions, is considered a RSG entry. In these cases, the “identity type” could be specified as “sex assigned at birth” or another regionally specific short text string. As a result of feedback from the Gender Harmony project and in-line with the Gender Harmony model, the US Office of the National Coordinator (ONC) recognized in its Standards Bulletin (SB22-2), regarding the development and finalization of United States Core Data for Interoperability (USCDI) Version 3, that “the data element Sex (Assigned at Birth) is used to represent different concepts not necessarily associated with what is assigned at the time of birth, such as clinically relevant sex for labs or diagnostic imaging, as well as administrative sex as recorded on birth certificates and health forms.” As a result, ONC changed the name of the data element to “Sex” acknowledging the previous limitation to information at birth.
-
 The RSG model includes source information so that the definition of “X” in a driver’s license can be found if necessary and the jurisdiction can be recorded.
 
 
@@ -349,7 +347,7 @@ The RSG model includes source information so that the definition of “X” in a
 
 **Usage Note:** If a medical system needs to exchange a single internal field labeled “sex” which, over time, has been used to capture both sex and gender, Recorded Sex or Gender may be an appropriate way to exchange such data. 
 
-Note that administrative gender, administrative sex, and sex assigned at birth are exchanged today, but are not Gender Identity (GI) or Sex Parameter for Clinical Use (SPCU), and thus are examples of Recorded Sex or Gender (RSG). It is expected that these existing concepts may be exchanged using established methods.
+It is understood that administrative gender, administrative sex, and sex assigned at birth are exchanged today, and when exchanged in this way the data should not be considered a representation of Gender Identity (GI) or Sex Parameter for Clinical Use (SPCU). It is expected that these concepts may continue to be exchanged using existing established methods without using RSG. But, when SAAB *is exchanged as an RSG entry* the "type” should be specified as “sex assigned at birth” or another regionally specific short text string. As a result of feedback from the Gender Harmony project and in-line with the Gender Harmony model, the US Office of the National Coordinator (ONC) recognized in its Standards Bulletin (SB22-2), regarding the development and finalization of United States Core Data for Interoperability (USCDI) Version 3, that “the data element Sex (Assigned at Birth) is used to represent different concepts not necessarily associated with what is assigned at the time of birth, such as clinically relevant sex for labs or diagnostic imaging, as well as administrative sex as recorded on birth certificates and health forms.” As a result, ONC changed the name of the data element to “Sex” acknowledging the previous limitation to birth information documentation.
 
 **Cardinality:** 0..n
 
@@ -398,6 +396,8 @@ value 'ж' for sex.
 -   Cardinality: 1..1
 
 -   Type: Code or constrained short text
+
+Note that based upon ballot feedback, the proposed InternationalEquivalentRecordedSexOrGender element with values based upon the International Civil Aviation Organization (ICAO) code system is no longer included. Implementers may provide an ICAO translation to the value provided.
 
 
 ##### Type
