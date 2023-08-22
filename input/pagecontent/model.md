@@ -27,6 +27,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-22       OTHER-2532         Rob McClure                   Clarify use of "sex or gender"
 2023-08-22        various           Rob McClure                Updated RSG description and Usage Notes to clarify that SAAB (and Administrative Gender) can be directly exchanged without "wrapping" in RSG template and as such they should be considered a conformant exchange of USCDI v4 "Sex"
 2023-08-22        OTHER-2512        Rob McClure                Confirmed removal of ICAO element and added explanation of change.
+2023-08-22        OTHER-2589        Ro McClure                 Added section noting changes in the model when compared to original. Confirmed changes in bindings. provided links to binding strength definitions.
 -->
 
 ### Modeling Sex and Gender Representation
@@ -116,6 +117,16 @@ about the context and reason for selection may be incorporated into the
 link to observations or reports that are part of the SPCU, or in the
 comment associated with Gender Identity.
 
+### Updates to the model compared to original specification
+With the exception of the following noted changes, the model included in this implementation guide matches the model in the published Gender Harmony Informative Specification.
+#### Recorded Sex or Gender
+- Addition of Recorded Sex or Gender attribute = type with datatype = code or constrained text
+   -  This addition was made to align with the original context of the data exchanged as an RSG so that users may specify the type or category of sex or gender that is recorded (e.g., "Sex").
+-  Removed the InternationalEquivalentRecordedSexOrGender element
+   -  Reviewers agreed that explicit inclusion of the translation of the value to a code from International Civil Aviation Organization (ICAO) code system was not useful. Implementers that want to send this may do so as a translation of the primary value.
+#### Pronouns
+- Update of Pronoun binding strength to Example.
+   -  The binding strength to the Pronoun value set was originally extensible. In reviewers agreed that this needed to be loosened to example across products to allow for greater flexibility in establishing a base set of jurisdiction appropriate pronouns. 
 ### Person
 
 **Definition:** This is an abstract representing a person.
@@ -163,9 +174,9 @@ individual's identity, ascertained by asking them what that identity is.
 
 -   Proposed Terminology:
 
-    -   minValueSet: [Gender Identity](http://terminology.hl7.org/ValueSet/gender-identity) valueSet
+    -   [minValueSet](http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet): [Gender Identity](http://terminology.hl7.org/ValueSet/gender-identity) valueSet
 
-    -   binding Strength: extensible
+    -   [binding Strength](http://hl7.org/fhir/R5/terminologies.html#strength): [extensible](http://hl7.org/fhir/R5/terminologies.html#extensible)
 
 ##### Validity Period 
 
@@ -290,9 +301,9 @@ the FHIR R5 page listed here: [Sex Parameter for Clinical Use](https://build.fhi
 
 -   Proposed Terminology:
 
-    -   minValueSet: [SexForClinicalUseCategory](http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use) valueSet
+    -   ValueSet: [SexForClinicalUseCategory](http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use) valueSet
 
-    -   binding Strength: required
+    -   [binding Strength](http://hl7.org/fhir/R5/terminologies.html#strength): [required](http://hl7.org/fhir/R5/terminologies.html#required)
 
 ##### Validity Period
 
@@ -562,9 +573,9 @@ those in the care setting.
 
 -   Proposed Terminology:
 
-    -   minValueSet: [Pronouns](http://terminology.hl7.org/ValueSet/pronouns) valueSet
+    -   ValueSet: [Pronouns](http://terminology.hl7.org/ValueSet/pronouns) valueSet
 
-    -   binding Strength: extensible
+    -   [binding Strength](http://hl7.org/fhir/R5/terminologies.html#strength): [example](http://hl7.org/fhir/R5/terminologies.html#example)
 
 ##### Validity Period
 

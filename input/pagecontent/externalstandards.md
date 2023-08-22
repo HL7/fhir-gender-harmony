@@ -79,10 +79,11 @@ proposal with the activity of the Gender Harmony project.
 - Gender identity (GI): [76691-5](https://loinc.org/76691-5/)
 - Sex parameter for clinical use (SPCU): [99501-9](https://loinc.org/99501-9/)
 - Recorded sex or gender (RSG): [99502-7](https://loinc.org/99502-7/)
+  - The LOINC set of [example answer values](https://loinc.org/LL6134-2) is provided as just an example set by LOINC and while useful, is not intended to be a required implementation.
 - Personal pronouns - Reported: [90778-2](https://loinc.org/90778-2/)
 - LOINC does not have an observable that specifically represents a person's chosen name to use.
 
-All of the above observations align directly with the gender harmony content, including expected values. 
+All of the above observations align directly with the gender harmony content. 
 
 In addition to the above, LOINC also includes the useful observation Sexual orientation ([76690-7](https://loinc.org/76690-7/)).
 
