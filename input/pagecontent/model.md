@@ -52,7 +52,7 @@ The [Gender Harmony initial informative specification](http://www.hl7.org/implem
 accurately capture sex and gender identity along with associated context of use.
 While the framework provides the necessary infrastructure, the specific
 changes in individual standards to concretely specify actual
-implementable structures are detailed in separate specifications (insert
+implementable structures are detailed in separate specifications (xxinsert
 links to (HL7 v2, FHIR, DICOM etc.) while this implementation guide
 provides additional guidance and use cases.
 
