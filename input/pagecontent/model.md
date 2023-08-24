@@ -1,7 +1,8 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2411         Joanie Harper                Added closing parentheses per the Jira ticket https://jira.hl7.org/browse/OTHER-2411
-2023-06-16       OTHER-2586         Joanie Harper                Change field name from Jurisdiction to Issuer, added **Definition**, and put Cardinality on its own line per https://jira.hl7.org/browse/OTHER-2586
+2023-06-16       OTHER-2586         Joanie Harper                Change field name from Jurisdiction to Issuer, added **Definition**, and put Cardinality on its own
+                                                                   line per https://jira.hl7.org/browse/OTHER-2586
 2023-06-16       OTHER-2587         Joanie Harper                update Source Field Name and Source Field Desription per Jira ticket https://jira.hl7.org/browse/OTHER-2587
 2023-06-16       OTHER-2575         Joanie Harper                Added hyphens per Jira ticket https://jira.hl7.org/browse/OTHER-2575
 2023-06-16       OTHER-2578         Joanie Harper                Updated SPCU section per Jira ticket https://jira.hl7.org/browse/OTHER-2578
@@ -9,10 +10,24 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-13       OTHER-2463         Cooper Thompson              Updated RSG model definition and other narrative
 2023-07-13       V2-25452           Cooper Thompson              Removed international equivalent references
 2023-07-17       OTHER-2557         Cooper Thompson              Clarified terminology expectations for RSG
-2023-07-25		 OTHER-2708	    	Carol Macumber		 		 GI Usage Note change per OTHER-2708
-2023-07-25    	 OTHER-2539	    	Carol Macumber		 		 GI Usage Note change per OTHER-2539
-2023-07-26		 OTHER-2570			Carol Macumber				 Standardized the use of "Gender Harmony initial informative specification"  when referring to initial specification
-2023-08-23		 OTHER-2573			Carol Macumber				Added clarification per OTHER-2573 about Patient resource
+2023-07-25		  OTHER-2708	    	Carol Macumber		 	     	  GI Usage Note change per OTHER-2708
+2023-07-25       OTHER-2539	    	Carol Macumber		 		     GI Usage Note change per OTHER-2539
+2023-07-26		  OTHER-2570			Carol Macumber				     Standardized the use of "Gender Harmony initial informative specification"  when referring to initial 
+                                                                  specification
+2023-08-08       OTHER-2577         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2585         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2420         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2625         Joanie Harper                removed sentence per Jira ticket 
+2023-08-08       OTHER-2582         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2581         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2494         Joanie Harper                update text per Jira ticket 
+2023-08-08       OTHER-2540         Joanie Harper                add links for minValueSets per Jira ticket 
+2023-08-08       OTHER-2576         Joanie Harper                update text per Jira ticket 
+2023-08-14       OTHER-2709         Joanie Harper                update text per Jira ticket 
+2023-08-22       OTHER-2532         Rob McClure                   Clarify use of "sex or gender"
+2023-08-22        various           Rob McClure                Updated RSG description and Usage Notes to clarify that SAAB (and Administrative Gender) can be directly exchanged without "wrapping" in RSG template and as such they should be considered a conformant exchange of USCDI v4 "Sex"
+2023-08-22        OTHER-2512        Rob McClure                Confirmed removal of ICAO element and added explanation of change.
+2023-08-22        OTHER-2589        Ro McClure                 Added section noting changes in the model when compared to original. Confirmed changes in bindings. provided links to binding strength definitions.
 -->
 
 ### Modeling Sex and Gender Representation
@@ -37,9 +52,11 @@ The [Gender Harmony initial informative specification](http://www.hl7.org/implem
 accurately capture sex and gender identity along with associated context of use.
 While the framework provides the necessary infrastructure, the specific
 changes in individual standards to concretely specify actual
-implementable structures are detailed in separate specifications (insert
+implementable structures are detailed in separate specifications (xxinsert
 links to (HL7 v2, FHIR, DICOM etc.) while this implementation guide
 provides additional guidance and use cases.
+
+In this document, and elsewhere, the phrase “sex or gender” is used to characterize data in which the contextual meaning of the the datum is unclear and its use is an acknowledgement that human discourse regarding this information is often equally unclear. Use of this phrase is not intended to mean a unification of information that is more clearly either SPCU or gender identity.
 
 ### Model Overview
 
@@ -100,21 +117,30 @@ about the context and reason for selection may be incorporated into the
 link to observations or reports that are part of the SPCU, or in the
 comment associated with Gender Identity.
 
+### Updates to the model compared to original specification
+With the exception of the following noted changes, the model included in this implementation guide matches the model in the published Gender Harmony Informative Specification.
+#### Recorded Sex or Gender
+- Addition of Recorded Sex or Gender attribute = type with datatype = code or constrained text
+   -  This addition was made to align with the original context of the data exchanged as an RSG so that users may specify the type or category of sex or gender that is recorded (e.g., "Sex").
+-  Removed the InternationalEquivalentRecordedSexOrGender element
+   -  Reviewers agreed that explicit inclusion of the translation of the value to a code from International Civil Aviation Organization (ICAO) code system was not useful. Implementers that want to send this may do so as a translation of the primary value.
+#### Pronouns
+- Update of Pronoun binding strength to Example.
+   -  The binding strength to the Pronoun value set was originally extensible. In reviewers agreed that this needed to be loosened to example across products to allow for greater flexibility in establishing a base set of jurisdiction appropriate pronouns. 
+
 ### Person
 
-**Definition:** This is an abstract class to be mapped onto a concrete
-class in a specific standard or definition. The concrete class is
-expected to be a kind of person.
+**Definition:** This is an abstract representing a person.
 
-**Usage Note:** In FHIR a specific functional mapping might add
-attributes or modify existing attributes of the FHIR Patient resource. When
-used with standards that do not define classes, e.g., HL7 v2.x, this
-abstract Person class can be mapped into concrete changes to the
-standard.
+**Usage Note:** This class may be mapped onto a concrete class when 
+implemented using a model with concrete classes representing a person 
+where additional attributes can be added or existing attributes can be 
+enhanced. In FHIR currently this would be the following resources: Person, 
+Patient, Practitioner, and RelatedPerson
 
 ### Gender Identity (GI)
 
-Gender Identity describes the identity or identities of the person. This
+Gender Identity describes the identity of the person. This
 is important in many social and cultural contexts. It might be missing,
 as for an infant, or multi-valued in some cultures and specific
 situations. The meaning, criteria, and implications of specific gender
@@ -149,9 +175,9 @@ individual's identity, ascertained by asking them what that identity is.
 
 -   Proposed Terminology:
 
-    -   minValueSet: GenderIdentity valueSet
+    -   [minValueSet](http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet): [Gender Identity](http://terminology.hl7.org/ValueSet/gender-identity) valueSet
 
-    -   binding Strength: extensible
+    -   [binding Strength](http://hl7.org/fhir/R5/terminologies.html#strength): [extensible](http://hl7.org/fhir/R5/terminologies.html#extensible)
 
 ##### Validity Period 
 
@@ -161,7 +187,7 @@ to the person. May be just an initial dateTime.
 -   Usage note: Validity period may be overlapping in the case of
 multiple gender identities (such as for bi-gender persons, some
 gender-fluid persons, and binary Two-Spirit persons who also identify as
-male or female).
+both male and female).
 
 -   Cardinality: 0..1
 
@@ -182,8 +208,8 @@ particularly with overlapping active values.
 
 ### Sex Parameter for Clinical Use (SPCU)
 
-Sex Parameter for Clinical Use is provided for use in orders, observations, and
-other clinical uses. SPCU can be highly contextual and allows specific
+Sex Parameter for Clinical Use is provided for use in orders, observations, 
+and other clinical uses. SPCU can be highly contextual and allows specific
 considerations to be provided for potential automated uses and records.
 Examples include:
 
@@ -191,16 +217,16 @@ Examples include:
     work order so that their unexpected hormone levels can be properly
     reported and not rejected as invalid results.
 
--   A person with BRCA2 mutations can be identified so that a screening
-    mammography order is properly performed.
+-   A female to male transgender patient early in transition undergoing imaging 
+wherein the device requires selection of either M or F to complete the set up 
+would benefit from an imaging context-specific SPCU noting the patient needs to 
+have the setup for “Female-typical”
 
 There are many other situations involving tumors, resections, congenital
 conditions (i.e., ovotestes), and transgender patients where SPCU can be
 used to provide information that is needed to perform a procedure
 properly. Many procedures need at least a "male" or "female"
-specification (e.g., for radiation shielding). For detailed use cases
-and implementation guidance, see (insert link to Use Cases landing page
-in IG).
+specification (e.g., for radiation shielding). 
 
 SPCU provides a general extendable structure. During the transition from 
 old systems to new systems, and as medical technology and science evolve, 
@@ -210,20 +236,25 @@ ordering systems are expected to accommodate changes to the order filling
 systems. The gender harmony model enables adaptation of old systems and 
 new technologies.
 
-In observations, SPCU is used to describe the specific contexts used in
-the observation. For example, the computation of glomerular filtration
-rate (GFR) based on blood chemistry uses formulas that are different for
-"male" and "female". The SPCU for the GFR report can indicate which
-formula was used in the computation of that result. The expectation is
-that the patient level SPCU is the default value used in all
-observations in a report and have an individual SPCU for individual
-observations when that observation was performed using a different SPCU.
-The Gender Harmony model does not cover the description of individual
-observations, but the SPCU attribute can be used.
+The SPCU, when used for a specific observation, describes a context that 
+clarifies the settings or reference ranges for the observation. For example, 
+the computation of glomerular filtration rate (GFR) based on blood chemistry 
+may use formulas that are different for “male” and “female”. The SPCU for 
+the GFR report can indicate which formula should be used in the computation 
+of that result. In cases where there is a patient level SPCU, the patient 
+level value can be used as a default (any specific use) value unless a 
+specific SPCU for that observation has been specified, in which case, the 
+specified SPCU should apply. The Gender Harmony model does not cover the 
+description of the use of SPCU in type of observation, but the approach for 
+each is the same.
 
-**Definition**: A categorization of sex derived from observable
-information such as an organ inventory, recent hormone lab tests,
-genetic testing, menstrual status, obstetric history, etc.
+**Definition**: A Sex Parameter for Clinical Use is a parameter that 
+provides guidance on how a recipient should apply settings or reference 
+ranges that are derived from observable information such as an organ 
+inventory, recent hormone lab tests, genetic testing, menstrual status, 
+obstetric history, etc.. This property is intended for use in clinical 
+decision making, and indicates that treatment or diagnostic tests should 
+consider best practices associated with the relevant reference population.
 
 **Usage Note(s)**: A sex category that supports context specificity,
 derived from observable information, preferably directly linked to the
@@ -243,20 +274,27 @@ the capabilities of the systems involved. This may require individual
 site specific business rules to map a multi-valued SPCU into a single
 value that is appropriate for this context.
 
-As SPCU can be context-specific, on rare occasions there may be more
-than one concurrent SPCU for a patient. For example, there could be
-multiple procedure results, each identifying a context specific SPCU
-determination used to set the normal range used. For example an SPCU
-value and linked comment or specific observation could be summarized as
-"male, based on hormonal measurement."
+The model supports multiple instances of SPCU to allow, when necessary, 
+more than one concurrent SPCU for a patient. For example, there could be 
+multiple procedure results, each identifying a context specific SPCU 
+determination used to set the normal range used. For example an SPCU value 
+and linked comment or specific observation could be summarized as “male, 
+based on hormonal measurement.”
 
-**Cardinality**: 0..n, expected to be zero unless in a clinical context.
+**Cardinality**: 0..n, Multiple instances of an SPCU can exist and each 
+instance will have the attributes listed below.
 
 #### Attributes: 
 
 ##### SPCU Category 
 
--   Definition: Sex value based on clinical observations.
+-   Definition: A parameter that provides guidance on how a recipient 
+should apply settings or reference ranges that are derived from observable 
+information such as an organ inventory, recent hormone lab tests, genetic 
+testing, menstrual status, obstetric history, etc..
+
+In addition, all the attributes of SPCU should have text that is drawn from 
+the FHIR R5 page listed here: [Sex Parameter for Clinical Use](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse.html)
 
 -   Cardinality: 1..1
 
@@ -264,9 +302,9 @@ value and linked comment or specific observation could be summarized as
 
 -   Proposed Terminology:
 
-    -   minValueSet: SexForClinicalUseCategory valueSet
+    -   ValueSet: [SexForClinicalUseCategory](http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use) valueSet
 
-    -   binding Strength: required
+    -   [binding Strength](http://hl7.org/fhir/R5/terminologies.html#strength): [required](http://hl7.org/fhir/R5/terminologies.html#required)
 
 ##### Validity Period
 
@@ -294,7 +332,7 @@ overlapping active values
 
 ##### Linked Clinical Observation
 
--   Definition: Link or identifier to observation(s) or report(s) that
+-   Definition: Link to, or identifier of, the observation(s) or report(s) that
 are used to determine the sex category value.
 
 -   Usage Note: The specific implementation of these links will vary
@@ -314,10 +352,6 @@ information may be provided in the Comment attribute.
 
 Recorded Sex or Gender information may originate from a physical or electronic document that was provided to a medical provider. This information may also originate from fields in medical systems that were initially populated using those documents, or via patient attestations.  The rules for collection of these documents and fields have varied significantly over time and place therefore  the relationship to current Gender Identity or Sex Parameters for Clinical Use may be unclear. 
 
-
-
-Sex assigned at birth (SAAB), while very common and considered essential in some jurisdictions, is considered a RSG entry. In these cases, the “identity type” could be specified as “sex assigned at birth” or another regionally specific short text string. As a result of feedback from the Gender Harmony project and in-line with the Gender Harmony model, the US Office of the National Coordinator (ONC) recognized in its Standards Bulletin (SB22-2), regarding the development and finalization of United States Core Data for Interoperability (USCDI) Version 3, that “the data element Sex (Assigned at Birth) is used to represent different concepts not necessarily associated with what is assigned at the time of birth, such as clinically relevant sex for labs or diagnostic imaging, as well as administrative sex as recorded on birth certificates and health forms.” As a result, ONC changed the name of the data element to “Sex” acknowledging the previous limitation to information at birth.
-
 The RSG model includes source information so that the definition of “X” in a driver’s license can be found if necessary and the jurisdiction can be recorded.
 
 
@@ -325,7 +359,7 @@ The RSG model includes source information so that the definition of “X” in a
 
 **Usage Note:** If a medical system needs to exchange a single internal field labeled “sex” which, over time, has been used to capture both sex and gender, Recorded Sex or Gender may be an appropriate way to exchange such data. 
 
-Note that administrative gender, administrative sex, and sex assigned at birth are exchanged today, but are not Gender Identity (GI) or Sex Parameter for Clinical Use (SPCU), and thus are examples of Recorded Sex or Gender (RSG). It is expected that these existing concepts may be exchanged using established methods.
+It is understood that administrative gender, administrative sex, and sex assigned at birth are exchanged today, and when exchanged in this way the data should not be considered a representation of Gender Identity (GI) or Sex Parameter for Clinical Use (SPCU). It is expected that these concepts may continue to be exchanged using existing established methods without using RSG. But, when SAAB *is exchanged as an RSG entry* the "type” should be specified as “sex assigned at birth” or another regionally specific short text string. As a result of feedback from the Gender Harmony project and in-line with the Gender Harmony model, the US Office of the National Coordinator (ONC) recognized in its Standards Bulletin (SB22-2), regarding the development and finalization of United States Core Data for Interoperability (USCDI) Version 3, that “the data element Sex (Assigned at Birth) is used to represent different concepts not necessarily associated with what is assigned at the time of birth, such as clinically relevant sex for labs or diagnostic imaging, as well as administrative sex as recorded on birth certificates and health forms.” As a result, ONC changed the name of the data element to “Sex” acknowledging the previous limitation to birth information documentation.
 
 **Cardinality:** 0..n
 
@@ -351,7 +385,7 @@ When evaluating when and how to exchange sex or gender concepts, consider whethe
    * Creating jurisdiction or use case specific structures that are directly tied to the specific concept being exchanged, such as:
       * New jurisdictional or use case specific extensions for FHIR
       * [us-core-birthsex](http://hl7.org/fhir/us/core/StructureDefinition-us-core-birthsex.html)
-	  * [us-core-sex](http://hl7.org/fhir/us/core/StructureDefinition-us-core-sex.html)
+	   * [us-core-sex](http://hl7.org/fhir/us/core/StructureDefinition-us-core-sex.html)
       * [ukcore-birthsex](https://simplifier.net/hl7fhirukcorer4/extension-ukcore-birthsex)
       * New template for CDA
    * Using a generic structure
@@ -374,6 +408,8 @@ value 'ж' for sex.
 -   Cardinality: 1..1
 
 -   Type: Code or constrained short text
+
+Note that based upon ballot feedback, the proposed InternationalEquivalentRecordedSexOrGender element with values based upon the International Civil Aviation Organization (ICAO) code system is no longer included. Implementers may provide an ICAO translation to the value provided.
 
 
 ##### Type
@@ -538,9 +574,9 @@ those in the care setting.
 
 -   Proposed Terminology:
 
-    -   minValueSet: Pronoun valueSet
+    -   ValueSet: [Pronouns](http://terminology.hl7.org/ValueSet/pronouns) valueSet
 
-    -   binding Strength: extensible
+    -   [binding Strength](http://hl7.org/fhir/R5/terminologies.html#strength): [example](http://hl7.org/fhir/R5/terminologies.html#example)
 
 ##### Validity Period
 
