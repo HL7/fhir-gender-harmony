@@ -17,9 +17,9 @@ The changes made in this version have been reviewed by the public through the HL
 -   Patient Administration,
 -   Patient Care,
 -   Structured Documents,
--   Terminology Infrastructure Work Group,
--   Terminology Services Management Group,
--   V2 Management Group
+-   Terminology Infrastructure,
+-   Terminology Services Management Group, and
+-   V2 Management Group.
 
 
 <!-- 1. Ticket Status    Ticket Summary       (Jira Ticket Number link)  See changes Here link
