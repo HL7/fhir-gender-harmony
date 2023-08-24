@@ -59,6 +59,8 @@ pages:
     title: External Standards  
   bibliography.md:
     title: Bibliography
+  changelog.md:
+    title: Change Log  
   artifacts2.md:
     title: Artifacts
   v2dicom_use_case.md:
@@ -96,10 +98,10 @@ menu:
   Terminology: terminology.html 
   External Standards: externalstandards.html
   Bibliography: bibliography.html
-
+  Change Log: changelog.html
   All Artifacts: artifacts2.html
   
-  History: http://hl7.org/fhir/us/fhir-gender-harmony/history.html
+
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
