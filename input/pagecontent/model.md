@@ -12,6 +12,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-25		 OTHER-2708	    	Carol Macumber		 		 GI Usage Note change per OTHER-2708
 2023-07-25    	 OTHER-2539	    	Carol Macumber		 		 GI Usage Note change per OTHER-2539
 2023-07-26		 OTHER-2570			Carol Macumber				 Standardized the use of "Gender Harmony initial informative specification"  when referring to initial specification
+2023-08-23		 OTHER-2573			Carol Macumber				Added clarification per OTHER-2573 about Patient resource
 -->
 
 ### Modeling Sex and Gender Representation
@@ -106,7 +107,7 @@ class in a specific standard or definition. The concrete class is
 expected to be a kind of person.
 
 **Usage Note:** In FHIR a specific functional mapping might add
-attributes or modify existing attributes of the FHIR Patient Class. When
+attributes or modify existing attributes of the FHIR Patient resource. When
 used with standards that do not define classes, e.g., HL7 v2.x, this
 abstract Person class can be mapped into concrete changes to the
 standard.
