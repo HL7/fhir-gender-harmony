@@ -21,7 +21,6 @@ publisher:
   email: ti@lists.hl7.org
 
 
-
 pages:
   index.md:
     title: Home
