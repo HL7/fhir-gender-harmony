@@ -10,12 +10,14 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-17       OTHER-2630         Joanie Harper                Updated note to balloters regarding v2.9.1 afrtifacts per https://jira.hl7.org/browse/OTHER-2630
 2023-07-17       OTHER-2557         Joanie Harper                Removed references to ICAO in RSG section.  Added THO link to value set per https://jira.hl7.org/browse/OTHER-2557
 2023-07-17       OTHER-2557         Joanie Harper                Updated text in general section as per https://jira.hl7.org/browse/OTHER-2409.  This removes references to rolling up
+2023-08-24       OTHER-2602         MaryKay McDaniel             Commented out Notes to Balloters (just in case we want to leave it in...)
 
 -->
 
 > Words are singularly the most powerful force available to humanity. We can choose to use this force constructively with words of encouragement, or destructively using words of despair. Words have energy and power with the ability to help, to heal, to hinder, to hurt, to harm, to humiliate and to humble.
 > 
 > -Yehuda Berg
+
 
 ### Notes
 
@@ -38,7 +40,7 @@ A companion pdf CDA template specification containing gender harmony-specific te
 
 <!--Balloters should note that the terminology artifacts (code systems and value sets) will all *eventually* be published as part of the content at terminology.hl7.org (THO). This will occur *after ballot reconciliation*. During the ballot period the terminology resources defined by this project exist as part of the FHIR R5 core build. This is evident when looking at the actual location when viewing the terminology resources, even though the canonical urls are all based in THO. We note this so that if the canonical url is pasted into a browser, the location will 404 until ballot reconciliation is completed and the content is moved to THO permanently.-->
 
-<!--Bottom line for comments: Essentially all terminology is defined in the FHIR R5 ballot so please review that ballot, focusing on the extensions noted in the FHIR section of this guide to know where to look. Make all comments on the terminology artifacts against that ballot.-->
+ 
 
 ### General
 Medical terminology and standards, as core parts of medical systems, are necessarily omnipresent in today’s biomedical landscape. They form an important cornerstone of almost all digital health technology utilized today around the world. However, despite their increasing importance to health care, medical terminology and standards rarely consider the ethical implications surrounding their existence. Many communities have been adversely affected by this lack of consideration, which this guide hopes to address in part by careful consideration to the terminology used when representing  sex and gender in clinical systems. The initial [Gender Harmony logical model publication](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) provides an in-depth discussion on issues regarding clinical sex and gender terminology, as does the [JAMIA publication](https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocab196/6382238?guestAccessKey=016faba4-edcc-4cbd-b5bc-27d3452d2ce1) "Gender harmony: improved standards to support affirmative care of gender-marginalized people through inclusive gender and sex representation" and we refer the interested reader to those documents for useful background.
