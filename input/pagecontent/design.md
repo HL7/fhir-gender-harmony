@@ -27,13 +27,14 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-18    OTHER-2479, OTHER-2496   Rob McClure               Updated RSG section to aling with change in source document to be a concept domain (table 0826). Also updated GSR field ids in RSG table for V2 after removal of International equivalent field
 2023-07-24       OTHER-2544         Joanie Harper                Fixed some link formatting in the Name to Use table.
 2023-08-22      none                Rob McClure                   Fixed spelling of Practitioner
+2023-08-25      OTHER-2602                Carol Macumber                Removing "Note to balloters"
 -->
 
 The discussion around gender harmony has been on-going for several years. This implementation guide is based on the logical [Gender Harmony initial informative specification ](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) published in 2021 and the evolution of the Gender Harmony Project (GHP) team’s understanding of how sex and gender information is implemented currently and how it could be more effectively implemented in electronic healthcare systems. Based upon input from the community, the Gender Harmony project has defined (and prefers) implementing a model using extensions so that the added information is “close to user,” but it is clear that as an alternative users may choose to implement the information as observations in a manner similar to that found in the Gravity Project, for example [Observation Recorded Sex Gender](http://hl7.org/fhir/us/sdoh-clinicalcare/STU2/StructureDefinition-SDOHCC-ObservationRecordedSexGender.html).
 
 The table below lists design requirements considered by GHP for each Gender Harmony Model element and its implementation across the HL7 product families. Both the FHIR and V2 efforts chose to build sex and gender harmony model information into the core model – as FHIR extensions in FHIR and as a new segment in V2 – because the information processing requirements that those standards support benefit from this proximity. CDA does not have this constraint and prioritized ease of use and access to the artifacts, ultimately opting for the use of a clinical statement template as the most feasible approach.
 
-Detailed design considerations for each HL7 product family are included in the appropriate sections in this IG and include notes to balloters asking for feedback on the approaches taken. 
+Detailed design considerations for each HL7 product family are included in the appropriate sections in this IG. 
 
 **Gender Identity** 
 <style>
