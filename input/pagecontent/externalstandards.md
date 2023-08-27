@@ -2,7 +2,7 @@
 Date             Jira ticket        Updated by                   Comment
 2023-06-14       OTHER-2609         Joanie Harper                Added hyphen per Jira ticket https://jira.hl7.org/browse/OTHER-2609
 2023-08-22      OTHER-2710          Rob McClure                 Added LOINC section, arranged sections in alpha order
-
+2023-08-27      OTHER-2608          Rob McClure                 Updated DICOM section to align with current SPCU
 -->
 
 ### DICOM
