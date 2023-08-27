@@ -1,11 +1,13 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-07-10       OTHER-2558         Cooper                       Added SPCU considerations
-
+2023-08-27			NONE			Carol Macumber		Added note at top of page instructing implementers to use product specific jira projects to propose changes to FHIR, CDA or V2.
 
 -->
 
 Gender Harmony Implementer Considerations for HL7 Product Families
+
+Note: Implementers should utilize product specific JIRA projects to propose HL7 product family specific changes. For convienence, they are linked here: [FHIR](http://jira.hl7.org/projects/FHIR), [V2](http://jira.hl7.org/projects/V2) and [CDA](http://jira.hl7.org/projects/CDA). Proposed changes to this Cross Paradigm Gender Harmony IG should be submitted [here](http://jira.hl7.org/projects/OTHER).
 
 ## Exchanging a Sex Parameter for Clinical Use
 ### Patient Level Sex Parameter for Clinical Use

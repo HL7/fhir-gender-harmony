@@ -68,7 +68,7 @@ table, th, td {
 |Support GH attribute = validity period, type = duration|Validity Range (GSP-6) with datatype Date Range(DR)|[Datatype: Period](http://build.fhir.org/datatypes.html#Period) (http://build.fhir.org/datatypes.html#Period)|effectiveTime (CONF:4536-69)|
 |Support GH attribute = comment, type = string|Comment (GSP-7) with datatype Text (TX)|Comment, datatype: string|Text (CONF:4536-72)|
 
-**Name to Use**https://jira.hl7.org/browse/OTHER-2674
+**Name to Use**
 
 |[**Logical Model Requirement**](https://build.fhir.org/ig/HL7/fhir-gender-harmony/branches/main/model.html)|**V2**|**FHIR**|**CDA**|
 | :- | :- | :- | :- |

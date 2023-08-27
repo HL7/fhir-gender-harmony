@@ -169,7 +169,7 @@ We are indebted to all members of the project, listed [here](https://confluence.
     - Cooper Thompson
 - **Use Cases**
     - Robert Horn, Steven Nichols, Riki Merrick, Cara Schlegel, and Joseph Bormel
-- **Resources Provided by the Department of Veterans Affairs**
+- **Supporting Resources Provided by the Department of Veterans Affairs**
 	- Dr. Jonathan Nebeker, National CMIO and Executive Director of Clinical Informatics and Data Management Office (CIDMO)
 	- Steven Brown, MD, Director, CIDMO Knowledge-Based Systems (KBS)
 	- Christopher Shawn, Director KBS Standards & Interoperability(S&I)
