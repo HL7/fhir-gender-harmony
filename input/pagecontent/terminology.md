@@ -58,17 +58,17 @@ The [gender identity value set](http://terminology.hl7.org/ValueSet/gender-ident
 
 Please note that CDA requires the use of value sets that do not include null flavor concepts, therefore the CDA entry templates bind to a separate "core" value set of SNOMED CT concepts, and that value set is used to build the overall gender identity minimum value set.
 
-### Sex For Clinial Use (SFCU)
+### Sex Parameter For Clinial Use (SPCU)
 As noted in our JAMIA publication
-> SFCU is a summary sex classification element based on one or more clinical observations such as an organ survey, hormone levels, and chromosomal analysis. SFCU can provide a “patient-level” summary clinical sex characterization value to be specified for any clinical order, result, or assessment. SFCU also allows users to specify different values for the same patient for specific clinical uses.
+> SPCU (previously SFCU) is a summary sex classification element based on one or more clinical observations such as an organ survey, hormone levels, and chromosomal analysis. SPCU can provide a “patient-level” summary clinical sex characterization value to be specified for any clinical order, result, or assessment. SPCU also allows users to specify different values for the same patient for specific clinical uses.
 
-SFCU is intended as a replacement for the idea of "clinical sex" which most importantly brings a context-specific focus to the use of the SFCU value exchanged. The value provided **is not a general, use anywhere** value. Provision of "a clinical sex in all uses" has been found to be dangerously over-simplified. The SFCU exchange element exists to help align *current* system expectations for sex-classification reference ranges or system set-up settings to fill the gap between defined sex-characteristic aligned clinical observations that influence those settings, and the operational need to put in a binary sex value. In cases that need a sex-category to do a procedure or report a result, SFCU provides a method to exchange the needed summary sex classification value, along with the specific clinical observation used to determine the SFCU value. In addition to Male-typical or Female-typical, SFCU also provides an important additional value of **Specified** which is an indication that additional information should be available, or obtained from the patient/record to clarify any specific clinical information needed to make the clinical sex-related decision.
+SPCU is intended as a replacement for the idea of "clinical sex" which most importantly brings a context-specific focus to the use of the SPCU value exchanged. The value provided **is not a general, use anywhere** value. Provision of "a clinical sex in all uses" has been found to be dangerously over-simplified. The SPCU exchange element exists to help align *current* system expectations for sex-classification reference ranges or system set-up settings to fill the gap between defined sex-characteristic aligned clinical observations that influence those settings, and the operational need to put in a binary sex value. In cases that need a sex-category to do a procedure or report a result, SPCU provides a method to exchange the needed summary sex classification value, along with the specific clinical observation used to determine the SPCU value. In addition to Male-typical or Female-typical, SPCU also provides an important additional value of **Specified** which is an indication that additional information should be available, or obtained from the patient/record to clarify any specific clinical information needed to make the clinical sex-related decision.
 
-Because the three included values scope all possible values (plus a SFCU-specific unknown), the value set is bound REQUIRED/SHALL and only the values included are allowed. 
+Because the three included values scope all possible values (plus a SPCU-specific unknown), the value set is bound REQUIRED/SHALL and only the values included are allowed. 
 
-The code system used for this value set is the internal HL7 code system "[Sex For Clinical Use](http://build.fhir.org/codesystem-sex-for-clinical-use.html)".
+The code system used for this value set is the internal HL7 code system [Sex For Clinical Use](http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use).
 
-The [Sex For Clinical Use](http://build.fhir.org/valueset-sex-for-clinical-use.html) value set is defined as part of the R5 FHIR Specification.
+The [Sex For Clinical Use](http://hl7.org/fhir/extensions/ValueSet-sex-parameter-for-clinical-use) value set is defined as part of the R5 FHIR Specification.
 
 The LOINC code for the "observable encoding" of the Sex For Clinical Use is [99501-9](https://loinc.org/99501-9/)
 
@@ -82,7 +82,7 @@ The [Pronouns](http://terminology.hl7.org/ValueSet/pronouns) value set is define
 The LOINC code for the "observable encoding" of the Personal pronouns - Reported is [90778-2](https://loinc.org/90778-2/)
 
 ### Recorded Sex or Gender (RSG)
-The RSG element is intended to support the exchange of any sex or gender recorded data that is not specifically known to be the gender identity or a needed SFCU. The element allows any code or text that is in the record to be sent as the "recorded value" so no value set or code system is defined for that element. We do provide a value set and use an external code system for sending an international equivalent value in addition to the actual recorded value.
+The RSG element is intended to support the exchange of any sex or gender recorded data that is not specifically known to be the gender identity or a needed SPCU. The element allows any code or text that is in the record to be sent as the "recorded value" so no value set or code system is defined for that element. We do provide a value set and use an external code system for sending an international equivalent value in addition to the actual recorded value.
 
 When exchanging a Recorded Sex or Gender concept, it is expected that there are existing value sets that can be used.  For example, when using Recorded Sex or Gender to exchange Sex Assigned at Birth, a jurisdiction may have an existing value set for Sex Assigned at Birth, which would be used to exchange the value for the Sex Assigned at Birth as a Recorded Sex or Gender.
 

@@ -37,7 +37,7 @@ When creating the FHIR extensions, there were several proposed changes to the lo
 
 **Sex Parameter for Clinical Use: extension**
 
-*Note*: The Sex Parameter for Clinical Use (SFCU) concept was formerly known as Sex for Clinical Use.
+*Note*: The Sex Parameter for Clinical Use (SPCU) concept was formerly known as Sex for Clinical Use (SFCU).
 
 *Context:* The Sex Parameter for Clinical Use extension is available on all FHIR resource types; however, it is intended for use on clinical resource types (e.g., DiagnosticReport, Observation), and enclosing contextual resources (e.g., Encounter, EpisodeOfCare, Patient). We considered limiting the extension only to the resources we expect it to be used on, however there will likely be resources we incorrectly excluded, and new resources created to which it could apply, so we opted to allow it to all resources, understanding that it would not be applicable for many resource types.
 
