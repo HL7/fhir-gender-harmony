@@ -24,10 +24,13 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-08       OTHER-2540         Joanie Harper                add links for minValueSets per Jira ticket 
 2023-08-08       OTHER-2576         Joanie Harper                update text per Jira ticket 
 2023-08-14       OTHER-2709         Joanie Harper                update text per Jira ticket 
-2023-08-22       OTHER-2532         Rob McClure                   Clarify use of "sex or gender"
-2023-08-22        various           Rob McClure                Updated RSG description and Usage Notes to clarify that SAAB (and Administrative Gender) can be directly exchanged without "wrapping" in RSG template and as such they should be considered a conformant exchange of USCDI v4 "Sex"
-2023-08-22        OTHER-2512        Rob McClure                Confirmed removal of ICAO element and added explanation of change.
-2023-08-22        OTHER-2589        Ro McClure                 Added section noting changes in the model when compared to original. Confirmed changes in bindings. provided links to binding strength definitions.
+2023-08-22       OTHER-2532         Rob McClure                  Clarify use of "sex or gender"
+2023-08-22        various           Rob McClure                  Updated RSG description and Usage Notes to clarify that SAAB (and Administrative Gender) can be directly exchanged without "wrapping" in RSG template and as such they should be considered a conformant exchange of USCDI v4 "Sex"
+2023-08-22        OTHER-2512        Rob McClure                  Confirmed removal of ICAO element and added explanation of change.
+2023-08-22        OTHER-2589        Rob McClure                  Added section noting changes in the model when compared to original. Confirmed changes in bindings. provided links to binding strength definitions.
+2023-08-28       OTHER-2569         Joanie Harper                update per Jira ticket -- still need links to V2 spec and CDA spec
+2023-08-28       OTHER-2580         Joanie Harper                update Gender Harmony capitalization
+
 -->
 
 ### Modeling Sex and Gender Representation
@@ -359,7 +362,7 @@ The RSG model includes source information so that the definition of “X” in a
 
 **Usage Note:** If a medical system needs to exchange a single internal field labeled “sex” which, over time, has been used to capture both sex and gender, Recorded Sex or Gender may be an appropriate way to exchange such data. 
 
-It is understood that administrative gender, administrative sex, and sex assigned at birth are exchanged today, and when exchanged in this way the data should not be considered a representation of Gender Identity (GI) or Sex Parameter for Clinical Use (SPCU). It is expected that these concepts may continue to be exchanged using existing established methods without using RSG. But, when SAAB *is exchanged as an RSG entry* the "type” should be specified as “sex assigned at birth” or another regionally specific short text string. As a result of feedback from the gender harmony project and in-line with the gender harmony model, the US Office of the National Coordinator (ONC) recognized in its Standards Bulletin (SB22-2), regarding the development and finalization of United States Core Data for Interoperability (USCDI) Version 3, that “the data element Sex (Assigned at Birth) is used to represent different concepts not necessarily associated with what is assigned at the time of birth, such as clinically relevant sex for labs or diagnostic imaging, as well as administrative sex as recorded on birth certificates and health forms.” As a result, ONC changed the name of the data element to “Sex” acknowledging the previous limitation to birth information documentation.
+It is understood that administrative gender, administrative sex, and sex assigned at birth are exchanged today, and when exchanged in this way the data should not be considered a representation of Gender Identity (GI) or Sex Parameter for Clinical Use (SPCU). It is expected that these concepts may continue to be exchanged using existing established methods without using RSG. But, when SAAB *is exchanged as an RSG entry* the "type” should be specified as “sex assigned at birth” or another regionally specific short text string. As a result of feedback from the Gender Harmony Project and in-line with the gender harmony model, the US Office of the National Coordinator (ONC) recognized in its Standards Bulletin (SB22-2), regarding the development and finalization of United States Core Data for Interoperability (USCDI) Version 3, that “the data element Sex (Assigned at Birth) is used to represent different concepts not necessarily associated with what is assigned at the time of birth, such as clinically relevant sex for labs or diagnostic imaging, as well as administrative sex as recorded on birth certificates and health forms.” As a result, ONC changed the name of the data element to “Sex” acknowledging the previous limitation to birth information documentation.
 
 **Cardinality:** 0..n
 
