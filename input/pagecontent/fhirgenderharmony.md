@@ -30,7 +30,7 @@ table, th, td {
 | Pronouns     | [individual-pronouns](http://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html)     | Patient, RelatedPerson, Person, and Practitioner     |
 | Gender      | [individual-recordedSexOrGender](http://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html)     | Patient, RelatedPerson, Person, and Practitioner     |
 
-The [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension makes use of the CodeableReference data type, which was added in R5. In hindsight, we would have used R4 compatible data types to make this extension backportable to R4. However, given that this issue was discovered after the extension was published, we have created a separate [patient-sexParameterForClinicalUse-backport](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-backport.html) extension that may be used for versions prior to R5.
+The [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension makes use of the CodeableReference datatype, which was added in R5. In hindsight, we would have used R4 compatible datatypes to make this extension backportable to R4. However, given that this issue was discovered after the extension was published, we have created a separate [patient-sexParameterForClinicalUse-backport](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-backport.html) extension that may be used for versions prior to R5.
 
 
 ## General Guidance Sex and Gender
@@ -98,7 +98,7 @@ CDA and FHIR are aligned with regard to the *concept* of gender identity.  Howev
 The [individual-pronouns](http://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html) extension was added in FHIR R5 to support exchanging pronouns to use for Patients, Practitioners, RelatedPersons, and Persons.  Implementers who need to exchange pronouns in prior versions of FHIR are encouraged to pre-adopt the R5 extension.
 
 ## Exchanging Name to Use
-The Name to Use for a person should be exchanged using the HumanName data type in the relevant resource, with a HumanName.use = "usual".
+The Name to Use for a person should be exchanged using the HumanName datatype in the relevant resource, with a HumanName.use = "usual".
 
 ## Exchanging Recorded Sex and Gender
 When evaluating when and how to exchange sex or gender concepts, consider whether Gender Identity or Sex Parameters for Clinical Use may be better for the relevant use case.  If those concepts are not appropriate or available, then the following approach for exchanging Recorded Sex or Gender may be used:
