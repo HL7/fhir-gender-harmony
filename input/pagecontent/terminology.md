@@ -18,30 +18,6 @@ Date             Jira ticket        Updated by                   Comment
 > 
 > -Yehuda Berg
 
-
-### Notes
-
-With a few exceptions noted below, all terminology content used for the gender harmony elements **are defined within the FHIR R5 ballot.** This is because the code systems, value sets, and external code system (provided as a convenience copy) are all needed to support the FHIR core R5 extensions. These same terminology artifacts are used by each of the other product family standards. 
-<!--By defining in one place - R5 FHIR - we simplify review and ballot commenting **but** this means commenters must review the vocabulary content in the FHIR R5 core ballot and make any comments on the terminology artifacts (value sets and code systems) against *the FHIR R5 ballot* and not make those comments against this ballot.-->
-
-There is a **separate** V2 specification that describes all V2.x normative track changes. **All V2 content, including V2-specific terminology artifacts are contained within the V2.9.1 specifciation**. 
-
-The only terminology artifacts that are V2.9.1-specific are:
-
-- The value set Concept Domains
-- The "table 396" entries (actually, this is now in [THO](https://terminology.hl7.org/) as the "Code System" code system.)
-- The Sexual Orientation value set. Sexual Orientation was deemed out of scope for the Gender Harmony project
-
-<!--Any balloter that has a comment on these three items in V2.9.1 should comment on the V2.9.1 ballot noting the concern.-->
-
-<!--The CDA normative track material **is completely included within this Gender Harmony ballot.-->
-A companion pdf CDA template specification containing gender harmony-specific templates is published separately. When this guide was in ballot the CDA template pdf specification was embedded within this guide. It is now a distinct, separate specification. **All terminology content used in the CDA Entry Templates is all defined within the FHIR R5 ballot.**
-<!--Please review the terminology there and comment on the R5 ballot if there is an issue.-->
-
-<!--Balloters should note that the terminology artifacts (code systems and value sets) will all *eventually* be published as part of the content at terminology.hl7.org (THO). This will occur *after ballot reconciliation*. During the ballot period the terminology resources defined by this project exist as part of the FHIR R5 core build. This is evident when looking at the actual location when viewing the terminology resources, even though the canonical urls are all based in THO. We note this so that if the canonical url is pasted into a browser, the location will 404 until ballot reconciliation is completed and the content is moved to THO permanently.-->
-
- 
-
 ### General
 Medical terminology and standards, as core parts of medical systems, are necessarily omnipresent in today’s biomedical landscape. They form an important cornerstone of almost all digital health technology utilized today around the world. However, despite their increasing importance to health care, medical terminology and standards rarely consider the ethical implications surrounding their existence. Many communities have been adversely affected by this lack of consideration, which this guide hopes to address in part by careful consideration to the terminology used when representing  sex and gender in clinical systems. The initial [Gender Harmony logical model publication](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) provides an in-depth discussion on issues regarding clinical sex and gender terminology, as does the [JAMIA publication](https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocab196/6382238?guestAccessKey=016faba4-edcc-4cbd-b5bc-27d3452d2ce1) "Gender harmony: improved standards to support affirmative care of gender-marginalized people through inclusive gender and sex representation" and we refer the interested reader to those documents for useful background.
 
