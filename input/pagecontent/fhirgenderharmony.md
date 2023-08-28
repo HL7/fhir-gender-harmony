@@ -7,7 +7,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-13       OTHER-2618         Cooper Thompson              Added guidance on the R4 backport extension for SPCU
 2023-08-16       spell/grammar chk  MaryKay McDaniel             157, changed presense or absense to presence or absence
                                                                  171, anatmoical to anatomical, disrete to discrete, unconsious to unconscious, invenvory to inventory
-
+2023-08-27        OTHER-2574        Rob McClure                   ValueSet to value set, data type to datatype
 
 -->
 

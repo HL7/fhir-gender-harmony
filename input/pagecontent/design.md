@@ -28,6 +28,8 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-24       OTHER-2544         Joanie Harper                Fixed some link formatting in the Name to Use table.
 2023-08-22      none                Rob McClure                   Fixed spelling of Practitioner
 2023-08-25      OTHER-2602                Carol Macumber                Removing "Note to balloters"
+2023-08-27        OTHER-2574        Rob McClure                   ValueSet to value set, data type to datatype
+2023-08-27      OTHER-2522        Rob McClure                   added "Note: V2 requires a looser binding due to use of a structure that is used across other observations." to GI V2 binding section
 -->
 
 The discussion around gender harmony has been on-going for several years. This implementation guide is based on the logical [Gender Harmony initial informative specification ](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) published in 2021 and the evolution of the Gender Harmony Project (GHP) team’s understanding of how sex and gender information is implemented currently and how it could be more effectively implemented in electronic healthcare systems. Based upon input from the community, the Gender Harmony project has defined (and prefers) implementing a model using extensions so that the added information is “close to user,” but it is clear that as an alternative users may choose to implement the information as observations in a manner similar to that found in the Gravity Project, for example [Observation Recorded Sex Gender](http://hl7.org/fhir/us/sdoh-clinicalcare/STU2/StructureDefinition-SDOHCC-ObservationRecordedSexGender.html).
@@ -50,7 +52,7 @@ table, th, td {
 |Value is coded and allows text|SOGI Concept Value (GSP-5), when SOGI Concept (GSP-4) = 76691-5^Gender Identity^LN with datatype Coded with Exceptions (CWE)|[Datatype: CodableConcept](http://build.fhir.org/datatypes.html#CodeableConcept) (http://build.fhir.org/datatypes.html#CodeableConcept)|CD (CONF:4536-48)|
 |Designated value set|[GenderIdentity](http://terminology.hl7.org/ValueSet/gender-identity) (http://terminology.hl7.org/ValueSet/gender-identity)|[GenderIdentity](http://terminology.hl7.org/ValueSet/gender-identity) (http://terminology.hl7.org/ValueSet/gender-identity)|[GenderIdentity](http://terminology.hl7.org/ValueSet/gender-identity) (http://terminology.hl7.org/ValueSet/gender-identity)<br>(CONF:4536-48)|
 |Support notion of value =  "unknown" |UNK and asked-declined are in the Gender Identity value set|UNK and asked-declined are in the Gender Identity value set|UNK and asked-declined are in the Gender Identity value set|
-|Supports additional values (extensible)|Example Binding|Preferred Binding|SHOULD (CONF:4536-48)|
+|Supports additional values (extensible)|Example Binding<br>Note: V2 requires a looser binding due to use of a structure that is used across other observations.|Preferred Binding|SHOULD (CONF:4536-48)|
 |Support GH attribute = validity period, type = duration|Validity Range (GSP-6) with datatype Date Range (DR)|Datatype: Period (http://build.fhir.org/datatypes.html#Period)|effectiveTime/low and effectiveTime/high (CONF:4536-50)|
 |Support GH attribute = comment, type = string|Comment (GSP-7) with datatype Text (TX)|Comment, datatype: string|text (CONF:4536-140)|
 
@@ -90,7 +92,7 @@ table, th, td {
 |Support notion of value =  "unknown" |Included in value set|Included in value set|Represented as a NULL value, not in the value set.|
 |Specific allowed set of values only|Required binding|Required binding|SHALL binding|
 |Support GH attribute = validity period, type = duration|Validity Period (GSC-5) with datatype Date Range (DR)|[Datatype: Period](http://build.fhir.org/datatypes.html#Period)|effectiveTime (CONF:4536-82)|
-|Support GH attribute = comment, type = string|Comment (GSC-8) with data type Text (TX)|Comment, datatype: string|text (CONF:4536-80)|
+|Support GH attribute = comment, type = string|Comment (GSC-8) with datatype Text (TX)|Comment, datatype: string|text (CONF:4536-80)|
 |Support assertion of linked clinical obs evidence for assignment|Evidence (GSC-7) with datatype Message Location (ERL)|SupportingInfo, [datatype: CodeableReference](http://build.fhir.org/references.html) (http://build.fhir.org/references.html)|entryRelationship (CONF:4536-101)|
 |Support assertion of context for use: specific context (not modeled)|Context (GSC-6) with datatype Message Location (ERL)|The resource in which the extension is used|Guidance on nesting template under target or (for multiple targets) using Entry Reference|
 |Support assertion of context for use: patient|Patient segment in the same message where the segment is used|The patient that is linked to the resource in which the extension is used|Guidance on including independent of entryRelationship|
