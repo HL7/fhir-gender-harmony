@@ -5,11 +5,12 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-26		 OTHER-2570			Carol Macumber				 Standardized the use of "Gender Harmony initial informative specification"  when referring to initial specification
 2023-08-14       OTHER-2568         Joanie Harper                Removed phrase "(per NCPDP page 11)"
 2023-8-16        OTHER-2579/spellchkMaryKay McDaniel             Sex for Clinical Use (SFCU) changed to Sex Parameter for Clinical Use (SPCU) in 42 & 46
-2023-08-23       OTHER-2537         Rob McClure                 Minor changes for JIRA and spell check
+2023-08-23       OTHER-2537         Rob McClure                  Minor changes for JIRA and spell check
+2023-08-28       OTHER-2567         Joanie Harper                Qualify NCQA with US before it
 -->
 
 ### Impact of Sex and Gender on Clinical Care
-In the [Gender Harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564), excerpted below, we noted the following (The original references are replicated here in our [Bibliography](bibliography.html).)
+In the [gender harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564), excerpted below, we noted the following (The original references are replicated here in our [Bibliography](bibliography.html).)
 
 In 2016, The Report of the 2015 U.S. Transgender Survey which asked 27,715 self-identified transgender persons about their experiences in health care, noted that 33% had at least one negative experience with a health care provider related to being transgender, that 23% did not seek the health care they needed due to fear of mistreatment, and 33% did not go to a health care provider when they really needed to because they could not afford it (26,75).
 
