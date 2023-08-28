@@ -1,7 +1,7 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-
-
+2023-08-28       OTHER-2425         Rob McClure                 Updated SFCU to SPCU and updated code value.
+2023-08-28          None            TRob McClure                Fixed heading hierarchy to place much of this under the Workflow/Storyboard section
 
 -->
 
@@ -32,9 +32,7 @@ Use case covers change of name, gender identity, and pronouns in the patient reg
 2.	Patient medical history is available in the facility's EHR
 
 ### Workflow/Storyboard:
-### Administrative update and record change
-
-
+#### Administrative update and record change
 
 1.	A patient, Julie Smith, calls her primary care health clinic and speaks with an administrative representative. 
 2.	The patient informs the clinic’s administrative representative that she is a transgender female and would like to update her name, gender identity, and pronouns in the clinic’s EHR system.
@@ -57,30 +55,30 @@ Use case covers change of name, gender identity, and pronouns in the patient reg
 19. The updated record sends a message to clinics in the health system to notify their systems of the change.
 
 
-#### Administrative update and record change workflow
+##### Administrative update and record change workflow
 <img style="vertical-align: top;" src="WF Record Change.svg" width="100%" /> 
  
 
 
-### Health screening automated process
+#### Health screening automated process
 1.	The health maintenance system runs on a weekly basis and has a rule that when a patient changes their gender identity, it generates an e-mail to schedule an annual health screening appointment and requests the patient complete an anatomic inventory in their health profile.
 2.	Julie responds to the email by scheduling an appointment and completing the anatomic inventory.
 
-#### Health screening automated process workflow
+##### Health screening automated process workflow
 <img style="vertical-align: top;" src="WF Health Screening.svg" width="100%" /> 
  
-### Clinic appointment arrival and check-in
+#### Clinic appointment arrival and check-in
 1.	Julie Smith, age 52, arrives at an outpatient clinic for her health screening appointment and is greeted at the registration desk. 
 2.	The clerk asks for the patient's name and date of birth. 
 3.	The patient provides the name, Julie Smith with her date of birth. 
 4.	The clerk can find a patient in the appointment system with the name Julie Smith with a matching birthdate that has an appointment for today. 
 5.	The clerk checks Julie in for her appointment. 
 
-#### Clinic appointment arrival and check-in workflow
+##### Clinic appointment arrival and check-in workflow
 <img style="vertical-align: top;" src="WF CheckIn.svg" width="100%" /> 
 
 
-### Patient encounter and examination
+#### Patient encounter and examination
 1.	Julie proceeds with her annual appointment with her physician, Dr. Jones. 
 2.	Upon starting the visit with Julie, Dr. Jones reviews the anatomic inventory questions with Julie, and it is noted that the patient has a prostate.
 3.	Based upon this updated information, the system notes Julie’s age is over 50 and she has an anatomic inventory with prostate present and no prostate exam or PSA value in the past 10 years. The EHR alerts Dr. Jones that a prostate exam and/or a PSA should be considered for the patient.
@@ -88,20 +86,20 @@ Use case covers change of name, gender identity, and pronouns in the patient reg
 5.	Before the examination, Dr. Jones asks Julie about the medications she is taking regularly and on an as-needed basis. 
 6.	Julie informs Dr. Jones that she is utilizing an estrogenic therapy regimen. 
 7.	During the examination of her prostate, Dr. Jones notes a nodule on the prostate.
-8.	After a discussion with the patient, Dr. Jones enters a lab order for a PSA quantitative test and includes an SFCU value of “Male”, noting in the comment field that the patient has a prostate. 
+8.	After a discussion with the patient, Dr. Jones enters a lab order for a PSA quantitative test and includes an SPCU code of male-typical	with display "Apply male-typical setting or reference range", noting in the comment field that the patient has a prostate. 
 9.	The order is transmitted to the lab system. 
 10.	Julie proceeds to the lab department where she is checked in by her name and the lab technicians use her appropriate pronouns of she/her/hers as indicated in the record. Her blood specimen is collected, and the PSA test is performed by the lab.
 
-#### Patient encounter and examination workflow
+##### Patient encounter and examination workflow
 <img style="vertical-align: top;" src="WF Examination.svg" width="100%" />
  
-### Review of lab results 
+#### Review of lab results 
 1.	The next day, Dr. Jones reviews the results of Julie Smith’s PSA. 
 2.	A PSA of 3.0 ng/ml is resulted with a reference range of normal as 0-4.0 ng/ml for Julie’s age. 
 3.	However, upon opening the result Dr. Jones is notified of a comment on the result: “Patients on testosterone suppressing medications, the upper limit of normal for the PSA should be reduced to 1.0 ng/ml.” 
 4.	Dr. Jones reviews Julie Smith’s previous testosterone levels, discusses the results with Julie, and together they decide to schedule her for additional testing based upon the specific situation noted for this PSA result.
 
-#### Review of lab results workflow
+##### Review of lab results workflow
  ![Review of lab results workflow](WF Results SVG.svg)
 
 ## References

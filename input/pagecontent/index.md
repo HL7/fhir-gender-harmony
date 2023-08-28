@@ -10,6 +10,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-31       OTHER-2515         Joanie Harper                Update the name of the "Vendors" section to "HIT System solution providers" per the Jira ticket https://jira.hl7.org/browse/OTHER-2515
 2023-08-20       OTHER-2602         Rob McClure                  Remove Notes to balloters
 2023-08-21       OTHER-2532         Joanie Harper                Added links to the model page for the items that are In Scope
+2023-08-25       OTHER-2560         Sean Muir                    Improve footnote notation - used MD based footnote syntax
 -->
 
 <!-- NOTES on ballot:
@@ -68,7 +69,7 @@ As described in the original Gender Harmony logical model specification:
 
 > Health care is increasingly turning to technology to help improve systems and processes to benefit patients and their health. Ongoing efforts supported by governing agencies and standards committees are responding to the demonstrated need through standards that allow for seamless integration of patient information between systems.
 
-> It is imperative that both sex and gender vocabulary be formally integrated into clinical care because they are not interchangeable. Both influence health outcomes. Gender-marginalized individuals <a href="#fn1">fn1</a>   face significant barriers to adequate and culturally responsive healthcare, leading to numerous health disparities. By adopting structured data sets, agnostic systems will be better equipped to transmit (share) and accept data elements that will improve the accuracy of patient information. Furthermore, standardizing data enables information to be combined with other data sources used to evaluate clinical outcomes. While data collection and documentation are critical factors in clinical decision-making, these new data will also promote important dialogue between clinicians and patients. Ultimately, this will assist with improved quality of care, reduced clinician burden and less fragmentation of a person&#39;s clinical record.
+> It is imperative that both sex and gender vocabulary be formally integrated into clinical care because they are not interchangeable. Both influence health outcomes. Gender-marginalized individuals[^1] face significant barriers to adequate and culturally responsive healthcare, leading to numerous health disparities. By adopting structured data sets, agnostic systems will be better equipped to transmit (share) and accept data elements that will improve the accuracy of patient information. Furthermore, standardizing data enables information to be combined with other data sources used to evaluate clinical outcomes. While data collection and documentation are critical factors in clinical decision-making, these new data will also promote important dialogue between clinicians and patients. Ultimately, this will assist with improved quality of care, reduced clinician burden and less fragmentation of a person&#39;s clinical record.
 
 Currently, it is common that a single data element is used to capture both sex and gender information, often assuming these two items are one unified idea. The goal of this specification is to firmly and irrevocably clarify that clinical sex characterization, where useful, is distinct from gender identity and when sharing of other sex or gender datums is important for interoperability, they be identified as a particular recorded sex or recorded gender. In addition, name to use and pronouns are critical information for affirming interactions. Central to the goal of this guide is to "harmonize" Hl7 standards and through that work we hope for consistency in clinical system representation of the specific data elements to be used for independent consideration of sex and gender.  The assessment of their differences promotes the health of women, men, and people of diverse gender identities of all age. Implementing these changes can improve data accuracy for sex and gender information in health care systems.
 
@@ -76,7 +77,7 @@ Currently, it is common that a single data element is used to capture both sex a
 
 #### In-Scope
 
-The consultative process that has produced this HL7 guide continues the work of the initial GH project and reflects clinical end user needs on balance with contributors from 2SLGBTQIA+ <a href="#fn2">fn2</a>  organizations such as Fenway Health and active participants with lived experience from the United States and Canada. Vendors were included from Japan, Germany, India, and the United States.
+The consultative process that has produced this HL7 guide continues the work of the initial GH project and reflects clinical end user needs on balance with contributors from 2SLGBTQIA+[^2] organizations such as Fenway Health and active participants with lived experience from the United States and Canada. Vendors were included from Japan, Germany, India, and the United States.
 
 The in-scope core list of specific gender and sex use-data elements described by the specification, are as follows:
 The in-scope core list of specific gender and sex use-data elements described by the specification, are as follows:
@@ -169,7 +170,7 @@ We are indebted to all members of the project, listed [here](https://confluence.
     - Cooper Thompson
 - **Use Cases**
     - Robert Horn, Steven Nichols, Riki Merrick, Cara Schlegel, and Joseph Bormel
-- **Resources Provided by the Department of Veterans Affairs**
+- **Supporting Resources Provided by the Department of Veterans Affairs**
 	- Dr. Jonathan Nebeker, National CMIO and Executive Director of Clinical Informatics and Data Management Office (CIDMO)
 	- Steven Brown, MD, Director, CIDMO Knowledge-Based Systems (KBS)
 	- Christopher Shawn, Director KBS Standards & Interoperability(S&I)
@@ -181,8 +182,7 @@ We are indebted to all members of the project, listed [here](https://confluence.
 	- Sean Muir, Project Facilitator, Cognitive Medical
 
 ### FootNote(s)
-1. fn1
-<p id="fn1"><sup>A grouping term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.</sup></p>
 
-1. fn2
-<p id="fn2"><sup>Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community is not a monolith.</sup></p>
+[^1]:A grouping term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.
+
+[^2]:Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community is not a monolith.

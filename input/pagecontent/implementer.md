@@ -1,11 +1,13 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
 2023-07-10       OTHER-2558         Cooper                       Added SPCU considerations
-
-
+2023-08-27			NONE			Carol Macumber		Added note at top of page instructing implementers to use product specific jira projects to propose changes to FHIR, CDA or V2.
+2023-08-27       OTHER-2452         Rob McClure                 Added new section Sex assigned at birth versus birth-focused Sex Parameter for Clinical Use
 -->
 
 Gender Harmony Implementer Considerations for HL7 Product Families
+
+Note: Implementers should utilize product specific JIRA projects to propose HL7 product family specific changes. For convienence, they are linked here: [FHIR](http://jira.hl7.org/projects/FHIR), [V2](http://jira.hl7.org/projects/V2) and [CDA](http://jira.hl7.org/projects/CDA). Proposed changes to this Cross Paradigm Gender Harmony IG should be submitted [here](http://jira.hl7.org/projects/OTHER).
 
 ## Exchanging a Sex Parameter for Clinical Use
 ### Patient Level Sex Parameter for Clinical Use
@@ -13,6 +15,9 @@ A Sex Parameter for Clinical Use (SPCU) may be used in specific clinical context
     
       
 When using SPCU at a patient level, consider if any information is available suggesting that the patient is NOT male-typical or female-typical *across all clinical contexts*, then using **specified** as the patient-level SPCU is most appropriate, as that indicates that individuals or systems providing care should either use default behavior that is safe for both male and female populations, individually review treatment options with the patient, or carefully inspect comments and relevant observations before proceeding with treatment.   Additionally, consider if there are any risks related to patient care or equitable treatment when using a patient-level SPCU.  For example, when bifurcating a cohort based on a patient-context SPCU for research, carefully consider which groups may be inappropriately categorized.
+
+### Sex Assigned at Birth versus birth-focused Sex Parameter for Clinical Use
+Describing the patient's anatomical sex at birth can be done using a Sex Parameter for Clinical Use, with a period indicating it was captured at (or around) the birth of the child.  That same determination may also be communicated as the specific observation "Sex Assigned at Birth". While Sex Assigned at Birth is often associated with the birth certificate, in certain jurisdictions this datum can be changed, and it may have legal connotations that differ from the clinical observations. The preferred international approach is to use SPCU associated with a relevant delivery episode. If that is not possible, some implementations may associate this directly to the patient. If Sex Assigned at Birth is in a implementation guide relevant to your use case and jurisdiction (e.g. US Core uses an extension on Patient), use of that profile or extension may be preferred.
 
 ### Contextual Sex Parameter for Clinical Use
 A Sex Parameter for Clinical Use (SPCU) may be used in specific clinical contexts, for example, when placing an order or when interpreting a result.  In these contexts, consider whether using a categorization such as Sex Parameter for Clinical Use is sufficient, or if using a more specific clinical observation such as an Observation about the presense or absense of an organ is most appropriate.  If a categorization is sufficient, then the [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension may be added to the resource that best represents the context.  For example, if the context is a referral order or lab order, then the extension could be added to the ServiceRequest.

@@ -33,8 +33,8 @@ In this scenario, the Care Manager reviews a list of patients that have upcoming
 - The Care Manager is reviewing a list of patients in a time period appropriate for considering an annual health maintenance visit. 
 - After completing the prior patient on the list, the Care Manager arrives at Julie Smith (the transgender woman used in this series of use cases). 
 - The Care Manager has an application that is functionally integrated into the EHR which reviews the patients’ clinical features, including reviewing and validating an organ inventory. The organ inventory was updated following gender-affirming surgery, specifically vaginoplasty, and this information (presence of prostate) was sufficient to create a task (Resource Task) indicating that Julie Smith will require (or be offered and may refuse) a prostate screening by her PCP. 
-- The task, Prostate Screening Exam is created with an SFCU = M, with supplementary information indicating that the presence of prostate warranted this SFCU value.
-- The Care Manager’s work for Julie Smith includes and is completed by initiating the scheduling of a clinic appointment at which time the active tasks (including the prostate screening exam) will be performed. Note that a value of ‘M’ will at no point be attached to the patient record itself and no patient level SFCU will be set. [In some practice environments, a Prostate-specific Antigen PSA lab test may be deployed instead of the prostate exam. The service request for that lab will include an SFCU = M, also linked to the organ inventory value.]
+- The task, Prostate Screening Exam is created with an SPCU = M, with supplementary information indicating that the presence of prostate warranted this SPCU value.
+- The Care Manager’s work for Julie Smith includes and is completed by initiating the scheduling of a clinic appointment at which time the active tasks (including the prostate screening exam) will be performed. Note that a value of ‘M’ will at no point be attached to the patient record itself and no patient level SPCU will be set. [In some practice environments, a Prostate-specific Antigen PSA lab test may be deployed instead of the prostate exam. The service request for that lab will include an SPCU = M, also linked to the organ inventory value.]
 ##### Clinic appointment arrival and check-in
 The Use Case below describes the process of a clinic appointment for a transgender woman with lab testing as a result of an organ-specific finding.
 - Julie Smith arrives at an outpatient clinic for her health screening appointment and is greeted at the registration desk. 
@@ -59,7 +59,7 @@ The Use Case below describes the process of a clinic appointment for a transgen
 - Julie proceeds with her annual appointment with her physician, Dr. Jones. 
 - Before the examination, Dr. Jones asks Julie about the medications she is taking regularly and on an as needed basis. 
 - Julie notes that she is transgender and is utilizing estrogenic therapy regimen. During the examination of her prostate, Dr. Jones notes a nodule on the prostate.
-- After a discussion with the patient, Dr. Jones enters a lab order for a PSA quantitative test and includes an SFCU value of “Male”, noting in the comment field that the patient has a prostate. 
+- After a discussion with the patient, Dr. Jones enters a lab order for a PSA quantitative test and includes an SPCU value of “Male”, noting in the comment field that the patient has a prostate. 
 - The order is transmitted to the lab system. 
 - Julie proceeds to the lab department where she is checked in by her name and the lab technicians use her appropriate pronouns of she/her/hers as indicated in the record. Her blood specimen is collected, and the PSA test is performed by the lab
 ##### Review of lab results 
