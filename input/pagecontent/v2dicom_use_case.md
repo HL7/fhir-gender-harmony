@@ -1,7 +1,7 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-2023-08-01      OTHER-2454          Rob M                          Used this ticket to update per changes in RM updates to SCT and SPCU value sets
-2023-08-02      none                Rob M                   Fixed incorrect SPCU code system name
+2023-08-01      OTHER-2454          Rob M                        Used this ticket to update per changes in RM updates to SCT and SPCU value sets
+2023-08-02      none                Rob M                        Fixed incorrect SPCU code system name
 
 -->
 
