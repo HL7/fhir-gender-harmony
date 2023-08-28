@@ -2,7 +2,7 @@
 Date             Jira ticket              Updated by               Comment
 2023-8-16        spell/grammar check      MaryKay McDaniel         timeframes to time frames, 
 2023-8-16        OTHER-2602               MaryKay McDaniel         commented out the Note to balloter, incase it was needed for something in other tickets
-
+2023-08-27        OTHER-2574        Rob McClure                   ValueSet to value set, data type to datatype
 -->
 
 Because we do not yet support FHIR publication of CDA artifacts, we publish the CDA templates in the same format as prior CDA implementation guides, i.e., a pdf document. 
@@ -30,7 +30,7 @@ As most guides specify “open” templates, inclusion of these entries where ap
 
 **Backwards compatibility of GH artifacts**
 
-Name to use, as noted above, is not templated, as it is supported by Person Name data type.
+Name to use, as noted above, is not templated, as it is supported by Person Name datatype.
 
 Pronouns is a new template.
 

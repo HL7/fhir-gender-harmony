@@ -2,7 +2,7 @@
 Date             Jira ticket        Updated by                   Comment
 2023-06-14       OTHER-2609         Joanie Harper                Added hyphen per Jira ticket https://jira.hl7.org/browse/OTHER-2609
 2023-08-22      OTHER-2710          Rob McClure                 Added LOINC section, arranged sections in alpha order
-
+2023-08-27      OTHER-2608          Rob McClure                 Updated DICOM section to align with current SPCU
 -->
 
 ### DICOM
@@ -25,10 +25,9 @@ characteristics of the studied populations.
 Operationally, this field is initially populated either by hand or
 based on an order. The order is frequently conveyed by HL7 V2.x
 message. The inconsistency and confusion caused by having one field
-for multiple concepts (administrative sex, gender identity and sex for
-clinical use) leads to occasional inconsistency in the image results
+for multiple concepts (administrative sex, gender identity and sex parameter for clinical use) leads to occasional inconsistency in the image results
 and reports created by DICOM equipment. It also leads to operators
-occasionally making changes to reflect the patient’s sex for clinical
+occasionally making changes to reflect the patient’s sex parameter for clinical
 use that then cause downstream inconsistencies with other systems that
 were using administrative sex or gender identity.
 
@@ -42,11 +41,11 @@ Project. The present expectation is to revise DICOM to:
 - Clarify that the current Patient Sex attribute corresponds to the
 originator's administrative choices.  This preserves compatibility
 with existing medical records archives and equipment. It also explains
-that SFCU should be used for clinical analysis when available.
+that SPCU should be used for clinical analysis when available.
 
-- Add an optional SFCU attribute to convey SFCU as defined in the
+- Add an optional SPCU attribute to convey SPCU as defined in the
 logical model. As gender harmonized applications are installed
-upstream that support SFCU, this should reduce ambiguities resulting
+upstream that support SPCU, this should reduce ambiguities resulting
 from the use of local administrative choices.
 
 - Add an optional Patient Gender Identity attribute with the same
@@ -59,7 +58,7 @@ required and optional value set as described here.
 - Add an optional Recorded Sex and Gender attribute.
 
 - Clarify existing DICOM patient and order comment fields to indicate
-that when Sex for Clinical Use is “complex”, these comment fields
+that when Sex Parameter for Clinical Use is "Specified", these comment fields
 should provide information explaining relevant information for
 operators and clinicians. They are presently used for operator
 instructions, so this usage is a continuation of current usage.
