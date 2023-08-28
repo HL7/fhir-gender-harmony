@@ -1,6 +1,6 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-
+2023-08-28       OTHER-2425         Rob McClure                 Updated SFCU to SPCU and updated code value.
 
 
 -->
@@ -88,7 +88,7 @@ Use case covers change of name, gender identity, and pronouns in the patient reg
 5.	Before the examination, Dr. Jones asks Julie about the medications she is taking regularly and on an as-needed basis. 
 6.	Julie informs Dr. Jones that she is utilizing an estrogenic therapy regimen. 
 7.	During the examination of her prostate, Dr. Jones notes a nodule on the prostate.
-8.	After a discussion with the patient, Dr. Jones enters a lab order for a PSA quantitative test and includes an SFCU value of “Male”, noting in the comment field that the patient has a prostate. 
+8.	After a discussion with the patient, Dr. Jones enters a lab order for a PSA quantitative test and includes an SPCU code of male-typical	with display "Apply male-typical setting or reference range", noting in the comment field that the patient has a prostate. 
 9.	The order is transmitted to the lab system. 
 10.	Julie proceeds to the lab department where she is checked in by her name and the lab technicians use her appropriate pronouns of she/her/hers as indicated in the record. Her blood specimen is collected, and the PSA test is performed by the lab.
 
