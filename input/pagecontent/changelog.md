@@ -5,12 +5,13 @@ Date             Jira ticket        Updated by                   Comment
 # Change log
 This page details changes made in each version of the HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation
 
-## Version = 
+## Changes made for the STU1 Ballot Reconciliation include:
+Version = 
 Publication Date:
 url:  
 Based on FHIR version : 
 
-The changes made in this version have been reviewed by the public through the HL7 International ballot process. The resolution of the community comments has been agreed and voted on by members of the following work groups:  
+The changes made in this version have been reviewed by the public through the HL7 International ballot process. The resolution of the community comments has been agreed and voted on by members of the following management and work groups:  
 -   CDA Management Group,
 -   Financial Management, 
 -   Orders and Observations,
@@ -40,6 +41,7 @@ The changes made in this version have been reviewed by the public through the HL
 <!-- I don't think the name of this CDA Guide is correct???????
 -->
 ### Changes applied to the HL7 CDA R2 Implementation Guide: Sex and Gender Representation Edition 1 – US Realm
+
 **Applied:** Update the conformance statement for observation.value.code at 2.3.13.a.v [OTHER-2640](https://jira.hl7.org/browse/OTHER-2640)
 **Applied:** In CDA, Change SFCU to SPCU based upon resolution of ballot comments [OTHER-2671](https://jira.hl7.org/browse/OTHER-2671)
 **Applied:** CDA Sex for Clinical Use - Unclear Sentence [OTHER-2511](https://jira.hl7.org/browse/OTHER-2511)
@@ -53,10 +55,8 @@ Next ticket is 2508
 **Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)
 -->
 
-## Version = 
+## Initial Ballot 
+Version = 
 Publication Date:  
 url:  
 Based on FHIR version : 
-
-### Changes:
-STU1 Ballot 
