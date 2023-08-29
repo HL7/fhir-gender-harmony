@@ -24,10 +24,13 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-08       OTHER-2540         Joanie Harper                add links for minValueSets per Jira ticket 
 2023-08-08       OTHER-2576         Joanie Harper                update text per Jira ticket 
 2023-08-14       OTHER-2709         Joanie Harper                update text per Jira ticket 
-2023-08-22       OTHER-2532         Rob McClure                   Clarify use of "sex or gender"
-2023-08-22        various           Rob McClure                Updated RSG description and Usage Notes to clarify that SAAB (and Administrative Gender) can be directly exchanged without "wrapping" in RSG template and as such they should be considered a conformant exchange of USCDI v4 "Sex"
-2023-08-22        OTHER-2512        Rob McClure                Confirmed removal of ICAO element and added explanation of change.
-2023-08-22        OTHER-2589        Ro McClure                 Added section noting changes in the model when compared to original. Confirmed changes in bindings. provided links to binding strength definitions.
+2023-08-22       OTHER-2532         Rob McClure                  Clarify use of "sex or gender"
+2023-08-22        various           Rob McClure                  Updated RSG description and Usage Notes to clarify that SAAB (and Administrative Gender) can be directly exchanged without "wrapping" in RSG template and as such they should be considered a conformant exchange of USCDI v4 "Sex"
+2023-08-22        OTHER-2512        Rob McClure                  Confirmed removal of ICAO element and added explanation of change.
+2023-08-22        OTHER-2589        Rob McClure                  Added section noting changes in the model when compared to original. Confirmed changes in bindings. provided links to binding strength definitions.
+2023-08-28       OTHER-2569         Joanie Harper                update per Jira ticket -- still need links to V2 spec and CDA spec
+2023-08-28       OTHER-2580         Joanie Harper                update Gender Harmony capitalization
+
 -->
 
 ### Modeling Sex and Gender Representation
@@ -48,13 +51,13 @@ demand improvements that will benefit all patients. This implementation
 guide provides structural and semantic guidance to vendors and interface
 developers to address these requirements.
 
-The [Gender Harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) provides necessary constructs to more
+The [gender harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) provides necessary constructs to more
 accurately capture sex and gender identity along with associated context of use.
 While the framework provides the necessary infrastructure, the specific
-changes in individual standards to concretely specify actual
-implementable structures are detailed in separate specifications (xxinsert
-links to (HL7 v2, FHIR, DICOM etc.) while this implementation guide
-provides additional guidance and use cases.
+changes in individual standards to concretely specify actual implementable 
+structures are detailed in separate specifications ([FHIR R5](http://hl7.org/fhir/extensions/extensions-Patient.html), [V2.9.1](still 
+undergoing ballot), [Representing Sex and Gender in CDA](permanent-link to spec)), this implementation 
+guide provides specific additional guidance and cross-paradigm use cases. 
 
 In this document, and elsewhere, the phrase “sex or gender” is used to characterize data in which the contextual meaning of the the datum is unclear and its use is an acknowledgement that human discourse regarding this information is often equally unclear. Use of this phrase is not intended to mean a unification of information that is more clearly either SPCU or gender identity.
 
@@ -70,8 +73,8 @@ or Gender (RSG), Name to Use (NtU), and Pronouns.
 
 With the exception of one addition (Recorded Sex or Gender attribute =
 type with datatype = code or constrained text), the model included in
-this implementation guide is exactly in the published Gender Harmony
-Informative Specification. The addition was made to clarify and cover
+this implementation guide is exactly in the published gender harmony
+informative specification. The addition was made to clarify and cover
 the original intent of Record Sex or Gender, including the ability to
 specify the type or category of sex or gender that is recorded (e.g.,
 Sex Assigned At Birth).
@@ -89,7 +92,7 @@ if applicable) for each model element.
 <br clear="all" />
 
 
-The Gender Harmony model sub-elements described below are sex or
+The gender harmony model sub-elements described below are sex or
 gender information that may be context-dependent; in essence a sex
 and/or gender context type. Some of these types are multi-valued based
 in part on the need for independent, occasionally co-occurring, values
@@ -118,7 +121,7 @@ link to observations or reports that are part of the SPCU, or in the
 comment associated with Gender Identity.
 
 ### Updates to the model compared to original specification
-With the exception of the following noted changes, the model included in this implementation guide matches the model in the published Gender Harmony Informative Specification.
+With the exception of the following noted changes, the model included in this implementation guide matches the model in the published gender harmony informative specification.
 #### Recorded Sex or Gender
 - Addition of Recorded Sex or Gender attribute = type with datatype = code or constrained text
    -  This addition was made to align with the original context of the data exchanged as an RSG so that users may specify the type or category of sex or gender that is recorded (e.g., "Sex").
@@ -244,7 +247,7 @@ the GFR report can indicate which formula should be used in the computation
 of that result. In cases where there is a patient level SPCU, the patient 
 level value can be used as a default (any specific use) value unless a 
 specific SPCU for that observation has been specified, in which case, the 
-specified SPCU should apply. The Gender Harmony model does not cover the 
+specified SPCU should apply. The gender harmony model does not cover the 
 description of the use of SPCU in type of observation, but the approach for 
 each is the same.
 
@@ -359,7 +362,7 @@ The RSG model includes source information so that the definition of “X” in a
 
 **Usage Note:** If a medical system needs to exchange a single internal field labeled “sex” which, over time, has been used to capture both sex and gender, Recorded Sex or Gender may be an appropriate way to exchange such data. 
 
-It is understood that administrative gender, administrative sex, and sex assigned at birth are exchanged today, and when exchanged in this way the data should not be considered a representation of Gender Identity (GI) or Sex Parameter for Clinical Use (SPCU). It is expected that these concepts may continue to be exchanged using existing established methods without using RSG. But, when SAAB *is exchanged as an RSG entry* the "type” should be specified as “sex assigned at birth” or another regionally specific short text string. As a result of feedback from the Gender Harmony project and in-line with the Gender Harmony model, the US Office of the National Coordinator (ONC) recognized in its Standards Bulletin (SB22-2), regarding the development and finalization of United States Core Data for Interoperability (USCDI) Version 3, that “the data element Sex (Assigned at Birth) is used to represent different concepts not necessarily associated with what is assigned at the time of birth, such as clinically relevant sex for labs or diagnostic imaging, as well as administrative sex as recorded on birth certificates and health forms.” As a result, ONC changed the name of the data element to “Sex” acknowledging the previous limitation to birth information documentation.
+It is understood that administrative gender, administrative sex, and sex assigned at birth are exchanged today, and when exchanged in this way the data should not be considered a representation of Gender Identity (GI) or Sex Parameter for Clinical Use (SPCU). It is expected that these concepts may continue to be exchanged using existing established methods without using RSG. But, when SAAB *is exchanged as an RSG entry* the "type” should be specified as “sex assigned at birth” or another regionally specific short text string. As a result of feedback from the Gender Harmony Project and in-line with the gender harmony model, the US Office of the National Coordinator (ONC) recognized in its Standards Bulletin (SB22-2), regarding the development and finalization of United States Core Data for Interoperability (USCDI) Version 3, that “the data element Sex (Assigned at Birth) is used to represent different concepts not necessarily associated with what is assigned at the time of birth, such as clinically relevant sex for labs or diagnostic imaging, as well as administrative sex as recorded on birth certificates and health forms.” As a result, ONC changed the name of the data element to “Sex” acknowledging the previous limitation to birth information documentation.
 
 **Cardinality:** 0..n
 
