@@ -51,7 +51,7 @@ demand improvements that will benefit all patients. This implementation
 guide provides structural and semantic guidance to vendors and interface
 developers to address these requirements.
 
-The [gender harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) provides necessary constructs to more
+The [Gender Harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) provides necessary constructs to more
 accurately capture sex and gender identity along with associated context of use.
 While the framework provides the necessary infrastructure, the specific
 changes in individual standards to concretely specify actual implementable 
@@ -73,7 +73,7 @@ or Gender (RSG), Name to Use (NtU), and Pronouns.
 
 With the exception of one addition (Recorded Sex or Gender attribute =
 type with datatype = code or constrained text), the model included in
-this implementation guide is exactly in the published gender harmony
+this implementation guide is exactly in the published Gender Harmony
 informative specification. The addition was made to clarify and cover
 the original intent of Record Sex or Gender, including the ability to
 specify the type or category of sex or gender that is recorded (e.g.,
@@ -121,7 +121,7 @@ link to observations or reports that are part of the SPCU, or in the
 comment associated with Gender Identity.
 
 ### Updates to the model compared to original specification
-With the exception of the following noted changes, the model included in this implementation guide matches the model in the published gender harmony informative specification.
+With the exception of the following noted changes, the model included in this implementation guide matches the model in the published Gender Harmony informative specification.
 #### Recorded Sex or Gender
 - Addition of Recorded Sex or Gender attribute = type with datatype = code or constrained text
    -  This addition was made to align with the original context of the data exchanged as an RSG so that users may specify the type or category of sex or gender that is recorded (e.g., "Sex").
