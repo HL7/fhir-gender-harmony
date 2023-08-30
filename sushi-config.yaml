@@ -20,6 +20,7 @@ publisher:
   url: https://www.hl7.org/Special/committees/Vocab
   email: ti@lists.hl7.org
 
+# paremter for navigation
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   shownav: 'true'  
 
