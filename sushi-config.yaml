@@ -53,8 +53,8 @@ pages:
    title: FHIR Guidance
   fhirdesignbackground.md:
    title: FHIR Design Background
-  fhirexamples.md:
-    title:  FHIR Examples
+#  fhirexamples.md:
+#    title:  FHIR Examples
   terminology.md:
     title: Terminology        
   externalstandards.md:
