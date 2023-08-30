@@ -96,7 +96,7 @@ menu:
   FHIR:
     FHIR Guidance: fhirgenderharmony.html
     FHIR Design Background: fhirdesignbackground.html
-    FHIR Examples: fhirexamples.html
+#    FHIR Examples: fhirexamples.html
   Terminology: terminology.html 
   External Standards: externalstandards.html
   Bibliography: bibliography.html
