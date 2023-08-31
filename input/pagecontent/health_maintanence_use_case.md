@@ -1,7 +1,7 @@
 <!-- Updates based on Jira tickets 
 Date             Jira ticket        Updated by                   Comment
-2023-08-28       OTHER-2425         Rob McClure                 Updated SFCU to SPCU and updated code value.
-2023-08-28          None            TRob McClure                Fixed heading hierarchy to place much of this under the Workflow/Storyboard section
+2023-08-28       OTHER-2425         Rob McClure                Updated SFCU to SPCU and updated code value.
+2023-08-28          None            Rob McClure                Fixed heading hierarchy to place much of this under the Workflow/Storyboard section
 
 -->
 
