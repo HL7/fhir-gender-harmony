@@ -85,12 +85,67 @@ The changes made in this version of the Implementation Guide are a result of the
 ### Changes applied to the HL7 CDA R2 Implementation Guide: Sex and Gender Representation Edition 1 – US Realm
 <!-- I don't think the name of this CDA Guide is correct???????
 THIS SECTION NEEDS TO BE COMPLETED
+OTHER-2510
+OTHER-2509
+OTHER-2510
+1507
+2506
+2505
+2504
+2503
+2502
+2501
+2500
+2499
+2498
+2470
+2469
+2468
+2467
+2465
+2435
+2434
+
+
 -->
 **Applied:** Update the conformance statement for observation.value.code at 2.3.13.a.v [OTHER-2640](https://jira.hl7.org/browse/OTHER-2640)<br>
 **Applied:** In CDA, Change SFCU to SPCU based upon resolution of ballot comments [OTHER-2671](https://jira.hl7.org/browse/OTHER-2671)<br>
 **Applied:** CDA Sex for Clinical Use - Unclear Sentence [OTHER-2511](https://jira.hl7.org/browse/OTHER-2511)<br>
 **Applied:** CDA Recorded Sex or Gender - Sex for Clinical Use SPRT actRelationshipType is "Has Support" [OTHER-2520](https://jira.hl7.org/browse/OTHER-2510)<br>
 **Applied:** CDA Recorded Sex or Gender - Patient Record Type - Use Act reference/ExternalAct instead [OTHER-2508](https://jira.hl7.org/browse/OTHER-2508)<br>
+
+
+
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
+
+
+
 
 ### Changes applied to [CDA, CDA Examples Page](https://build.fhir.org/ig/HL7/fhir-gender-harmony/cdaexamples.html#cda-examples)
 <!-- Updates based on Jira tickets 
@@ -102,6 +157,8 @@ Date             Jira ticket        Updated by                   Comment
 2023-8-18        OTHER-2464         Sean Muir                    Update example per issue
 2023-8-18        OTHER-2466         Sean Muir                    Update example per issue
 2023-8-18        OTHER-2487         Sean Muir                    Update example per issue
+Check OTHER-2488
+
 -->
 
 **Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
@@ -110,51 +167,27 @@ Date             Jira ticket        Updated by                   Comment
 **Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
 **Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
 **Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
 
+### Changes applied to [FHIR, FHIR Guidance](https://build.fhir.org/ig/HL7/fhir-gender-harmony/fhirgenderharmony.html#fhir-guidance)
+**Applied:** Added links, updated wording, typos, and made grammar corrections per [OTHER-2629](https://jira.hl7.org/browse/OTHER-2629), [OTHER-2616](https://jira.hl7.org/browse/OTHER-2616), and [OTHER-2411](https://jira.hl7.org/browse/OTHER-2411)<br>
+**Applied:** Split design background into a new page, updated FHIR guidance with much more detail [OTHER-2558](https://jira.hl7.org/browse/OTHER-2558)<br>
+**Applied:** Added guidance on the R4 backport extension for SPCU [OTHER-2618](https://jira.hl7.org/browse/OTHER-2618)<br>
 
+### Changes applied to [FHIR, FHIR Design Background](https://build.fhir.org/ig/HL7/fhir-gender-harmony/fhirdesignbackground.html#fhir-design-background)
+**Applied:** Split design background into a new page, updated FHIR guidance with much more detail [OTHER-2558](https://jira.hl7.org/browse/OTHER-2558)<br>
+**Applied:** Added guidance on the R4 backport extension for SPCU [OTHER-2618](https://jira.hl7.org/browse/OTHER-2618)<br>
+**Applied:** Updated wording, typos, and made grammar corrections per [OTHER-2633](https://jira.hl7.org/browse/OTHER-2633), [OTHER-2613](https://jira.hl7.org/browse/OTHER-2613), [OTHER-2610](https://jira.hl7.org/browse/OTHER-2610), [OTHER-2579](https://jira.hl7.org/browse/OTHER-2579), and [OTHER-2525](https://jira.hl7.org/browse/OTHER-2525)<br>
+**Applied:** Updated Backwards Compatibility for FHIR versions section [OTHER-2618](https://jira.hl7.org/browse/OTHER-2618)<br>
 
+### Changes applied to [Terminology](https://build.fhir.org/ig/HL7/fhir-gender-harmony/terminology.html#terminology)
+**Applied:** Added links, updated wording, typos, and made grammar corrections per [OTHER-2553](https://jira.hl7.org/browse/OTHER-2553), [OTHER-2641](https://jira.hl7.org/browse/OTHER-2641), [OTHER-2557](https://jira.hl7.org/browse/OTHER-2557), and [OTHER-2630](https://jira.hl7.org/browse/OTHER-2630)<br>
+**Applied:** Updated SPCU value references [OTHER-2552](https://jira.hl7.org/browse/OTHER-2552)<br>
+**Applied:** Added additional guidance for RecordedSexOrGender [OTHER-2637](https://jira.hl7.org/browse/OTHER-2637)<br>
+**Applied:** Modified Gender Identity section discussion around minimum value set for clarity [OTHER-2636](https://jira.hl7.org/browse/OTHER-2636)<br>
 
-<!--
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
-**Applied:**  [OTHER-2](https://jira.hl7.org/browse/OTHER-2)<br>
--->
+### Changes applied to [External Standards](hhttps://build.fhir.org/ig/HL7/fhir-gender-harmony/externalstandards.html#external-standards)
+**Applied:** Updated wording, typos, and made grammar corrections per [OTHER-2609](https://jira.hl7.org/browse/OTHER-2609)<br>
+**Applied:** Added LOINC section, arranged sections in alpha order [OTHER-2710](https://jira.hl7.org/browse/OTHER-2710)<br>
+**Applied:** Updated DICOM section to align with use of SPCU and final SPCU values [OTHER-2608](https://jira.hl7.org/browse/OTHER-2608)<br>
+
 

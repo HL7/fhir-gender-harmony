@@ -7,7 +7,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-10       OTHER-2637         Joanie Harper                Add paragraph to the RSG section per https://jira.hl7.org/browse/OTHER-2637
 2023-07-17       OTHER-2636         Joanie Harper                Updated Gender Identity section per https://jira.hl7.org/browse/OTHER-2636
 2023-07-17       OTHER-2606         Joanie Harper                Updated the line about 'table 396' entries per https://jira.hl7.org/browse/OTHER-2606
-2023-07-17       OTHER-2630         Joanie Harper                Updated note to balloters regarding v2.9.1 afrtifacts per https://jira.hl7.org/browse/OTHER-2630
+2023-07-17       OTHER-2630         Joanie Harper                Updated note to balloters regarding v2.9.1 artifacts per https://jira.hl7.org/browse/OTHER-2630
 2023-07-17       OTHER-2557         Joanie Harper                Removed references to ICAO in RSG section.  Added THO link to value set per https://jira.hl7.org/browse/OTHER-2557
 2023-07-17       OTHER-2557         Joanie Harper                Updated text in general section as per https://jira.hl7.org/browse/OTHER-2409.  This removes references to rolling up
 2023-08-24       OTHER-2602         MaryKay McDaniel             Commented out Notes to Balloters (just in case we want to leave it in...)
