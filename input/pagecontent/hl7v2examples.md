@@ -10,5 +10,5 @@ Date             Jira ticket        Updated by                   Comment
 
 #### [DICOM PET scan in patient with change in gender](v2dicom_use_case.html)
 
-#### [Health Screening with lab test in patient with change in gender](v2health_maintanence_use_case.html)
+#### [Health Screening with lab test in patient with change in gender](v2health_maintenance_use_case.html)
 
