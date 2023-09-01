@@ -38,10 +38,10 @@ pages:
     title: Design Considerations        
   implementer.md:
     title: Implementer Considerations      
-  dicom_use_case.md:
-    title: DICOM PET Scan Use Case
-  health_maintanence_use_case.md:
-    title: Health Maintanence Lab Use Case 
+  # dicom_use_case.md:
+    # title: DICOM PET Scan Use Case
+  health_maintenance_use_case.md:
+    title: Health Maintenance Lab Use Case 
   hl7v2genderharmony.md:
     title: V2 Gender Harmony
   hl7v2examples.md:
@@ -67,13 +67,15 @@ pages:
   artifacts2.md:
     title: Artifacts
   v2dicom_use_case.md:
-    title: FHIR DICOM Example
-  v2health_maintanence_use_case.md:
-    title: V2 Health Maintanence Example
+    title: V2 DICOM Example
+  v2health_maintenance_use_case.md:
+    title: V2 Health Maintenance Example
   cdadicom_use_case.md:
     title: CDA DICOM Example
-  fhirhealth_maintanence_use_case.md:
-    title: FHIR Health Maintanence Example   
+  dicom_use_case.md:
+    title: FHIR DICOM Example
+  fhirhealth_maintenance_use_case.md:
+    title: FHIR Health Maintenance Example   
 menu:
   Home: index.html
   Background: 
@@ -85,7 +87,7 @@ menu:
     Implementer Considerations: implementer.html 
   Use Cases:  
     DICOM PET Scan Use Case: dicom_use_case.html
-    Health Maintenance Lab Use Case: health_maintanence_use_case.html   
+    Health Maintenance Lab Use Case: health_maintenance_use_case.html   
   V2:
     V2 Gender Harmony: hl7v2genderharmony.html
     V2 Examples: hl7v2examples.html
