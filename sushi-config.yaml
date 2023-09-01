@@ -72,8 +72,6 @@ pages:
     title: V2 Health Maintanence Example
   cdadicom_use_case.md:
     title: CDA DICOM Example
-  fhirdicom_use_case.md:
-    title: FHIR DICOM Example
   fhirhealth_maintanence_use_case.md:
     title: FHIR Health Maintanence Example   
 menu:
