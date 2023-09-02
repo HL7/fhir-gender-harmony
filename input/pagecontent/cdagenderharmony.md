@@ -62,6 +62,8 @@ One approach would be to use the Entry Reference template to associate an SPCU w
 
 The template defined here describes an approach using entryRelationship to establish context specific to an entry, to an encounter, or to the patient generally. This approach leverages context conduction appropriately, and it is a tactic with which many implementers are familiar. It also requires the use of the Entry Reference template where the SPCU applies to multiple entries.
 
+**CDA Publication**
+You can find the CDA publication here [CDA Gender Harmony](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=398).
 
 <!--<div class="note-to-balloters">
 <ol>
@@ -72,4 +74,4 @@ The template defined here describes an approach using entryRelationship to estab
 </div>
 -->
 
-<embed src="pdf/RepresentingSexandGender.pdf" width="100%" height="4200px" />
+
