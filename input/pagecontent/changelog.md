@@ -28,11 +28,13 @@ The changes made in this version of the Implementation Guide are a result of the
 **Applied:** Added additional depth to the TOC [OTHER-2526](https://jira.hl7.org/browse/OTHER-2526)<br>
 **Applied:** Standardized the use of "Gender Harmony initial informative specification" when referring to initial specification [OTHER-2570](https://jira.hl7.org/browse/OTHER-2570)<br>
 **Applied:** Links to ValueSet and CodeSystems, binding strength definitions, and standardized ValueSet and datatype name capitalization [OTHER-2574](https://jira.hl7.org/browse/OTHER-2574)<br>
-**Applied:** Remove notes to balloters [OTHER-2602](https://jira.hl7.org/browse/OTHER-2602)<br>
+**Applied:** Remove notes to balloters [OTHER-2571](https://jira.hl7.org/browse/OTHER-2571), [OTHER-2602](https://jira.hl7.org/browse/OTHER-2602), and [OTHER-2604](https://jira.hl7.org/browse/OTHER-2604)<br>
 **Applied:** Update SFCU to SPCU throughout the Gender Harmony IG [OTHER-2706](https://jira.hl7.org/browse/OTHER-2706), [OTHER-2671](https://jira.hl7.org/browse/OTHER-2671)<br>
-
+**Applied:** Consistent capitalization of Gender Harmony [OTHER-2580](https://jira.hl7.org/browse/OTHER-2580)<br>
+**Applied:** The tab "History" was modified to Change Log [OTHER-2592](https://jira.hl7.org/browse/OTHER-2592)<br>
 
 ### Changes applied to [Home Page](https://build.fhir.org/ig/HL7/fhir-gender-harmony/index.html#home)
+**Applied:** Wording, typos, and grammar corrections per [OTHER-2531](https://jira.hl7.org/browse/OTHER-2531), [OTHER-2561](https://jira.hl7.org/browse/OTHER-2561), [OTHER-2563](https://jira.hl7.org/browse/OTHER-2563), and [OTHER-2565](https://jira.hl7.org/browse/OTHER-2565)<br>
 **Applied:** Further explanation of 'harmony' in gender harmony [OTHER-2594](https://jira.hl7.org/browse/OTHER-2594)<br>
 **Applied:** Improved the readability and formatting of the In-scope section [OTHER-2562](https://jira.hl7.org/browse/OTHER-2562) and [OTHER-2528](https://jira.hl7.org/browse/OTHER-2528), Added links to the model page for GI, SPCU, RSG, Pronouns, NtU [OTHER-2532](https://jira.hl7.org/browse/OTHER-2532)<br>
 **Applied:** Updated the name of section 1.4.3 from Vendors to HIT System solution providers [OTHER-2515](https://jira.hl7.org/browse/OTHER-2515), Updated to use the word 'harmony' to 'harmonize' [OTHER-2594](https://jira.hl7.org/browse/OTHER-2594), Added links to DICOM and X12 [OTHER-2564](https://jira.hl7.org/browse/OTHER-2564)<br> 
@@ -41,13 +43,29 @@ The changes made in this version of the Implementation Guide are a result of the
 
 
 ### Changes applied to [Background Page](https://build.fhir.org/ig/HL7/fhir-gender-harmony/background.html#background)
-**Applied:** Minor wording, typos, and grammar corrections per [OTHER-2533](https://jira.hl7.org/browse/OTHER-2533), [OTHER-2566](https://jira.hl7.org/browse/OTHER-2566), [OTHER-2568](https://jira.hl7.org/browse/OTHER-22568), [OTHER-2537](https://jira.hl7.org/browse/OTHER-2537), and [OTHER-2567](https://jira.hl7.org/browse/OTHER-2567)<br>  
+**Applied:** Minor wording, typos, and grammar corrections per [OTHER-2533](https://jira.hl7.org/browse/OTHER-2533), [OTHER-2535](https://jira.hl7.org/browse/OTHER-2535), [OTHER-2536](https://jira.hl7.org/browse/OTHER-2536),[OTHER-2566](https://jira.hl7.org/browse/OTHER-2566), [OTHER-2568](https://jira.hl7.org/browse/OTHER-22568), [OTHER-2537](https://jira.hl7.org/browse/OTHER-2537), and [OTHER-2567](https://jira.hl7.org/browse/OTHER-2567)<br>  
 
 
 ### Changes applied to [Model Page](https://build.fhir.org/ig/HL7/fhir-gender-harmony/model.html#model)
-**Applied:** Wording, typos, and grammar corrections per [OTHER-2411](https://jira.hl7.org/browse/OTHER-2411), [OTHER-2480](https://jira.hl7.org/browse/OTHER-2480), [OTHER-2577](https://jira.hl7.org/browse/OTHER-2577), [OTHER-2585](https://jira.hl7.org/browse/OTHER-2585), [OTHER-2420](https://jira.hl7.org/browse/OTHER-2420), [OTHER-2625](https://jira.hl7.org/browse/OTHER-2625), [OTHER-2582](https://jira.hl7.org/browse/OTHER-2582), [OTHER-2581](https://jira.hl7.org/browse/OTHER-2581), [OTHER-2494](https://jira.hl7.org/browse/OTHER-2494), [OTHER-2576](https://jira.hl7.org/browse/OTHER-2576), [OTHER-2575](https://jira.hl7.org/browse/OTHER-2578), [OTHER-2575](https://jira.hl7.org/browse/OTHER-2578), and [OTHER-2709](https://jira.hl7.org/browse/OTHER-2709)<br>
+**Applied:** Wording, typos, and grammar corrections per 
+[OTHER-2411](https://jira.hl7.org/browse/OTHER-2411), 
+[OTHER-2420](https://jira.hl7.org/browse/OTHER-2420), 
+[OTHER-2480](https://jira.hl7.org/browse/OTHER-2480), 
+[OTHER-2494](https://jira.hl7.org/browse/OTHER-2494), 
+[OTHER-2572](https://jira.hl7.org/browse/OTHER-2572), 
+[OTHER-2573](https://jira.hl7.org/browse/OTHER-2573), 
+[OTHER-2575](https://jira.hl7.org/browse/OTHER-2575), 
+[OTHER-2576](https://jira.hl7.org/browse/OTHER-2576), 
+[OTHER-2577](https://jira.hl7.org/browse/OTHER-2577), 
+[OTHER-2578](https://jira.hl7.org/browse/OTHER-2578), 
+[OTHER-2581](https://jira.hl7.org/browse/OTHER-2581), 
+[OTHER-2582](https://jira.hl7.org/browse/OTHER-2582), 
+[OTHER-2585](https://jira.hl7.org/browse/OTHER-2585), 
+[OTHER-2597](https://jira.hl7.org/browse/OTHER-2597), 
+[OTHER-2625](https://jira.hl7.org/browse/OTHER-2625), and 
+[OTHER-2709](https://jira.hl7.org/browse/OTHER-2709)<br>
 **Applied:** Changed field name from Jurisdiction to Issuer, added Definition, and put Cardinality on its own line [OTHER-2586](https://jira.hl7.org/browse/OTHER-2586)<br>
-**Applied:** Updated Source Field Name and Source Field Description [OTHER-2578](https://jira.hl7.org/browse/OTHER-2578)<br>
+**Applied:** Updated Source Field Name and Source Field Description [OTHER-2587](https://jira.hl7.org/browse/OTHER-2587)<br>
 **Applied:** Updated RSG model definition and other narrative [OTHER-2463](https://jira.hl7.org/browse/OTHER-2463)<br>
 **Applied:** Clarified terminology expectations for RSG [OTHER-2557](https://jira.hl7.org/browse/OTHER-2557)<br>
 **Applied:** Removed international equivalent references [V2-25452](https://jira.hl7.org/browse/V2-25452)<br>
@@ -60,7 +78,7 @@ The changes made in this version of the Implementation Guide are a result of the
 
 
 ### Changes applied to [Guidance, Design Considerations Page](https://build.fhir.org/ig/HL7/fhir-gender-harmony/design.html#design-considerations)
-**Applied:** Added links, updated wording, typos, and made grammar corrections per [OTHER-2596](https://jira.hl7.org/browse/OTHER-2596), [OTHER-2593](https://jira.hl7.org/browse/OTHER-2593), [OTHER-2599](https://jira.hl7.org/browse/OTHER-2599), [OTHER-2595](https://jira.hl7.org/browse/OTHER-2595), [OTHER-2541](https://jira.hl7.org/browse/OTHER-2541), [OTHER-2598](https://jira.hl7.org/browse/OTHER-2598), and [OTHER-2544](https://jira.hl7.org/browse/OTHER-2544)<br>
+**Applied:** Added links, updated wording, typos, and made grammar corrections per [OTHER-2541](https://jira.hl7.org/browse/OTHER-2541), [OTHER-2542](https://jira.hl7.org/browse/OTHER-2542), [OTHER-2543](https://jira.hl7.org/browse/OTHER-2543), [OTHER-2546](https://jira.hl7.org/browse/OTHER-2546),  [OTHER-2593](https://jira.hl7.org/browse/OTHER-2593), [OTHER-2595](https://jira.hl7.org/browse/OTHER-2595), [OTHER-2596](https://jira.hl7.org/browse/OTHER-2596), [OTHER-2598](https://jira.hl7.org/browse/OTHER-2598), and [OTHER-2599](https://jira.hl7.org/browse/OTHER-2599)<br>
 **Applied:** Modified designated valuesets in tables so they are represented consistently [OTHER-2598](https://jira.hl7.org/browse/OTHER-2509)<br>
 **Applied:** Removed TBD in RSG section [OTHER-2600](https://jira.hl7.org/browse/OTHER-2600) and corrected the "Designated value set"<br>
 **Applied:** Updated RSG section to align with change in source document to be a concept domain (table 0826). Updated GSR field ids in RSG table for V2 after removal of International equivalent field  [OTHER-2479](https://jira.hl7.org/browse/OTHER-2479) and [OTHER-2496](https://jira.hl7.org/browse/OTHER-2496)<br>
@@ -82,7 +100,16 @@ The changes made in this version of the Implementation Guide are a result of the
 
 
 ### Changes applied to [Use Cases, DICOM PET Scan Use Case](https://build.fhir.org/ig/HL7/fhir-gender-harmony/dicom_use_case.html#dicom-pet-scan-use-case)
-**Applied:** Updated use case with changes from [OTHER-2411](https://jira.hl7.org/browse/OTHER-2411), [OTHER-2488](https://jira.hl7.org/browse/OTHER-2488), and [OTHER-2548](https://jira.hl7.org/browse/OTHER-2548)<br>
+**Applied:** Updated use case with changes from 
+[OTHER-2411](https://jira.hl7.org/browse/OTHER-2411), 
+[OTHER-2488](https://jira.hl7.org/browse/OTHER-2488), 
+[OTHER-2548](https://jira.hl7.org/browse/OTHER-2548), 
+[OTHER-2549](https://jira.hl7.org/browse/OTHER-2549),  
+[OTHER-2601](https://jira.hl7.org/browse/OTHER-2601), 
+[OTHER-2603](https://jira.hl7.org/browse/OTHER-2503), 
+and 
+[OTHER-2607](https://jira.hl7.org/browse/OTHER-2507), 
+<br>
 
 
 ### Changes applied to [Use Cases, Health Maintenance Lab Use Case Page](https://build.fhir.org/ig/HL7/fhir-gender-harmony/health_maintanence_use_case.html#health-maintanence-lab-use-case)
@@ -90,7 +117,7 @@ The changes made in this version of the Implementation Guide are a result of the
 
 
 ### Changes applied to [V2, V2 Gender Harmony Page](https://build.fhir.org/ig/HL7/fhir-gender-harmony/hl7v2genderharmony.html#v2-gender-harmony)
-**Applied:** Updated wording, typos, and made grammar corrections per [OTHER-2550](https://jira.hl7.org/browse/OTHER-2550),[OTHER-2432](https://jira.hl7.org/browse/OTHER-2432), [OTHER-2433](https://jira.hl7.org/browse/OTHER-2433), [OTHER-2431](https://jira.hl7.org/browse/OTHER-2), and [OTHER-2530](https://jira.hl7.org/browse/OTHER-2530)<br>
+**Applied:** Updated wording, typos, and made grammar corrections per [OTHER-2530](https://jira.hl7.org/browse/OTHER-2530), [OTHER-2432](https://jira.hl7.org/browse/OTHER-2432),[OTHER-2433](https://jira.hl7.org/browse/OTHER-2433),[OTHER-2550](https://jira.hl7.org/browse/OTHER-2550), and [OTHER-2551](https://jira.hl7.org/browse/OTHER-2551), <br>
 
 
 ### Changes applied to [CDA, CDA Gender Harmony Page](https://build.fhir.org/ig/HL7/fhir-gender-harmony/cdagenderharmony.html#cda-gender-harmony)
@@ -147,19 +174,39 @@ The changes made in this version of the Implementation Guide are a result of the
 
 ### Changes applied to [FHIR, FHIR Design Background](https://build.fhir.org/ig/HL7/fhir-gender-harmony/fhirdesignbackground.html#fhir-design-background)
 **Applied:** Split design background into a new page, updated FHIR guidance with much more detail [OTHER-2558](https://jira.hl7.org/browse/OTHER-2558)<br>
-**Applied:** Added guidance on the R4 backport extension for SPCU [OTHER-2618](https://jira.hl7.org/browse/OTHER-2618)<br>
-**Applied:** Updated wording, typos, and made grammar corrections per [OTHER-2633](https://jira.hl7.org/browse/OTHER-2633), [OTHER-2613](https://jira.hl7.org/browse/OTHER-2613), [OTHER-2610](https://jira.hl7.org/browse/OTHER-2610), [OTHER-2579](https://jira.hl7.org/browse/OTHER-2579), and [OTHER-2525](https://jira.hl7.org/browse/OTHER-2525)<br>
+**Applied:** Updated wording, typos, and made grammar corrections per 
+[OTHER-2610](https://jira.hl7.org/browse/OTHER-2610), 
+[OTHER-2611](https://jira.hl7.org/browse/OTHER-2611), 
+[OTHER-2613](https://jira.hl7.org/browse/OTHER-2613), 
+[OTHER-2579](https://jira.hl7.org/browse/OTHER-2579),  
+[OTHER-2525](https://jira.hl7.org/browse/OTHER-2525), and 
+[OTHER-2633](https://jira.hl7.org/browse/OTHER-2633) <br>
+**Applied:** Moved 'Avoids problems with changing normative content." to the Advantages column in last two rows of table [OTHER-2612](https://jira.hl7.org/browse/OTHER-2612)<br>
+**Applied:** Added ServiceRequest and Procedure to SPCU context, clinical resource types [OTHER-2615](https://jira.hl7.org/browse/OTHER-2615)
+<!-- validate these ticket numbers, in 2x with different words... Missing ticket?
 **Applied:** Updated Backwards Compatibility for FHIR versions section [OTHER-2618](https://jira.hl7.org/browse/OTHER-2618)<br>
-
+**Applied:** Added guidance on the R4 backport extension for SPCU [OTHER-2618](https://jira.hl7.org/browse/OTHER-2618)<br>
+-->
 
 ### Changes applied to [Terminology](https://build.fhir.org/ig/HL7/fhir-gender-harmony/terminology.html#terminology)
-**Applied:** Added links, updated wording, typos, and made grammar corrections per [OTHER-2553](https://jira.hl7.org/browse/OTHER-2553), [OTHER-2641](https://jira.hl7.org/browse/OTHER-2641), [OTHER-2557](https://jira.hl7.org/browse/OTHER-2557), and [OTHER-2630](https://jira.hl7.org/browse/OTHER-2630)<br>
+**Applied:** Added links, updated wording, typos, and made grammar corrections per 
+[OTHER-2553](https://jira.hl7.org/browse/OTHER-2553), 
+[OTHER-2557](https://jira.hl7.org/browse/OTHER-2557),  
+[OTHER-2606](https://jira.hl7.org/browse/OTHER-2606), 
+[OTHER-2630](https://jira.hl7.org/browse/OTHER-2630), 
+[OTHER-2641](https://jira.hl7.org/browse/OTHER-2641), and
+<br>
 **Applied:** Updated SPCU value references [OTHER-2552](https://jira.hl7.org/browse/OTHER-2552)<br>
 **Applied:** Added additional guidance for RecordedSexOrGender [OTHER-2637](https://jira.hl7.org/browse/OTHER-2637)<br>
 **Applied:** Modified Gender Identity section discussion around minimum value set for clarity [OTHER-2636](https://jira.hl7.org/browse/OTHER-2636)<br>
 
 
 ### Changes applied to [External Standards](hhttps://build.fhir.org/ig/HL7/fhir-gender-harmony/externalstandards.html#external-standards)
-**Applied:** Updated wording, typos, and made grammar corrections per [OTHER-2609](https://jira.hl7.org/browse/OTHER-2609)<br>
-**Applied:** Added LOINC section, arranged sections in alpha order [OTHER-2710](https://jira.hl7.org/browse/OTHER-2710)<br>
+**Applied:** Updated wording, typos, add links, and made grammar corrections per [OTHER-2590](https://jira.hl7.org/browse/OTHER-2590) and [OTHER-2609](https://jira.hl7.org/browse/OTHER-2609)<br>
 **Applied:** Updated DICOM section to align with use of SPCU and final SPCU values [OTHER-2608](https://jira.hl7.org/browse/OTHER-2608)<br>
+**Applied:** Added LOINC section, arranged sections in alpha order [OTHER-2710](https://jira.hl7.org/browse/OTHER-2710)<br>
+
+
+### Changes applied to [Artifacts](https://build.fhir.org/ig/HL7/fhir-gender-harmony/artifacts2.html#artifacts)
+**Applied:** Modified to list all IG artifacts as a 'linked' Title not separating the title from the url [OTHER-2591](https://jira.hl7.org/browse/OTHER-2591)<br>
+
