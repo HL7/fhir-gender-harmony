@@ -167,9 +167,8 @@ table, th, td {
   border: 1px solid black;
 }
 </style>
-
 |Name|Role|Contact|
-|---|---|---|
+| :- | :- | :- |
 |HL7 Terminology Infrastructure|Primary Sponsor|http://www.hl7.org/Special/committees/Vocab/index.cfm|
 |HL7 Patient Administration|Co-sponsor|http://www.hl7.org/Special/committees/pafm/index.cfm|
 |HL7 Structured Documents|Co-sponsor|http://www.hl7.org/Special/committees/structure/index.cfm|
@@ -177,6 +176,7 @@ table, th, td {
 |HL7 Financial Management|Co-sponsor|http://www.hl7.org/Special/committees/fm/index.cfm|
 |HL7 Orders & Observations|Co-sponsor|http://www.hl7.org/Special/committees/orders/index.cfm|
 |HL7 Patient Care|Co-sponsor|http://www.hl7.org/Special/committees/patientcare/index.cfm|
+
 ### FootNote(s)
 
 [^1]:A grouping term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.
