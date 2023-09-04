@@ -13,6 +13,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-29		NONE				Carol Macumber				Final read through of page, updated reference to informative GH Model to use formal name, therefore reducing any possibility that it is confused with this IG whose name is "HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1"
 2023-08-25       OTHER-2560         Sean Muir                    Improve footnote notation - used MD based footnote syntax
 2023-08-29			none			Rob McClure					Clarified that this guide supersedes the original model
+2023-09-04			none			Rob McClure				Changed the "Author" section to say "Implementation Guide Contributors" and then make a separate Author section noting TI, PA, SD, V2MG as true authors. Similar to other guides
 -->
 
 
@@ -137,17 +138,17 @@ The material in this implementation guide is is crafted through the hard work an
 
 We are indebted to all members of the project, listed [here](https://confluence.hl7.org/display/VOC/Project+participants) who supported the creation of this implementation guide. In particular, the following organizations provided mission-critical administrative, technical and subject matter expertise for ballot resolution and publication: US Department of Veterans Affairs and Canada Health Infoway. 
 
-#### Authors Of The Guide Content
+#### Implementation Guide Contributors
 - **Overall Authors and Editors**
-    - Robert C. McClure, Carol Macumber, Robert Horn, Lorraine Constable, Clair Kronk, and Joanie Harper
+    - Robert C. McClure (MD Partners, Inc), Carol Macumber (Clinical Architecture, LLC), Robert Horn (Fairhaven Technology), Lorraine Constable, Clair Kronk, and Joanie Harper
 - **V2 material**
-    - Riki Merrick and Craig Newman
+    - Riki Merrick (Assoc. of Public Laboratories) and Craig Newman (Altarum)
 - **CDA**
-    - Jay Lyle, Russel Ott, Gay Dolin, and Benjamin Flessner
+    - Jay Lyle (JP Systems, Inc.), Russel Ott (Deloitte Consulting LLP), Gay Dolin (Namaste Informatics), and Benjamin Flessner
 - **FHIR**
-    - Cooper Thompson
+    - Cooper Thompson (Epic)
 - **Use Cases**
-    - Robert Horn, Steven Nichols, Riki Merrick, Cara Schlegel, and Joseph Bormel
+    - Robert Horn, Steven Nichols (GE), Riki Merrick, Cara Schlegel (ICF), and Joseph Bormel (Cognitive Medical Systems)
 - **Supporting Resources Provided by the Department of Veterans Affairs**
 	- Dr. Jonathan Nebeker, National CMIO and Executive Director of Clinical Informatics and Data Management Office (CIDMO)
 	- Steven Brown, MD, Director, CIDMO Knowledge-Based Systems (KBS)
@@ -158,7 +159,21 @@ We are indebted to all members of the project, listed [here](https://confluence.
 	- Matt Greene, Policy Lead KBS S&I
 	- Mary Kay McDaniel, Project Facilitator, Cognitive Medical
 	- Sean Muir, Project Facilitator, Cognitive Medical
-
+#### Authors
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+|Name|Role|Contact|
+|---|---|---|
+|HL7 Terminology Infrastructure|Primary Sponsor|http://www.hl7.org/Special/committees/Vocab/index.cfm|
+|HL7 Patient Administration|Co-sponsor|http://www.hl7.org/Special/committees/pafm/index.cfm|
+|HL7 Structured Documents|Co-sponsor|http://www.hl7.org/Special/committees/structure/index.cfm|
+|HL7 V2 Management Group|Co-sponsor|http://www.hl7.org/Special/committees/v2management/index.cfm|
+|HL7 Financial Management|Co-sponsor|http://www.hl7.org/Special/committees/fm/index.cfm|
+|HL7 Orders & Observations|Co-sponsor|http://www.hl7.org/Special/committees/orders/index.cfm|
+|HL7 Patient Care|Co-sponsor|http://www.hl7.org/Special/committees/patientcare/index.cfm|
 ### FootNote(s)
 
 [^1]:A grouping term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.
