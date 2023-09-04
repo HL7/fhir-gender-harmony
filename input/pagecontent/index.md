@@ -159,6 +159,7 @@ We are indebted to all members of the project, listed [here](https://confluence.
 	- Matt Greene, Policy Lead KBS S&I
 	- Mary Kay McDaniel, Project Facilitator, Cognitive Medical
 	- Sean Muir, Project Facilitator, Cognitive Medical
+
 #### Authors
 
 <style>
