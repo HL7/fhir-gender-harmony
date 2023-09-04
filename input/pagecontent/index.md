@@ -160,11 +160,13 @@ We are indebted to all members of the project, listed [here](https://confluence.
 	- Mary Kay McDaniel, Project Facilitator, Cognitive Medical
 	- Sean Muir, Project Facilitator, Cognitive Medical
 #### Authors
+
 <style>
 table, th, td {
   border: 1px solid black;
 }
 </style>
+
 |Name|Role|Contact|
 |---|---|---|
 |HL7 Terminology Infrastructure|Primary Sponsor|http://www.hl7.org/Special/committees/Vocab/index.cfm|
