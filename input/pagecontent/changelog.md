@@ -11,8 +11,6 @@ QUESTION to all...
 MK
 -->
 
-
--->
 ## Change log
 
 The changes made in this version of the Implementation Guide are a result of the HL7 International ballot process. The resolution of the community comments have been agreed and voted on by members of the following management and work groups:  
@@ -48,7 +46,9 @@ The changes made in this version of the Implementation Guide are a result of the
 **Applied:** Wording, typos, and grammar corrections per [OTHER-2531](https://jira.hl7.org/browse/OTHER-2531), [OTHER-2561](https://jira.hl7.org/browse/OTHER-2561), [OTHER-2563](https://jira.hl7.org/browse/OTHER-2563), and [OTHER-2565](https://jira.hl7.org/browse/OTHER-2565)<br>
 **Applied:** Further explanation of 'harmony' in gender harmony [OTHER-2594](https://jira.hl7.org/browse/OTHER-2594)<br>
 **Applied:** Improved the readability and formatting of the In-scope section [OTHER-2562](https://jira.hl7.org/browse/OTHER-2562) and [OTHER-2528](https://jira.hl7.org/browse/OTHER-2528), Added links to the model page for GI, SPCU, RSG, Pronouns, NtU [OTHER-2532](https://jira.hl7.org/browse/OTHER-2532)<br>
-**Applied:** Updated the name of section 1.4.3 from Vendors to HIT System solution providers [OTHER-2515](https://jira.hl7.org/browse/OTHER-2515), Updated to use the word 'harmony' to 'harmonize' [OTHER-2594](https://jira.hl7.org/browse/OTHER-2594), Added links to DICOM and X12 [OTHER-2564](https://jira.hl7.org/browse/OTHER-2564)<br> 
+**Applied:** Updated the name of section 1.4.3 from Vendors to HIT System solution providers [OTHER-2515](https://jira.hl7.org/browse/OTHER-2515)<br>
+**Applied:** Updated to use the word 'harmony' to 'harmonize' [OTHER-2594](https://jira.hl7.org/browse/OTHER-2594)<br>
+**Applied:** Added links to DICOM and X12 [OTHER-2564](https://jira.hl7.org/browse/OTHER-2564)<br> 
 **Applied:** Modified first sentence of the HIT System solution providers [OTHER-2421](https://jira.hl7.org/browse/OTHER-2421)<br>
 **Applied:** Improved the footnote notation using MD based footnote syntax [OTHER-2560](https://jira.hl7.org/browse/OTHER-2560)<br> 
 
