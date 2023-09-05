@@ -2,7 +2,6 @@
 Date             Jira ticket        Updated by                   Comment
 2023-08-20        None              MaryKay McDaniel             Initial creation
 
-<!--
 2023-09-4
 QUESTION to all...
 1) DID NOT include OTHER-2517, did not seem relevant to the changes made? 
