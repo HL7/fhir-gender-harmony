@@ -20,6 +20,7 @@ publisher:
   url: https://www.hl7.org/Special/committees/Vocab
   email: ti@lists.hl7.org
 
+# paremter for navigation
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   shownav: 'true'  
 
@@ -66,12 +67,12 @@ pages:
   artifacts2.md:
     title: Artifacts
   v2dicom_use_case.md:
-    title: FHIR DICOM Example
+    title: V2 DICOM Example
   v2health_maintenance_use_case.md:
     title: V2 Health Maintenance Example
   cdadicom_use_case.md:
     title: CDA DICOM Example
-  fhirdicom_use_case.md:
+  dicom_use_case.md:
     title: FHIR DICOM Example
   fhirhealth_maintenance_use_case.md:
     title: FHIR Health Maintenance Example   
@@ -96,7 +97,7 @@ menu:
   FHIR:
     FHIR Guidance: fhirgenderharmony.html
     FHIR Design Background: fhirdesignbackground.html
-    FHIR Examples: fhirexamples.html
+#    FHIR Examples: fhirexamples.html
   Terminology: terminology.html 
   External Standards: externalstandards.html
   Bibliography: bibliography.html
