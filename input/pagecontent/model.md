@@ -51,7 +51,7 @@ demand improvements that will benefit all patients. This implementation
 guide provides structural and semantic guidance to vendors and interface
 developers to address these requirements.
 
-The [Gender Harmony initial informative specification](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) provides necessary constructs to more
+The [HL7 Informative Document: Gender Harmony - Modeling Sex and Gender Representation, Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564)  provides necessary constructs to more
 accurately capture sex and gender identity along with associated context of use.
 While the framework provides the necessary infrastructure, the specific
 changes in individual standards to concretely specify actual implementable 
@@ -72,12 +72,12 @@ Person: Gender Identity (GI), Sex Parameter for Clinical Use (SPCU), Recorded Se
 or Gender (RSG), Name to Use (NtU), and Pronouns.
 
 With the exception of one addition (Recorded Sex or Gender attribute =
-type with datatype = code or constrained text), the model included in
-this implementation guide is exactly in the published Gender Harmony
+type with datatype = code or constrained text) and one deletion (International Equivalent Recorded Sex or Gender), the model included in
+this implementation guide is exactly as it is in the published Gender Harmony
 informative specification. The addition was made to clarify and cover
 the original intent of Record Sex or Gender, including the ability to
 specify the type or category of sex or gender that is recorded (e.g.,
-Sex Assigned At Birth).
+Sex Assigned At Birth). The deletion was made in response to ballot feedback that the RSG value element is a CodeableConcept which supports "translation" of local code values to other (international) code systems. 
 
 Each of the following sections is structured to align with the UML Model
 in Figure 1 and provides a definition, description, usage notes (if
