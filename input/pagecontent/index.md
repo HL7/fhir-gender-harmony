@@ -52,7 +52,7 @@ Currently, it is common that a single data element is used to capture both sex a
 
 #### In-Scope
 
-The consultative process that has produced this HL7 guide continues the work of the initial Gender Harmony project and reflects clinical end user needs on balance with contributors from 2SLGBTQIA+ <a href="#fn2">fn2</a>  organizations such as Fenway Health and active participants with lived experience from the United States and Canada. Vendors were included from Japan, Germany, India, and the United States.
+The consultative process that has produced this HL7 guide continues the work of the initial Gender Harmony project and reflects clinical end user needs on balance with contributors from 2SLGBTQIA+[^2]  organizations such as Fenway Health and active participants with lived experience from the United States and Canada. Vendors were included from Japan, Germany, India, and the United States.
 
 The in-scope core list of specific gender and sex use-data elements described by the specification, are as follows:
 The in-scope core list of specific gender and sex use-data elements described by the specification, are as follows:
@@ -169,16 +169,16 @@ table, th, td {
 </style>
 |Name|Role|Contact|
 | :- | :- | :- |
-|HL7 Terminology Infrastructure|Primary Sponsor|http://www.hl7.org/Special/committees/Vocab/index.cfm|
-|HL7 Patient Administration|Co-sponsor|http://www.hl7.org/Special/committees/pafm/index.cfm|
-|HL7 Structured Documents|Co-sponsor|http://www.hl7.org/Special/committees/structure/index.cfm|
-|HL7 V2 Management Group|Co-sponsor|http://www.hl7.org/Special/committees/v2management/index.cfm|
-|HL7 Financial Management|Co-sponsor|http://www.hl7.org/Special/committees/fm/index.cfm|
-|HL7 Orders & Observations|Co-sponsor|http://www.hl7.org/Special/committees/orders/index.cfm|
-|HL7 Patient Care|Co-sponsor|http://www.hl7.org/Special/committees/patientcare/index.cfm|
+|HL7 Terminology Infrastructure|Primary Sponsor|[TI Main Page](http://www.hl7.org/Special/committees/Vocab/index.cfm)|
+|HL7 Patient Administration|Co-sponsor|[PA Main Page](http://www.hl7.org/Special/committees/pafm/index.cfm)|
+|HL7 Structured Documents|Co-sponsor|[SD Main Page](http://www.hl7.org/Special/committees/structure/index.cfm)|
+|HL7 V2 Management Group|Co-sponsor|[V2MG Main Page](http://www.hl7.org/Special/committees/v2management/index.cfm)|
+|HL7 Financial Management|Co-sponsor|[FM Main Page](http://www.hl7.org/Special/committees/fm/index.cfm)|
+|HL7 Orders & Observations|Co-sponsor|[OO Main Page](http://www.hl7.org/Special/committees/orders/index.cfm)|
+|HL7 Patient Care|Co-sponsor|[PC Main Page](http://www.hl7.org/Special/committees/patientcare/index.cfm)|
 
 ### FootNote(s)
 
 [^1]:A grouping term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.
 
-[^2]:Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community is not a monolith.
+[^2]:Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community needs to be seen as a diverse non-monolithic culture.

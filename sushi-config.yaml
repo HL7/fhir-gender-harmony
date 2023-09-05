@@ -38,8 +38,8 @@ pages:
     title: Design Considerations        
   implementer.md:
     title: Implementer Considerations      
-  # dicom_use_case.md:
-    # title: DICOM PET Scan Use Case
+  dicom_use_case.md:
+    title: DICOM PET Scan Use Case
   health_maintenance_use_case.md:
     title: Health Maintenance Lab Use Case 
   hl7v2genderharmony.md:
@@ -72,8 +72,8 @@ pages:
     title: V2 Health Maintenance Example
   cdadicom_use_case.md:
     title: CDA DICOM Example
-  dicom_use_case.md:
-    title: FHIR DICOM Example
+  # dicom_use_case.md:
+    # title: FHIR DICOM Example
   fhirhealth_maintenance_use_case.md:
     title: FHIR Health Maintenance Example   
 menu:
