@@ -10,9 +10,7 @@ QUESTION to all...
 MK
 -->
 
-## Change log *for all cross-paradigm publications* 
-
-The changes made in this version of the Implementation Guide are a result of the HL7 International ballot process. The resolution of the community comments have been agreed and voted on by members of the following management and work groups:  CDA Management Group, Financial Management, Orders and Observations, Patient Administration, Patient Care, Structured Documents, Terminology Infrastructure, Terminology Services Management Group, and V2 Management Group.
+This log contains changes that are a result of the HL7 International ballot process for *for all cross-paradigm gender harmony publications*. The resolution of the community comments have been agreed and voted on by members of the following management and work groups:  CDA Management Group, Financial Management, Orders and Observations, Patient Administration, Patient Care, Structured Documents, Terminology Infrastructure, Terminology Services Management Group, and V2 Management Group.
 
 ### Changes applied to FHIR R5 Standard 
 
