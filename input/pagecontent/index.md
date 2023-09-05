@@ -169,13 +169,13 @@ table, th, td {
 </style>
 |Name|Role|Contact|
 | :- | :- | :- |
-|HL7 Terminology Infrastructure|Primary Sponsor|http://www.hl7.org/Special/committees/Vocab/index.cfm|
-|HL7 Patient Administration|Co-sponsor|http://www.hl7.org/Special/committees/pafm/index.cfm|
-|HL7 Structured Documents|Co-sponsor|http://www.hl7.org/Special/committees/structure/index.cfm|
-|HL7 V2 Management Group|Co-sponsor|http://www.hl7.org/Special/committees/v2management/index.cfm|
-|HL7 Financial Management|Co-sponsor|http://www.hl7.org/Special/committees/fm/index.cfm|
-|HL7 Orders & Observations|Co-sponsor|http://www.hl7.org/Special/committees/orders/index.cfm|
-|HL7 Patient Care|Co-sponsor|http://www.hl7.org/Special/committees/patientcare/index.cfm|
+|HL7 Terminology Infrastructure|Primary Sponsor|[TI Main Page](http://www.hl7.org/Special/committees/Vocab/index.cfm)|
+|HL7 Patient Administration|Co-sponsor|[PA Main Page](http://www.hl7.org/Special/committees/pafm/index.cfm)|
+|HL7 Structured Documents|Co-sponsor|[SD Main Page](http://www.hl7.org/Special/committees/structure/index.cfm)|
+|HL7 V2 Management Group|Co-sponsor|[V2MG Main Page](http://www.hl7.org/Special/committees/v2management/index.cfm)|
+|HL7 Financial Management|Co-sponsor|[FM Main Page](http://www.hl7.org/Special/committees/fm/index.cfm)|
+|HL7 Orders & Observations|Co-sponsor|[OO Main Page](http://www.hl7.org/Special/committees/orders/index.cfm)|
+|HL7 Patient Care|Co-sponsor|[PC Main Page](http://www.hl7.org/Special/committees/patientcare/index.cfm)|
 
 ### FootNote(s)
 
