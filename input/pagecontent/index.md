@@ -140,7 +140,7 @@ We are indebted to all members of the project, listed [here](https://confluence.
 
 #### Implementation Guide Contributors
 - **Overall Authors and Editors**
-    - Robert C. McClure (MD Partners, Inc), Carol Macumber (Clinical Architecture, LLC), Robert Horn (Fairhaven Technology), Lorraine Constable, Clair Kronk, and Joanie Harper
+    - Robert C. McClure (MD Partners, Inc), Carol Macumber (Clinical Architecture, LLC), Robert Horn (Fairhaven Technology), Lorraine Constable, Clair Kronk, and Joanie Harper (Canada Health Infoway)
 - **V2 material**
     - Riki Merrick (Assoc. of Public Laboratories) and Craig Newman (Altarum)
 - **CDA**
