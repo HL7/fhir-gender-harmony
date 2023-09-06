@@ -45,7 +45,7 @@ This log contains changes that are a result of the HL7 International ballot proc
      These are marked at applied, so added to the list. These I did not confirm/validate.
       OTHER:  2475, 2476, 2478, 2481, 2482, 2483, 2485, 2486, 2489, 2711
 -->
-**Completed:** Removed the final [HL7 CDA® R2 Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](www.hl7.org/permalink/?GenderharmonyCDAIG) PDF from this guide, the final document is published separately 
+**Completed:** Removed the final [HL7 CDA® R2 Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](www.hl7.org/permalink/?GenderharmonyCDAIG) PDF from this guide, the final document is published separately <br>
 **Applied:** Update CONF:4536-61 conformance verb from SHOULD to SHALL [OTHER-2435](https://jira.hl7.org/browse/OTHER-2435)<br>
 **Applied:** In the Gender Identity section added sentence to provide clarity around provenance [OTHER-2465](https://jira.hl7.org/browse/OTHER-2465)<br>
 **Applied:** In the Individual Pronouns section added sentence to provide clarity around provenance [OTHER-2467](https://jira.hl7.org/browse/OTHER-2467)<br>
@@ -75,13 +75,62 @@ This log contains changes that are a result of the HL7 International ballot proc
 **Applied:** Updated gender null flavor instructions [OTHER-2711](https://jira.hl7.org/browse/OTHER-2711)<br>
 
 ### Changes applied to the V2.9.1 Standard
+
+**Applied:** Wording, typos,broken links, and grammar corrections per 
+[V2-25385](https://jira.hl7.org/browse/V2-25385), 
+[V2-25386](https://jira.hl7.org/browse/V2-25386), 
+[V2-25387](https://jira.hl7.org/browse/V2-25387), 
+[V2-25420](https://jira.hl7.org/browse/V2-25420), 
+[V2-25423](https://jira.hl7.org/browse/V2-25423), 
+[V2-25424](https://jira.hl7.org/browse/V2-25424), 
+[V2-25442](https://jira.hl7.org/browse/V2-25442), 
+[V2-25446](https://jira.hl7.org/browse/V2-25446), 
+[V2-25452](https://jira.hl7.org/browse/V2-25452), 
+[V2-25458](https://jira.hl7.org/browse/V2-25458), 
+[V2-25487](https://jira.hl7.org/browse/V2-25487), and 
+[V2-25507](https://jira.hl7.org/browse/V2-25507), <br>
+
+**Applied:** Modified both OBX and 3 new segments, updated guidance [V2-25412](https://jira.hl7.org/browse/V2-25412)<br>
+**Applied:** Updated the descriptions of PID-8, GT1-9, and IN1-43 [V2-25414](https://jira.hl7.org/browse/V2-25414) and [V2-25506](https://jira.hl7.org/browse/V2-25506) <br>
+**Applied:** Added guidance for name to use in section 3.4.2.5 [V2-25415](https://jira.hl7.org/browse/V2-25415)<br>
+**Applied:** Added guidance in Chapter 1 clarifying updates to the underlying base are not expected to automatically be adopted by existing integrations [V2-25418](https://jira.hl7.org/browse/V2-25418)<br>
+
+**Applied:** Modified Table 0821 per 
+[V2-25425](https://jira.hl7.org/browse/V2-25425), 
+[V2-25434](https://jira.hl7.org/browse/V2-25434), 
+[FHIR-39459](https://jira.hl7.org/browse/FHIR-39459), 
+[V2-25447](https://jira.hl7.org/browse/V2-25447), and
+[V2-25460](https://jira.hl7.org/browse/V2-25460)<br>
+
+**Applied:** SFCU changed to SPCU, links provided to the Gender Harmony Implementation Guide [V2-25427](https://jira.hl7.org/browse/V2-25427)<br>
+**Applied:** Modified to table to include the final value set description in the FHIR value set [V2-25436](https://jira.hl7.org/browse/V2-25436)<br>
+**Applied:** Updated Table 824 in Chapter 2c to align with the FHIR RSG value set http://hl7.org/fhir/extensions/ValueSet-recorded-sex-or-gender-type.html [V2-25438](https://jira.hl7.org/browse/V2-25438)<br>
+**Applied:** Modified Table 0826 to align with https://build.fhir.org/valueset-doc-typecodes.html and changed the name of GSR-7 to SourceDocumentTypeForRecordedSexOrGender [V2-25439](https://jira.hl7.org/browse/V2-25439) and [V2-25454](https://jira.hl7.org/browse/V2-25454)<br>
+
+**Applied:** Updated Table 0820 per 
+[V2-25441](https://jira.hl7.org/browse/V2-25441), 
+[V2-25459](https://jira.hl7.org/browse/V2-25459), and
+[V2-25462](https://jira.hl7.org/browse/V2-25462)<br>
+
+**Applied:** Updated chapter 2A - Control and Data Types Reference Range Administrative Sex Component for Gender Harmony per [V2-25443](https://jira.hl7.org/browse/V2-25443) and [V2-25518](https://jira.hl7.org/browse/V2-25518)<br>
+
+
+**Applied:** Clarified that V2 will maintain the value set for Sexual Orientation directly, as that is not part of the Gender Harmony project. V2 will also maintain a value set of relevant gender-related LOINC codes for use in OBX-3. [V2-25444](https://jira.hl7.org/browse/V2-25444)<br>
+**Applied:** Removed element "InternationalEquivalent" [V2-25453](https://jira.hl7.org/browse/V2-25453)<br>
+
+**Applied:** Updated Table 0823 per 
+[V2-25463](https://jira.hl7.org/browse/V2-25463), 
+[V2-25465](https://jira.hl7.org/browse/V2-25465), and
+[V2-25468](https://jira.hl7.org/browse/V2-25468)<br>
+
+**Applied:** Corrected NK1 (removed SFCU) and added GSP and GSR [V2-25471](https://jira.hl7.org/browse/V2-25471) and [V2-25478](https://jira.hl7.org/browse/V2-25478)<br>
+
+**Applied:** Moved the Gender Harmony segments to before PRT and after PD1, to align with the ordering defined in Chapter 3 [V2-25473](https://jira.hl7.org/browse/V2-25473)<br>
 **Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
 **Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
 **Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
 **Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
-**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
-**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
-**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
+
 
 ### Changes to this Cross-paradigm Implementation Guide
 #### Changes applied across the Implementation Guide
@@ -250,7 +299,7 @@ This log contains changes that are a result of the HL7 International ballot proc
 [OTHER-2525](https://jira.hl7.org/browse/OTHER-2525), and 
 [OTHER-2633](https://jira.hl7.org/browse/OTHER-2633) <br>
 **Applied:** Moved 'Avoids problems with changing normative content." to the Advantages column in last two rows of table [OTHER-2612](https://jira.hl7.org/browse/OTHER-2612)<br>
-**Applied:** Added ServiceRequest and Procedure to SPCU context, clinical resource types [OTHER-2615](https://jira.hl7.org/browse/OTHER-2615)
+**Applied:** Added ServiceRequest and Procedure to SPCU context, clinical resource types [OTHER-2615](https://jira.hl7.org/browse/OTHER-2615)<br>
 **Applied:** Updated Backwards Compatibility for FHIR versions section [OTHER-2618](https://jira.hl7.org/browse/OTHER-2618)<br>
 
 
