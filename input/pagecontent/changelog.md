@@ -126,10 +126,7 @@ This log contains changes that are a result of the HL7 International ballot proc
 **Applied:** Corrected NK1 (removed SFCU) and added GSP and GSR [V2-25471](https://jira.hl7.org/browse/V2-25471) and [V2-25478](https://jira.hl7.org/browse/V2-25478)<br>
 
 **Applied:** Moved the Gender Harmony segments to before PRT and after PD1, to align with the ordering defined in Chapter 3 [V2-25473](https://jira.hl7.org/browse/V2-25473)<br>
-**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
-**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
-**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
-**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
+
 
 
 ### Changes to this Cross-paradigm Implementation Guide
