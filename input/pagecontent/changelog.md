@@ -6,7 +6,6 @@ Date             Jira ticket        Updated by                   Comment
 QUESTION to all...
 1) DID NOT include OTHER-2517, did not seem relevant to the changes made? 
 2) This change log does NOT include and of the FHIR changes made for Gender Harmony - do I need to go back and add them???
-
 MK
 -->
 
@@ -15,6 +14,32 @@ MK
 The changes made in this version of the Implementation Guide are a result of the HL7 International ballot process. The resolution of the community comments have been agreed and voted on by members of the following management and work groups:  CDA Management Group, Financial Management, Orders and Observations, Patient Administration, Patient Care, Structured Documents, Terminology Infrastructure, Terminology Services Management Group, and V2 Management Group.
 
 ### Changes applied to FHIR R5 Standard 
+**Applied:** Wording, formatting, and grammar corrections per 
+[FHIR-38861](https://jira.hl7.org/browse/FHIR-38861), 
+[FHIR-39197](https://jira.hl7.org/browse/FHIR-39197), 
+[FHIR-39201](https://jira.hl7.org/browse/FHIR-39201), 
+[FHIR-39202](https://jira.hl7.org/browse/FHIR-39202), 
+[FHIR-39204](https://jira.hl7.org/browse/FHIR-39204), and
+[FHIR-39210](https://jira.hl7.org/browse/FHIR-39210)<br> 
+**Applied:** Removed the element "InternationalEquivalentRecordedSexOrGender" [FHIR-38892](https://jira.hl7.org/browse/FHIR-38892), 
+[FHIR-39193](https://jira.hl7.org/browse/FHIR-39193), and 
+[FHIR-39527](https://jira.hl7.org/browse/FHIR-39527)<br> 
+**Applied:** Modified Definition of Specified and Null [FHIR-38893](https://jira.hl7.org/browse/FHIR-38893)<br>
+**Applied:** Added PractitionerRole as an allowed context for the GI extension [FHIR-39195](https://jira.hl7.org/browse/FHIR-39195)<br>
+**Applied:** Added general language referring implementers to GHP IG for specific guidance on how and when to use  [FHIR-39196](https://jira.hl7.org/browse/FHIR-39196)<br>
+**Applied:**  Updated gender-identity value set to use the codes from the source code system (SNOMED) directly instead of importing the NLM value set. [FHIR-39198](https://jira.hl7.org/browse/FHIR-39198)<br>
+**Applied:** Updated GI text [FHIR-39202](https://jira.hl7.org/browse/FHIR-39202)<br>
+**Applied:** Added "asked-declined" to GI value set [FHIR-39238](https://jira.hl7.org/browse/FHIR-39238)<br>
+**Applied:** Update the definition narrative for individual-genderidentity extension [FHIR-39246](https://jira.hl7.org/browse/FHIR-39246)<br>
+**Applied:** Modified display names in the value set to remove the "(finding)" parenthetical [FHIR-39459](https://jira.hl7.org/browse/FHIR-39459)<br>
+**Applied:** Changes to the guidance and wording in the Sex and Gender section, moving recommendations out of the FHIR base spec and into the GHP IG [FHIR-39203](https://jira.hl7.org/browse/FHIR-39203)<br>
+**Applied:** Modified RSG value set [FHIR-39205](https://jira.hl7.org/browse/FHIR-39205) and [FHIR-39237](https://jira.hl7.org/browse/FHIR-39237)<br>
+**Applied:** Added clarification for RSG [FHIR-39232](https://jira.hl7.org/browse/FHIR-39232), see also [OTHER-2463](https://jira.hl7.org/browse/OTHER-2463)<br>
+**Applied:** Change SFCU to SPCU [FHIR-39219](https://jira.hl7.org/browse/FHIR-39219)<br>
+**Applied:** Update the unknown code in the SFCU value set to be "unknown" from https://terminology.hl7.org/CodeSystem-data-absent-reason.html [FHIR-39231](https://jira.hl7.org/browse/FHIR-39231)<br>
+**Applied:** Clarified definition and display for "Specified" in SFCU values [FHIR-39241](https://jira.hl7.org/browse/FHIR-39241)<br>
+**Applied:** Update pronoun value set display text to the same as the LOINC code it represents [FHIR-39676](https://jira.hl7.org/browse/FHIR-39676)<br>
+
 
 ### Changes applied to the **HL7 CDA® R2 Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1** Implementation Guide
 
@@ -22,6 +47,7 @@ The changes made in this version of the Implementation Guide are a result of the
      These are marked at applied, so added to the list. These I did not confirm/validate.
       OTHER:  2475, 2476, 2478, 2481, 2482, 2483, 2485, 2486, 2489, 2711
 -->
+**Completed:** Removed the final [HL7 CDA® R2 Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](www.hl7.org/permalink/?GenderharmonyCDAIG) PDF from this guide, the final document is published separately 
 **Applied:** Update CONF:4536-61 conformance verb from SHOULD to SHALL [OTHER-2435](https://jira.hl7.org/browse/OTHER-2435)<br>
 **Applied:** In the Gender Identity section added sentence to provide clarity around provenance [OTHER-2465](https://jira.hl7.org/browse/OTHER-2465)<br>
 **Applied:** In the Individual Pronouns section added sentence to provide clarity around provenance [OTHER-2467](https://jira.hl7.org/browse/OTHER-2467)<br>
@@ -51,6 +77,13 @@ The changes made in this version of the Implementation Guide are a result of the
 **Applied:** Updated gender null flavor instructions [OTHER-2711](https://jira.hl7.org/browse/OTHER-2711)<br>
 
 ### Changes applied to the V2.9.1 Standard
+**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
+**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
+**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
+**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
+**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
+**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
+**Applied:**  [V2-](https://jira.hl7.org/browse/V2-)<br>
 
 ### Changes to this Cross-paradigm Implementation Guide
 #### Changes applied across the Implementation Guide
@@ -131,7 +164,7 @@ The changes made in this version of the Implementation Guide are a result of the
 [OTHER-2596](https://jira.hl7.org/browse/OTHER-2596), 
 [OTHER-2598](https://jira.hl7.org/browse/OTHER-2598), and 
 [OTHER-2599](https://jira.hl7.org/browse/OTHER-2599)<br>
-**Applied:** Modified designated valuesets in tables so they are represented consistently [OTHER-2598](https://jira.hl7.org/browse/OTHER-2509)<br>
+**Applied:** Modified designated value sets in tables so they are represented consistently [OTHER-2598](https://jira.hl7.org/browse/OTHER-2509)<br>
 **Applied:** Removed TBD in RSG section [OTHER-2600](https://jira.hl7.org/browse/OTHER-2600) and corrected the "Designated value set"<br>
 **Applied:** Updated RSG section to align with change in source document to be a concept domain (table 0826). Updated GSR field ids in RSG table for V2 after removal of International equivalent field  [OTHER-2479](https://jira.hl7.org/browse/OTHER-2479) and [OTHER-2496](https://jira.hl7.org/browse/OTHER-2496)<br>
 **Applied:** Modified text in the "Support zero to many instances" rows for GI and Pronouns [OTHER-2422](https://jira.hl7.org/browse/OTHER-2422)<br>
@@ -220,10 +253,8 @@ The changes made in this version of the Implementation Guide are a result of the
 [OTHER-2633](https://jira.hl7.org/browse/OTHER-2633) <br>
 **Applied:** Moved 'Avoids problems with changing normative content." to the Advantages column in last two rows of table [OTHER-2612](https://jira.hl7.org/browse/OTHER-2612)<br>
 **Applied:** Added ServiceRequest and Procedure to SPCU context, clinical resource types [OTHER-2615](https://jira.hl7.org/browse/OTHER-2615)
-<!-- validate these ticket numbers, in 2x with different words... Missing ticket?
 **Applied:** Updated Backwards Compatibility for FHIR versions section [OTHER-2618](https://jira.hl7.org/browse/OTHER-2618)<br>
-**Applied:** Added guidance on the R4 backport extension for SPCU [OTHER-2618](https://jira.hl7.org/browse/OTHER-2618)<br>
--->
+
 
 #### Changes applied to [Terminology](https://build.fhir.org/ig/HL7/fhir-gender-harmony/terminology.html#terminology)
 **Applied:** Added links, updated wording, typos, and made grammar corrections per 
@@ -240,6 +271,7 @@ The changes made in this version of the Implementation Guide are a result of the
 **Applied:** Modified Gender Identity section discussion around minimum value set for clarity [OTHER-2636](https://jira.hl7.org/browse/OTHER-2636)<br>
 **Applied:** Added additional guidance for RecordedSexOrGender [OTHER-2637](https://jira.hl7.org/browse/OTHER-2637)<br>
 **Applied:** Updated SPCU value references [OTHER-2552](https://jira.hl7.org/browse/OTHER-2552)<br>
+
 
 #### Changes applied to [External Standards](hhttps://build.fhir.org/ig/HL7/fhir-gender-harmony/externalstandards.html#external-standards)
 **Applied:** Updated wording, typos, add links, and made grammar corrections per [OTHER-2590](https://jira.hl7.org/browse/OTHER-2590) and [OTHER-2609](https://jira.hl7.org/browse/OTHER-2609)<br>
