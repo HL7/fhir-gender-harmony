@@ -12,13 +12,9 @@ This use case illustrates DICOM Sex and Gender encoding, including: admission, p
 
 In this case, there are three examples of Sex Parameter for Clinical Use (SPCU):
 
-   1) The ordering physician provides instructions for interpreting lab values within a Sex Parameter for Clinical Use comment. 
-
-
-   2) A second SPCU is determined by a post-processing AI (Artificial  Intelligence) application that utilizes the different item in the Sex Parameter for Clinical Use Sequence for reference values. 
-
-
-   3) The radiologist determines the appropriate SPCU for a Standard Uptake Value (SUV) calculation based on the patient's body composition.
+   1. The ordering physician provides instructions for interpreting lab values within a Sex Parameter for Clinical Use comment. 
+   2. A second SPCU is determined by a post-processing AI (Artificial  Intelligence) application that utilizes the different item in the Sex Parameter for Clinical Use Sequence for reference values. 
+   3. The radiologist determines the appropriate SPCU for a Standard Uptake Value (SUV) calculation based on the patient's body composition.
 
 The DICOM (Digital Imaging and COmmunications in Medicine) Standard attributes in this use case are not, at time of publication of this Implementation Guide, normative, and details in DICOM are still being defined in Supplement 233. Readers interested in participating in development of DICOM Sex and Gender encoding, please contact the [DICOM Secretariat](mailto:dicom@dicomstandard.org).
 
