@@ -7,8 +7,8 @@ Date             Jira ticket        Updated by                   Comment
 2023-07-13       OTHER-2618         Cooper Thompson              Added guidance on the R4 backport extension for SPCU
 2023-08-16       spell/grammar chk  MaryKay McDaniel             157, changed presense or absense to presence or absence
                                                                  171, anatmoical to anatomical, disrete to discrete, unconsious to unconscious, invenvory to inventory
-2023-08-27        OTHER-2574        Rob McClure                   ValueSet to value set, data type to datatype
-
+2023-08-27       OTHER-2574         Rob McClure                   ValueSet to value set, data type to datatype
+2023-09-07       OTHER-2618         Cooper Thompson              Removed backport extension comments
 -->
 
 
@@ -25,12 +25,11 @@ table, th, td {
 | **Concept** | **FHIR Artifact** | **Contexts of Use** |
 | -------- | -------- | -------- |
 | Gender Identity     | [individual-genderIdentity](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html)     | Patient, RelatedPerson, Person, Practitioner, and PractitionerRole     |
-| Sex Parameter for Clinical Use (R5 and later)     | [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html)     | All Resource types     |
-| Sex Parameter for Clinical Use (R4 and prior)    | [patient-sexParameterForClinicalUse-backport](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-backport.html)     | All Resource types     |
+| Sex Parameter for Clinical Use    | [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html)     | All Resource types     |
 | Pronouns     | [individual-pronouns](http://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html)     | Patient, RelatedPerson, Person, and Practitioner     |
 | Gender      | [individual-recordedSexOrGender](http://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html)     | Patient, RelatedPerson, Person, and Practitioner     |
 
-The [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension makes use of the CodeableReference datatype, which was added in R5. In hindsight, we would have used R4 compatible datatypes to make this extension backportable to R4. However, given that this issue was discovered after the extension was published, we have created a separate [patient-sexParameterForClinicalUse-backport](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse-backport.html) extension that may be used for versions prior to R5.
+The [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension makes use of the CodeableReference datatype, which was added in R5. To allow this extension to be used in prior version of FHIR, the FHIR extension IG provides a version of that extension that is compatible with prior versions of FHIR. 
 
 
 ### General Guidance Sex and Gender
@@ -93,7 +92,6 @@ CDA has two options for exchanging gender identity:
 
 CDA and FHIR are aligned with regard to the *concept* of gender identity.  However, when determining which *structure* should be used, it is up to the implementer as to which may be used.  If an exchange involves mapping between FHIR and CDA, the implementer may determine which FHIR option would map to which CDA option. 
 
-#### Handling Gender Identity in FHIR and HL7v2
 ### Exchanging Pronouns
 The [individual-pronouns](http://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html) extension was added in FHIR R5 to support exchanging pronouns to use for Patients, Practitioners, RelatedPersons, and Persons.  Implementers who need to exchange pronouns in prior versions of FHIR are encouraged to pre-adopt the R5 extension.
 
@@ -196,7 +194,7 @@ When applying this methodology in FHIR, there are some considerations:
    * Using a generic structure such as the individual-recordedSexOrGender FHIR extension if available for the context in question or a FHIR Observation resource
 
 
-### General Guidance
+#### General Guidance
 
 For R4 or R5 implementations, our recommendation is to work with your jurisdiction-specific or use-case specific implementation guide authors to define jurisdiction or use-case specific extensions for any concept that can be categorized as a recorded sex and gender, including sex assigned at birth. Replacing a use-case specific extension or property (which is already in use) with the individual-recordedSexOrGender extension is not recommended.
  
