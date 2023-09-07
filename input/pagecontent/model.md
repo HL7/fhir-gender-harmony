@@ -55,8 +55,7 @@ The [HL7 Informative Document: Gender Harmony - Modeling Sex and Gender Represen
 accurately capture sex and gender identity along with associated context of use.
 While the framework provides the necessary infrastructure, the specific
 changes in individual standards to concretely specify actual implementable 
-structures are detailed in separate specifications ([FHIR R5](http://hl7.org/fhir/extensions/extensions-Patient.html), [V2.9.1](still 
-undergoing ballot), [Representing Sex and Gender in CDA](permanent-link to spec)), this implementation 
+structures are detailed in separate specifications ([FHIR R5](http://hl7.org/fhir/extensions/extensions-Patient.html), [V2.9.1](https://hl7.org/documentcenter/private/standards/V291_R1_202xmmm.zip), [Representing Sex and Gender in CDA](http://www.hl7.org/permalink/?GenderHarmonyCDAIG), this implementation 
 guide provides specific additional guidance and cross-paradigm use cases. 
 
 In this document, and elsewhere, the phrase “sex or gender” is used to characterize data in which the contextual meaning of the the datum is unclear and its use is an acknowledgement that human discourse regarding this information is often equally unclear. Use of this phrase is not intended to mean a unification of information that is more clearly either SPCU or gender identity.
