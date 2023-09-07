@@ -27,7 +27,7 @@ This universal-realm implementation guide describes the changes incorporated in 
 This implementation guide contains *Informative* content discussing the overall Gender Harmony Project (GHP) approach intended to provide definitive guidance on how to exchange clinical sex and gender affirming information using HL7 models. We also provide examples that align with that guidance. The content of this guide must be viewed as accompanying the gender harmony content within the product family-specific specifications found elsewhere. Each of these is described in more detail in other pages of this guide:
 - [FHIR Core specification](fhirdesignbackground.html) - gender harmony defined extensions and value sets used by ***all*** specifications.
 - [CDA](cdagenderharmony.html) - A companion pdf CDA template specification containing gender harmony-specific templates is published separately. When this guide was in ballot the CDA template pdf specification was embedded within this guide. It is now a distinct, separate specification.
-- [V2](hl7V2genderharmony.html) - The V2.9.1 specification contains new segments used to convey gender harmony content. While not the preferred solution, the specification also describes how this information can be exchanged using existing V2x structures.
+- [V2](hl7v2genderharmony.html) - The V2.9.1 specification contains new segments used to convey gender harmony content. While not the preferred solution, the specification also describes how this information can be exchanged using existing V2x structures.
 
 To accomplish our cross-paradigm goal, the guide provides:
 - Introductory and background information, much drawn from previously published material.
@@ -120,7 +120,7 @@ Messaging and interchange standards developers and standardized terminology orga
 
 #### HIT System Solution Providers
 
-All the sex and gender information described in this document requires engaged review and implementation support from all HIT-system vendors (EHR, LIS, IS, governmental, etc.) to have a meaningful impact on patient care and clinical interactions. By including guidance for [V2](hl7V2genderharmony.html), [FHIR](fhirdesignbackground.html), [CDA](cdagenderharmony.html), and working closely with [DICOM](https://www.dicomstandard.org/), [X12](https://x12.org/), and others, we hope to enable adoption of the Gender Harmony approach across the vendor spectrum. Vendors are encouraged to incorporate the intent of the specification into the end-user workflow.
+All the sex and gender information described in this document requires engaged review and implementation support from all HIT-system vendors (EHR, LIS, IS, governmental, etc.) to have a meaningful impact on patient care and clinical interactions. By including guidance for [V2](hl7v2genderharmony.html), [FHIR](fhirdesignbackground.html), [CDA](cdagenderharmony.html), and working closely with [DICOM](https://www.dicomstandard.org/), [X12](https://x12.org/), and others, we hope to enable adoption of the Gender Harmony approach across the vendor spectrum. Vendors are encouraged to incorporate the intent of the specification into the end-user workflow.
 
 #### Researchers
 

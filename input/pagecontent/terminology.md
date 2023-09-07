@@ -44,7 +44,7 @@ Because the three included values scope all possible values (plus a SPCU-specifi
 
 The code system used for this value set is the internal HL7 code system [Sex For Clinical Use](http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use).
 
-The [Sex For Clinical Use](http://hl7.org/fhir/extensions/ValueSet-sex-parameter-for-clinical-use) value set is defined as part of the R5 FHIR Specification.
+The [Sex For Clinical Use](http://terminology.hl7.org/ValueSet/sex-parameter-for-clinical-use) value set is defined as part of the R5 FHIR Specification.
 
 The LOINC code for the "observable encoding" of the Sex For Clinical Use is [99501-9](https://loinc.org/99501-9/)
 

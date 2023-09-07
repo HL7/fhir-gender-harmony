@@ -148,8 +148,6 @@ In the FHIR Coverage resource, both Coverage.beneficiary and Coverage.subscriber
 
 ## Exchanging Sex Parameters for Clinical Use
 
-Note:  See [Backwards Compatability](fhirdesignbackground.html#backwards-compatibility) for considerations around exchanging Sex Parameters for Clinical Use in versions of FHIR prior to R5.
-
 ### Patient Level Sex Parameter for Clinical Use
 Sex Parameters for Clinical Use (SPCU) may be used in specific clinical contexts, for example, when placing an order or when interpreting a result.  However, there are cases where having a context-free categorization of a patient can be useful, for example, when doing outreach for cervical cancer screening to patients for which you don't have access to any specific clinical information.  Or when you don't have access to the specific clinical information **yet**.
     
