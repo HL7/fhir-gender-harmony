@@ -2,7 +2,7 @@
 Date             Jira ticket        Updated by                   Comment
 2023-06-16       OTHER-2411         Joanie Harper                Corrected Example 01: Imaging Order per the Jira ticket https://jira.hl7.org/browse/OTHER-2411
 2023-06-16       OTHER-2488         Joanie Harper                Fixed spelling of narrative per the Jira ticket https://jira.hl7.org/browse/OTHER-2488
-2023-08-02		All Usecase updates	Rob M				         Updated the entirew document using DICOm file from Steven N. Issues above are included.
+2023-08-02		All Usecase updates	Rob M				         Updated the entire document using DICOm file from Steven N. Issues above are included.
 2023-08-14                          Joanie Harper                Updated some numbering and spacing.
 2023-08-28       OTHER-2548         Joanie Harper                Updated Intro and Use Case description
 -->
@@ -10,10 +10,7 @@ Date             Jira ticket        Updated by                   Comment
 
 This use case illustrates DICOM Sex and Gender encoding, including: admission, patient prep, examination, post processing and reporting for a PET/CT examination order. A patient with EHR Sex Parameter for Clinical Use (SPCU) of “Female-typical” and an EHR Gender Identity of “Identifies a male gender” checks-in for a PET/CT examination. The examination is performed, the patient’s demographics are updated, and the report is delivered.
 
-In this use case, there are three instances of Sex Parameter for Clinical Use (SPCU):   <br>
-Instance 1:  The ordering physician provides instructions for interpreting lab values within a SPCU comment. <br>
-Instance 2:  A post-processing AI (Artifical Intelligence) application utilizes the Sex Assigned at Birth for the basis of reference values. <br>
-Instance 3:  The radiologist determines the appropriate sex to use based on the patient's body composition for a Standard Uptake Value (SUV) calculation. <br>
+In this case, there are three examples of Sex Parameter for Clinical Use (SPCU). First, the ordering physician provides instructions for interpreting lab values within a Sex Parameter for Clinical Use comment. In the second SPCU, a post-processing AI (Artificial  Intelligence) application utilizes the a different item in the Sex Parameter for Clinical Use Sequence for reference values. Third, the radiologist determines the appropriate sex for a Standard Uptake Value (SUV) calculation, based on the patient's body composition.
 
 The DICOM (Digital Imaging and COmmunications in Medicine) Standard attributes in this use case are not, at time of publication of this Implementation Guide, normative, and details in DICOM are still being defined in Supplement 233. Readers interested in participating in development of DICOM Sex and Gender encoding, please contact the [DICOM Secretariat](mailto:dicom@dicomstandard.org).
 
