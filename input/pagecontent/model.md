@@ -126,6 +126,8 @@ With the exception of the following noted changes, the model included in this im
    -  This addition was made to align with the original context of the data exchanged as an RSG so that users may specify the type or category of sex or gender that is recorded (e.g., "Sex").
 -  Removed the InternationalEquivalentRecordedSexOrGender element
    -  Reviewers agreed that explicit inclusion of the translation of the value to a code from International Civil Aviation Organization (ICAO) code system was not useful. Implementers that want to send this may do so as a translation of the primary value.
+
+
 #### Pronouns
 - Update of Pronoun binding strength to Example.
    -  The binding strength to the Pronoun value set was originally extensible. In reviewers agreed that this needed to be loosened to example across products to allow for greater flexibility in establishing a base set of jurisdiction appropriate pronouns. 
