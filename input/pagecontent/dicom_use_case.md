@@ -11,8 +11,13 @@ Date             Jira ticket        Updated by                   Comment
 This use case illustrates DICOM Sex and Gender encoding, including: admission, patient prep, examination, post processing and reporting for a PET/CT examination order. A patient with EHR Sex Parameter for Clinical Use (SPCU) of “Female-typical” and an EHR Gender Identity of “Identifies a male gender” checks-in for a PET/CT examination. The examination is performed, the patient’s demographics are updated, and the report is delivered.
 
 In this case, there are three examples of Sex Parameter for Clinical Use (SPCU):
+
  1) The ordering physician provides instructions for interpreting lab values within a Sex Parameter for Clinical Use comment. 
+
+
  2) A second SPCU is determined by a post-processing AI (Artificial  Intelligence) application that utilizes the different item in the Sex Parameter for Clinical Use Sequence for reference values. 
+
+
  3) The radiologist determines the appropriate sex for a Standard Uptake Value (SUV) calculation, based on the patient's body composition.
 
 The DICOM (Digital Imaging and COmmunications in Medicine) Standard attributes in this use case are not, at time of publication of this Implementation Guide, normative, and details in DICOM are still being defined in Supplement 233. Readers interested in participating in development of DICOM Sex and Gender encoding, please contact the [DICOM Secretariat](mailto:dicom@dicomstandard.org).
