@@ -29,7 +29,7 @@ table, th, td {
 | Pronouns     | [individual-pronouns](http://hl7.org/fhir/extensions/StructureDefinition-individual-pronouns.html)     | Patient, RelatedPerson, Person, and Practitioner     |
 | Gender      | [individual-recordedSexOrGender](http://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html)     | Patient, RelatedPerson, Person, and Practitioner     |
 
-The [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension makes use of the CodeableReference datatype, which was added in R5. To allow this extension to be used in prior version of FHIR, the FHIR extension IG provides a version of that extension that is compatible with prior versions of FHIR. 
+The [patient-sexParameterForClinicalUse](http://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) extension makes use of the CodeableReference datatype, which was added in R5. To allow this extension to be used in prior versions of FHIR, the FHIR extension IG provides a version of that extension that is compatible with prior versions of FHIR. 
 
 
 ### General Guidance Sex and Gender
