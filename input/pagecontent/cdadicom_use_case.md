@@ -17,14 +17,14 @@ The patient is a transgender male, undergoing hormonal treatment. Based on physi
 
 The Social History Section includes instance examples of the Gender Identity, Pronouns, and Recorded Sex or Gender templates.
 
-Examples of the use of the Sex Paramenter for Clinical Use template can be found in the Imaging Procedure History Section.
+Examples of the use of the Sex Parameter for Clinical Use template can be found in the Imaging Procedure History Section.
 
 
 
 ```
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
-<!-- Title: Sex Paramenter for Clinical Use CDA Template Example file Version: 1.0 Revision History: 31-Jan-2011 source document created 10-Aug-2022 example drafted [Jay Lyle, JP Systems for the 
+<!-- Title: Sex Parameter for Clinical Use CDA Template Example file Version: 1.0 Revision History: 31-Jan-2011 source document created 10-Aug-2022 example drafted [Jay Lyle, JP Systems for the 
     VHA; Rob Horn, Fairhaven Technology; Steven Nichols, GE] -->
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif" xmlns:voc="urn:hl7-org:v3/voc"
     xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd"

@@ -60,7 +60,7 @@ Date             Jira ticket        Updated by                   Comment
     <templateId root="2.16.840.1.113883.10.15.4" extension="2022-09-01" />
     
     <!--  http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender/type  -->
-    <code code="76689-9" codeSystem="2.16.840.1.113883.6.1" displayName="Sex assigned at birthr" />
+    <code code="76689-9" codeSystem="2.16.840.1.113883.6.1" displayName="Sex assigned at birth" />
     <statusCode code="completed" />
     <!--  http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender/effectivePeriod -->
     <effectiveTime>

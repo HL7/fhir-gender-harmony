@@ -73,7 +73,7 @@ DICOM is coordinating the development and approval of this change
 proposal with the activity of the Gender Harmony project. 
 
 ### LOINC
-[Logical Observation Identifiers Names and Codes (LOINC)](https://loinc.org/) is "the international standard for identifying health measurements, observations, and documents." LOINC is released twice a year (Feburary and August) under Creative Commons Attribution 4.0 International Public License. Gender harmony project uses LOINC clinical identifiers to represent the following observations:
+[Logical Observation Identifiers Names and Codes (LOINC)](https://loinc.org/) is "the international standard for identifying health measurements, observations, and documents." LOINC is released twice a year (February and August) under Creative Commons Attribution 4.0 International Public License. Gender harmony project uses LOINC clinical identifiers to represent the following observations:
 
 - Gender identity (GI): [76691-5](https://loinc.org/76691-5/)
 - Sex parameter for clinical use (SPCU): [99501-9](https://loinc.org/99501-9/)

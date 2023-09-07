@@ -24,6 +24,9 @@ Date             Jira ticket        Updated by                   Comment
 ### Introduction
 This universal-realm implementation guide describes the changes incorporated in HL7 product family specifications that are aligned with the [HL7 Informative Document: Gender Harmony - Modeling Sex and Gender Representation, Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=564) published in 2021. Based upon ballot comments and participant feedback, this publication and the associated V2, CDA, and FHIR specifications include minor improvements when compared to the logical model described in the 2021 specification. These changes are described in the [Model](model.html) section of this specification.
 
+<br>
+<br>
+<br>
 This implementation guide contains *Informative* content discussing the overall Gender Harmony Project (GHP) approach intended to provide definitive guidance on how to exchange clinical sex and gender affirming information using HL7 models. We also provide examples that align with that guidance. The content of this guide must be viewed as accompanying the gender harmony content within the product family-specific specifications found elsewhere. Each of these is described in more detail in other pages of this guide:
 - [FHIR Core specification](fhirdesignbackground.html) - gender harmony defined extensions and value sets used by ***all*** specifications.
 - [CDA](cdagenderharmony.html) - A companion pdf CDA template specification containing gender harmony-specific templates is published separately. When this guide was in ballot the CDA template pdf specification was embedded within this guide. It is now a distinct, separate specification.
