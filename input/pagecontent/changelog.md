@@ -114,7 +114,6 @@ This log contains changes that are a result of the HL7 International ballot proc
 
 **Applied:** Updated chapter 2A - Control and Data Types Reference Range Administrative Sex Component for Gender Harmony per [V2-25443](https://jira.hl7.org/browse/V2-25443) and [V2-25518](https://jira.hl7.org/browse/V2-25518)<br>
 
-
 **Applied:** Clarified that V2 will maintain the value set for Sexual Orientation directly, as that is not part of the Gender Harmony project. V2 will also maintain a value set of relevant gender-related LOINC codes for use in OBX-3. [V2-25444](https://jira.hl7.org/browse/V2-25444)<br>
 **Applied:** Removed element "InternationalEquivalent" [V2-25453](https://jira.hl7.org/browse/V2-25453)<br>
 
@@ -126,7 +125,6 @@ This log contains changes that are a result of the HL7 International ballot proc
 **Applied:** Corrected NK1 (removed SFCU) and added GSP and GSR [V2-25471](https://jira.hl7.org/browse/V2-25471) and [V2-25478](https://jira.hl7.org/browse/V2-25478)<br>
 
 **Applied:** Moved the Gender Harmony segments to before PRT and after PD1, to align with the ordering defined in Chapter 3 [V2-25473](https://jira.hl7.org/browse/V2-25473)<br>
-
 
 
 ### Changes to this Cross-paradigm Implementation Guide

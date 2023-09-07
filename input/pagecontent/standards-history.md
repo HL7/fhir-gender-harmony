@@ -3,8 +3,8 @@ Date             Jira ticket        Updated by                   Comment
 -->
 
 
-## History of Sex and Gender in HL7 Standards
-### HL7v2 History
+### History of Sex and Gender in HL7 Standards
+#### HL7v2 History
 
 1. In HL7v2 2.3.1:
    * The PID-8 field was labeled as “Sex” 
@@ -21,15 +21,15 @@ Date             Jira ticket        Updated by                   Comment
    * The Value Set was given a definition of “Concepts specifying a patient's sex for administrative purposes.”
    * A new code was added for X-Non-Binary.  This code included a usage note indicating that it was for jurisdictional use, and was driven by reporting requirements of some states in the US.  This was intentionally a stop-gap measure.  The HL7 meeting which added X-Non-Binary to table 0001 was the same meeting that initiated the Gender Harmony Project!
 
-### HL7v3 History
+#### HL7v3 History
 1. HL7v3 adopted Administrative Gender as a concept.
 
-### FHIR History
+#### FHIR History
 1. In FHIR DSTU1
    * A [Patient.gender property](https://hl7.org/fhir/DSTU1/patient-definitions.html#Patient.gender) was included with a definition, requirements, and comments.
    * Patient.gender was mapped to PID-8 in the [Mappings for HL7v2](https://hl7.org/fhir/DSTU1/patient-mappings.html#http://hl7.org/v2).
 2. In FHIR DSTU2:
-   * Addtional [Patient.gender comments](http://hl7.org/fhir/DSTU2/patient-definitions.html#Patient.gender) were added suggesting the use of Observations (when available) rather than Patient.gender for clinical decision support.
+   * Additional [Patient.gender comments](http://hl7.org/fhir/DSTU2/patient-definitions.html#Patient.gender) were added suggesting the use of Observations (when available) rather than Patient.gender for clinical decision support.
 3. In FHIR STU3:
    * The [Patient Gender section](http://hl7.org/fhir/STU3/patient.html#gender) was added with some guidance on representing patient gender.
 4. In FHIR R4:
