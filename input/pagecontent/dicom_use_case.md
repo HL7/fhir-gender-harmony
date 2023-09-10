@@ -5,6 +5,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-02		All Usecase updates	Rob M				         Updated the entire document using DICOm file from Steven N. Issues above are included.
 2023-08-14                          Joanie Harper                Updated some numbering and spacing.
 2023-08-28       OTHER-2548         Joanie Harper                Updated Intro and Use Case description
+2023-09-08       OTHER-2605         Carol Macumber                Fixed Applied consistency in use of "IHE Actor Name" and other editorial updates
 -->
 ### Introduction & Use Case Description
 
@@ -16,13 +17,13 @@ In this case, there are three examples of Sex Parameter for Clinical Use (SPCU):
    2. A second SPCU is determined by a post-processing AI (Artificial  Intelligence) application that utilizes the different item in the Sex Parameter for Clinical Use Sequence for reference values. 
    3. The radiologist determines the appropriate SPCU for a Standard Uptake Value (SUV) calculation based on the patient's body composition.
 
-The DICOM (Digital Imaging and COmmunications in Medicine) Standard attributes in this use case are not, at time of publication of this Implementation Guide, normative, and details in DICOM are still being defined in Supplement 233. Readers interested in participating in development of DICOM Sex and Gender encoding, please contact the [DICOM Secretariat](mailto:dicom@dicomstandard.org).
+The DICOM (Digital Imaging and Communications in Medicine) Standard attributes in this use case are not, at time of publication of this Implementation Guide, normative, and details in DICOM are still being defined in Supplement 233. Readers interested in participating in development of DICOM Sex and Gender encoding, please contact the [DICOM Secretariat](mailto:dicom@dicomstandard.org).
 
-### Actors:
+### Actors
 
 #### People
 
-1.  Patient (John Smith) - whose previous records are for studies performed when his EHR Gender Identity was “Identifies as female gender”. 
+1.  Patient (John Smith) - whose previous records are for studies performed when his EHR Gender Identity was “Identifies as female gender”.
 
 2.  Referring Physician
 
@@ -32,7 +33,7 @@ The DICOM (Digital Imaging and COmmunications in Medicine) Standard attributes i
 
 5.  Radiologist
 
-#### Systems, (using IHE Actor names)
+#### Systems using IHE Actor Names
 
 1.  ADT, Order Placer (Hospital EHR)
 
@@ -46,11 +47,11 @@ The DICOM (Digital Imaging and COmmunications in Medicine) Standard attributes i
 
 6.  Task Performer (Artificial Intelligence) 
 
-### Scope Statement:
+### Scope Statement
 
 Use case covers admission, patient prep, examination, post processing and reporting for a PET/CT study.
 
-### Precondition(s):
+### Precondition(s)
 
 1.  John Smith is registered in the hospital record system under the name “Janet Smith”.
 
@@ -66,7 +67,7 @@ Use case covers admission, patient prep, examination, post processing and report
 
 [**Example 01**](#example-01-imaging-order) depicts an HL7 Imaging Order for this patient with mapping to DICOM Modality Worklist attributes.
 
-### Postcondition(s):
+### Postcondition(s)
 
 1.  PET/CT study is complete.
 
@@ -75,7 +76,7 @@ Use case covers admission, patient prep, examination, post processing and report
 3.  Report is generated in the RIS and available in the EHR.
 
 
-### Workflow/Storyboard:
+### Workflow/Storyboard
 
 Note: IHE transactions are noted in brackets
 
@@ -84,13 +85,13 @@ Note: IHE transactions are noted in brackets
 
 Figure 1 Workflow Storyboard
 
-#### Arrival and check-in:
+#### Arrival and Check-in
 
 In this scenario, the patient initiates the discussion with the clerk.
 
 1.  When the patient arrives at the waiting room for a PET/CT examination he announces himself as “John”.
 
-2.  The clerk asks “John Williams?”, seeing a John Williams in the schedule. 
+2.  The clerk asks “John Williams?”, seeing a John Williams in the schedule.
 
 3.  Patient: “No, Smith”.
 
