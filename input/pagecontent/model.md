@@ -522,7 +522,7 @@ be used to capture context for use of the name.
 
 ##### Validity Period
 
-- Definition: The timeframe during which the name is to be used. May
+- Definition: The timeframe during which the Name is to be used. May
 just include a start date.
 
 -   Cardinality: 0..1
