@@ -58,7 +58,7 @@ changes in individual standards to concretely specify actual implementable
 structures are detailed in separate specifications ([FHIR R5](http://hl7.org/fhir/extensions/extensions-Patient.html), [V2.9.1](https://hl7.org/documentcenter/private/standards/V291_R1_202xmmm.zip), [Representing Sex and Gender in CDA](http://www.hl7.org/permalink/?GenderHarmonyCDAIG), this implementation 
 guide provides specific additional guidance and cross-paradigm use cases. 
 
-In this document, and elsewhere, the phrase “sex or gender” is used to characterize data in which the contextual meaning of the the datum is unclear and its use is an acknowledgement that human discourse regarding this information is often equally unclear. Use of this phrase is not intended to mean a unification of information that is more clearly either SPCU or gender identity.
+In this document, and elsewhere, the phrase “sex or gender” is used to characterize data in which the contextual meaning of the the datum is unclear and its use is an acknowledgement that human discourse regarding this information is often equally unclear. Use of this phrase is not intended to mean a unification of information that is more clearly either Sex Parameter for Clinical Use (SPCU) or gender identity.
 
 ### Model Overview
 
@@ -130,7 +130,7 @@ With the exception of the following noted changes, the model included in this im
 
 #### Pronouns
 - Update of Pronoun binding strength to Example.
-   -  The binding strength to the Pronoun value set was originally extensible. In reviewers agreed that this needed to be loosened to example across products to allow for greater flexibility in establishing a base set of jurisdiction appropriate pronouns. 
+   -  The binding strength to the Pronoun value set was originally extensible. Reviewers agreed that this needed to be loosened to example across products to allow for greater flexibility in establishing a base set of jurisdiction appropriate pronouns. 
 
 ### Person
 
@@ -189,7 +189,7 @@ individual's identity, ascertained by asking them what that identity is.
 to the person. May be just an initial dateTime.
 
 -   Usage note: Validity period may be overlapping in the case of
-multiple gender identities (such as for bi-gender persons, some
+multiple gender identities (such as for bigender persons, some
 gender-fluid persons, and binary Two-Spirit persons who also identify as
 both male and female).
 
@@ -256,7 +256,7 @@ each is the same.
 provides guidance on how a recipient should apply settings or reference 
 ranges that are derived from observable information such as an organ 
 inventory, recent hormone lab tests, genetic testing, menstrual status, 
-obstetric history, etc.. This property is intended for use in clinical 
+obstetric history, etc. This property is intended for use in clinical 
 decision making, and indicates that treatment or diagnostic tests should 
 consider best practices associated with the relevant reference population.
 
@@ -295,10 +295,7 @@ instance will have the attributes listed below.
 -   Definition: A parameter that provides guidance on how a recipient 
 should apply settings or reference ranges that are derived from observable 
 information such as an organ inventory, recent hormone lab tests, genetic 
-testing, menstrual status, obstetric history, etc..
-
-In addition, all the attributes of SPCU should have text that is drawn from 
-the FHIR R5 page listed here: [Sex Parameter for Clinical Use](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-patient-sexParameterForClinicalUse.html)
+testing, menstrual status, obstetric history, etc.
 
 -   Cardinality: 1..1
 
@@ -325,7 +322,8 @@ based on procedure or process used to determine the value
 ##### Comment
 
 -   Definition: Text to further explain the context for this specific
-SPCU categorization. Usage note: Content included may be related to
+SPCU categorization. 
+-   Usage note: Content included may be related to
 social and/or cultural context to be considered or additional
 information related to the linked observations, particularly with
 overlapping active values
@@ -399,14 +397,14 @@ When evaluating when and how to exchange sex or gender concepts, consider whethe
       * Observation template in CDA
 
 
-The value sets used to exchange Recorded Sex or Gender values are expected to be defined by the owner of the specific concept being exchanged.  For example, if you are exchanging the sex on the driver's license in a specific region, that region's driver registraton authority would define the value set, and those values would be used in the exchange.  As such, creating new value sets to represent Recorded Sex or Gender values is not necessary and should be avoided.
+The value sets used to exchange Recorded Sex or Gender values are expected to be defined by the owner of the specific concept being exchanged.  For example, if you are exchanging the sex on the driver's license in a specific region, that region's driver registration authority would define the value set, and those values would be used in the exchange.  As such, creating new value sets to represent Recorded Sex or Gender values is not necessary and should be avoided.
 
 #### Attributes: 
 
 ##### Source Recorded Sex or Gender 
 
 -   Definition: The actual value found on the document. This may be in
-any character set. For example. a Russian identity card might have the
+any character set. For example, a Russian identity card might have the
 value 'ж' for sex.
 
 -   Cardinality: 1..1
@@ -598,7 +596,7 @@ May just include a start date.
 -   Usage Note: Multiple pronoun entries may exist and overlap as some
 persons utilize multiple pronouns simultaneously or switch usage based
 on context, familiarity, comfortability, and/or Gender Identity (for
-instance, in the case of bi-gender or gender-fluid persons).
+instance, in the case of bigender or gender-fluid persons).
 
 -   Cardinality: 0..1
 

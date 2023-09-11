@@ -164,6 +164,6 @@ Since V2 has been used for a long time, the field Administrative Sex (PID-8) V2 
 
 Definition: This field contains the patient’s sex. Refer to User-defined Table 0001 - Administrative Sex in Chapter 2C, Code Tables, for suggested values. = <https://terminology.hl7.org/CodeSystem-v2-0001.html>
 
-Due to the longstanding existence of this field, we are not planning to change the definition of this field, but rather ensure users understand that it should be used with care, while defining additional constructs to convey the more precisely defined attributes. 
+Due to the longstanding existence of this field, we have not changed the definition of this field, but rather ensure users understand that it should be used with care, while defining additional constructs to convey the more precisely defined attributes. 
 
 When conveying additional SOGI concepts in a message, implementers must consider how the business requirements of the receiving system will be satisfied when consuming SOGI data elements. Depending on the use case, a hierarchy of data elements may need to be constructed in order to ensure that business requirements are met appropriately. For example, in a billing use case, if both PID-8 and Gender Identity are populated in a message, the receiving system may choose to prioritize PID-8 over Gender Identity based on the needs of the use case.
