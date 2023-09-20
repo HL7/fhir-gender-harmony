@@ -23,6 +23,7 @@ publisher:
 # paremter for navigation
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   shownav: 'true'  
+  jira-code: 'gender-harmony'
 
 
 pages:
