@@ -180,8 +180,22 @@ table, th, td {
 |HL7 Orders & Observations|Co-sponsor|[OO Main Page](http://www.hl7.org/Special/committees/orders/index.cfm)|
 |HL7 Patient Care|Co-sponsor|[PC Main Page](http://www.hl7.org/Special/committees/patientcare/index.cfm)|
 
+
+#### Dependency Table
+
+{% include dependency-table.xhtml %}
+
+#### Globals Table
+
+{% include globals-table.xhtml %}
+
+#### IP Statements
+
+{% include ip-statements.xhtml %}
 ### FootNote(s)
 
 [^1]:A grouping term describing individuals who experience gender marginalization, meaning those individuals who belong to gender-related groups who are, or have been, systematically oppressed. Another term which is used to the same effect is people of marginalized genders.
 
 [^2]:Typically, this initialism is taken as meaning Two-Spirit, lesbian, gay, bisexual, trans, questioning/queer, intersex, and asexual/aromantic/agender, and other umbrella sexual- and gender-marginalized groups (“+”), dependent on socio-cultural factors. This initialism (or any number of different initialisms) may be used differently by other individuals or groups at different times. Additionally, the term “queer” may be considered offensive by some individuals. The 2SLGBTQIA+ community needs to be seen as a diverse non-monolithic culture.
+
+
