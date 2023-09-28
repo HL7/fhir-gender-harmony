@@ -17,7 +17,7 @@ releaseLabel: ci-build  # | draft | qa-preview | ballot | trial-use | release | 
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: HL7 Terminology Infrastruture Work Group
-  url: https://www.hl7.org/Special/committees/Vocab
+  url: https://www.hl7.org/Special/committees/vocab
   email: ti@lists.hl7.org
 
 # parameters

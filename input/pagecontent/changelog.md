@@ -45,7 +45,7 @@ This log contains changes that are a result of the HL7 International ballot proc
      These are marked at applied, so added to the list. These I did not confirm/validate.
       OTHER:  2475, 2476, 2478, 2481, 2482, 2483, 2485, 2486, 2489, 2711
 -->
-**Completed:** Removed the final [HL7 CDA® R2 Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1](www.hl7.org/permalink/GenderharmonyCDAIG) PDF from this guide, the final document is published separately <br>
+**Completed:** Removed the final HL7 CDA® R2 Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1 PDF from this guide, the final document is published separately <br>
 **Applied:** Update CONF:4536-61 conformance verb from SHOULD to SHALL [OTHER-2435](https://jira.hl7.org/browse/OTHER-2435)<br>
 **Applied:** In the Gender Identity section added sentence to provide clarity around provenance [OTHER-2465](https://jira.hl7.org/browse/OTHER-2465)<br>
 **Applied:** In the Individual Pronouns section added sentence to provide clarity around provenance [OTHER-2467](https://jira.hl7.org/browse/OTHER-2467)<br>
