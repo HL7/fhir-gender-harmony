@@ -1,15 +1,10 @@
 {
   "package-id" : "hl7.xprod.uv.gender-harmony",
   "version" : "1.0.0",
-  "path" : "http://hl7.org/uv/gender-harmony/2023Sep",
+  "path" : "http://hl7.org/xprod/ig/uv/gender-harmony/STU1",
   "mode" : "milestone",
   "status" : "informative",
-  "sequence" : "Releases",
-  "desc" : "A cross-paradigm implementation guide that provides definitive guidance on how to exchange clinical sex and gender affirming information using HL7 models. This specification is built upon, but has some changes in comparison to, the initial "Gender Harmony - Modeling Sex and Gender Representation, Release 1" logical model. This guide provides an updated general model to clearly separate gender from summary sex-related clinical observations, as well as provides additional useful gender-related elements. The application of the gender harmony general model is discussed for each specific product family: V2 (as V2.9.1), CDA (the templates are published as a separate specification), and in FHIR, initially in the R5 version. All terminology is published by HL7 at terminology.hl7.org, often referred to as “THO”. Examples and overall background are also provided.",
-  "changes" : "changelog.html",
-  "first" : true,
-  "title" : "Gender Harmony - Sex and Gender Representation",
-  "ci-build" : "http://build.fhir.org/ig/HL7/fhir-gender-harmony/branches/main/index.html",
-  "category" : "Equity",
-  "introduction" : "This implementation guide contains informative content discussing the overall Gender Harmony Project (GHP) approach intended to provide definitive guidance on how to exchange clinical sex and gender affirming information using HL7 models. This includes examples that align with that guidance. The content of this guide must be viewed as accompanying the gender harmony content within the product family-specific specifications published as separate specifications: 1) The FHIR Core specification with gender harmony defined extensions and value sets used by all specifications. 2) A companion pdf CDA template specification containing gender harmony-specific templates. 3) The V2.9.1 specification that contains new segments used to convey gender harmony content."
+  "sequence" : "STU1",
+  "desc" : "A cross-paradigm implementation guide that provides definitive guidance on how to exchange clinical sex and gender affirming information using HL7 models. This specification is built upon, but has some changes in comparison to, the initial \"Gender Harmony - Modeling Sex and Gender Representation, Release 1\" logical model. This guide provides an updated general model to clearly separate gender from summary sex-related clinical observations, as well as provides additional useful gender-related elements. The application of the gender harmony general model is discussed for each specific product family: V2 (as V2.9.1), CDA (the templates are published as a separate specification), and in FHIR, initially in the R5 version. All terminology is published by HL7 at terminology.hl7.org, often referred to as “THO”. Examples and overall background are also provided.",
+  "changes" : "changelog.html"
 }

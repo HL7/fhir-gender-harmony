@@ -5,7 +5,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.xprod.uv.gender-harmony
 canonical: http://hl7.org/xprod/ig/uv/gender-harmony
-name: hl7-gender-harmony
+name: CrossParadigmGenderHarmony
 title: "HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1"
 description: "HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1"
 status: active # draft | active | retired | unknown
