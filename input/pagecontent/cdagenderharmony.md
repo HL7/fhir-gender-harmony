@@ -6,6 +6,7 @@ Date             Jira ticket              Updated by               Comment
 2023-09-05        none            Rob McClure           Fixed ballot references and content noting included CDA pdf
 -->
 
+
 When compared to the original ballot, this cross-paradigm publication **no longer contains an embedded CDA template IG.** The gender harmony publication process removed the CDA template IG from this FHIR publication and created a separate Standard for Trial Use (STU) CDA R2 implementation guide that is considered a companion guide to this cross-paradigm guide. The CDA gender harmony template implementation guide is discussed here but the details are only available within the published CDA template guide:
 -  [HL7 CDA® R2 Implementation Guide: Gender Harmony - Sex and Gender Representation](http://www.hl7.org/permalink/?GenderHarmonyCDAIG)
 
