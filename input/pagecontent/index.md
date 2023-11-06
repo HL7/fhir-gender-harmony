@@ -14,6 +14,7 @@ Date             Jira ticket        Updated by                   Comment
 2023-08-25       OTHER-2560         Sean Muir                    Improve footnote notation - used MD based footnote syntax
 2023-08-29			none			Rob McClure					Clarified that this guide supersedes the original model
 2023-09-04			none			Rob McClure				Changed the "Author" section to say "Implementation Guide Contributors" and then make a separate Author section noting TI, PA, SD, V2MG as true authors. Similar to other guides
+2023-11-06							Rob McClure					Corrected spelling of "Russel" to Russell"
 -->
 
 
@@ -147,7 +148,7 @@ We are indebted to all members of the project, listed [here](https://confluence.
 - **V2 material**
     - Riki Merrick (Assoc. of Public Laboratories) and Craig Newman (Altarum)
 - **CDA**
-    - Jay Lyle (JP Systems, Inc.), Russel Ott (Deloitte Consulting LLP), Gay Dolin (Namaste Informatics), and Benjamin Flessner
+    - Jay Lyle (JP Systems, Inc.), Russell Ott (Deloitte Consulting LLP), Gay Dolin (Namaste Informatics), and Benjamin Flessner
 - **FHIR**
     - Cooper Thompson (Epic)
 - **Use Cases**
